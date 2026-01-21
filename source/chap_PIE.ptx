@@ -1,0 +1,182 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="chap_PIE">
+  <title>Principle of Inclusion and Exclusion</title>
+  <p>
+    We now introduce a concept known as the
+    <term>Principal of Inclusion and Exclusion</term>.
+    Recall <xref ref="thm_General_Sum_Principle">Theorem</xref>,
+    which states that if <m>A</m> and <m>B</m> are sets, then
+    <me>
+      {|A\cup B| = |A| + |B| - |A\cap B|.}
+    </me>
+  </p>
+  <problem>
+    <statement>
+      <p>
+        How many integers between 1 and 881 inclusively are divisible by 3 or 5?
+      </p>
+    </statement>
+  </problem>
+  <p>
+    But what do we do if we have more than two sets?
+    Let's first examine the situation with three sets.
+  </p>
+  <problem>
+    <statement>
+      <p>
+        If <m>A, B</m>, and <m>C</m> are sets,
+        then find a formula in the same vein as <xref ref="thm_General_Sum_Principle">Theorem</xref> for <m>|A\cup B\cup C|</m>.
+      </p>
+    </statement>
+  </problem>
+  <p>
+    The upshot is that we add
+    <q>singles</q>
+    subtract
+    <q>doubles</q>
+    and add
+    <q>triples</q>.
+  </p>
+  <problem>
+    <statement>
+      <p>
+        In the Natteranian township, 750 of the residents have a smart phone, 620 have a laptop computer, 480 have a desktop computer, 420 have both a laptop and a smart phone, 390 have both a smart phone and a desktop, 212 have both a laptop and a desktop computer and 164 have all three items.
+        <ol>
+          <li>
+            <p>
+              How many residents have at least one of the three items?
+            </p>
+          </li>
+          <li>
+            <p>
+              How many residents do not have desktop computer?
+            </p>
+          </li>
+          <li>
+            <p>
+              How many residents have a smart phone or a laptop?
+            </p>
+          </li>
+          <li>
+            <p>
+              How many have a smart phone or a laptop but not a desktop?
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+  <p>
+    We can generalize to any finite number of sets.
+  </p>
+  <theorem>
+    <title>Principal of Inclusion and Exclusion</title>
+    <statement>
+      <p>
+        The number of elements in the union of finite sets <m>A_1, A_2, \dots, A_n</m> is
+        <me>
+          {{|A_1\cup\cdots \cup A_n|=\sum_i |A_i| - \sum_{i\lt j} |A_i\cap A_j| + \sum_{i\lt j\lt k}|A_i\cap A_j\cap A_k| -\cdots +(-1)^{n+1}|A_1\cap A_2 \cdots \cap A_n|.}}
+        </me>
+      </p>
+    </statement>
+  </theorem>
+  <problem>
+    <statement>
+      <p>
+        How many nonnegative integer solutions does the equation
+        <m>x_1+x_2+x_3+x_4 = 25</m> have such that <m>x_1 \lt 7</m>,
+        <m>x_2 \lt 5</m>, and <m>x_4\lt 8</m>?
+      </p>
+    </statement>
+  </problem>
+  <p>
+    We now discuss one important application of the Principle of Inclusion and Exclusion.
+    Formally, a <term>derangement</term>
+    is a permutation <m>w:[n]\to [n]</m> such that <m>w(i)\neq i</m> for all
+    <m>1\leq i\leq n</m> (i.e., <m>w</m> has no fixed points).
+    That is, a derangement is a special rearrangement of objects such that none is in its original spot.
+  </p>
+  <problem xml:id="prob_derangements_CAT">
+    <statement>
+      <p>
+        How many derangements of CAT are there?
+      </p>
+    </statement>
+  </problem>
+  <p>
+    Let <m>d_n</m> denote the number of derangements of <m>[n]</m>.
+    We set <m>d_0:=1</m>.
+  </p>
+  <problem xml:id="prob_number_of_derangements">
+    <statement>
+      <p>
+        For <m>1\leq i\leq n</m>,
+        let <m>F_i</m> be the set of permutations that fix <m>i</m>.
+        <ol>
+          <li>
+            <p>
+              Explain why
+              <me>
+                d_n=|F^c_1\cap \cdots \cap F^c_n|
+              </me>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Explain why
+              <me>
+                d_n=n!-\sum_i |F_i|+\sum_{i\lt j} |F_i\cap F_j|-\sum_{i\lt j\lt k}|F_i\cap F_j\cap F_k|+\cdots +(-1)^n|F_1\cap\cdots \cap F_n|
+              </me>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Explain why the number of derangements of <m>[n]</m> is
+              <me>
+                {d_n=n!\left(1-\frac{1}{1!}+\frac{1}{2!}-\frac{1}{3!}+\cdots +(-1)^n\frac{1}{n!} \right)=n!\sum_{k=0}^n\frac{(-1)^k}{k!}.}
+              </me>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Using the previous problem,
+        verify that we got the right answer to <xref ref="prob_derangements_CAT">Problem</xref>.
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        If 7 hats are left at the hat-check window,
+        in how many ways can they be returned so that no one gets the correct hat?
+      </p>
+    </statement>
+  </problem>
+  <p>
+    Now, just for funsies<ellipsis/> from second semester calculus, we know
+    <me>
+      e^x=\sum_{k=0}^{\infty}\frac{x^k}{k!}
+    </me>,
+    which implies that
+    <me>
+      e^{-1}=\sum_{k=0}^{\infty}\frac{(-1)^k}{k!}
+    </me>.
+  </p>
+  <p>
+    Using Part<nbsp/>(c) of <xref ref="prob_number_of_derangements">Problem</xref>,
+    we see that
+    <me>
+      \lim_{n\to \infty}\frac{d_n}{n!}=\lim_{n\to\infty}\sum_{k=0}^n\frac{(-1)^k}{k!}=\frac{1}{e}\approx 0.367879
+    </me>.
+  </p>
+  <p>
+    In other words, when <m>n</m> is large,
+    the probability of selecting a derangement at random from the collection of permutations of <m>n</m> is approximately <m>1/e</m>.
+    As <m>n</m> increases, the approximation improves.
+    Boom.
+  </p>
+</chapter>

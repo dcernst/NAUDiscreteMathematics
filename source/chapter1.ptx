@@ -1,0 +1,1011 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Sets and Counting Principles</title>
+  <p>
+    A <term>set</term> is a collection of objects called <term>elements</term>.
+    Typically, braces are used to denote sets as in <m>\{b,c,d,f\}</m>,
+    which is the same set as <m>\{b,d,c,f\}</m>,
+    and the same as <m>\{c,f,c,f,d,b\}</m>.
+    If <m>A</m> is a set and <m>x</m> is an element of <m>A</m>,
+    we write <m>{x\in A}</m>.
+    Otherwise, we write <m>{x\notin A}</m>.
+    For example,
+    <m>b\in \{b,d,c,f\}</m> while <m>e\notin \{b,d,c,f\}</m>.
+    The set containing no elements is called the <term>empty set</term>,
+    and is denoted by the symbol <m>{\emptyset}</m>,
+    but can also be written as <m>{\{\}}</m>.
+    Any set that contains at least one element is referred to as a
+    <term>nonempty set</term>.
+    If we think of a set as a box potentially containing some stuff,
+    then the empty set is a box with nothing in it.
+  </p>
+  <p>
+    The empty set and the set <m>\{b,c,d,f\}</m> are examples of <term>finite sets</term>.
+    Any set that is not finite is an
+    <term>infinite set</term>.
+    For example, the <term>natural numbers</term>
+    defined by <m>{\mathbb{N}\coloneqq \{1,2,3,\ldots\}}</m> and <term>integers</term>
+    defined by <m>{\mathbb{Z}\coloneqq \{0, \pm 1, \pm2, \pm 3, \ldots\}}</m> are both examples of infinite sets.
+    Some books will include zero in the set of natural numbers,
+    but we do not.
+    Since the set of natural numbers consists of the positive integers,
+    the natural numbers are sometimes denoted by <m>{\mathbb{Z}^+}</m>.
+    The <term>real numbers</term>,
+    denoted by <m>{\mathbb{R}}</m>,
+    is another example of an infinite set.
+    If you look closely at our definitions for the natural numbers and integers you will notice that we wrote <m>{\coloneqq}</m> instead of <m>=</m>.
+    We use <m>\coloneqq</m> to mean that the symbol or expression on the left is defined to be equal to the expression on the right.
+  </p>
+  <p>
+    The language associated to sets is specific.
+    We will often define sets using the following notation,
+    called <term>set-builder notation</term>:
+    <me>
+      {S=\{x \in A\mid P(x)\}}
+    </me>,
+    where <m>P(x)</m> is some predicate statement involving <m>x</m>.
+    The first part
+    <q><m>x \in A</m></q>
+    denotes what type of <m>x</m> is being considered.
+    The predicate to the right of the vertical bar determines the condition(s) that each <m>x</m> must satisfy in order to be a member of the set.
+    This notation is read as
+    <q>The set of all <m>x</m> in <m>A</m> such that <m>P(x)</m>.</q>
+  </p>
+  <example>
+    <statement>
+      <p>
+        The set <m>\{x\in \mathbb{N}\mid x \mbox{ is even and } x\geq 8\}</m> describes the collection of even natural numbers that are greater than or equal to 8.
+      </p>
+    </statement>
+  </example>
+  <example>
+    <statement>
+      <p>
+        We can define the <term>rational numbers</term>
+        using set-builder notation via
+        <me>
+          {\mathbb{Q}\coloneqq \{a/b \mid a, b \in \mathbb{Z} \text{ and }  b \neq 0\}}
+        </me>.
+      </p>
+    </statement>
+  </example>
+  <problem>
+    <statement>
+      <p>
+        Write the set of perfect squares
+        <m>\{1,4,9,16,\ldots\}</m> using set-builder notation.
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Translate the following set defined with set-builder notation in English and list a few of its elements:
+        <me>
+          P=\{x\in\mathbb{N} \mid x=2^n\mbox{ for some } n\in\mathbb{N}\}
+        </me>.
+      </p>
+    </statement>
+  </problem>
+  <p>
+    The <term>cardinality</term> of a set <m>A</m>,
+    denoted by <m>{|A|}</m>, is the number of elements in <m>A</m>.
+    For example, if <m>A = \{b,c,d,f\}</m>, then <m>|A| = 4</m>.
+    We will mostly concern ourselves with the cardinality of finite sets in this book.
+    Cardinality gets wildly more complicated if we consider infinite sets.
+  </p>
+  <p>
+    If <m>A</m> and <m>B</m> are sets,
+    then we say that <m>A</m> is a <term>subset</term> of <m>B</m>,
+    written <m>{A\subseteq B}</m>,
+    provided that every element of <m>A</m> is an element of <m>B</m>.
+  </p>
+  <example>
+    <statement>
+      <p>
+        We have <m>\{c,f,g\} \subseteq \{b,c,d,f,g\}</m>.
+      </p>
+    </statement>
+  </example>
+  <problem>
+    <statement>
+      <p>
+        Let <m>A</m> be a set.
+        Determine whether each of the following statements is true or false.
+        If a statement is true, explain why.
+        If a statement is false, provide a specific counterexample.
+        <ol>
+          <li>
+            <p>
+              <m>A\subseteq A</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\emptyset \subseteq A</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Consider the set <m>A=\{a,b,c\}</m>.
+        How many subsets does <m>A</m> have?
+      </p>
+    </statement>
+  </problem>
+  <theorem>
+    <title>Transitivity of Subsets</title>
+    <statement>
+      <p>
+        Suppose that <m>A</m>, <m>B</m>, and <m>C</m> are sets.
+        If <m>A\subseteq B</m> and
+        <m>B\subseteq C</m>, then <m>A\subseteq C</m>.
+      </p>
+    </statement>
+  </theorem>
+  <p>
+    Note that two sets <m>A</m> and <m>B</m> are <term>equal</term>,
+    denoted <m>{A=B}</m>, if the sets contain the same elements.
+    It's clear that <m>A=B</m> if and only if
+    <m>A \subseteq B</m> and <m>B \subseteq A</m>.
+    If <m>A\subseteq B</m>, then <m>A</m> is called a
+    <term>proper subset</term>
+    provided that <m>A\neq B</m>.
+    In this case, we may write
+    <m>{A\subset B}</m> or <m>{A\subsetneq B}</m>.
+    Some authors use <m>\subset</m> to mean <m>\subseteq</m>,
+    so some confusion could arise if you are not reading carefully.
+  </p>
+  <p>
+    Sometimes it is useful to fix a set to focus our attention on.
+    The term <term>universe of discourse</term>
+    (or <term>domain of discourse</term>)
+    generally refers to the collection of objects being discussed in a specific context.
+  </p>
+  <p>
+    Let <m>A</m> and <m>B</m> be sets in some universe of discourse <m>U</m>.
+    We define the following.
+    <ol>
+      <li>
+        <p>
+          The <term>union</term> of <m>A</m> and <m>B</m> is <m>{A \cup B \coloneqq \{x\in U \mid x\in A \mbox{ or } x\in B \}}</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          The <term>intersection</term> of <m>A</m> and <m>B</m> is <m>{A \cap B \coloneqq\{x\in U \mid x\in A \mbox{ and } x\in B \}}</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          If <m>A</m> and <m>B</m> have the property that <m>A \cap B = \emptyset</m>,
+          then we say that <m>A</m> and <m>B</m> are <term>disjoint</term>.
+        </p>
+      </li>
+      <li>
+        <p>
+          The <term>set difference</term>
+          (relative to <m>U</m>)
+          of the sets <m>A</m> and <m>B</m> is <m>{A \setminus B \coloneqq\{x\in U \mid x\in A \mbox{ and } x\notin B \}}</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          The <term>complement</term>
+          (relative to <m>U</m>)
+          of <m>A</m> is the set <m>{A^c\coloneqq U \setminus A =\{x \in U \mid x \notin A\}}</m>.
+        </p>
+      </li>
+    </ol>
+  </p>
+  <problem>
+    <statement>
+      <p>
+        Suppose that the universe of discourse is <m>U=\{1,2,3,4,5,6,7,8,9,10\}</m>.
+        Let <m>A=\{1, 2, 3, 4, 5\}</m>,
+        <m>B=\{1, 3, 5\}</m>, and <m>C=\{2, 4, 6, 8\}</m>.
+        Find each of the following and then determine the cardinality of the set.
+        <ol>
+          <li>
+            <p>
+              <m>A \cap C</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>B \cap C</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>A \cup B</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>A\setminus B</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>B \setminus A</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>C \setminus B</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>B^c</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>A^c</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>(A\cup B)^c</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>A^c\cap B^c</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+      <p>
+        Is any pair of the original sets <m>A</m>,
+        <m>B</m>, and <m>C</m> disjoint?
+      </p>
+    </statement>
+  </problem>
+  <p>
+    The next theorem should be clear.
+  </p>
+  <theorem xml:id="thm_set_and_its_complement">
+    <statement>
+      <p>
+        If <m>A</m> is a subset of some universe of discourse <m>U</m>, then
+        <ol>
+          <li>
+            <p>
+              <m>{A\cup A^c=U}</m>;
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>{A\cap A^c=\emptyset}</m> (i.e., <m>A</m> and <m>A^c</m> are disjoint).
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </theorem>
+  <p>
+    The following principle is a natural notion.
+  </p>
+  <theorem xml:id="thm_sum_principle">
+    <title>Sum Principle for Disjoint Sets</title>
+    <statement>
+      <p>
+        If <m>A</m> and <m>B</m> are disjoint sets, then
+        <me>
+          {|A \cup B| = |A| + |B|.}
+        </me>
+      </p>
+      <p>
+        More generally,
+        if <m>A_1,\ldots, A_n</m> are pairwise disjoint sets, then
+        <me>
+          {|A_1\cup \cdots \cup A_n|=|A_1|+\cdots +|A_n|.}
+        </me>
+      </p>
+    </statement>
+  </theorem>
+  <problem xml:id="prob_dominoes">
+    <statement>
+      <p>
+        A <term>domino</term> is a rectangular tile,
+        usually with a line dividing its face into two square ends,
+        and each end is marked with a number of dots
+        (also called pips)
+        or is blank.
+        <xref ref="fig_domino">Figure</xref>
+        shows a few examples of dominoes.
+        The first and second domino in the figure are actually the same domino since orientation of the domino is irrelevant!
+        When tackling the problems below,
+        consider handling disjoint cases.
+        If you visualize the various cases,
+        you may end up with a nice staircase-looking arrangement.
+        <ol>
+          <li>
+            <p>
+              How many dominoes are there in a set that includes double blank through double nine?
+            </p>
+          </li>
+          <li>
+            <p>
+              How many dominoes are there in a set that includes double blank through double twelve?
+            </p>
+          </li>
+          <li>
+            <p>
+              How many dominoes are there in a set that includes double blank through double <m>n</m>?
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+  <figure xml:id="fig_domino">
+    <caption>Examples of dominoes.</caption>
+    \domino{2}{4} <nbsp/><nbsp/> \domino{4}{2} <nbsp/><nbsp/>\domino{5}{5} <nbsp/><nbsp/> \domino{3}{0}
+  </figure>
+  <problem>
+    <statement>
+      <p>
+        How many students are enrolled in MAT 136 or MAT 226
+        (or both)
+        if there are 409 in MAT 136 and 156 in MAT 226?
+        Do you need to know that 40 students are in both courses?
+      </p>
+    </statement>
+  </problem>
+  <p>
+    The previous problems gives us an indication of how to generalize the Sum Principle
+    (<xref ref="thm_sum_principle">Theorem</xref>)
+    to the case when the sets are not disjoint.
+  </p>
+  <theorem xml:id="thm_General_Sum_Principle">
+    <title>General Sum Principle</title>
+    <statement>
+      <p>
+        If <m>A</m> and <m>B</m> are sets, then
+        <me>
+          {|A \cup B| = |A|+|B|-|A\cap B|,}
+        </me>
+        or equivalently
+        <me>
+          {|A\cup B|+|A\cap B|=|A|+|B|.}
+        </me>
+      </p>
+    </statement>
+  </theorem>
+  <problem xml:id="prob_coffee">
+    <statement>
+      <p>
+        I'm in the mood for a cup of coffee!
+        Let's say that the nearest place to get a cup of coffee is four blocks East and three blocks North.
+        Assuming I only walk East or North,
+        how many different routes can I take to get there if:
+        <ol>
+          <li>
+            <p>
+              The last block I walk is heading North?
+            </p>
+          </li>
+          <li>
+            <p>
+              The last block I walk is heading East?
+            </p>
+          </li>
+          <li>
+            <p>
+              I don't care whether the last block I walk is North or East?
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+  <p>
+    In <xref ref="prob_coffee">Problem</xref>,
+    we could describe paths to the coffee shop using expressions like <m>NNENEEE</m>,
+    where we interpret the expression from left to right as instruction for which direction to walk at each step.
+    Such expressions have a name.
+    A <term>string</term> of objects of <term>length</term>
+    <m>k</m> is a linearly ordered arrangements of <m>k</m> objects.
+    The objects in a string may be repeated unless specified otherwise.
+    For example,
+    <m>NNENEEE</m> is a string of length 7 consisting of <m>N</m>'s and <m>E</m>'s.
+    If a string consists of letters,
+    then it may be called a <term>word</term>
+    (we do not require a word to be in the dictionary!).
+    A <term>bit string</term> is a string consisting of 0's and 1's.
+    Each occurrence of a 0 or 1 in a bit string is called a <term>bit</term>.
+    The strings <m>010</m> and <m>100</m> are two different bit strings of length 3.
+  </p>
+  <example xml:id="ex_counting_two_letter_words">
+    <statement>
+      <p>
+        How many two-letter words are there using only the letters <m>b</m>,
+        <m>c</m>, <m>d</m>, <m>f</m>?
+      </p>
+    </statement>
+    <solution>
+      <p>
+        We can easily list these,
+        but a different arrangement will illustrate a more powerful technique.
+      </p>
+      <tabular>
+        <row>
+          <cell></cell>
+          <cell><m>b</m></cell>
+          <cell><m>c</m></cell>
+          <cell><m>d</m></cell>
+          <cell><m>f</m></cell>
+        </row>
+        <row>
+          <cell>\noalign{\hrule height 2pt}
+            <m>b</m></cell>
+          <cell><m>bb</m></cell>
+          <cell><m>bc</m></cell>
+          <cell><m>bd</m></cell>
+          <cell><m>bf</m></cell>
+        </row>
+        <row bottom="minor">
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell><m>c</m></cell>
+          <cell><m>cb</m></cell>
+          <cell><m>cc</m></cell>
+          <cell><m>cd</m></cell>
+          <cell><m>cf</m></cell>
+        </row>
+        <row bottom="minor">
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell><m>d</m></cell>
+          <cell><m>db</m></cell>
+          <cell><m>dc</m></cell>
+          <cell><m>dd</m></cell>
+          <cell><m>df</m></cell>
+        </row>
+        <row bottom="minor">
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell><m>f</m></cell>
+          <cell><m>fb</m></cell>
+          <cell><m>fc</m></cell>
+          <cell><m>fd</m></cell>
+          <cell><m>f\!f</m></cell>
+        </row>
+      </tabular>
+      <p>
+        The rectangular table makes it clear that there are 16 two-letter words using the letters <m>b</m>,
+        <m>c</m>, <m>d</m>, and <m>f</m>.
+        Another way to see this is to note that there are 4 choices for the first (left-hand) letter and for each of these there are 4 choices for the right-hand letter,
+        so there are <m>4 \cdot 4 = 16</m> words total.
+      </p>
+    </solution>
+  </example>
+  <example>
+    <statement>
+      <p>
+        How many
+        <q>numbered words</q>
+        are there consisting of two letters from <m>b</m>, <m>c</m>,
+        <m>d</m>,
+        and <m>f</m>, followed by one of the digits 1, 2, 3, 4, and 5?
+      </p>
+    </statement>
+    <solution>
+      <p>
+        A geometric display as in <xref ref="ex_counting_two_letter_words">Example</xref>
+        would seem to require three dimensions,
+        but we can take what we already know and just add a digit to the right:
+      </p>
+      <tabular>
+        <row>
+          <cell></cell>
+          <cell>1</cell>
+          <cell>2</cell>
+          <cell>3</cell>
+          <cell>4</cell>
+          <cell>5</cell>
+        </row>
+        <row>
+          <cell>\noalign{\hrule height 2pt}
+            <m>bb</m></cell>
+          <cell><m>bb1</m></cell>
+          <cell><m>bb2</m></cell>
+          <cell><m>bb3</m></cell>
+          <cell><m>bb4</m></cell>
+          <cell><m>bb5</m></cell>
+        </row>
+        <row bottom="minor">
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell><m>bc</m></cell>
+          <cell><m>bc1</m></cell>
+          <cell><m>bc2</m></cell>
+          <cell><m>bc3</m></cell>
+          <cell><m>bc4</m></cell>
+          <cell><m>bc5</m></cell>
+        </row>
+        <row bottom="minor">
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell><m>\vdots</m></cell>
+          <cell><m>\vdots</m></cell>
+          <cell><m>\vdots</m></cell>
+          <cell><m>\vdots</m></cell>
+          <cell><m>\vdots</m></cell>
+          <cell><m>\vdots</m></cell>
+        </row>
+        <row bottom="minor">
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell><m>f\!f</m></cell>
+          <cell><m>f\!f1</m></cell>
+          <cell><m>f\!f2</m></cell>
+          <cell><m>f\!f3</m></cell>
+          <cell><m>f\!f4</m></cell>
+          <cell><m>f\!f5</m></cell>
+        </row>
+      </tabular>
+      <p>
+        There are 16 rows
+        (each with a word from <xref ref="ex_counting_two_letter_words">Example</xref>)
+        and five columns, so there are
+        <m>16\cdot 5 = 80</m> two-letter words using <m>b</m>,
+        <m>c</m>,
+        <m>d</m>,
+        and <m>f</m>, followed by a digit from 1, 2, 3, 4, and 5.
+      </p>
+    </solution>
+  </example>
+  <p>
+    If <m>A</m> and <m>B</m> are sets,
+    the <term>Cartesian product</term>
+    of <m>A</m> and <m>B</m>, denoted <m>A\times B</m>
+    (read as
+    <q><m>A</m> times <m>B</m></q>
+    or
+    <q><m>A</m> cross <m>B</m></q>),
+    is the set of all <term>ordered pairs</term>
+    where the first component is from <m>A</m> and the second component is from <m>B</m>.
+    In set-builder notation, we have
+    <me>
+      {A\times B\coloneqq \{(a,b)\mid a\in A, b\in B\}}
+    </me>.
+  </p>
+  <p>
+    Similarly, the Cartesian product of sets
+    <m>A_1, \ldots, A_n</m> sets is the collection of
+    <term><m>n</m>-tuples</term> given by
+    <me>
+      {A_1\times \cdots \times A_n\coloneqq \{(a_1,\ldots,a_n)\mid  a_j\in A_j \mbox{ for all } 1\leq j\leq n\}}\
+    </me>,
+    where <m>A_i</m> is referred to as the <m>i</m>th <term>factor</term>
+    of the Cartesian product.
+    As a special case, the set
+    <me>
+      \underbrace{A\times \cdots \times A}_{n\text{ factors } }
+    </me>
+    is often abbreviated as <m>{A^n}</m>.
+  </p>
+  <p>
+    Cartesian products are named after French philosopher and mathematician
+    <url href="https://en.wikipedia.org/wiki/Rene_Descartes">Ren&#xe9; Descartes</url>
+    (1596<ndash/>1650).
+  </p>
+  <example xml:id="ex_CartesianProduct">
+    <statement>
+      <p>
+        If <m>A=\{a,b,c\}</m> and <m>B=\{\smiley,\frownie\}</m>, then
+        <me>
+          A\times B=\{(a,\smiley), (a,\frownie),(b,\smiley),(b,\frownie), (c,\smiley),(c,\frownie)\}
+        </me>.
+      </p>
+    </statement>
+  </example>
+  <example>
+    <statement>
+      <p>
+        The standard two-dimensional plane
+        <m>\mathbb{R}^2</m> and standard three space
+        <m>\mathbb{R}^{3}</m> are familiar examples of Cartesian products.
+        In particular, we have
+        <me>
+          \mathbb{R}^2=\mathbb{R}\times \mathbb{R}=\{(x,y)\mid x,y\in \mathbb{R}\}
+        </me>
+        and
+        <me>
+          \mathbb{R}^3=\mathbb{R}\times \mathbb{R}\times \mathbb{R}=\{(x,y,z)\mid x,y,z\in \mathbb{R}\}
+        </me>.
+      </p>
+    </statement>
+  </example>
+  <problem>
+    <statement>
+      <p>
+        Consider the sets <m>A</m> and <m>B</m> from <xref ref="ex_CartesianProduct">Example</xref>.
+        <ol>
+          <li>
+            <p>
+              Find <m>B\times A</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Find <m>B\times B</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Let <m>A=\{1, 2, 3\}</m>, <m>B=\{1,2\}</m>, and <m>C=\{1,3\}</m>.
+        Find <m>A \times B\times C</m>.
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        If <m>A</m> is a set, then what is <m>A\times \emptyset</m> equal to?
+      </p>
+    </statement>
+  </problem>
+  <problem xml:id="prob_cardinality_of_product">
+    <statement>
+      <p>
+        If <m>A</m> and <m>B</m> are both finite sets,
+        find a nice formula for <m>|A\times B|</m>.
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Are collections of words or strings that we encountered earlier in the chapter just Cartesian products in disguise?
+        Explain.
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Is a set of dominoes a Cartesian product in disguise?
+        Explain.
+      </p>
+    </statement>
+  </problem>
+  <p>
+    We have been dancing around a fundamental counting principle.
+    Let's state it officially.
+    There are three progressively more general versions,
+    the first of which we already encountered in <xref ref="prob_cardinality_of_product">Problem</xref>.
+    The second version officially follows from the first version by induction,
+    which is a topic we will encounter later.
+    The third version follows from the second by making a careful use of notation to identify the set
+    <m>\mathcal{O}</m> with a Cartesian product.
+  </p>
+  <theorem>
+    <title>Product Principle</title>
+    <statement>
+      <p>
+        Each of the following are referred to as the
+        <term>Product Principle</term>.
+        <ol>
+          <li>
+            <p>
+              If <m>A</m> and <m>B</m> are finite sets, then
+              <me>
+                {|A\times B|=|A|\cdot |B|.}
+              </me>
+            </p>
+          </li>
+          <li>
+            <p>
+              If <m>A_1,\ldots,A_k</m> are finite sets, then
+              <me>
+                {|A_1\times\cdots \times A_k|=|A_1|\cdots |A_k|.}
+              </me>
+            </p>
+          </li>
+          <li>
+            <p>
+              If <m>\mathcal{O}</m> is the set of outcomes for a <m>k</m>-step process,
+              where for <m>1\leq i\leq k</m>,
+              there are <m>n_i</m> choices for step <m>i</m>,
+              no matter what earlier choices were made, then
+              <me>
+                {|\mathcal{O}|=n_1n_2\cdots n_k.}
+              </me>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </theorem>
+  <p>
+    The key difference between versions (b) and (c) of the Product Principle is that version<nbsp/>(c) does not assume that the set of choices for step <m>i</m> is independent of the previous choices.
+  </p>
+  <problem>
+    <statement>
+      <p>
+        A fashion-challenged freshman has three pair of pants,
+        five shirts
+        (all t-shirts, but different patterns)
+        and a pair of sandals.
+        How many different ensembles are available for this freshman?
+      </p>
+    </statement>
+  </problem>
+  <problem xml:id="prob_coin_flips">
+    <statement>
+      <p>
+        Suppose you flip a coin fives times in a row,
+        recording the sequence of heads and tails that you see.
+        How many different sequences of flips are possible?
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Suppose we roll a six-sided die and then flip a coin.
+        How many distinct outcomes are possible?
+      </p>
+    </statement>
+  </problem>
+  <problem xml:id="prob_bit_strings">
+    <statement>
+      <p>
+        How many bit strings of length <m>n</m> are there?
+        How many of these start and end with the bit 1?
+      </p>
+    </statement>
+  </problem>
+  <problem xml:id="prob_number_of_subsets">
+    <statement>
+      <p>
+        How many subsets does a set with <m>n</m> elements have?
+        Make sure you are taking the case <m>n=0</m> into account.
+        You should be able to carefully justify your answer by cleverly utilizing the Product Principle.
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        How many four-letter words are there using lower-case English letter consonants
+        (including <m>y</m>)
+        that include exactly one occurrence of <m>b</m>?
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        A pass code consists of a string of two or three case-sensitive English letters followed by three digits (i.e., <m>0,1,2,3,4,5,6,7,8,9</m>).
+        How many different possible pass codes are there?
+      </p>
+    </statement>
+  </problem>
+  <p>
+    So far we have encountered the following fundamental methods for determining the cardinality of a set:
+    <ul>
+      <li>
+        <p>
+          Systematic <term>brute-force</term> (with good bookkeeping);
+        </p>
+      </li>
+      <li>
+        <p>
+          <term>Sum Principle:</term> If there are multiple disjoint cases,
+          we can add up the sizes of the various cases.
+          If you can phrase a problem with
+          <q>or</q>, you should consider adding cases.
+        </p>
+      </li>
+      <li>
+        <p>
+          <term>Product Principle:</term> If all the elements/outcomes can be constructed using a step-by-step process,
+          you should multiply the number of ways each step in process can occur.
+          Be on the look out for the keywords
+          <q>and</q>
+          or
+          <q>then</q>.
+        </p>
+      </li>
+    </ul>
+  </p>
+  <p>
+    The next result is simply a special case of <xref ref="thm_sum_principle">Theorem</xref>.
+    Sometimes it might be easier to count the opposite of what you are looking to count and then to subtract from the size of the universe of discourse.
+    This idea is sometimes referred to as the
+    <term>Subtraction Principle</term>.
+    Keep this in mind as a method of attack for future problems.
+  </p>
+  <theorem>
+    <title>Subtraction Principle</title>
+    <statement>
+      <p>
+        If <m>A</m> is a subset of a universe of discourse <m>U</m>,
+        then <m>{|U|=|A|+|A^c|}</m>, or equivalently, <m>{|A|=|U|-|A^c|}</m>.
+      </p>
+    </statement>
+  </theorem>
+  <problem>
+    <statement>
+      <p>
+        How many words of length 4 are there consisting of lower-case English letters that utilize at least two x's?
+        Find the answer in two different ways.
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        How many words of length 6 are there consisting of lower-case English letters subject to the following constraints?
+        <ol>
+          <li>
+            <p>
+              No constraints.
+            </p>
+          </li>
+          <li>
+            <p>
+              Repetition not allowed.
+            </p>
+          </li>
+          <li>
+            <p>
+              No instances of letter <m>a</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              At least one occurrence of letter <m>a</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Six friends sit on one side of long rectangular table.
+        <ol>
+          <li>
+            <p>
+              How many seating arrangements are there?
+            </p>
+          </li>
+          <li>
+            <p>
+              How many seating arrangements are there if Sally and Maria always sit next to each other?
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+  <p>
+    The next principle, called the <term>Division Principle</term>,
+    provides a method for ignoring
+    <q>unimportant</q>
+    differences when counting things.
+    Loosely speaking,
+    the general idea is count a larger set of distinct objects and then use the Division Principle to
+    <q>merge</q>
+    the ones that are not significantly different from each other.
+    As a motivating example,
+    suppose my kids have 30 toys scattered around the room.
+    After asking my kids to pick up all the toys and put each toy in a bin according to what type of toy it is (e.g., Transformer),
+    there ends up being 6 toys in each bin.
+    In this case,
+    it is easy to see that there must be 5 distinct bins.
+  </p>
+  <theorem>
+    <title>Division Principle</title>
+    <statement>
+      <p>
+        If the finite set <m>A</m> is the union of <m>n</m> pairwise disjoint subsets each with <m>d</m> elements,
+        then <m>|A|=n\cdot d</m>.
+        Equivalently, <m>n=|A|/d</m>.
+      </p>
+    </statement>
+  </theorem>
+  <problem xml:id="prop_circular_table">
+    <statement>
+      <p>
+        Six friends sit around a circle to play a game.
+        Rotations of the group do not constitute different seating orders.
+        <ol>
+          <li>
+            <p>
+              How many circular seating arrangements are there?
+            </p>
+          </li>
+          <li>
+            <p>
+              How many circular seating arrangements are there if Sally and Maria always sit next to each other?
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        How many ways can the letters of the word SLOPPY be arranged?
+      </p>
+    </statement>
+  </problem>
+  <problem xml:id="prob_candy">
+    <statement>
+      <p>
+        It's Halloween and five students arrive at my office begging for candy.
+        I happen to have five pieces of candy.
+        Depending on my mood, I may give away none of the candy,
+        all of the candy, or any amount in between.
+        Assuming I don't give any student more than one piece of candy,
+        how many different ways can I distribute the candy?
+        Does it matter if the pieces of candy are identical or not?
+        If so, count both situations.
+      </p>
+    </statement>
+  </problem>
+</chapter>

@@ -1,0 +1,480 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Functions</title>
+  <p>
+    Let <m>X</m> and <m>Y</m> be two nonempty sets.
+    A <term>function <m>f</m> from <m>X</m> to <m>Y</m></term>
+    is a subset of <m>X\times Y</m> such that for every <m>x\in X</m>,
+    there exists a unique <m>y\in Y</m> such that <m>(x,y)\in f</m>.
+    The set <m>X</m> is called the <term>domain</term>
+    of <m>f</m> and is denoted by <m>{\dom(f)}</m>.
+    The set <m>Y</m> is called the <term>codomain</term>
+    of <m>f</m> and is denoted by
+    <m>{\codom(f)}</m> while the subset of the codomain defined via
+    <me>
+      {\range(f)\coloneqq \{y\in Y\mid \mbox{there exists } x\mbox{ such that }  (x,y)\in f\}}
+    </me>
+    is called the <term>range</term> of <m>f</m> or the
+    <term>image of <m>X</m></term> under <m>f</m>.
+  </p>
+  <p>
+    There is a variety of notation and terminology associated to functions.
+    We will write <m>{f:X\to Y}</m> to indicate that <m>f</m> is a function from <m>X</m> to <m>Y</m>.
+    We will make use of statements such as
+    <q>Let <m>f:X\to Y</m> be the function defined via<ellipsis/></q>
+    or
+    <q>Define <m>f:X\to Y</m> via<ellipsis/></q>, where <m>f</m> is understood to be a function in the second statement.
+    Sometimes the word <term>mapping</term>
+    (or <term>map</term>)
+    is used in place of the word function.
+    If <m>(x,y)\in f</m> for a function <m>f</m>,
+    we often write <m>{f(x)=y}</m> and say that
+    <q><m>f</m> maps <m>x</m> to <m>y</m></q>
+    or
+    <q><m>f</m> of <m>x</m> equals <m>y</m></q>. In this case, <m>x</m> may be called an
+    <term>input</term> of <m>f</m> and is the
+    <term>preimage</term> of <m>y</m> under <m>f</m> while <m>y</m> is called an <term>output</term>
+    of <m>f</m> and is the <term>image</term>
+    of <m>x</m> under <m>f</m>.
+    Note that the domain of a function is the set of inputs while the range is the set of outputs for the function.
+  </p>
+  <p>
+    Sometimes we can represent functions visual representations called <term>function</term>
+    (or <term>mapping</term>)
+    <term>diagrams</term>,
+    where the elements of the domain and codomain are indicated by labeled nodes and ordered pairs for the function are indicated by an arrow pointing from the node for input to the node for the output.
+    When drawing function diagrams,
+    it is standard practice to put the elements for the domain on the left and the elements for the codomain on the right,
+    so that all directed edges point from left to right.
+    We may also draw an additional arrow labeled by the name of the function from the domain to the codomain.
+  </p>
+  <example xml:id="ex_function">
+    <statement>
+      <p>
+        <xref ref="fig_function_diagram">Figure</xref>
+        depicts a function <m>f:X\to Y</m> for the sets
+        <m>X=\{a,b,c,d\}</m> to <m>Y=\{1,2,3,4\}</m>.
+        In this case, we see that <m>\range(f)=\{1,2,4\}</m>.
+        Moreover, we can write things like <m>f(a)=2</m> and <m>c\mapsto 4</m>,
+        and say things like
+        <q><m>f</m> maps <m>b</m> to 4</q>
+        and
+        <q>the image of <m>d</m> is 1.</q>
+        Note that it is perfectly okay to have both <m>b</m> and <m>c</m> mapped to 4.
+      </p>
+    </statement>
+  </example>
+  <p>
+    \tikzset{every loop/.style={min distance=8mm}} \tikzstyle{vert} = [circle, draw,
+    fill=grey,inner sep=0pt, minimum size=5mm] \tikzstyle{b} = [draw,-stealth]
+  </p>
+  <figure xml:id="fig_function_diagram">
+    <caption>Function diagram for a function from <m>X=\{a,b,c,d,\}</m> to <m>Y=\{1,2,3,4\}</m>.</caption>
+    <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\node[vert] (A) at (0,4) {\scriptsize \(a\)};
+\node[vert] (B) at (0,3) {\scriptsize \(b\)};
+\node[vert] (C) at (0,2) {\scriptsize \(c\)};
+\node[vert] (D) at (0,1) {\scriptsize \(d\)};
+\node[vert] (1) at (2.5,4) {\scriptsize \(1\)};
+\node[vert] (2) at (2.5,3) {\scriptsize \(2\)};
+\node[vert] (3) at (2.5,2) {\scriptsize \(3\)};
+\node[vert] (4) at (2.5,1) {\scriptsize \(4\)};
+\path (A) edge node {} (2)
+(B) edge node {} (4)
+(C) edge node {} (4)
+(D) edge node {} (1);
+\node[draw,rounded corners,fit=(A) (B) (C) (D),minimum width=1.3cm,gray] {};
+\node[draw,rounded corners,fit=(1) (2) (3) (4),minimum width=1.3cm,gray] {};
+\node (X) at (0,4.6) {\(X\)};
+\node (Y) at (2.5,4.6) {\(Y\)};
+\path (X) edge [bend left] node {\(f\)} (Y);\end{tikzpicture}]]>
+</latex-image>
+    </image>
+  </figure>
+  <p>
+    Sometimes we can define a function using a formula.
+    For example,
+    we can write <m>f(x)=x^2-1</m> to mean that each <m>x</m> in the domain of <m>f</m> maps to <m>x^2-1</m> in the codomain.
+    However, notice that providing only a formula is ambiguous!
+    A function is determined by its domain,
+    codomain, and the correspondence between these two sets.
+    If we only provide a description for the correspondence,
+    it is not clear what the domain and codomain are.
+    Two functions that are defined by the same formula,
+    but have different domains or codomains are <em>not</em> equal.
+    It is important to point out that not every function can be described using a formula!
+    Despite your prior experience,
+    functions that can be represented succinctly using a formula are rare.
+  </p>
+  <example>
+    <statement>
+      <p>
+        The function <m>f:\mathbb{R}\to \mathbb{R}</m> defined via
+        <m>f(x)=x^{2}-1</m> is not equal to the function <m>g:\mathbb{N}\to\mathbb{R}</m> defined by
+        <m>g(x)=x^{2}-1</m> since the two functions do not have the same domain.
+      </p>
+    </statement>
+  </example>
+  <problem>
+    <statement>
+      <p>
+        Provide an example of each of the following.
+        You may draw a function diagram,
+        write down a list of ordered pairs that represents the assignment,
+        or write a formula as long as the domain and codomain are clear.
+        <ol>
+          <li>
+            <p>
+              A function <m>f</m> from a set with 4 elements to a set with 3 elements such that <m>\range(f)=\codom(f)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              A function <m>g</m> from a set with 4 elements to a set with 3 elements such that
+              <m>\range(g)</m> is strictly smaller than <m>\codom(g)</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        In high school you may have been told that a graph represents a function if it passes the
+        <term>vertical line test</term>.
+        Carefully state what the vertical line test says and then explain why it works.
+      </p>
+    </statement>
+  </problem>
+  <p>
+    A <term>piecewise-defined function</term>
+    (or <term>piecewise function</term>)
+    is a function defined by specifying its output on a partition (i.e.,
+    <q>disjoint chunks</q>
+    ) of the domain.
+    Note that
+    <q>piecewise</q>
+    is a way of expressing the function,
+    rather than a property of the function itself.
+  </p>
+  <example>
+    <statement>
+      <p>
+        The function <m>f:\mathbb{R}\to \mathbb{R}</m> defined via
+        <me>
+          f(x)=\begin{cases}x^2-1, \amp  \mbox{if }  x\geq 0,\\ 17, \amp  \mbox{if }  -2\leq x\lt  0,\\ -x, \amp  \mbox{if }  x\lt -2 \end{cases}
+        </me>
+        is an example of a piecewise-defined function.
+      </p>
+    </statement>
+  </example>
+  <problem>
+    <statement>
+      <p>
+        Define <m>f:\mathbb{R}\setminus\{0\}\to \mathbb{R}</m> via <m>f(x)=\frac{|x|}{x}</m>.
+        Express <m>f</m> as a piecewise function.
+      </p>
+    </statement>
+  </problem>
+  <problem xml:id="prob_binary_output_function">
+    <statement>
+      <p>
+        Let <m>n\in\mathbb{N}</m>.
+        Count all functions <m>f:\{1,2,\ldots,n\}\to \{0,1\}</m>.
+        How is this problem related to <xref ref="prob_bit_strings">Problem</xref>?
+        How is this problem related to <xref ref="prob_number_of_subsets">Problem</xref>?
+      </p>
+    </statement>
+  </problem>
+  <p>
+    Let <m>f:X\to Y</m> be a function.
+    We define the following.
+    <ol>
+      <li>
+        <p>
+          The function <m>f</m> is said to be <term>injective</term>
+          (or <term>one-to-one</term>)
+          if for all <m>y\in \range(f)</m>,
+          there is a unique <m>x\in X</m> such that <m>y=f(x)</m>.
+          Said another way, <m>f</m> is one-to-one provided
+          <m>f(x) = f(y)</m> implies that <m>x = y</m>,
+          or equivalently <m>x \ne y</m>
+          (in <m>X</m>)
+          implies <m>f(x) \ne f(y)</m>.
+          That is, different inputs produce different outputs.
+        </p>
+      </li>
+      <li>
+        <p>
+          The function <m>f</m> is said to be <term>surjective</term>
+          (or <term>onto</term>)
+          if for all <m>y\in Y</m>,
+          there exists <m>x\in X</m> such that <m>y=f(x)</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          If <m>f</m> is both injective and surjective,
+          we say that <m>f</m> is <term>bijective</term>.
+        </p>
+      </li>
+    </ol>
+  </p>
+  <problem>
+    <statement>
+      <p>
+        Assume that <m>X</m> and <m>Y</m> are finite sets.
+        Provide an example of each of the following.
+        You may draw a function diagram,
+        write down a list of ordered pairs,
+        or write a formula as long as the domain and codomain are clear.
+        <ol>
+          <li>
+            <p>
+              A function <m>f:X\to Y</m> that is injective but not surjective.
+            </p>
+          </li>
+          <li>
+            <p>
+              A function <m>f:X\to Y</m> that is surjective but not injective.
+            </p>
+          </li>
+          <li>
+            <p>
+              A function <m>f:X\to Y</m> that is a bijection.
+            </p>
+          </li>
+          <li>
+            <p>
+              A function <m>f:X\to Y</m> that is neither injective nor surjective.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+  <problem xml:id="prob_injective_surjective_functions">
+    <statement>
+      <p>
+        Determine whether each of the following functions is injective,
+        surjective, both, or neither.
+        <ol>
+          <li>
+            <p>
+              Define <m>f:\mathbb{R}\to \mathbb{R}</m> via <m>f(x)=x^{2}</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              Define <m>g:\mathbb{R}\to [0,\infty)</m> via <m>g(x)=x^{2}</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              Define <m>h:\mathbb{R}\to \mathbb{R}</m> via <m>h(x)=x^{3}</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              Define <m>k:\mathbb{R}\to \mathbb{R}</m> via <m>k(x)=x^{3}-x</m>
+            </p>
+          </li>
+          <li xml:id="circles">
+            <p>
+              Define <m>c: \mathbb{R}\times \mathbb{R}\to \mathbb{R}</m> via <m>c(x,y)=x^{2}+y^{2}</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              Define <m>f:\mathbb{N}\to \mathbb{N}\times \mathbb{N}</m> via <m>f(n)=(n,n)</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              Define <m>g:\mathbb{Z}\to \mathbb{Z}</m> via
+              <me>
+                g(n)=\begin{cases}\frac{n}{2}, \amp  \text{ if } n\text{ is even } \\ \frac{n+1}{2}, \amp  \text{ if } n\text{ is odd } \end{cases}
+              </me>
+            </p>
+          </li>
+          <li>
+            <p>
+              Define <m>\ell:\mathbb{Z}\to \mathbb{N}</m> via
+              <me>
+                \ell(n)=\begin{cases}2n+1, \amp  \text{ if } n\geq 0\\ -2n, \amp  \text{ if } n\lt 0 \end{cases}
+              </me>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Suppose <m>X\subseteq \mathbb{R}</m> and <m>f:X\to \mathbb{R}</m> is a function.
+        Fill in the blank with the appropriate word.
+      </p>
+      <blockquote>
+        The function <m>f:X\to \mathbb{R}</m> is <em><nbsp/> <nbsp/> <nbsp/> <nbsp/>   <nbsp/> <nbsp/> <nbsp/> <nbsp/> </em> if and only if every horizontal line hits the graph of <m>f</m> <em>at most once</em>.
+      </blockquote>
+      <p>
+        This statement is often called the
+        <term>horizontal line test</term>.
+        Explain why the horizontal line test is true.
+        What kind of theorems to we get if we replace
+        <q>at most once</q>
+        with either
+        <q>at least once</q>
+        or
+        <q>exactly once</q>?
+      </p>
+    </statement>
+  </problem>
+  <problem xml:id="prob_injective_surjective_cardinality">
+    <statement>
+      <p>
+        Suppose <m>f:A\to B</m> is a function for finite sets <m>A</m> and <m>B</m>.
+        Explain why each of the following statements is true.
+        <ol>
+          <li>
+            <p>
+              If <m>f</m> is an injection, then <m>|A|\leq |B|</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              If <m>f</m> is a surjection, then <m>|A|\geq |B|</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              If <m>f</m> is a bijection, then <m>|A|=|B|</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Let <m>A</m> and <m>B</m> be nonempty finite sets with <m>|A|=n</m> and <m>|B|=k</m>.
+        <ol>
+          <li>
+            <p>
+              How many different functions are there from <m>A</m> to <m>B</m>?
+            </p>
+          </li>
+          <li>
+            <p>
+              If <m>n\leq k</m>,
+              how many injective functions are there from <m>A</m> to <m>B</m>?
+            </p>
+          </li>
+          <li>
+            <p>
+              If <m>n=k</m>,
+              how many bijective functions are there from <m>A</m> to <m>B</m>?
+            </p>
+          </li>
+          <li>
+            <p>
+              If <m>n\geq k</m>,
+              do you think it would be challenging to count the number of surjective functions from <m>A</m> to <m>B</m>?
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+  <p>
+    The next theorem states an important counting technique,
+    which we refer to as the <term>Bijection Principle</term>.
+  </p>
+  <theorem>
+    <title>Bijection Principle</title>
+    <statement>
+      <p>
+        If <m>|B|=k</m> and there exists a bijection between <m>A</m> and <m>B</m>,
+        then <m>|A|=k</m>, as well.
+      </p>
+    </statement>
+  </theorem>
+  <problem>
+    <statement>
+      <p>
+        Let <m>A</m> denote the set of ways to distribute candy in <xref ref="prob_candy">Problem</xref>
+        (in the situation where the candy is all identical)
+        and let <m>B</m> denote the set of sequence of coin flips in <xref ref="prob_coin_flips">Problem</xref>.
+        Find a bijection <m>f:A\to B</m>.
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Utilize a bijection to connect <xref ref="prob_bit_strings">Problems</xref>
+        and <xref ref="prob_number_of_subsets"></xref>.
+      </p>
+    </statement>
+  </problem>
+  <p>
+    The next problem illustrates that some care must be taken when attempting to define a function.
+  </p>
+  <problem xml:id="prob_not_well_defined">
+    <statement>
+      <p>
+        For each of the following,
+        explain why the given description does not define a function.
+        <ol>
+          <li>
+            <p>
+              Define <m>f:\{1,2,3\}\to \{1,2,3\}</m> via <m>f(a)=a-1</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Define <m>g:\mathbb{N}\to \mathbb{Q}</m> via <m>g(n)=\frac{n}{n-1}</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Let <m>A_1=\{1,2,3\}</m> and <m>A_2=\{3,4,5\}</m>.
+              Define <m>h:A_1\cup A_2\to \{1,2\}</m> via
+              <me>
+                h(x)=\begin{cases}1, \amp  \mbox{if } x\in A_1\\ 2, \amp  \mbox{if } x\in A_2. \end{cases}
+              </me>
+            </p>
+          </li>
+          <li>
+            <p>
+              Define <m>s:\mathbb{Q}\to \mathbb{Z}</m> via <m>s(a/b)=a+b</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+  <p>
+    In mathematics,
+    we say that an expression is <term>well defined</term>
+    (or <term>unambiguous</term>)
+    if its definition yields a unique interpretation.
+    Otherwise, we say that the expression is not well defined
+    (or is <term>ambiguous</term>).
+    For example, if <m>a,b,c\in\mathbb{R}</m>,
+    then the expression <m>abc</m> is well defined since it does not matter if we interpret this as <m>(ab)c</m> or <m>a(bc)</m> since the real numbers are associative under multiplication.
+  </p>
+  <p>
+    When we attempt to define a function,
+    it may not be clear without doing some work that our definition really does yield a function.
+    If there is some potential ambiguity in the definition of a function that ends up not causing any issues,
+    we say that the function is well defined.
+    However, this phrase is a bit of misnomer since all functions are well defined.
+    The issue of whether a description for a proposed function is well defined often arises when defining things in terms of how an element of the domain is written.
+    For example,
+    the descriptions given in Parts<nbsp/>(c) and<nbsp/>(d) of <xref ref="prob_not_well_defined">Problem</xref> are not well defined.
+  </p>
+</chapter>

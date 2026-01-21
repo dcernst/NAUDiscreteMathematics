@@ -1,0 +1,292 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Permutations</title>
+  <p>
+    For <m>n\in\mathbb{N}</m>, we define <m>{[n]:=\{1,2,\ldots,n\}}</m>.
+    That is, <m>[n]</m> is just clever shorthand for the set containing 1 through <m>n</m>.
+    This notation is meant to resemble interval notation.
+  </p>
+  <p>
+    For <m>k\in\mathbb{N}</m> and a nonempty set <m>A</m>,
+    a <term><m>k</m>-permutation</term>
+    of <m>A</m> is an injective function <m>w:[k]\to A</m>.
+    The set of all <m>k</m>-permutations of <m>A</m> is denoted by <m>{S_{A,k}}</m>.
+    If <m>A</m> happens to be the set <m>[n]</m>,
+    we use the notation <m>{S_{n,k}}</m>.
+    And if <m>n=k</m>, we write
+    <m>{S_n:=S_{n,n}}</m> and refer to each <m>n</m>-permutation in <m>S_n</m> as a <term>permutation</term>.
+    Let <m>{P(n,k):=|S_{n,k}|}</m>.
+    By convention, we set <m>{P(n,0):=1}</m>,
+    including the case when <m>n=0</m>.
+  </p>
+  <problem>
+    <statement>
+      <p>
+        Complete the following.
+        <ol>
+          <li>
+            <p>
+              Write down all of the elements in <m>S_3</m>.
+              What is <m>P(3,3)</m>?
+            </p>
+          </li>
+          <li>
+            <p>
+              Write down all of the elements in <m>S_{4,3}</m>.
+              What is <m>P(4,3)</m>?
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+  <p>
+    The game of chess is played on an <m>8\times 8</m> grid.
+    We will consider chessboards with arbitrary dimensions,
+    say <m>n\times k</m> (<m>n</m> rows,
+    <m>k</m> columns) with <m>1\leq k \leq n</m>.
+    A rook is a castle-shaped piece that can move horizontally or vertically any number of squares.
+    In a typical chess game, there are two black rooks and two white rooks,
+    but for our purposes we will assume we have <m>k</m> rooks,
+    where all the rooks are the same color.
+    We say that an arrangement of rooks on an <m>n\times k</m> chessboard is
+    <term>non-attacking</term>
+    if no two rooks lie in the same row or column.
+    <xref ref="fig_nonattacking">Figure</xref>
+    shows one possible non-attacking rook arrangement on an <m>6\times 4</m> chessboard.
+  </p>
+  <figure xml:id="fig_nonattacking">
+    <caption>A non-attacking rook arrangement on a <m>6\times 4</m> chessboard.</caption>
+    <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\draw[step=1cm,color=gray] (-2,-3) grid (2,3);
+\matrix[matrix of nodes,nodes={inner sep=0pt,text width=1cm,align=center,minimum height=1cm}]{
+&amp; \symrook &amp;   &amp;   \\
+&amp;  &amp;   &amp;   \\
+&amp;   &amp;   &amp; \symrook \\
+\symrook &amp;   &amp;   &amp;   \\
+&amp;   &amp; \symrook &amp;  \\
+&amp;   &amp;  &amp;  \\};\end{tikzpicture}]]>
+</latex-image>
+    </image>
+  </figure>
+  <problem>
+    <statement>
+      <p>
+        Consider the collection of <m>k</m>-permutations in <m>S_{n,k}</m> with <m>1\leq k\leq n</m>.
+        Explain why <m>P(n,k)</m> is equal to the number of non-attacking rook arrangements on an <m>n\times k</m> chess board.
+        <em>Hint:</em> Establish a bijection between the collection of non-attacking rook arrangements on an
+        <m>n\times k</m> chess board and the collection of <m>k</m>-permutations.
+      </p>
+    </statement>
+  </problem>
+  <p>
+    Recall that for <m>n\in\mathbb{N}</m>,
+    the <term>factorial</term> of <m>n</m> is defined <m>{n!:=n\cdot (n-1)\cdots 2\cdot 1}</m>,
+    and we define <m>{0!:=1}</m> for convenience.
+  </p>
+  <theorem xml:id="thm_permutations_formula">
+    <statement>
+      <p>
+        For <m>1\leq k\leq n</m>, we have
+        <me>
+          {P(n,k)=n\cdot (n-1)\cdots (n+1-k) = \frac{n!}{(n-k)!}.}
+        </me>
+      </p>
+    </statement>
+  </theorem>
+  <p>
+    Note that as a special case of the formula above,
+    we have <m>|S_n|=P(n,n)=n!</m> and we obtain
+    <me>
+      {P(0,0)=\frac{0!}{(0-0)!}=1} \text{ and }  {P(n,0)=\frac{n!}{(n-0)!}=1.}
+    </me>
+  </p>
+  <p>
+    We can think of a <m>k</m>-permutation as a linearly-ordered arrangement (i.e., string) of <m>k</m> of <m>n</m> objects.
+    That is, we can denote a <m>k</m>-permutation as a string <m>w=w(1)w(2)\cdots w(k)</m>,
+    where each <m>w(i)\in [n]</m> and <m>w(i)\neq w(j)</m> for <m>i\neq j</m>.
+    For example, if <m>n=6</m> and <m>k=4</m>,
+    then the string <m>3624</m> represents the <m>4</m>-permutation <m>w:[4]\to [6]</m> given by
+    <me>
+      w(1)=3, w(2)=6, w(3)=2,w(4)=4
+    </me>.
+  </p>
+  <p>
+    Do you see why this <m>4</m>-permutation corresponds to the non-attacking rook arrangement in <xref ref="fig_non-attacking">Figure</xref>?
+  </p>
+  <p>
+    In the case when <m>n=k</m>,
+    we can denote a permutation as a string <m>w=w(1)w(2)\cdots w(n)</m>,
+    where each entry <m>w(i)</m> appears once.
+    For example,
+    the string <m>w=241365</m> represents the bijection <m>w:[6]\to [6]</m> given by
+    <me>
+      w(1)=2, w(2)=4, w(3)=1, w(4)=3, w(5)=6, w(6)=5
+    </me>.
+  </p>
+  <problem>
+    <statement>
+      <p>
+        How many strings of length three are there using letters from
+        <m>\{a,b,c,d,e,f,g\}</m> if the letters in the string are not repeated?
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        There are 8 finalists at the Olympic Games 100 meters sprint.
+        Assume there are no ties.
+        <ol>
+          <li>
+            <p>
+              How many ways are there for the runners to finish?
+            </p>
+          </li>
+          <li>
+            <p>
+              How many ways are there for the runners to get gold, silver, bronze?
+            </p>
+          </li>
+          <li>
+            <p>
+              How many ways are there for the runners to get gold, silver,
+              bronze given that Usain Bolt is sure to get the gold medal?
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        If <m>1\leq k\leq n</m>, prove that <m>{P(n,k)=P(n-1,k)+kP(n-1,k-1)}</m>,
+        both using the formula in <xref ref="thm_permutations_formula">Theorem</xref>,
+        and separately using the definition of <m>k</m>-permutations together with Product and Sum Principles.
+        The latter approach is an example of a
+        <term>combinatorial proof</term>.
+      </p>
+    </statement>
+  </problem>
+  <p>
+    The formula in the previous problem is an example of a
+    <term>recurrence relation</term>,
+    which will be a topic of focus in a later chapter.
+  </p>
+  <p>
+    Interpreting a permutation as a linearly ordered arrangement of object (i.e., string),
+    a <term>circular permutation</term>
+    is similar to a permutation except the objects are arranged on a circle,
+    so that there is no beginning or end.
+    We can present a circular permutation <m>w</m> of length <m>n</m> as in <xref ref="fig_circular_permutation">Figure</xref>.
+    Each <m>w(i)</m> is a distinct value from <m>[n]</m>,
+    and reading clockwise we encounter
+    <m>w(1),
+    w(2),\ldots,w(n)</m>, so that <m>w(n)</m> is placed next to <m>w(1)</m>.
+    Any circular rotation yields the same circular permutation.
+  </p>
+  <figure xml:id="fig_circular_permutation">
+    <caption>Representation of a circular permutation.</caption>
+    <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}
+\path
+pic[rotate=90,circular diagram/.cd,radius=4,arcs={{[bend]}-}]{
+circular diagram={w(1)/,w(n)/,w(n-1)/,
+\rotatebox{-50}{\(\dots\)}/,w(i)/,\rotatebox{50}{\(\dots\)}/,w(3)/,w(2)/}}
+;\end{tikzpicture}]]>
+</latex-image>
+    </image>
+  </figure>
+  <p>
+    We encountered circular permutations back in <xref ref="prop_circular_table">Problem</xref>
+    when we counted circular seating arrangements of six friends sitting around a circle to play a game.
+    Recall that the trick in that problem was to make use of the Division Principle.
+  </p>
+  <problem>
+    <statement>
+      <p>
+        How many circular permutations are there of length <m>n</m>?
+      </p>
+    </statement>
+  </problem>
+  <p>
+    Moving away from circular permutations and back to <m>k</m>-permutations,
+    recall that we can represent each <m>k</m>-permutation of <m>[n]</m> as a string of length <m>k</m>,
+    where each entry is from <m>[n]</m> and no repeats are allowed.
+    What if we allow repeats?
+  </p>
+  <problem>
+    <statement>
+      <p>
+        How many ways can the letters of the word PRESCOTT be arranged?
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        How many ways can the letters of the word POPPY be arranged?
+        Try to solve this problem in two different ways.
+      </p>
+    </statement>
+  </problem>
+  <p>
+    Consider a set of <m>n</m> objects that are not necessarily distinct,
+    with <m>p</m> different types objects and <m>n_i</m> objects of type <m>i</m>
+    (for <m>i=1,2,\ldots, p</m>),
+    so that <m>n=n_1+\cdots +n_p</m>.
+    An ordered arrangement of these <m>n</m> objects is called a
+    <term>generalized permutation</term>
+    and the number of such arrangements is denoted by <m>{P(n;n_1,\ldots,n_p)}</m>.
+    For example,
+    the number of words we can make out of the letters of POPPY is <m>P(5;3,1,1)</m>.
+    The following theorem follows immediately from the Division Principle.
+  </p>
+  <theorem>
+    <statement>
+      <p>
+        For <m>n,n_1,\ldots,n_p\in \mathbb{N}</m> such that <m>n=n_1+\cdots +n_p</m>, we have
+        <me>
+          {P(n;n_1,\ldots,n_p)=\frac{n!}{n_1!\cdots n_p!}.}
+        </me>
+      </p>
+    </statement>
+  </theorem>
+  <problem>
+    <statement>
+      <p>
+        How many ways can the letters of the word MISSISSIPPI be arranged?
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        In Professor X's class of 9 graduate students she will give two A's, one B, and six C's.
+        How many possible ways are there to do this?
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Let's revisit <xref ref="prob_coffee">Problem</xref>,
+        which involved my walk to get coffee.
+        When we attacked that problem,
+        we did a lot of brute force.
+        Do we now have an easier method?
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        In how many ways can a deck of 52 cards be dealt to four players,
+        say <m>N</m>,
+        <m>E</m>, <m>S</m>, and <m>W</m>?
+      </p>
+    </statement>
+  </problem>
+</chapter>

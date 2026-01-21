@@ -1,0 +1,120 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="chap_pigeonhole_principle">
+  <title>Pigeonhole Principle</title>
+  <p>
+    The <term>Pigeonhole Principle</term> is a very natural idea.
+    It says: If a collection of at least <m>n+1</m> objects is put into <m>n</m> boxes,
+    then there is a box with at least two things in it.
+    The Pigeonhole Principle has surprisingly deep applications.
+    We will start with a few examples.
+  </p>
+  <example>
+    <statement>
+      <p>
+        Back in <xref ref="prob_injective_surjective_cardinality">Problem</xref>,
+        we implicitly used the Pigeonhole Principle when we argued that if
+        <m>f:A\to B</m> is a function for finite sets <m>A</m> and <m>B</m>, then
+        <ol>
+          <li>
+            <p>
+              If <m>f</m> is an injection, then <m>|A|\leq |B|</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              If <m>f</m> is a surjection, then <m>|A|\geq |B|</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </example>
+  <problem xml:id="prob_colored_balls_in_box">
+    <statement>
+      <p>
+        A box has blue, green, yellow,
+        red, orange, and white balls.
+        How many must be drawn without looking to be sure of getting at least two of the same color?
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Prove that if seven distinct numbers are selected from <m>\{1, 2, \ldots, 11\}</m>,
+        then there exists a pair of numbers that sum to 12.
+      </p>
+    </statement>
+  </problem>
+  <p>
+    We would like to generalize the Pigeonhole Principle,
+    but first we need a useful function.
+    The <term>ceiling function</term>
+    of a real number <m>x</m>,
+    written <m>{\lceil x \rceil}</m>,
+    is the smallest integer greater than or equal to <m>x</m>.
+    That is, <m>\lceil x \rceil</m> is an integer,
+    <m>\lceil x \rceil \geq x</m>,
+    and there is no other integer between <m>\lceil x \rceil</m> and <m>x</m>.
+    You can think of it as the
+    <q>round-up to an integer</q>
+    function.
+  </p>
+  <example>
+    <statement>
+      <p>
+        For example, <m>\lceil \pi \rceil = 4</m>,
+        <m>\lceil -\pi \rceil = -3</m>,
+        and <m>\lceil 7 \rceil = 7</m>.
+      </p>
+    </statement>
+  </example>
+  <p>
+    We can now generalize the Pigeonhole Principle as follows.
+  </p>
+  <theorem>
+    <title>Generalized Pigeonhole Principle</title>
+    <statement>
+      <p>
+        If <m>n</m> objects are placed in <m>m</m> boxes,
+        then there is a box with at least <m>\lceil \frac{n}{m} \rceil</m> objects.
+      </p>
+    </statement>
+  </theorem>
+  <problem>
+    <statement>
+      <p>
+        If 20 buses seating at most 50 carry 621 passengers to a ball game,
+        then some bus must have at least
+        <em><nbsp/> <nbsp/> <nbsp/> <nbsp/> <nbsp/> <nbsp/> <nbsp/> <nbsp/></em><nbsp/>passengers.
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        How many balls must be drawn from the box in <xref ref="prob_colored_balls_in_box">Problem</xref>
+        in order to be sure of getting at least 4 of the same color?
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Suppose <m>n\in\mathbb{N}</m> and let <m>S=\{1,2,\ldots,2n\}</m>.
+        Argue that if we choose <m>n+1</m> distinct elements from the set <m>S</m>,
+        then among those elements there must exist a pair of numbers such that one is a multiple of the other.
+        <em>Hint:</em> Every number in <m>S</m> is of the form <m>2^km</m>,
+        where <m>k</m> is a nonnegative integer and <m>m</m> is odd.
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Explain why every collection of ten distinct integers
+        <m>x_1, x_2, \dots,
+        x_{10}</m> must have at least one subset whose sum of the elements in the subset is divisible by 10.
+      </p>
+    </statement>
+  </problem>
+</chapter>

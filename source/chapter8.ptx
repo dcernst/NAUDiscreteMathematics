@@ -1,0 +1,503 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Mathematical Induction</title>
+  <p>
+    In this chapter, we introduce <term>mathematical induction</term>,
+    which is a proof technique that is useful for proving statements of the form
+    <q>For all natural numbers <m>n</m>, <m>P(n)</m></q>, or more generally
+    <q>For all integers <m>n\geq a</m>, <m>P(n)</m></q>, where <m>P(n)</m> is some predicate.
+    Loosely speaking,
+    a predicate <m>P(n)</m> is some statement about <m>n</m>.
+    For example,
+    <q><m>n</m> is prime</q>
+    is a predicate.
+  </p>
+  <p>
+    Consider the claims:
+    <ol>
+      <li>
+        <p>
+          For all <m>n\in\mathbb{N}</m>,
+          <m>\displaystyle 1+2+3+\cdots +n=\frac{n(n+1)}{2}</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          For all <m>n\in\mathbb{N}</m>,
+          <m>n^{2}+n+41</m> is prime.
+        </p>
+      </li>
+    </ol>
+  </p>
+  <p>
+    Let's take a look at potential proofs.
+  </p>
+  <p>
+    <em>
+    <q>Proof</q>
+    of (a).</em> If <m>n=1</m>, then <m>1=\frac{1(1+1)}{2}</m>.
+    If <m>n=2</m>, then <m>1+2=3=\frac{2(2+1)}{2}</m>.
+    If <m>n=3</m>, then <m>1+2+3=6=\frac{3(3+1)}{2}</m>, and so on.
+  </p>
+  <p>
+    <em>
+    <q>Proof</q>
+    of (b).</em> If <m>n=1</m>, then <m>n^{2}+n+41=43</m>,
+    which is prime.
+    If <m>n=2</m>, then <m>n^{2}+n+41=47</m>, which is prime.
+    If <m>n=3</m>, then <m>n^{2}+n+41=53</m>,
+    which is prime, and so on.
+  </p>
+  <p>
+    Are these actual proofs?
+    No!
+    In fact, the second claim is not even true.
+    If <m>n=41</m>, then <m>n^{2}+n+41=41^{2}+41+41=41(41+1+1)</m>,
+    which is not prime since it has 41 as a factor.
+    It turns out that the first claim is true,
+    but what we wrote cannot be a proof since the same type of reasoning when applied to the second claim seems to prove something that is not actually true.
+    We need a rigorous way of capturing
+    <q>and so on</q>
+    and a way to verify whether it really is
+    <q>and so on.</q>
+  </p>
+  <p>
+    We will not formally prove the following theorem,
+    but instead rely on our intuition.
+  </p>
+  <theorem xml:id="thm_PMI">
+    <title>Principle of Mathematical Induction</title>
+    <statement>
+      <p>
+        Let <m>P(1), P(2), P(3), \ldots</m> be a sequence of statements,
+        one for each natural number.
+        Assume
+        <ol marker="labeltextrmroman">
+          <li>
+            <p>
+              <m>P(1)</m> is true, and
+            </p>
+          </li>
+          <li>
+            <p>
+              for all <m>k\geq 1</m>, if <m>P(k)</m> is true,
+              then <m>P(k+1)</m> is true.
+            </p>
+          </li>
+        </ol>
+      </p>
+      <p>
+        Then <m>P(n)</m> is true for all <m>n\in\mathbb{N}</m>.
+      </p>
+    </statement>
+  </theorem>
+  <p>
+    The Principle of Mathematical Induction
+    (or PMI for short)
+    provides us with a process for proving statements of the form
+    <q>For all natural numbers <m>n</m>, <m>P(n)</m>,</q>
+    where <m>P(n)</m> is some predicate involving <m>n</m>.
+    Hypothesis (i) above is called the <term>base step</term>
+    (or <term>base case</term>)
+    while (ii) is called the <term>inductive step</term>.
+  </p>
+  <p>
+    Intuitively,
+    here is what the Principle of Mathematical Induction is saying.
+    Think of the statements <m>P(1), P(2), P(3),\ldots</m> as being rungs of a ladder.
+    The base step indicates that we can step onto the first rung of the ladder while the inductive step tells us that if we are on a rung of the ladder we can always move up to the next rung.
+    The Principle of Mathematical Induction asserts that if we can achieve these two things,
+    then we can climb the entire infinite ladder.
+    Do you agree that this seems reasonable?
+  </p>
+  <p>
+    You should not confuse <em>mathematical induction</em>
+    with <em>inductive reasoning</em>
+    associated with the natural sciences.
+    Inductive reasoning is a scientific method whereby one induces general principles from observations.
+    On the other hand,
+    mathematical induction is a deductive form of reasoning used to establish the validity of a proposition.
+  </p>
+  <p>
+    Here is the general structure for a proof by induction.
+  </p>
+  <p>
+    \begin{mdframed}[style=skeleton]
+  </p>
+  <proof>
+    <p>
+      We proceed by induction.
+      <ol>
+        <li>
+          <title>(i)</title>
+          <p>
+            <term>Base step:</term> <em>[Verify that <m>P(1)</m> is true.
+            This often, but not always,
+            amounts to plugging <m>n=1</m> into two sides of some claimed equation and <em>verifying</em>
+            that both sides are actually equal.]</em>
+          </p>
+        </li>
+        <li>
+          <title>(ii)</title>
+          <p>
+            <term>Inductive step:</term> <em>[Your goal is to prove
+            <q>For all <m>k\in\mathbb{N}</m>,
+            if <m>P(k)</m> is true, then <m>P(k+1)</m> is true.</q>
+            ]</em> Let <m>k\in\mathbb{N}</m> and assume that <m>P(k)</m> is true.
+            <em>[Do something to derive that <m>P(k+1)</m> is true.]</em>
+            Therefore, <m>P(k+1)</m> is true.
+          </p>
+        </li>
+      </ol>
+    </p>
+    <p>
+      Thus, by induction, <m>P(n)</m> is true for all <m>n\in\mathbb{N}</m>.
+    </p>
+  </proof>
+  <p>
+    \end{mdframed}
+  </p>
+  <problem>
+    <statement>
+      <p>
+        Conjecture a
+        <q>nice</q>
+        formula for the following summation and then prove your claim using induction:
+        <me>
+          \sum_{i=1}^n (2i-1):=1+3+5+\cdots +(2n-1)
+        </me>.
+      </p>
+      <p>
+        Independent of induction,
+        can you think of a nice visual proof of this result?
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Prove the first claim that we introduced at the beginning of the chapter using induction.
+        That is, prove that for all <m>n\in\mathbb{N}</m>,
+        <me>
+          \sum_{i=1}^{n}i=\frac{n(n+1)}{2}
+        </me>.
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Prove that for all <m>n\in\mathbb{N}</m>, 3 divides <m>4^{n}-1</m>.
+      </p>
+    </statement>
+  </problem>
+  <problem xml:id="prob_L-shapes">
+    <statement>
+      <p>
+        Consider a grid of squares that is <m>2^n</m> squares wide by <m>2^n</m> squares long,
+        where <m>n\in\mathbb{N}</m>.
+        One of the squares has been cut out,
+        but you do not know which one!
+        You have a bunch of L-shapes made up of <m>3</m> squares.
+        Prove that you can perfectly cover this chessboard with the L-shapes
+        (with no overlap)
+        for any <m>n\in\mathbb{N}</m>.
+        <xref ref="fig_L-shapes">Figure</xref>
+        depicts one possible covering for the case involving <m>n=2</m> and a fixed cut-out square.
+      </p>
+    </statement>
+  </problem>
+  <figure xml:id="fig_L-shapes">
+    <caption>One possible covering for the case involving <m>n=2</m> for <xref ref="prob_L-shapes">Problem</xref>.</caption>
+    <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\draw [fill=lightorange] (0,0) rectangle (2,1);
+\draw [fill=lightorange] (0,1) rectangle (1,2);
+\draw [fill=lightskyblue] (3,0) rectangle (4,2);
+\draw [fill=lightskyblue] (2,1) rectangle (3,2);
+\draw [fill=deeppink] (0,2) rectangle (1,4);
+\draw [fill=deeppink] (1,3) rectangle (2,4);
+\draw [fill=softplum] (1,1) rectangle (2,3);
+\draw [fill=softplum] (2,2) rectangle (3,3);
+\draw [fill=naugreen] (2,3) rectangle (4,4);
+\draw [fill=naugreen] (3,2) rectangle (4,3);
+\draw[thick] (0,0) grid (4,4);
+\node (y) at (2.5,.5){};
+\node (x) at (3.8,-.5){cut-out square};
+\draw [->, thick] (x) to [out=180,in=270] (y);\end{tikzpicture}]]>
+</latex-image>
+    </image>
+  </figure>
+  <p>
+    Mathematical induction can actually be used to prove a broader family of results;
+    namely, those of the form
+    <q>For all integers <m>n\geq a</m>, <m>P(n)</m></q>, where <m>a \in \mathbb{Z}</m>.
+    <xref ref="thm_PMI">Theorem</xref>
+    handles the special case when <m>a = 1</m>.
+    The ladder analogy from earlier holds for this more general situation, too.
+  </p>
+  <theorem xml:id="thm_PMI2">
+    <title>Generalized PMI</title>
+    <statement>
+      <p>
+        Let <m>P(a), P(a+1), P(a+2), \ldots</m> be a sequence of statements,
+        one for each integer greater than or equal to <m>a</m>.
+        Assume that
+        <ol marker="labeltextrmroman">
+          <li>
+            <p>
+              <m>P(a)</m> is true, and
+            </p>
+          </li>
+          <li>
+            <p>
+              for all <m>k\geq a</m>, if <m>P(k)</m> is true,
+              then <m>P(k+1)</m> is true.
+            </p>
+          </li>
+        </ol>
+      </p>
+      <p>
+        Then <m>P(n)</m> is true for all integers <m>n \geq a</m>.
+      </p>
+    </statement>
+  </theorem>
+  <p>
+    Here is the general structure for a proof by induction when the base case does not necessarily involve <m>a=1</m>.
+  </p>
+  <p>
+    \begin{mdframed}[style=skeleton]
+  </p>
+  <proof>
+    <p>
+      We proceed by induction.
+      <ol>
+        <li>
+          <title>(i)</title>
+          <p>
+            <term>Base step:</term> <em>[Verify that <m>P(a)</m> is true.
+            This often, but not always,
+            amounts to plugging <m>n=a</m> into two sides of some claimed equation and <em>verifying</em>
+            that both sides are actually equal.]</em>
+          </p>
+        </li>
+        <li>
+          <title>(ii)</title>
+          <p>
+            <term>Inductive step:</term> <em>[Your goal is to prove
+            <q>For all <m>k\geq a</m>,
+            if <m>P(k)</m> is true, then <m>P(k+1)</m> is true.</q>
+            ]</em> Let <m>k \geq a</m> be an integer and assume that <m>P(k)</m> is true.
+            <em>[Do something to derive that <m>P(k+1)</m> is true.]</em>
+            Therefore, <m>P(k+1)</m> is true.
+          </p>
+        </li>
+      </ol>
+    </p>
+    <p>
+      Thus, by induction,
+      <m>P(n)</m> is true for all integers <m>n \ge a</m>.
+    </p>
+  </proof>
+  <p>
+    \end{mdframed}
+  </p>
+  <p>
+    We already encountered the next result back <xref ref="prob_number_of_subsets">Problem</xref>,
+    but let's see if we can use induction to prove it.
+  </p>
+  <problem xml:id="prob_number_of_subsets_alt">
+    <statement>
+      <p>
+        Use induction to prove that if <m>A</m> is a finite set with <m>n</m> elements,
+        then <m>A</m> has <m>2^{n}</m> subsets.
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Determine when <m>n+1 \lt n^2</m> for integer values and prove the claim using mathematical induction.
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Determine when <m>n^2 \lt 2^n</m> for integer values and prove the claim using mathematical induction.
+      </p>
+    </statement>
+  </problem>
+  <p>
+    There is another formulation of induction,
+    where the inductive step begins with a set of assumptions rather than one single assumption.
+    This method is sometimes called
+    <term>complete induction</term>
+    or <term>strong induction</term>.
+  </p>
+  <theorem>
+    <title>Principle of Complete Mathematical Induction</title>
+    <statement>
+      <p>
+        Let <m>P(1), P(2), P(3), \ldots</m> be a sequence of statements,
+        one for each natural number.
+        Assume that
+        <ol marker="labeltextrmroman">
+          <li>
+            <p>
+              <m>P(1),P(2),\ldots, P(m)</m> is true for some <m>m\geq 1</m>, and
+            </p>
+          </li>
+          <li>
+            <p>
+              For all <m>k \in \mathbb{N}</m> with <m>m\leq k</m>,
+              if <m>P(j)</m> is true for all
+              <m>j\in \mathbb{N}</m> such that <m>m\leq j \leq k</m>,
+              then <m>P(k+1)</m> is true.
+            </p>
+          </li>
+        </ol>
+      </p>
+      <p>
+        Then <m>P(n)</m> is true for all <m>n\in\mathbb{N}</m>.
+      </p>
+    </statement>
+  </theorem>
+  <p>
+    Note the difference between ordinary induction
+    (<xref ref="thm_PMI">Theorems</xref>
+    and <xref ref="thm_PMI2"></xref>)
+    and complete induction.
+    For the induction step of complete induction,
+    we are not only assuming that <m>P(k)</m> is true,
+    but rather that <m>P(j)</m> is true for all <m>j</m> from <m>m</m> to <m>k</m>.
+    Despite the name,
+    complete induction is not any stronger or more powerful than ordinary induction.
+    It is worth pointing out that anytime ordinary induction is an appropriate proof technique,
+    so is complete induction.
+    So, when should we use complete induction?
+  </p>
+  <p>
+    In the inductive step, you need to reach <m>P(k+1)</m>,
+    and you should ask yourself which of the previous cases you need to get there.
+    If all you need is the statement <m>P(k)</m>,
+    then ordinary induction is the way to go.
+    If, for example, two preceding cases,
+    <m>P(k - 1)</m> and <m>P(k)</m>,
+    are necessary to reach <m>P(k + 1)</m>,
+    then complete induction is appropriate.
+    In the extreme,
+    if one needs the full range of preceding cases (i.e., all statements <m>P(1), P(2),\ldots,P(k)</m>),
+    then again complete induction should be utilized.
+  </p>
+  <p>
+    Note that in situations where complete induction is appropriate,
+    it might be the case that you need to verify more than one case in the base step.
+    The number of base cases to be checked depends on how far one needs to
+    <q>look back</q>
+    in the induction step.
+  </p>
+  <p>
+    Here is the general structure for a proof by complete induction,
+    where the base case includes <m>n=1</m> and possibly more.
+  </p>
+  <p>
+    \begin{mdframed}[style=skeleton]
+  </p>
+  <proof>
+    <p>
+      We proceed by strong induction.
+      <ol>
+        <li>
+          <title>(i)</title>
+          <p>
+            Base step: <em>[Verify that each of the statements <m>P(1),P(2),\ldots, P(m)</m> are true.
+            The value of <m>m</m> depends on the statement.]</em>
+          </p>
+        </li>
+        <li>
+          <title>(ii)</title>
+          <p>
+            Inductive step: <em>[Your goal is to prove
+            <q>For all <m>k\in\mathbb{N}</m> with <m>m\leq k</m>,
+            if <m>P(j)</m> is true for all
+            <m>j\in \mathbb{N}</m> such that <m>m\leq j \leq k</m>,
+            then <m>P(k+1)</m> is true.</q>
+            ]</em> Let <m>k \in \mathbb{N}</m> with <m>m\leq k</m> and suppose <m>P(j)</m> is true for all <m>m\leq j \leq k</m>.
+            <em>[Do something to derive that <m>P(k+1)</m> is true.]</em>
+            Therefore, <m>P(k+1)</m> is true.
+          </p>
+        </li>
+      </ol>
+    </p>
+    <p>
+      Thus, by complete induction,
+      <m>P(n)</m> is true for all <m>n \in\mathbb{N}</m>.
+    </p>
+  </proof>
+  <p>
+    \end{mdframed}
+  </p>
+  <p>
+    When tackling the remaining problems in this chapter,
+    think carefully about how many base steps you must verify.
+  </p>
+  <problem xml:id="prob_Fibonacci">
+    <statement>
+      <p>
+        The <term>Fibonacci sequence</term>
+        is given by <m>f_1=1</m>, <m>f_2=1</m>,
+        and <m>f_n=f_{n-1}+f_{n-2}</m> for all natural numbers <m>n \geq 3</m>.
+        Prove that <m>f_n\lt 2^n</m> for all <m>n\in\mathbb{N}</m>.
+      </p>
+    </statement>
+  </problem>
+  <p>
+    Recall that <xref ref="thm_PMI2">Theorem</xref>
+    generalized <xref ref="thm_PMI">Theorem</xref>
+    and allowed us to handle situations where the base case was something other than <m>P(1)</m>.
+    We can generalize complete induction in the same way,
+    but we will not write this down as a formal theorem.
+  </p>
+  <problem>
+    <statement>
+      <p>
+        Prove that every amount of postage that is at least <m>12</m> cents can be made from <m>4</m>-cent and <m>5</m>-cent stamps.
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Consider a grid of squares that is <m>2</m> squares wide and <m>n</m> squares long.
+        Using <m>n</m> dominoes that are <m>1</m> square by <m>2</m> squares,
+        there are many ways to perfectly cover this grid with no overlap.
+        How many?
+        Prove your answer.
+      </p>
+    </statement>
+  </problem>
+  <p>
+    One final thing worth mentioning is that we did not write down a rigorous proof of the Principle of Inclusion and Exclusion,
+    which we encountered in <xref ref="chap_PIE">Chapter</xref>.
+    However, this omission could be remedied using induction.
+    That is, using induction,
+    we could prove that for all
+    <m>n\in\mathbb{N}</m> and finite sets <m>A_1,\ldots,A_n</m>, we have
+    <me>
+      |A_1\cup\cdots \cup A_n|=\sum_i |A_i| - \sum_{i\lt j} |A_i\cap A_j| + \sum_{i\lt j\lt k}|A_i\cap A_j\cap A_k| -\cdots +(-1)^{n+1}|A_1\cap A_2 \cdots \cap A_n|
+    </me>.
+  </p>
+  <p>
+    If <m>n=1</m>, the expression above simply says
+    <m>|A_1|=|A_1|</m>, which is certainly true.
+    For <m>n=2</m>, we have
+    <me>
+      |A_1\cup A_2|=|A_1|+|A_2|-|A_1\cap A_2|
+    </me>,
+    which is the General Sum Principle that we encountered in <xref ref="thm_General_Sum_Principle">Theorem</xref>.
+    The inductive step is a bit
+    <q>messy</q>, so we will omit it, but if you are interested,
+    you can find a complete proof
+    <url href="https://proofwiki.org/wiki/Inclusion-Exclusion_Principle">here</url>.
+  </p>
+</chapter>

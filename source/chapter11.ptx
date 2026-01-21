@@ -1,0 +1,1053 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Additional Graph Theory</title>
+  <p>
+    A <term>digraph</term>
+    (or <term>directed graph</term>)
+    <m>D</m> consists of a set <m>V</m> of vertices and a set <m>E</m> of
+    <term>directed edges</term>
+    (or <term>arrows</term>),
+    each of which is represented as an ordered pair <m>(u,v)</m>,
+    where <m>u,v\in V</m>.
+    We say that <m>u</m> is the <term>initial vertex</term>
+    and <m>v</m> is the <term>terminal vertex</term>
+    of the directed edge <m>(u,v)</m>.
+    We write <m>D=(V,E)</m> as we did with undirected graphs.
+    The <term>indegree</term> of a vertex <m>v</m> in a digraph,
+    denoted <m>{\deg^-(v)}</m>,
+    is the number of directed edges that have <m>v</m> as a terminal vertex while the
+    <term>outdegree</term> of <m>v</m>,
+    denoted <m>{\deg^+(v)}</m>,
+    is the number of edges having <m>v</m> as an initial vertex.
+  </p>
+  <problem>
+    <statement>
+      <p>
+        Find the indegree and outdegree of each vertex in the following graph.
+      </p>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\node (1) at (18:2) [ vert] {\scriptsize \(b_1\)};
+\node (2) at (90:2) [ vert] {\scriptsize \(b_2\)};
+\node (3) at (162:2) [ vert] {\scriptsize \(b_3\)};
+\node (4) at (234:2) [ vert] {\scriptsize \(b_4\)};
+\node (5) at (306:2) [ vert] {\scriptsize \(b_5\)};
+\node (11) at (18:1) [ vert] {\scriptsize \(b_{10}\)};
+\node (12) at (90:1) [ vert] {\scriptsize \(b_6\)};
+\node (13) at (162:1) [ vert] {\scriptsize \(b_7\)};
+\node (14) at (234:1) [ vert] {\scriptsize \(b_8\)};
+\node (15) at (306:1) [ vert] {\scriptsize \(b_9\)};
+\path [d] (1) to (2);
+\path [d] (3) to (2);
+\path [d] (5) to (4);
+\path [d] (4) to (3);
+\path [d] (5) to (1);
+\path [d] (11) to (1);
+\path [d] (11) to (13);
+\path [d] (13) to (15);
+\path [d] (15) to (12);
+\path [d] (12) to (14);
+\path [d] (11) to (14);
+\path [d] (2) to (12);
+\path [d] (3) to (13);
+\path [d] (4) to (14);
+\path [d] (5) to (15);\end{tikzpicture}]]>
+</latex-image>
+      </image>
+    </statement>
+  </problem>
+  <p>
+    As expected,
+    we have the following result that is analogous to the Handshake Lemma
+    (<xref ref="thm_Handshake">Theorem</xref>).
+  </p>
+  <theorem>
+    <statement>
+      <p>
+        If <m>D = (V,E)</m> is a digraph, then
+        <me>
+          |E|=\sum_{v \in V} \deg^-(v) = \sum_{v \in V} \deg^+(v)
+        </me>.
+      </p>
+    </statement>
+  </theorem>
+  <p>
+    Each graph/digraph is determined by its vertices and the manner in which they are connected by edges,
+    not the way a graph/digraph might be sketched.
+    We can represent a graph in a couple of ways.
+  </p>
+  <p>
+    The <term>adjacency list</term> of a simple graph lists all vertices in one column and all adjacent vertices in second column.
+    For a digraph,
+    the columns contain the initial vertices and the associated terminal vertices.
+  </p>
+  <problem>
+    <statement>
+      <p>
+        Make up a couple examples to explore adjacency lists for simple graphs and digraphs.
+      </p>
+    </statement>
+  </problem>
+  <p>
+    An <m>m\times n</m> <term>matrix</term>
+    <m>A</m> is a rectangular array of numbers with <m>m</m> rows and <m>n</m> columns.
+    The entry in the <m>i</m>th row and <m>j</m>th column is indicated by <m>A_{i,j}</m>.
+  </p>
+  <example>
+    <statement>
+      <p>
+        The example below is a <m>2 \times 3</m> matrix:
+        <me>
+          A = \left[\begin{array}{rrr} 2 \amp  3 \amp  5  \\ 10 \amp  6 \amp  7 \end{array} \right]
+        </me>
+      </p>
+      <p>
+        In this example, <m>A_{1,2} = 3</m>.
+      </p>
+    </statement>
+  </example>
+  <p>
+    The <term>adjacency matrix</term>
+    <m>A</m> of a graph (respectively,
+    digraph) <m>G</m> with vertices listed as
+    <m>v_1, v_2, \dots,
+    v_n</m> is the <m>n\times n</m> matrix <m>A</m> whose entry <m>A_{i,j}</m> in row <m>i</m> and column <m>j</m> is the number of edges connecting <m>v_i</m> and <m>v_j</m>
+    (respectively,
+    the number of edges from <m>v_i</m> to <m>v_j</m>).
+  </p>
+  <problem>
+    <statement>
+      <p>
+        Find the adjacency matrix for the following graph.
+      </p>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\node (1) at (18:2) [vert] {\scriptsize \(v_1\)};
+\node (2) at (90:2) [vert] {\scriptsize \(v_2\)};
+\node (3) at (162:2) [vert] {\scriptsize \(v_3\)};
+\node (4) at (234:2) [vert] {\scriptsize \(v_4\)};
+\node (5) at (306:2) [vert] {\scriptsize \(v_5\)};
+\path [e] (2) to (3) to (4) to (5) to (1);
+\path [e] (2) to (4);
+\path [e] (3) to (1);
+\path [e] (3) to (5);\end{tikzpicture}]]>
+</latex-image>
+      </image>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        What properties will the adjacency matrix for a simple graph have?
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Sketch a graph that has the following adjacency matrix.
+        <me>
+          A = \left[\begin{array}{rrrrr} 1\amp 0\amp 1\amp 0\amp 1  \\ 0\amp 1\amp 1\amp 0\amp 1 \\ 1\amp  1\amp  0 \amp  0\amp  1\\ 0\amp 0\amp 0\amp 0\amp 2 \\ 1\amp  1\amp  1 \amp  2 \amp 0 \end{array}  \right]
+        </me>
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Sketch a digraph that has the following adjacency matrix.
+        <me>
+          A = \left[\begin{array}{rrrrr} 0\amp 1\amp 0\amp 1\amp 1  \\ 0\amp 0\amp 1\amp 1\amp 1 \\ 1\amp  0\amp  0 \amp  0\amp  1\\ 0\amp 0\amp 0\amp 0\amp 0 \\ 1\amp  1\amp  1 \amp  2 \amp 0 \end{array}  \right]
+        </me>
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        What will the adjacency matrix for <m>P_n</m> look like,
+        assuming the vertices are taken in the natural order (start at one end of the path and end at the other)?
+        What about <m>C_n</m>?
+        <m>K_n</m>?
+      </p>
+    </statement>
+  </problem>
+  <p>
+    Recall that a graph is not determined by a sketch since many sketches give the same graph.
+    It may be hard to recognize from sketches whether two graphs are
+    <q>essentially</q>
+    the same even though the vertices may be different points.
+    The notion of isomorphism
+    (same form)
+    gives us a way to deal with this.
+    Two <em>simple</em> graphs <m>G_1 = (V_1, E_1)</m> and
+    <m>G_2 = (V_2, E_2)</m> are the <term>isomorphic</term>,
+    written <m>G_1 \cong G_2</m>,
+    if there is a a bijection <m>f:V_1\to V_2</m> such that <m>\{u,v\}</m> is an edge in <m>G_1</m> if and only if
+    <m>\{f(u),f(v)\}</m> is an edge in <m>G_2</m>.
+    The function <m>f</m> is called an <term>isomorphism</term>.
+    For digraphs,
+    we require that <m>(u,v)</m> is a directed edge in <m>G_1</m> if and only if
+    <m>(f(u),f(v))</m> is a directed edge in <m>G_2</m>.
+  </p>
+  <p>
+    For <m>G_1=(V_1,E_1)</m> and <m>G_2=(V_2,E_2)</m>,
+    to show that <m>G_1\cong G_2</m>:
+  </p>
+  <ol>
+    <li>
+      <p>
+        State a vertex matching explicitly, and
+      </p>
+    </li>
+    <li>
+      <p>
+        Either
+      </p>
+      <ol>
+        <li>
+          <p>
+            Check adjacency for each pair of vertices in <m>G_1</m> and the corresponding pair in <m>G_2</m> (a total of <m>\binom{|V_1|}{2}</m> checks).
+            This could also be as simple as providing sketches for each graph that clearly exhibit the correspondence of vertices and edges.
+          </p>
+        </li>
+        <li>
+          <p>
+            Demonstrate that the adjacency matrices of <m>G_1</m> and <m>G_2</m> are the same using an ordering that is compatible with the vertex matching.
+          </p>
+        </li>
+      </ol>
+    </li>
+  </ol>
+  <p>
+    <em>Warning!</em> The second method above usually involves much less writing,
+    but be aware that the adjacency matrices may differ in one ordering but agree with a different ordering.
+  </p>
+  <p>
+    The simplest way to show that
+    <m>G_1 \not\cong G_2</m> is to show that a feature preserved under isomorphism
+    (called an <term>invariant</term>)
+    holds for one graph but not the other.
+    Here are a few isomorphic invariants:
+    <ol>
+      <li>
+        <p>
+          Order of the graph
+        </p>
+      </li>
+      <li>
+        <p>
+          Number of edges in the graph
+        </p>
+      </li>
+      <li>
+        <p>
+          Number of vertices of a given degree
+        </p>
+      </li>
+      <li>
+        <p>
+          Degree sequence
+        </p>
+      </li>
+      <li>
+        <p>
+          Vertices of degree <m>k</m> and <m>\ell</m> are adjacent
+        </p>
+      </li>
+      <li>
+        <p>
+          Subgraph that is isomorphic to <m>C_n</m> or <m>P_n</m>.
+        </p>
+      </li>
+    </ol>
+  </p>
+  <problem>
+    <statement>
+      <p>
+        Determine whether the following graphs are isomorphic.
+      </p>
+      <tabular>
+        <row>
+          <cell><nbsp/><nbsp/>
+            <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\node (1) at (0,0) [ vert] {\scriptsize \(a_1\)};
+\node (2) at (0,1) [ vert] {\scriptsize \(a_2\)};
+\node (3) at (0,2) [ vert] {\scriptsize \(a_3\)};
+\node (4) at (2,0) [ vert] {\scriptsize \(a_4\)};
+\node (5) at (2,1) [ vert] {\scriptsize \(a_5\)};
+\node (6) at (2,2) [ vert] {\scriptsize \(a_6\)};
+\path [e] (1) to (2) to (3) to (6) to (5) to (4) to (1);
+\path [e] (2) to (5);\end{tikzpicture}]]>
+</latex-image>
+            </image>
+            <nbsp/><nbsp/></cell>
+          <cell><nbsp/><nbsp/>
+            <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\node (1) at (0,0) [ vert] {\scriptsize \(b_1\)};
+\node (2) at (0,1) [ vert] {\scriptsize \(b_2\)};
+\node (3) at (0,2) [ vert] {\scriptsize \(b_3\)};
+\node (4) at (2,0) [ vert] {\scriptsize \(b_4\)};
+\node (5) at (2,1) [ vert] {\scriptsize \(b_5\)};
+\node (6) at (2,2) [ vert] {\scriptsize \(b_6\)};
+\path [e] (1) to (2) to (3) to (6) to (5) to (4) to (1);
+\path [e] (1) to (6);\end{tikzpicture}]]>
+</latex-image>
+            </image>
+            <nbsp/><nbsp/></cell>
+        </row>
+        <row>
+          <cell><nbsp/><nbsp/> <m>G</m> <nbsp/><nbsp/></cell>
+          <cell><nbsp/><nbsp/> <m>H</m> <nbsp/><nbsp/></cell>
+        </row>
+      </tabular>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Let <m>G</m> be the graph with vertex set <m>V=\{a,b,c,d,e\}</m> and edge set
+        <m>E=\{\{a,b\},\{a,c\},\{a,e\},\{b,d\},\{b,e\},\{c,d\}\}</m> and let <m>H</m> be the following graph.
+      </p>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\node (1) at (18:2) [vert] {\scriptsize \(b\)};
+\node (2) at (90:2) [vert] {\scriptsize \(a\)};
+\node (3) at (162:2) [vert] {\scriptsize \(e\)};
+\node (4) at (234:2) [vert] {\scriptsize \(d\)};
+\node (5) at (306:2) [vert] {\scriptsize \(c\)};
+\path [e] (3) to (4) to (5) to (1);
+\path [e] (2) to (4);
+\path [e] (3) to (1);
+\path [e] (2) to (5);\end{tikzpicture}]]>
+</latex-image>
+      </image>
+      <p>
+        Determine whether <m>G</m> and <m>H</m> are isomorphic.
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Determine which pairs of the following graphs are isomorphic.
+      </p>
+      <tabular>
+        <row>
+          <cell><nbsp/><nbsp/>
+            <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\node (f) at (0,0) [vert] {\scriptsize \(f\)};
+\node (c) at (-1,1) [vert] {\scriptsize \(c\)};
+\node (d) at (1,1) [vert] {\scriptsize \(d\)};
+\node (a) at (0,2) [vert] {\scriptsize \(a\)};
+\node (e) at (2,1) [ vert] {\scriptsize \(e\)};
+\node (b) at (2,2) [ vert] {\scriptsize \(b\)};
+\path [e] (a) to (d) to (f) to (c) to (a) to (b) to (e);
+\path [e] (c) to (d);\end{tikzpicture}]]>
+</latex-image>
+            </image>
+            <nbsp/><nbsp/></cell>
+          <cell><nbsp/><nbsp/>
+            <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\node (g) at (0,0) [ vert] {\scriptsize \(g\)};
+\node (h) at (1,0) [ vert] {\scriptsize \(h\)};
+\node (i) at (2,0) [ vert] {\scriptsize \(i\)};
+\node (j) at (3,0) [ vert] {\scriptsize \(j\)};
+\node (k) at (4,0) [ vert] {\scriptsize \(k\)};
+\node (l) at (5,0) [ vert] {\scriptsize \(l\)};
+\path [e] (h) to (i) to (j) to (k) to (l);
+\path [e,out=-45,in=-135] (g) to (l);
+\path [e,out=45,in=135] (h) to (l);
+\path [e,out=-45,in=-135] (i) to (k);\end{tikzpicture}]]>
+</latex-image>
+            </image>
+            <nbsp/><nbsp/></cell>
+          <cell><nbsp/><nbsp/>
+            <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\node (p) at (0,1) [ vert] {\scriptsize \(p\)};
+\node (q) at (1,1) [ vert] {\scriptsize \(q\)};
+\node (r) at (2,1) [ vert] {\scriptsize \(r\)};
+\node (s) at (3,1) [ vert] {\scriptsize \(s\)};
+\node (t) at (.5,0) [ vert] {\scriptsize \(t\)};
+\node (u) at (1.5,0) [ vert] {\scriptsize \(u\)};
+\path [e] (s) to (r) to (q) to (p) to (t) to (u) to (r);
+\path [e] (t) to (q);\end{tikzpicture}]]>
+</latex-image>
+            </image>
+            <nbsp/><nbsp/></cell>
+        </row>
+        <row>
+          <cell><nbsp/><nbsp/> <m>G</m> <nbsp/><nbsp/></cell>
+          <cell><nbsp/><nbsp/> <m>H</m> <nbsp/><nbsp/></cell>
+          <cell><nbsp/><nbsp/> <m>K</m> <nbsp/><nbsp/></cell>
+        </row>
+      </tabular>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Determine whether the following digraphs are isomorphic.
+      </p>
+      <tabular>
+        <row>
+          <cell><nbsp/><nbsp/>
+            <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\node (1) at (0:1) [ vert] {\scriptsize \(a_1\)};
+\node (2) at (90:1) [ vert] {\scriptsize \(a_2\)};
+\node (3) at (180:1) [ vert] {\scriptsize \(a_3\)};
+\node (4) at (270:1) [ vert] {\scriptsize \(a_4\)};
+\node (5) at (0:2) [ vert] {\scriptsize \(a_5\)};
+\node (6) at (90:2) [ vert] {\scriptsize \(a_6\)};
+\node (7) at (180:2) [ vert] {\scriptsize \(a_7\)};
+\node (8) at (270:2) [ vert] {\scriptsize \(a_8\)};
+\path [d] (1) to (2);
+\path [d] (2) to (3);
+\path [d] (3) to (4);
+\path [d] (4) to (1);
+\path [d] (6) to (5);
+\path [d] (5) to (8);
+\path [d] (8) to (7);
+\path [d] (7) to (6);
+\path [d] (2) to (6);
+\path [d] (1) to (5);
+\path [d] (4) to (8);
+\path [d] (3) to (7);\end{tikzpicture}]]>
+</latex-image>
+            </image>
+            <nbsp/><nbsp/></cell>
+          <cell><nbsp/><nbsp/>
+            <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\node (1) at (0:1) [ vert] {\scriptsize \(b_1\)};
+\node (2) at (90:1) [ vert] {\scriptsize \(b_2\)};
+\node (3) at (180:1) [ vert] {\scriptsize \(b_3\)};
+\node (4) at (270:1) [ vert] {\scriptsize \(b_4\)};
+\node (5) at (0:2) [ vert] {\scriptsize \(b_5\)};
+\node (6) at (90:2) [ vert] {\scriptsize \(b_6\)};
+\node (7) at (180:2) [ vert] {\scriptsize \(b_7\)};
+\node (8) at (270:2) [ vert] {\scriptsize \(b_8\)};
+\path [d] (2) to (1);
+\path [d] (3) to (2);
+\path [d] (4) to (3);
+\path [d] (1) to (4);
+\path [d] (6) to (2);
+\path [d] (5) to (1);
+\path [d] (8) to (4);
+\path [d] (7) to (3);
+\path [d] (6) to (5);
+\path [d] (5) to (8);
+\path [d] (8) to (7);
+\path [d] (7) to (6);\end{tikzpicture}]]>
+</latex-image>
+            </image>
+            <nbsp/><nbsp/></cell>
+        </row>
+        <row>
+          <cell><nbsp/><nbsp/> <m>G</m> <nbsp/><nbsp/></cell>
+          <cell><nbsp/><nbsp/> <m>H</m> <nbsp/><nbsp/></cell>
+        </row>
+      </tabular>
+    </statement>
+  </problem>
+  <p>
+    We now introduce several new terms.
+    <ul>
+      <li>
+        <p>
+          A <term>walk</term> in a graph is an alternating sequence of vertices and edges that starts with a vertex and ends with a vertex such that consecutive vertices in the walk are the endpoints of the edge that separates them.
+          In a simple graph, a walk can be specified by a sequence of vertices.
+        </p>
+      </li>
+      <li>
+        <p>
+          The <term>length</term> of a walk is the number of edges in the walk.
+        </p>
+      </li>
+      <li>
+        <p>
+          If the initial and terminal vertices of a walk are the same,
+          then the walk is a <term>closed walk</term>.
+        </p>
+      </li>
+      <li>
+        <p>
+          A <term>trail</term> is a walk with distinct edges
+          (no repeated edges).
+        </p>
+      </li>
+      <li>
+        <p>
+          A <term>circuit</term> is a closed trail, that is,
+          a closed walk with no repeated edges.
+        </p>
+      </li>
+      <li>
+        <p>
+          A <term>path</term> is a walk with distinct vertices.
+          This is a subgraph isomorphic to <m>P_n</m> for some <m>n</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          A <term>cycle</term> is a closed walk with distinct vertices except the initial and terminal vertices.
+          This corresponds to a subgraph isomorphic to <m>C_n</m> for some <m>n</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          A graph <m>G</m> is <term>connected</term>
+          if for each pair of distinct vertices <m>u</m> and <m>v</m>,
+          there is a walk from <m>u</m> to <m>v</m>.
+          A <term>component</term> of a graph is a connected subgraph that is not contained in a larger connected subgraph.
+        </p>
+      </li>
+      <li>
+        <p>
+          A <term>cut vertex</term> of a connected graph <m>G</m> is a vertex which when removed along with all incident edges results in a disconnected graph.
+        </p>
+      </li>
+      <li>
+        <p>
+          A <term>bridge</term>
+          (or <term>cut edge</term>)
+          is an edge of a connected graph which when removed results in a disconnected graph.
+        </p>
+      </li>
+    </ul>
+  </p>
+  <p>
+    The following theorem likely does not come as a surprise.
+  </p>
+  <theorem>
+    <statement>
+      <p>
+        A graph <m>G</m> is connected if and only if for each pair of distinct vertices <m>u</m> and <m>v</m>,
+        there is a path from <m>u</m> to <m>v</m>.
+      </p>
+    </statement>
+  </theorem>
+  <p>
+    A digraph is <term>strongly connected</term>
+    if for each pair of distinct vertices <m>u</m> and <m>v</m> there is a (directed) walk from <m>u</m> to <m>v</m>.
+    A digraph is <term>weakly connected</term>
+    if the underlying undirected graph in which the direction of edges is removed is connected.
+    Note that a strongly connected digraph will always be weakly connected.
+    A <term>strongly connected component</term>
+    of a digraph is a maximal strongly connected subgraph.
+  </p>
+  <p>
+    We now introduce a couple of important circuits that a graph may or may not possess.
+    An <term>Euler circuit</term> in a graph <m>G</m> is a circuit that contains every edge of the graph.
+    An <term>Euler trail</term> in a graph is a trail that contains every edge of the graph.
+    Note that an Euler circuit is also an Euler trail as well.
+  </p>
+  <problem>
+    <statement>
+      <p>
+        Determine whether each of the following graphs has an Euler trail.
+        How about an Euler circuit?
+      </p>
+      <tabular>
+        <row>
+          <cell><nbsp/><nbsp/>
+            <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\node (a) at (0,0) [vert] {\scriptsize \(a\)};
+\node (b) at (0,1) [vert] {\scriptsize \(b\)};
+\node (c) at (0,2) [vert] {\scriptsize \(c\)};
+\node (d) at (2,1) [vert] {\scriptsize \(d\)};
+\path [e] (b) to (d);
+\path [e] (c) to (d) to (a);
+\path [e,out=-45,in=45] (c) to (b);
+\path [e,out=-135,in=135] (c) to (b);
+\path [e,out=-45,in=45] (b) to (a);
+\path [e,out=-135,in=135] (b) to (a);\end{tikzpicture}]]>
+</latex-image>
+            </image>
+            <nbsp/><nbsp/></cell>
+          <cell><nbsp/><nbsp/>
+            <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\node (1) at (0,0) [ vert] {\scriptsize \(b_1\)};
+\node (2) at (0,1) [ vert] {\scriptsize \(b_2\)};
+\node (3) at (0,2) [ vert] {\scriptsize \(b_3\)};
+\node (4) at (2,0) [ vert] {\scriptsize \(b_4\)};
+\node (5) at (2,1) [ vert] {\scriptsize \(b_5\)};
+\node (6) at (2,2) [ vert] {\scriptsize \(b_6\)};
+\path [e] (1) to (2) to (3) to (6) to (5) to (4) to (1);
+\path [e] (1) to (6);\end{tikzpicture}]]>
+</latex-image>
+            </image>
+            <nbsp/><nbsp/></cell>
+          <cell><nbsp/><nbsp/>
+            <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\node (1) at (18:2) [vert] {\scriptsize \(v_1\)};
+\node (2) at (90:2) [vert] {\scriptsize \(v_2\)};
+\node (3) at (162:2) [vert] {\scriptsize \(v_3\)};
+\node (4) at (234:2) [vert] {\scriptsize \(v_4\)};
+\node (5) at (306:2) [vert] {\scriptsize \(v_5\)};
+\path [e] (2) to (3) to (4) to (5) to (1);
+\path [e] (2) to (4);
+\path [e] (3) to (1);
+\path [e] (3) to (5);
+\path [e] (2) to (5);
+\path [e] (1) to (4);
+\path [e] (1) to (2);\end{tikzpicture}]]>
+</latex-image>
+            </image>
+            <nbsp/><nbsp/></cell>
+        </row>
+        <row>
+          <cell><nbsp/><nbsp/> <m>G</m> <nbsp/><nbsp/></cell>
+          <cell><nbsp/><nbsp/> <m>H</m> <nbsp/><nbsp/></cell>
+          <cell><nbsp/><nbsp/> <m>K</m> <nbsp/><nbsp/></cell>
+        </row>
+      </tabular>
+    </statement>
+  </problem>
+  <theorem>
+    <statement>
+      <p>
+        If <m>G</m> is a connected graph of order <m>n \ge 2</m>,
+        then <m>G</m> has an Euler circuit if and only if every vertex is even.
+      </p>
+    </statement>
+  </theorem>
+  <corollary>
+    <statement>
+      <p>
+        If <m>G</m> is a connected graph of order <m>n \geq 2</m>,
+        then <m>G</m> has an Euler trail that is not a circuit if and only if <m>G</m> has exactly two odd vertices.
+      </p>
+    </statement>
+  </corollary>
+  <p>
+    Edges can be added to a connected graph in order to cause it to have an Euler circuit
+    (or trail).
+    In particular, an <term>Eulerization</term>
+    of a connected graph is the addition of suitable multiple edges (i.e., duplicate existing edges) to permit an Euler circuit,
+    mimicking what must be done to complete a circuit such as a postal route or other delivery/pick-up route.
+  </p>
+  <problem>
+    <statement>
+      <p>
+        Eulerize the following graph.
+      </p>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\node (1) at (0,0) [ vert] {\scriptsize \(a_1\)};
+\node (2) at (0,1) [ vert] {\scriptsize \(a_2\)};
+\node (3) at (0,2) [ vert] {\scriptsize \(a_3\)};
+\node (4) at (1,0) [ vert] {\scriptsize \(a_4\)};
+\node (5) at (1,1) [ vert] {\scriptsize \(a_5\)};
+\node (6) at (1,2) [ vert] {\scriptsize \(a_6\)};
+\node (7) at (2,0) [ vert] {\scriptsize \(a_7\)};
+\node (8) at (2,1) [ vert] {\scriptsize \(a_8\)};
+\node (9) at (2,2) [ vert] {\scriptsize \(a_9\)};
+\node (10) at (3,0) [ vert] {\scriptsize \(a_{10}\)};
+\node (11) at (3,1) [ vert] {\scriptsize \(a_{11}\)};
+\node (12) at (3,2) [ vert] {\scriptsize \(a_{12}\)};
+\path [e] (1) to (2) to (3) to (6) to (5) to (4) to (1);
+\path [e] (2) to (5);
+\path [e] (6) to (9) to (12) to (11) to (10) to (7) to (4);
+\path [e] (7) to (8) to (9);
+\path [e] (5) to (8) to (11);\end{tikzpicture}]]>
+</latex-image>
+      </image>
+    </statement>
+  </problem>
+  <p>
+    A cycle in a graph that passes through every vertex is a
+    <term>Hamilton cycle</term>.
+    This is often called a <term>Hamilton circuit</term>.
+    A <term>Hamilton path</term> is a path in a graph that includes every vertex.
+  </p>
+  <problem>
+    <statement>
+      <p>
+        Determine whether each of the following graphs has a Hamilton circuit or a Hamilton path that is not a circuit.
+      </p>
+      <tabular>
+        <row>
+          <cell><nbsp/><nbsp/>
+            <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\node (1) at (0,0) [vert] {\scriptsize \(a_1\)};
+\node (2) at (0,1) [vert] {\scriptsize \(a_2\)};
+\node (3) at (0,2) [vert] {\scriptsize \(a_3\)};
+\node (4) at (1,0) [vert] {\scriptsize \(a_4\)};
+\node (5) at (1,1) [vert] {\scriptsize \(a_5\)};
+\node (6) at (1,2) [vert] {\scriptsize \(a_6\)};
+\node (7) at (2,0) [vert] {\scriptsize \(a_7\)};
+\node (8) at (2,1) [vert] {\scriptsize \(a_8\)};
+\node (9) at (2,2) [vert] {\scriptsize \(a_9\)};
+\node (10) at (3,0) [vert] {\scriptsize \(a_{10}\)};
+\node (11) at (3,1) [vert] {\scriptsize \(a_{11}\)};
+\node (12) at (3,2) [vert] {\scriptsize \(a_{12}\)};
+\path [e] (1) to (2) to (3) to (6) to (5) to (4) to (1);
+\path [e] (2) to (5);
+\path [e] (6) to (9) to (12) to (11) to (10) to (7) to (4);
+\path [e] (7) to (8) to (9);
+\path [e] (5) to (8) to (11);\end{tikzpicture}]]>
+</latex-image>
+            </image>
+            <nbsp/><nbsp/></cell>
+          <cell><nbsp/><nbsp/>
+            <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\node (1) at (0,0) [vert] {\scriptsize \(a_1\)};
+\node (2) at (1,0) [vert] {\scriptsize \(a_2\)};
+\node (3) at (2,0) [vert] {\scriptsize \(a_3\)};
+\node (4) at (3,0) [vert] {\scriptsize \(a_4\)};
+\node (5) at (4,0) [vert] {\scriptsize \(a_5\)};
+\node (6) at (0,1) [vert] {\scriptsize \(a_6\)};
+\node (7) at (1,1) [vert] {\scriptsize \(a_7\)};
+\node (8) at (2,1) [vert] {\scriptsize \(a_9\)};
+\node (9) at (3,1) [vert] {\scriptsize \(a_9\)};
+\node (10) at (4,1) [vert] {\scriptsize \(a_{10}\)};
+\node (11) at (0,2) [vert] {\scriptsize \(a_{11}\)};
+\node (12) at (1,2) [vert] {\scriptsize \(a_{12}\)};
+\node (13) at (2,2) [vert] {\scriptsize \(a_{13}\)};
+\node (14) at (3,2) [vert] {\scriptsize \(a_{14}\)};
+\node (15) at (4,2) [vert] {\scriptsize \(a_{15}\)};
+\node (16) at (0,3) [vert] {\scriptsize \(a_{16}\)};
+\node (17) at (1,3) [vert] {\scriptsize \(a_{17}\)};
+\node (18) at (2,3) [vert] {\scriptsize \(a_{18}\)};
+\node (19) at (3,3) [vert] {\scriptsize \(a_{19}\)};
+\node (20) at (4,3) [vert] {\scriptsize \(a_{20}\)};
+\node (21) at (0,4) [vert] {\scriptsize \(a_{21}\)};
+\node (22) at (1,4) [vert] {\scriptsize \(a_{22}\)};
+\node (23) at (2,4) [vert] {\scriptsize \(a_{23}\)};
+\node (24) at (3,4) [vert] {\scriptsize \(a_{24}\)};
+\node (25) at (4,4) [vert] {\scriptsize \(a_{25}\)};
+\path [e] (1) to (2) to (3) to (4) to (5) to (10) to (9) to (8) to (7) to (6) to (11) to (12) to (13) to (14) to (15) to (20) to (19) to (18) to (17) to (16) to (21) to (22) to (22) to (23) to (24) to (25) to (20);
+\path [e] (1) to (6);
+\path [e] (11) to (16);
+\path [e] (10) to (15);
+\path [e] (2) to (7) to (12) to (17) to (22);
+\path [e] (3) to (8) to (13) to (18) to (23);
+\path [e] (4) to (9) to (14) to (19) to (24);\end{tikzpicture}]]>
+</latex-image>
+            </image>
+            <nbsp/><nbsp/></cell>
+        </row>
+        <row>
+          <cell><nbsp/><nbsp/> <m>G</m> <nbsp/><nbsp/></cell>
+          <cell><nbsp/><nbsp/> <m>H</m> <nbsp/><nbsp/></cell>
+        </row>
+      </tabular>
+    </statement>
+  </problem>
+  <p>
+    Unfortunately, unlike the situation for Euler circuits,
+    there is no known simple necessary and sufficient condition for a Hamilton cycle to exist in a graph.
+    We can state some simple cases when one cannot exist,
+    and there are some theorems for the existence of a Hamilton cycle,
+    but these do not cover all possibilities.
+  </p>
+  <theorem>
+    <title>Dirac's Theorem</title>
+    <statement>
+      <p>
+        If <m>G</m> is a simple graph of order <m>n \ge 3</m> in which <m>\deg(v) \geq n/2</m> for each vertex,
+        then <m>G</m> has a Hamilton cycle.
+      </p>
+    </statement>
+  </theorem>
+  <theorem>
+    <title>Ore's Theorem</title>
+    <statement>
+      <p>
+        If <m>G</m> is a simple graph of order <m>n \geq 3</m> in which
+        <m>\deg(u) + \deg(v) \geq n</m> for each pair of vertices <m>u</m> and <m>v</m>,
+        then <m>G</m> has a Hamilton cycle.
+      </p>
+    </statement>
+  </theorem>
+  <problem>
+    <statement>
+      <p>
+        How many distinct Hamilton cycles does <m>K_n</m> have that start/end at a fixed vertex?
+      </p>
+    </statement>
+  </problem>
+  <p>
+    We now turn our attention to trees.
+    A <term>tree</term> is a connected graph that has no cycles.
+    A <term>forest</term> is a graph in which every connected component is a tree.
+    Trees provide a useful structure for organizing data,
+    for displaying organization, and for decision processes.
+  </p>
+  <problem>
+    <statement>
+      <p>
+        Is every tree necessarily a simple graph?
+      </p>
+    </statement>
+  </problem>
+  <theorem>
+    <statement>
+      <p>
+        A graph <m>G</m> is a tree if and only if for each pair of distinct vertices <m>u</m> and <m>v</m>,
+        there is a unique path from <m>u</m> to <m>v</m>.
+      </p>
+    </statement>
+  </theorem>
+  <theorem>
+    <statement>
+      <p>
+        Some properties of trees.
+        <ol>
+          <li>
+            <p>
+              A tree of order 2 or more has at least two vertices of degree 1.
+            </p>
+          </li>
+          <li>
+            <p>
+              Every edge of a tree is a bridge.
+            </p>
+          </li>
+          <li>
+            <p>
+              A connected graph in which every edge is a bridge is a tree.
+            </p>
+          </li>
+          <li>
+            <p>
+              A tree of order <m>n</m> has <m>n-1</m> edges.
+            </p>
+          </li>
+          <li>
+            <p>
+              A connected graph of order <m>n</m> with <m>n-1</m> edges is a tree.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </theorem>
+  <p>
+    A <term>spanning tree</term> of a simple graph <m>G</m> is a subgraph <m>T</m> of <m>G</m> such that <m>T</m> is a tree contains every vertex of <m>G</m>.
+  </p>
+  <problem>
+    <statement>
+      <p>
+        Find a spanning tree for each of the following.
+      </p>
+      <tabular>
+        <row>
+          <cell><nbsp/><nbsp/>
+            <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\node (1) at (0,0) [vert] {\scriptsize \(a_1\)};
+\node (2) at (0,1) [vert] {\scriptsize \(a_2\)};
+\node (3) at (0,2) [vert] {\scriptsize \(a_3\)};
+\node (4) at (1,0) [vert] {\scriptsize \(a_4\)};
+\node (5) at (1,1) [vert] {\scriptsize \(a_5\)};
+\node (6) at (1,2) [vert] {\scriptsize \(a_6\)};
+\node (7) at (2,0) [vert] {\scriptsize \(a_7\)};
+\node (8) at (2,1) [vert] {\scriptsize \(a_8\)};
+\node (9) at (2,2) [vert] {\scriptsize \(a_9\)};
+\node (10) at (3,0) [vert] {\scriptsize \(a_{10}\)};
+\node (11) at (3,1) [vert] {\scriptsize \(a_{11}\)};
+\node (12) at (3,2) [vert] {\scriptsize \(a_{12}\)};
+\path [e] (1) to (2) to (3) to (6) to (5) to (4) to (1);
+\path [e] (2) to (5);
+\path [e] (6) to (9) to (12) to (11) to (10) to (7) to (4);
+\path [e] (7) to (8) to (9);
+\path [e] (5) to (8) to (11);\end{tikzpicture}]]>
+</latex-image>
+            </image>
+            <nbsp/><nbsp/></cell>
+          <cell><nbsp/><nbsp/>
+            <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\node (1) at (0,0) [vert] {\scriptsize \(a_1\)};
+\node (2) at (1,0) [vert] {\scriptsize \(a_2\)};
+\node (3) at (2,0) [vert] {\scriptsize \(a_3\)};
+\node (4) at (3,0) [vert] {\scriptsize \(a_4\)};
+\node (5) at (4,0) [vert] {\scriptsize \(a_5\)};
+\node (6) at (0,1) [vert] {\scriptsize \(a_6\)};
+\node (7) at (1,1) [vert] {\scriptsize \(a_7\)};
+\node (8) at (2,1) [vert] {\scriptsize \(a_9\)};
+\node (9) at (3,1) [vert] {\scriptsize \(a_9\)};
+\node (10) at (4,1) [vert] {\scriptsize \(a_{10}\)};
+\node (11) at (0,2) [vert] {\scriptsize \(a_{11}\)};
+\node (12) at (1,2) [vert] {\scriptsize \(a_{12}\)};
+\node (13) at (2,2) [vert] {\scriptsize \(a_{13}\)};
+\node (14) at (3,2) [vert] {\scriptsize \(a_{14}\)};
+\node (15) at (4,2) [vert] {\scriptsize \(a_{15}\)};
+\node (16) at (0,3) [vert] {\scriptsize \(a_{16}\)};
+\node (17) at (1,3) [vert] {\scriptsize \(a_{17}\)};
+\node (18) at (2,3) [vert] {\scriptsize \(a_{18}\)};
+\node (19) at (3,3) [vert] {\scriptsize \(a_{19}\)};
+\node (20) at (4,3) [vert] {\scriptsize \(a_{20}\)};
+\node (21) at (0,4) [vert] {\scriptsize \(a_{21}\)};
+\node (22) at (1,4) [vert] {\scriptsize \(a_{22}\)};
+\node (23) at (2,4) [vert] {\scriptsize \(a_{23}\)};
+\node (24) at (3,4) [vert] {\scriptsize \(a_{24}\)};
+\node (25) at (4,4) [vert] {\scriptsize \(a_{25}\)};
+\path [e] (1) to (2) to (3) to (4) to (5) to (10) to (9) to (8) to (7) to (6) to (11) to (12) to (13) to (14) to (15) to (20) to (19) to (18) to (17) to (16) to (21) to (22) to (22) to (23) to (24) to (25) to (20);
+\path [e] (1) to (6);
+\path [e] (11) to (16);
+\path [e] (10) to (15);
+\path [e] (2) to (7) to (12) to (17) to (22);
+\path [e] (3) to (8) to (13) to (18) to (23);
+\path [e] (4) to (9) to (14) to (19) to (24);\end{tikzpicture}]]>
+</latex-image>
+            </image>
+            <nbsp/><nbsp/></cell>
+        </row>
+        <row>
+          <cell><nbsp/><nbsp/> <m>G</m> <nbsp/><nbsp/></cell>
+          <cell><nbsp/><nbsp/> <m>H</m> <nbsp/><nbsp/></cell>
+        </row>
+      </tabular>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Do you think every connected simple graph contains a spanning tree?
+      </p>
+    </statement>
+  </problem>
+  <p>
+    In fact, we have the following theorem.
+  </p>
+  <theorem>
+    <statement>
+      <p>
+        A simple graph <m>G</m> is connected if and only if it contains a spanning tree.
+      </p>
+    </statement>
+  </theorem>
+  <p>
+    Below, we provide informal descriptions of the depth-first and breadth-first algorithms for identifying a spanning tree in a connected simple graph <m>G</m> with vertices ordered as <m>v_1, v_2, \dots, v_n</m>.
+  </p>
+  <p>
+    <term>Depth-First Search.</term> Initialize:
+    <m>T = \{v_1\}</m>, <m>v = v_1</m>.
+    As long as <m>T</m> does not contain all vertices, do the following:
+    <ul>
+      <li>
+        <p>
+          Choose the first vertex <m>w</m> in the ordered list that is adjacent to <m>v</m> and is not yet in <m>T</m>.
+          If there are no vertices adjacent to <m>v</m> that are not yet in <m>T</m>,
+          return to the most recently added previous vertex <m>u</m> and let <m>v = u</m> and repeat this step with the revised <m>v</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Add <m>w</m> and edge <m>\{v,w\}</m> to <m>T</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Set <m>v = w</m>.
+        </p>
+      </li>
+    </ul>
+  </p>
+  <p>
+    Repeat the steps above
+    (with revised <m>v</m>'s)
+    as often as needed.
+  </p>
+  <p>
+    <term>Breadth-First Search.</term> Initialize:
+    <m>T = \{v_1\}</m>, <m>L = v_1</m>.
+    As long as <m>T</m> does not contain all vertices, do the following.
+  </p>
+  <ul>
+    <li>
+      <p>
+        Put <m>v =</m> the first vertex in <m>L</m>.
+      </p>
+    </li>
+    <li>
+      <p>
+        Remove that vertex from <m>L</m>.
+        (On paper, just mark out.)
+      </p>
+    </li>
+    <li>
+      <p>
+        For all vertices adjacent to <m>v</m> not yet in <m>T</m>,
+      </p>
+      <ul>
+        <li>
+          <p>
+            If <m>w</m> is the first vertex in order that is adjacent to <m>v</m> and not yet in <m>T</m>,
+            add <m>w</m> and edge <m>\{v,w\}</m> to <m>T</m> and put <m>w</m> at the end of list <m>L</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Repeat until all vertices adjacent to <m>v</m> not yet in <m>T</m> have been examined.
+          </p>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <p>
+    Repeat the above steps as needed.
+  </p>
+  <p>
+    A <term>weighted graph</term> is a graph with a positive numerical values assigned to each edge of the graph.
+    A <term>minimal spanning tree</term>
+    of a connected weighted graph is a spanning tree that has the smallest possible sum of weights for its edges.
+  </p>
+  <p>
+    Minimal spanning trees arose in the practical matter of designing an efficient electrical network,
+    and the concept applies to similar network notions in many areas such as transportation,
+    utilities,
+    and others.
+    We will discuss one early, elementary,
+    and effective algorithms for finding a minimal spanning tree in a connected undirected weighted graph.
+  </p>
+  <p>
+    <term>Prim's Algorithm</term> (Jarnik 1930, Prim 1957).
+    Assume <m>G</m> is a connected,
+    undirected, weighted loopless graph of order <m>n</m>.
+    <ol>
+      <li>
+        <p>
+          Initialize a tree with a single vertex,
+          chosen arbitrarily from the graph.
+        </p>
+      </li>
+      <li>
+        <p>
+          Grow the tree by one edge: Of the edges that connect the tree to vertices not yet in the tree,
+          find a minimum-weight edge, and transfer it to the tree.
+        </p>
+      </li>
+      <li>
+        <p>
+          Repeat step 2
+          (until all vertices are in the tree).
+        </p>
+      </li>
+    </ol>
+  </p>
+  <p>
+    Prim's Algorithm is an example of a greedy algorithm.
+  </p>
+  <problem>
+    <statement>
+      <p>
+        Make up an example of a connected, undirected,
+        weighted loopless graph and find a minimal spanning tree.
+      </p>
+    </statement>
+  </problem>
+</chapter>

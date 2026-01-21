@@ -1,0 +1,623 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Sequences and Recurrence Relations</title>
+  <p>
+    In this chapter we will study sequences of numbers that are built recursively.
+    Technically, a <term>sequence</term>
+    (of real numbers)
+    is a function <m>a</m> from
+    <m>\mathbb{N}</m> to <m>\mathbb{R}</m>.
+    If <m>n\in\mathbb{N}</m>, it is common to write <m>a_n:= a(n)</m>.
+    We refer to <m>a_n</m> as the <m>n</m>th
+    <term>term</term> of the sequence.
+    We will abuse notation and associate a sequence with its list of outputs, namely:
+    <me>
+      {(a_n)_{n=1}^{\infty}\coloneqq (a_1,a_2,\ldots)}
+    </me>,
+    which we may abbreviate as <m>{(a_n)}</m>.
+    Sometimes we may start our sequences at <m>n=0</m> as opposed to <m>n=1</m>.
+    That is, we may allow the domain of a sequence to be <m>\mathbb{N}\cup \{0\}</m>.
+  </p>
+  <example>
+    <statement>
+      <p>
+        Define <m>a:\mathbb{N}\to \mathbb{R}</m> via <m>a_n=\frac{1}{2^n}</m>.
+        Then we have
+        <me>
+          a=\left(\frac{1}{2}, \frac{1}{4},\ldots\right)=\left(\frac{1}{2^n}\right)_{n=1}^{\infty}
+        </me>.
+      </p>
+    </statement>
+  </example>
+  <p>
+    It is important to point out that not every sequence has a description in terms of an algebraic formula.
+    For example,
+    we could form a sequence out of the digits to the right of the decimal in the decimal expansion of <m>\pi</m>,
+    namely the <m>n</m>th term of the sequence is the <m>n</m>th digit to the right of the decimal.
+    But then there is no nice algebraic formula for describing the <m>n</m>th term of this sequence.
+  </p>
+  <p>
+    Loosely speaking,
+    a sequence of numbers is defined recursively if the <m>n</m>th term of the sequence is defined in terms of
+    <q>earlier</q>
+    terms of the sequence.
+    We have already encountered one famous example of a sequence being defined recursively,
+    namely the Fibonacci sequence <m>(f_n)</m>,
+    which we defined by <m>f_1=1</m>,
+    <m>f_2=1</m>, and <m>f_n=f_{n-1}+f_{n-2}</m> for <m>n\geq 3</m>.
+    The equation <m>f_n=f_{n-1}+f_{n-2}</m> is the
+    <term>recurrence relation</term>
+    while <m>f_1=1</m> and <m>f_2=1</m> are the
+    <term>initial conditions</term>.
+    It is important to emphasize that we cannot define the Fibonacci number using only the recurrence relation since otherwise,
+    we would not be able to
+    <q>get started</q>
+    with the recurrence.
+  </p>
+  <p>
+    We have also encountered a few recurrence relations of a different flavor that arise out of two-dimensional arrays of numbers.
+    For example:
+    <ol>
+      <li>
+        <p>
+          Number of <m>k</m>-permutations of <m>[n]</m>: For <m>1\leq k\leq n</m>,
+          <me>
+            P(n,k)=P(n-1,k)+kP(n-1,k-1)
+          </me>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Number of <m>k</m>-subsets of <m>[n]</m>: For <m>1\leq k\leq n</m>,
+          <me>
+            \binom{n}{k}=\binom{n-1}{k}+\binom{n-1}{k-1}
+          </me>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Number of set partitions of <m>[n]</m> with <m>k</m> blocks: For <m>1\leq k\leq n</m>,
+          <me>
+            \stirling{n}{k}=\stirling{n-1}{k-1}+k\stirling{n-1}{k}
+          </me>.
+        </p>
+      </li>
+    </ol>
+  </p>
+  <p>
+    Notice that each of the descriptions above are not sufficient without also providing a way to
+    <q>get started</q>. For the two-dimensional case,
+    the initial conditions are often called
+    <term>boundary conditions</term>.
+    For the rest of this chapter,
+    we will focus on one-dimensional sequences.
+  </p>
+  <p>
+    Here is an important general principle.
+  </p>
+  <theorem>
+    <statement>
+      <p>
+        If two sequences satisfy the same recurrence relation and initial conditions,
+        then the two sequences must be equal.
+      </p>
+    </statement>
+  </theorem>
+  <problem xml:id="prob_compositions">
+    <statement>
+      <p>
+        Recall that a <term>composition</term>
+        of <m>n</m> with <m>k</m> parts is an ordered list of <m>k</m> positive integers whose sum is <m>n</m>,
+        denoted <m>\alpha=(\alpha_1,\ldots,\alpha_k)</m>.
+        We say that <m>\alpha_i</m> is the <m>i</m>th part.
+        <ol>
+          <li>
+            <p>
+              How many compositions of <m>n</m> have only odd parts?
+            </p>
+          </li>
+          <li>
+            <p>
+              How many compositions of <m>n</m> have parts of size 1 and 2 only?
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Prove that <m>f_{n+1}=\displaystyle \sum_{k\geq 0}\binom{n-k}{k}</m> by utilizing one of the parts from <xref ref="prob_compositions">Problem</xref>.
+        What does this identity tell us about Pascal's Triangle?
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        For each of the following recursively defined sequences,
+        generate the first few terms.
+        If possible,
+        find an explicit formula for the terms of the sequence.
+        <ol>
+          <li>
+            <p>
+              <m>a_1=2</m>, <m>a_n=a_{n-1}+7</m> for <m>n\geq 2</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>a_0=1</m>, <m>a_n=2a_{n-1}</m> for <m>n\geq 1</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>a_0=0</m>, <m>a_n=na_{n-1}</m> for <m>n\geq 1</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>a_0=0</m>, <m>a_n=a_{n-1}+n</m> for <m>n\geq 1</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>a_0=0</m>,
+              <m>a_n=\displaystyle a_{n-1}+\sum_{i=0}^n(i+n)</m> for <m>n\geq 1</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+  <p>
+    By <term>solving</term> a recurrence relation together with its initial conditions we mean finding an explicit expression
+    (sometimes called a <term>closed form</term>)
+    for an arbitrary term <m>a_n</m> as a function of <m>n</m>
+    (but no earlier terms of the sequence).
+    The explicit expression for <m>a_n</m> is called the <term>solution</term>
+    of the recurrence relation.
+    For example,
+    each time we found an explicit formula for the <m>n</m>th term of a sequence in the previous problem,
+    we were solving the recurrence relation and the corresponding expression we found is the solution.
+    By the <term>general solution</term>
+    of a recurrence relation,
+    we mean the set of its solutions given any initial conditions.
+  </p>
+  <problem>
+    <statement>
+      <p>
+        Find the general solution for
+        <m>a_n=2a_{n-1}</m> if the first term of the sequence is <m>a_0</m>.
+        What if the sequence starts at <m>a_1</m>?
+      </p>
+    </statement>
+  </problem>
+  <p>
+    It's important to point out that finding a solution to a recurrence relation can be quite complicated,
+    maybe even impossible!
+    However, verifying whether a proposed solution is correct or not is straightforward.
+  </p>
+  <problem xml:id="prob_linear_combo_of_solutions">
+    <statement>
+      <p>
+        Consider the recurrence relation <m>a_n=a_{n-1}+6a_{n-2}</m>.
+        Is <m>a_n=(-2)^n</m> a solution?
+        How about <m>a_n=3^n</m>?
+        How about <m>a_n=5(-2)^n+7\cdot 3^n</m>?
+      </p>
+    </statement>
+  </problem>
+  <p>
+    We now turn our attention to two special classes of recurrence relations.
+    An <term>arithmetic progression</term>
+    is a recurrence relation in which the first term <m>a_0</m>
+    (or <m>a_1</m>)
+    and a <term>common difference</term>
+    <m>d</m> are given and the corresponding recurrence relation is
+    <me>
+      {a_n=a_{n-1}+d.}
+    </me>
+  </p>
+  <p>
+    A <term>geometric progression</term>
+    is a recurrence relation in which the first term <m>a_0</m>
+    (or <m>a_1</m>)
+    and <term>common ratio</term> <m>r</m> are given and the corresponding recurrence relation is
+    <me>
+      {a_n=r\cdot a_{n-1}.}
+    </me>
+  </p>
+  <problem>
+    <statement>
+      <p>
+        Compute the first few terms of each of the following and find the solution.
+        <ol>
+          <li>
+            <p>
+              Arithmetic progression with <m>a_0=3</m> and <m>d=2</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Geometric progression with <m>a_0=3</m> and <m>r=2</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Conjecture a solution to an arithmetic progression with first term <m>a_0</m> and common difference <m>d</m>.
+        Can you prove that your conjecture is correct?
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Conjecture a solution to a geometric progression with first term <m>a_0</m> and common ratio <m>r</m>.
+        Can you prove that your conjecture is correct?
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Recall that the <term>triangular numbers</term>
+        are defined via <m>t_n:=1+2+\cdots +n</m>.
+        The first few terms of this sequence are 1, 3, 6, 10, 15.
+        <ol>
+          <li>
+            <p>
+              Express the triangular numbers using a recurrence relation and initial condition.
+            </p>
+          </li>
+          <li>
+            <p>
+              Is this sequence an arithmetic progression?
+              Geometric progression?
+            </p>
+          </li>
+          <li>
+            <p>
+              Notice that the sequence of triangular numbers is a sequence of partial sums of the arithmetic sequence <m>1,2,3,\ldots</m>.
+              What happens if we add the partial sum expression for <m>t_n</m> to a second copy of <m>t_n</m> written in reverse?
+              Can you recover the nice closed form for <m>t_n</m> we are already familiar with?
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+  <p>
+    We can generalize the technique above for any sequence that is given by partial sums of an arithmetic sequence.
+  </p>
+  <problem>
+    <statement>
+      <p>
+        For <m>n\geq 2</m>,
+        define <m>\displaystyle a_n=6+10+14+\cdots +(4n-2)=\sum_{i=2}^n(4i-2)</m>.
+        Find a closed form for <m>a_n</m>.
+      </p>
+    </statement>
+  </problem>
+  <p>
+    What about sequences that are partial sums of geometric progressions?
+    In this case,
+    it turns out that we can multiply by the common ratio, shift,
+    and subtract.
+  </p>
+  <problem>
+    <statement>
+      <p>
+        For <m>n\geq 0</m>,
+        define <m>\displaystyle a_n=3^0+3^1+\cdots+3^n=\sum_{i=0}^n3^i</m>.
+        Find a closed form for <m>a_n</m>.
+      </p>
+    </statement>
+  </problem>
+  <p>
+    A <term>linear constant-coefficient</term>
+    recurrence relation of <term>order</term> <m>r</m> has the form
+    <me>
+      {a_n=c_1a_{n-1}+c_2a_{n-2}+\cdots + c_ra_{n-r}+f(n),}
+    </me>
+    where <m>c_1,c_2,\ldots,c_r</m> are real numbers with <m>c_r\neq 0</m>.
+    Such a recurrence relation is said to be
+    <term>homogeneous</term> if <m>f(n)=0</m>,
+    so that it can be written as
+    <me>
+      {a_n=c_1a_{n-1}+c_2a_{n-2}+\cdots + c_ra_{n-r},}
+    </me>
+    and is <term>non-homogeneous</term> otherwise.
+  </p>
+  <p>
+    Notice that every arithmetic progression and every geometric progression is a first order linear constant-coefficient recurrence relation.
+    In particular,
+    each geometric progression is homogeneous while each arithmetic progression is non-homogeneous.
+  </p>
+  <problem>
+    <statement>
+      <p>
+        Determine which of the following are linear constant-coefficient recurrence relations.
+        For those that are,
+        which are homogeneous and which are non-homogeneous?
+        <ol>
+          <li>
+            <p>
+              <m>a_n= na_{n-1}</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>a_n=a_{n-1}+d</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>a_n= ca_{n-1}</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>a_n=a_{n-1}+a_{n-2}</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>a_n=\sum_{i=0}^{n-1}a_ia_{n-1-i}</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>a_n=a_{n-1}-4a_{n-2}+7a_{n-3}</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>a_n=a^2_{n-1}+7a_{n-2}+2a_{n-6}</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Solve the first-order linear constant-coefficient non-homogeneous recurrence relation
+        <m>a_n=3a_{n-1}+2</m> with initial condition <m>a_0=1</m>.
+      </p>
+    </statement>
+  </problem>
+  <p>
+    Unfortunately,
+    the technique of the previous example is difficult to generalize to higher orders.
+  </p>
+  <p>
+    The next theorem characterizes the phenomenon that we witnessed in <xref ref="prob_linear_combo_of_solutions">Problem</xref>.
+    This theorem can be proved by direct substitution and some algebraic manipulation.
+  </p>
+  <theorem>
+    <title>Principle of Superposition</title>
+    <statement>
+      <p>
+        If <m>s_1(n),\ldots,s_k(n)</m> are solutions to the linear constant-coefficient homogeneous recurrence relation
+        <me>
+          a_n=c_1a_{n-1}+c_2a_{n-2}+\cdots + c_ra_{n-r}
+        </me>
+        and <m>\alpha_1,\ldots,\alpha_k</m> are real numbers,
+        then the linear combination <m>\alpha_1s_1(n)+\cdots+\alpha_ks_k(n)</m> is also a solution.
+      </p>
+    </statement>
+  </theorem>
+  <p>
+    We now focus on solving second-order linear constant-coefficient homogeneous recurrence relations.
+    Given the second-order linear constant-coefficient homogeneous recurrence relation
+    <me>
+      a_n=c_1a_{n-1}+c_2a_{n-2}
+    </me>,
+    its corresponding <term>characteristic equation</term> is defined via
+    <me>
+      {x^2-c_1x-c_2=0.}
+    </me>
+  </p>
+  <p>
+    The solutions of the characteristic equation are called
+    <term>characteristic roots</term>.
+  </p>
+  <example>
+    <statement>
+      <p>
+        The characteristic equation for the Fibonacci relation <m>f_n=f_{n-1}+f_{n-2}</m> is <m>x^2-x-1=0</m>,
+        which has characteristic roots <m>x=\frac{1\pm \sqrt{5}}{2}</m>.
+        Note that the characteristic root <m>\frac{1+ \sqrt{5}}{2}\approx 1.618</m> is the well-known
+        <term>golden ratio</term>.
+      </p>
+    </statement>
+  </example>
+  <p>
+    We will utilize the following remarkable theorem without proving it.
+  </p>
+  <theorem>
+    <statement>
+      <p>
+        If <m>r_1</m> and <m>r_2</m> are two <em>distinct</em>
+        characteristic roots (i.e.,
+        <m>r_1\neq r_2</m>) of the characteristic equation for <m>a_n=c_1a_{n-1}+c_2a_{n-2}</m>,
+        then the solution to the recurrence relation is
+        <me>
+          {a_n=ar_1^n+br_2^n,}
+        </me>
+        where <m>a</m> and <m>b</m> are constants determined by the initial conditions.
+      </p>
+    </statement>
+  </theorem>
+  <problem>
+    <statement>
+      <p>
+        Solve <m>a_n=a_{n-1}+a_{n-2}</m> with initial conditions <m>a_0=0</m> and <m>a_1=1</m>.
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Use the previous problem to find a solution to the Fibonacci sequence given by <m>f_1=1</m>,
+        <m>f_2=1</m>,
+        and <m>f_n=f_{n-1}+f_{n-2}</m>.
+        The closed form we just obtained for <m>f_n</m> is called
+        <term>Binet's formula</term>.
+      </p>
+    </statement>
+  </problem>
+  <p>
+    Although we will not consider examples more complicated than these,
+    this characteristic root technique can be applied to much more complicated recurrence relations.
+  </p>
+  <p>
+    We now turn our attention to one of my favorite sequences,
+    which is defined by a recurrence relation of a different flavor.
+    The <term>Catalan numbers</term> are defined via <m>c_0=1</m> and
+    <me>
+      {c_n=\sum_{i=0}^{n-1}c_ic_{n-1-i}}
+    </me>
+    for <m>n\geq 1</m>.
+    The equation above is called the
+    <term>Catalan recurrence</term>.
+    Using the initial condition and the Catalan recurrence,
+    we can generate the first several terms of the Catalan sequence:
+    <me>
+      1, 1, 2, 5, 14, 42, 132, 429, 1430, 4862, 16796, 58786
+    </me>
+  </p>
+  <p>
+    There are hundreds of interesting combinatorial objects counted by the Catalan numbers!
+    Let's explore a few.
+  </p>
+  <problem>
+    <statement>
+      <p>
+        A <term>Dyck path</term> of length <m>2n</m> is a lattice path from <m>(0, 0)</m> to <m>(n, n)</m> that takes <m>n</m> steps East from <m>(i, j)</m> to
+        <m>(i + 1, j)</m> and <m>n</m> steps North from <m>(i, j)</m> to
+        <m>(i, j +1)</m> such that all points on the path satisfy <m>i\leq j</m>.
+        This sound more complicated that it really is.
+        You can think of a Dyck path as one of our paths to get coffee that starts at <m>(0,0)</m> and ends at <m>(n,n)</m> but never drops below the line <m>y=x</m>.
+        Let <m>\Dyck(n)</m> denote set of all Dyck paths of length <m>2n</m> and let <m>d_n:=|\Dyck(n)|</m>.
+        We define <m>d_0:=1</m> for convenience.
+        <em>Important:</em> Unfortunately,
+        we also used <m>d_n</m> to denote the number of derangements of <m>n</m>.
+        This problem is about Dyck path, not derangements.
+        <ol>
+          <li>
+            <p>
+              Compute <m>d_1</m>, <m>d_2</m>, <m>d_3</m>,
+              and <m>d_4</m> via brute force.
+            </p>
+          </li>
+          <li>
+            <p>
+              Show that <m>d_n</m> satisfies the following recurrence for <m>n\geq 1</m>:
+              <me>
+                d_n=\sum_{i=0}^{n-1}d_id_{n-1-i}
+              </me>.
+              <em>Hint:</em> Consider the collection of Dyck paths that hit the line <m>y=x</m> at
+              <m>(i+1,i+1)</m> for the first time after leaving <m>(0,0)</m>.
+              Think about how many ways you can draw the Dyck path to get to
+              <m>(i+1,i+1)</m> versus how many ways you can draw the Dyck path from <m>(i+1,i+1)</m> to <m>(n,n)</m>.
+              The first case is trickier to think about.
+              Notice that the portion of the Dyck path from <m>(0,0)</m> to
+              <m>(i+1,i+1)</m> never hits the line <m>y=x</m> along the way.
+              Moreover, this portion necessarily starts with a North step and ends with an East step.
+              What are the possible values for <m>i</m>?
+            </p>
+          </li>
+        </ol>
+      </p>
+      <p>
+        Since <m>d_n</m> satisfies the same recurrence and initial conditions,
+        it follows that <m>d_n=c_n</m>.
+        That is, the number of Dyck paths is a Catalan number.
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        A sequence of parentheses is <term>balanced</term>
+        if it can be parsed syntactically.
+        In other words,
+        there should be the same number of left parentheses
+        <q>(</q>
+        and right parentheses
+        <q>)</q>, and when reading from left to right there should never be more right parentheses than left.
+        Here are the five balanced parenthesizations containing three pairs:
+        <me>
+          ()()(), ()(()), (()()), (())(), ((()))
+        </me>.
+      </p>
+      <p>
+        Prove that the number of balanced sequences of <m>n</m> pairs of parentheses is <m>c_n</m>.
+        <em>Hint:</em> Use a bijection!
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        A <term>triangulation</term> of a convex <m>(n+2)</m>-gon is a dissection into <m>n</m> triangles using only lines from vertices to vertices.
+        Think of the polygon as being fixed in space.
+        Prove that the number of triangulations of a convex <m>(n+2)</m>-gon is <m>c_n</m>.
+        Incidentally,
+        this is the problem that Euler was interested in when he studied the Catalan numbers!
+      </p>
+    </statement>
+  </problem>
+  <p>
+    Let's see if we can find a closed form for the Catalan numbers!
+  </p>
+  <problem>
+    <statement>
+      <p>
+        Tackle each of the following.
+        <ol>
+          <li>
+            <p>
+              Argue that the number of lattice paths
+              (not just Dyck paths)
+              from <m>(0,0)</m> to <m>(n,n)</m> is equal to <m>\binom{2n}{n}</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Argue that the number of lattice paths from <m>(0,0)</m> to
+              <m>(n+1,n-1)</m> is equal to <m>\binom{2n}{n-1}</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Prove that there is a bijection from the set of lattice paths from <m>(0,0)</m> to <m>(n,n)</m> that pass below <m>y=x</m> at least once to the set of lattice paths from <m>(0,0)</m> to <m>(n+1,n-1)</m>.
+              <em>Hint:</em> Consider the first point on lattice path from <m>(0,0)</m> to <m>(n,n)</m> that passes below <m>y=x</m>.
+              Reflect the remaining portion of the path over the appropriate line to get a path from <m>(0,0)</m> to <m>(n+1,n-1)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Prove that <m>\displaystyle d_n=\binom{2n}{n}-\binom{2n}{n-1}</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+      <p>
+        It is easy to verify that <m>\displaystyle \binom{2n}{n}-\binom{2n}{n-1} = \frac{1}{n+1}\binom{2n}{n}</m>,
+        and since <m>d_n=c_n</m>, we obtain
+        <me>
+          c_n=\displaystyle\frac{1}{n+1}\binom{2n}{n}
+        </me>.
+      </p>
+    </statement>
+  </problem>
+</chapter>

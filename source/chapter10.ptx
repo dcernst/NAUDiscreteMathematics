@@ -1,0 +1,721 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Introduction to Graph Theory</title>
+  <p>
+    Loosely speaking,
+    a graph is a collection of points called vertices and connecting segments called edges,
+    each of which starts at a vertex,
+    ends at a vertex and contains no other vertices beside these.
+    More formally, we define the term as follows.
+    A <term>graph</term> consists of two sets,
+    a nonempty set <m>V</m> of points called <term>vertices</term>
+    and a set <m>E</m> whose elements,
+    called <term>edges</term>, are multisets of size two from <m>V</m>.
+  </p>
+  <p>
+    Each edge is associated with either one vertex which serves as both endpoints or two vertices as its endpoints.
+    Technically, each edge is a multiset of the form
+    <m>{\multiset{u,v}}</m> where <m>u,v\in V</m>.
+    We say that <m>u</m> and <m>v</m> are <term>endpoints</term>
+    of the edge <m>\multiset{u,v}</m>.
+    In an abuse of notation,
+    it is customary to write <m>{\{u,v\}}</m> even if <m>u=v</m>.
+    In fact, we may abbreviate further and denote the edge by <m>{uv}</m>.
+    Note that the order in which the vertices of an edge are listed is irrelevant.
+    That is, <m>\multiset{u,v}=\multiset{v,u}</m>,
+    <m>\{u,v\}=\{v,u\}</m>, and <m>uv=vu</m>.
+    If <m>G</m> is the graph associated with the vertex set <m>V</m> and edge set <m>E</m>,
+    we write <m>{G=(V,E)}</m>.
+    It is worth pointing out that we assumed that <m>V</m> is nonempty,
+    but <m>E</m> is allowed to be empty (i.e., the graph has no edges).
+  </p>
+  <p>
+    It is customary to represent a graph using visual representations,
+    where each vertex is a dot and each edge is a connecting segment,
+    not necessarily straight.
+  </p>
+  <example xml:id="ex_graph">
+    <statement>
+      <p>
+        Here is an example of a graph with vertex set <m>V=\{v_1, v_2, v_3,v_4,v_5\}</m>.
+      </p>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\node (1) at (18:2) [vert] {\scriptsize \(v_1\)};
+\node (2) at (90:2) [vert] {\scriptsize \(v_2\)};
+\node (3) at (162:2) [vert] {\scriptsize \(v_3\)};
+\node (4) at (234:2) [vert] {\scriptsize \(v_4\)};
+\node (5) at (306:2) [vert] {\scriptsize \(v_5\)};
+\path [e] (2) to (3) to (4) to (5) to (1);
+\path [e] (2) to (4);
+\path [e] (3) to (1);
+\path [e] (3) to (5);
+\path [e,out=0,in=-90,looseness=8] (5) to (5);\end{tikzpicture}]]>
+</latex-image>
+      </image>
+    </statement>
+  </example>
+  <problem>
+    <statement>
+      <p>
+        Find at least five different graphs with vertex sets <m>V=\{a,b,c\}</m>.
+      </p>
+    </statement>
+  </problem>
+  <p>
+    There is a lot of terminology associated to graphs!
+    Here are some of the relevant concepts.
+    <ul>
+      <li>
+        <p>
+          Vertices <m>u</m> and <m>v</m> of a graph are <term>adjacent</term>
+          if they are the endpoints of the same edge.
+        </p>
+      </li>
+      <li>
+        <p>
+          If <m>v</m> is an endpoint of the edge <m>e</m>,
+          we say that <m>e</m> is <term>incident</term> to <m>v</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          If an edge <m>e</m> is incident to vertices <m>u</m> and <m>v</m>,
+          we say that <m>u</m> and <m>v</m> are
+          <term>connected</term> by edge <m>e</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          An edge <m>e</m> that is incident to a single vertex (i.e., <m>e=uu</m> for some <m>u\in V</m>) is called a <term>loop</term>.
+        </p>
+      </li>
+      <li>
+        <p>
+          The <term>order</term> of a graph is the number of vertices in the graph.
+          That is, if <m>G=(V,E)</m>, then the order of <m>G</m> is <m>|V|</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          The <term>degree</term> of a vertex <m>v</m>, written <m>\deg(v)</m>,
+          is the number of edges incident to <m>v</m> (i.e., the number of edges that have <m>v</m> as an endpoint).
+          Note that a loop contributes 2 to a vertex's degree,
+          one for each of the two ends of the edge.
+          The degree of a vertex <m>v</m> is denoted <m>{\deg(v)}</m>.
+        </p>
+      </li>
+    </ul>
+  </p>
+  <problem>
+    <statement>
+      <p>
+        Discuss each of the concepts introduced above in the context of <xref ref="ex_graph">Example</xref>.
+      </p>
+    </statement>
+  </problem>
+  <p>
+    Many graphs have similar properties that allow us to categorize them.
+    Here are several families of graphs.
+    <ul>
+      <li>
+        <p>
+          <em>Complete Graphs</em>.
+          The <term>complete graph</term> on <m>n\geq 1</m> vertices,
+          denoted <m>{K_n}</m>,
+          is the graph of order <m>n</m> such that each pair of vertices is connected by exactly one edge,
+          and there are no other edges (i.e., no loops).
+        </p>
+      </li>
+      <li>
+        <p>
+          <em>Cycle Graphs</em>.
+          The <term>cycle graph</term> on <m>n\ge 3</m> vertices,
+          denoted <m>{C_n}</m>,
+          is the graph such that when the <m>n</m> vertices are suitably labeled <m>v_1, v_2, \dots, v_n</m>,
+          the edges of <m>C_n</m> are <m>\{v_1,v_2\}, \{v_2,v_3\}, \dots, \{v_{n-1},v_n\}, \{v_n,v_1\}</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <em>Path Graphs</em>.
+          The <term>path</term> on <m>n\geq 1</m> vertices,
+          denoted <m>{P_n}</m>, has a description similar to <m>C_n</m>:
+          for distinct vertices suitably labeled <m>v_1, v_2, \dots, v_n</m>,
+          the edges of <m>P_n</m> are <m>\{v_1,v_2\}, \{v_2,v_3\}, \dots, \{v_{n-1},v_n\}</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <em>Wheel Graphs</em>.
+          The <term>wheel graph</term> on <m>n \ge 4</m> vertices,
+          denoted <m>{W_n}</m>,
+          is the graph <m>C_{n-1}</m> together with one additional vertex that is connected to each of the vertices of <m>C_{n-1}</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <em>Hypercube Graphs</em>.
+          The <term>hypercube</term> of dimension <m>n\geq 1</m>,
+          denoted <m>{Q_n}</m>,
+          is the graph whose vertices are labeled with the <m>2^n</m> bit strings of length <m>n</m> with an edge connecting two vertices if and only if their labels differ in exactly one bit.
+        </p>
+      </li>
+    </ul>
+  </p>
+  <problem>
+    <statement>
+      <p>
+        Draw the first few graphs of each of the graph families above.
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        How many edges do each of the following have?
+        <ol>
+          <li>
+            <p>
+              <m>K_n</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>C_n</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>P_n</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>W_n</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>Q_n</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+  <p>
+    A <term>simple graph</term> is a graph in which each edge connects two distinct vertices and each pair of vertices is connected by at most one edge.
+    Note that the graphs <m>K_n, C_n, P_n, W_n</m>,
+    and <m>Q_n</m> are all simple graphs.
+    A <term>pseudograph</term>
+    (or <term>multigraph</term>)
+    is like a graph but we allow <term>multiple edges</term>
+    between a pair of vertices (i.e., <m>E</m> is a multiset instead of a set).
+  </p>
+  <problem>
+    <statement>
+      <p>
+        Draw examples of simple graphs, non-simple graphs,
+        and psuedographs on 3 vertices.
+      </p>
+    </statement>
+  </problem>
+  <p>
+    A simple graph <m>G = (V,E)</m> is <term>bipartite</term>
+    if there is a partition of <m>V</m> into two nonempty sets <m>V_1,V_2</m> (i.e., <m>V_1\neq \emptyset</m>,
+    <m>V_2\neq \emptyset</m>, <m>V_1\cap V_2=\emptyset</m>,
+    and <m>V_1 \cup V_2 = V</m>) such that each edge of <m>G</m> connects a vertex in <m>V_1</m> and a vertex in <m>V_2</m>.
+    The pair <m>(V_1,V_2)</m> is called a
+    <term>bipartition</term> of the graph.
+  </p>
+  <problem>
+    <statement>
+      <p>
+        Provide an example of a bipartite graph with 5 vertices.
+      </p>
+    </statement>
+  </problem>
+  <p>
+    The following theorem provides a nice characterization of bipartite graphs.
+  </p>
+  <theorem>
+    <statement>
+      <p>
+        A graph is bipartite if each vertex can be colored with one of two colors so that each pair of adjacent vertices have different colors.
+      </p>
+    </statement>
+  </theorem>
+  <problem>
+    <statement>
+      <p>
+        Which complete graphs are bipartite?
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Which path graphs are bipartite?
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Which cycle graphs are bipartite?
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Is <m>Q_3</m> bipartite?
+      </p>
+    </statement>
+  </problem>
+  <p>
+    A bipartite graph with bipartition
+    <m>(V_1,V_2)</m> such that <m>|V_1|=m</m> and <m>|V_2|=n</m> is the
+    <term>complete bipartite graph</term>
+    <m>K_{m,n}</m> if it contains each edge <m>\{u,v\}</m> for every pair
+    <m>u \in V_1</m> and <m>v \in V_2</m>.
+    Note that <m>K_{m,n}=K_{n,m}</m>.
+  </p>
+  <problem>
+    <statement>
+      <p>
+        Draw <m>K_{1,1}</m>, <m>K_{1,2}</m>, <m>K_{2,2}</m>,
+        <m>K_{2,3}</m>, <m>K_{3,3}</m>.
+      </p>
+    </statement>
+  </problem>
+  <p>
+    The next result is sometimes referred to as the
+    <term>Handshake Lemma</term>.
+    Do you see why?
+  </p>
+  <theorem xml:id="thm_Handshake">
+    <title>Degree Sum Formula</title>
+    <statement>
+      <p>
+        In any graph,
+        the sum of the degrees of vertices in the graph is always twice the number of edges.
+        In other words, in a graph <m>G = (V,E)</m>,
+        <me>
+          2|E| = \sum_{v \in V} \deg(v)
+        </me>.
+      </p>
+    </statement>
+  </theorem>
+  <problem>
+    <statement>
+      <p>
+        At a recent party, 9 people greeted each other by shaking hands.
+        Is it possible that each person shook hands with exactly 7 people at the party?
+      </p>
+    </statement>
+  </problem>
+  <p>
+    Sometimes it is convenient to use the term
+    <term>even vertex</term> or <term>odd vertex</term>
+    to refer to a vertex whose degree is even or odd, respectively.
+  </p>
+  <problem>
+    <statement>
+      <p>
+        Explain why every graph has an even number of odd vertices.
+      </p>
+    </statement>
+  </problem>
+  <p>
+    The <term>degree sequence</term> of a graph is the list of the degrees of the vertices of the graph in descending order.
+    A finite list of nonnegative integers in descending order is <term>graphic</term>
+    if it is the degree sequence of a simple graph.
+  </p>
+  <problem>
+    <statement>
+      <p>
+        Find the degree sequences for <m>K_n</m> (<m>n\geq 1</m>),
+        <m>C_n</m> (<m>n\geq 3</m>),
+        <m>P_n</m> (<m>n\geq 1</m>), <m>W_n</m> (<m>n\geq 4</m>),
+        and <m>Q_n</m>
+        (<m>n\geq 1</m>).
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Which of the following are graphic sequences?
+        <ol>
+          <li>
+            <p>
+              3332
+            </p>
+          </li>
+          <li>
+            <p>
+              3331
+            </p>
+          </li>
+          <li>
+            <p>
+              44332
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Find two different graphs that have 32222111 as their degree sequence.
+      </p>
+    </statement>
+  </problem>
+  <theorem>
+    <statement>
+      <p>
+        If <m>d_1d_2\cdots d_n</m> is the degree sequence for a graph <m>G</m> of order <m>n</m>,
+        then <m>\sum_{i=1}^n d_i</m> must be even.
+      </p>
+    </statement>
+  </theorem>
+  <p>
+    One consequence of the previous theorem is that any sequence with an odd sum (e.g., 331) is not graphic.
+    It turns out that if a sequence has an even sum,
+    it is the degree sequence of a multigraph.
+    The construction of such a graph is straightforward:
+    connect vertices with odd degrees in pairs,
+    and fill out the remaining even degree counts by self-loops.
+    The question of whether a given degree sequence can be realized by a simple graph is more challenging.
+    This problem is also called <term>graph realization problem</term>
+    and can be solved by either the Erd&#xf6;s<ndash/>Gallai theorem or the Havel<ndash/>Hakimi algorithm.
+    Unfortunately, this is beyond the scope of this course.
+  </p>
+  <p>
+    We will now focus on making new graphs from old.
+    Below are several definitions.
+    <ul>
+      <li>
+        <p>
+          A graph <m>H=(V_H,E_H)</m> is a <term>subgraph</term>
+          of a graph <m>G=(V_G,E_G)</m> if <m>V_H\subseteq V_G</m> and
+          <m>E_H\subseteq E_G</m> (i.e., the vertices of <m>H</m> are vertices of <m>G</m> and the edges of <m>H</m> are edges of <m>G</m>).
+          If <m>H</m> is a subgraph of <m>G</m>,
+          we may write <m>{H\subseteq G}</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          A graph <m>H=(V_H,E_H)</m> is an
+          <term>induced subgraph</term>
+          of a graph <m>G=(V_G,E_G)</m> if
+          <m>V_H\subseteq V_G</m> and <m>E_H</m> consists of all of the edges in <m>E_G</m> that have both endpoints in <m>E_H</m>.
+          That is, for any two vertices <m>u,v\in V_H</m>,
+          <m>u</m> and <m>v</m> are adjacent in <m>H</m> if and only if <m>u</m> and <m>v</m> are adjacent in <m>G</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          If <m>G=(V,E)</m> is a graph and <m>S\subseteq V</m>,
+          then the <term>subgraph of <m>G</m> induced by <m>S</m></term>,
+          denoted <m>{G[S]}</m>,
+          is the induced subgraph of <m>G</m> with vertex set <m>S</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          The <term>union</term> of two graphs <m>G_1 = (V_1,E_1)</m> and
+          <m>G_2 = (V_2,E_2)</m> is the graph with vertex set
+          <m>V = V_1\cup V_2</m> and edge set <m>E = E_1 \cup E_2</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          The <term>complement</term> of a <em>simple</em>
+          graph <m>G</m> of order <m>n</m> is the graph
+          <m>{\overline{G}}</m> on the same <m>n</m> vertices such for each pair of distinct vertices <m>u</m> and <m>v</m>,
+          <m>\{u,v\}</m> is an edge of
+          <m>\overline{G}</m> if and only if it is not an edge of <m>G</m>.
+        </p>
+      </li>
+    </ul>
+  </p>
+  <problem>
+    <statement>
+      <p>
+        Consider the graph <m>C_4</m>.
+        Label the vertices clockwise as <m>a</m>,
+        <m>b</m>, <m>c</m>, and <m>d</m>.
+        <ol>
+          <li>
+            <p>
+              Find all induced subgraphs of <m>C_4</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Find a subgraph of <m>C_4</m> that is not an induced subgraph of <m>C_4</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Make up a few examples to explore the concepts of union and complement of graphs.
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Determine whether each of the following statements is true or false.
+        If a statement is true, prove it.
+        Otherwise, provide a counterexample.
+        <ol>
+          <li>
+            <p>
+              Any subgraph of a complete graph is also complete.
+            </p>
+          </li>
+          <li>
+            <p>
+              Any induced subgraph of a complete graph is also complete.
+            </p>
+          </li>
+          <li>
+            <p>
+              Any subgraph of a bipartite graph is bipartite.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+  <p>
+    If <m>G=(V,E)</m> is a graph and <m>S\subseteq V</m>,
+    the <term>neighborhood</term> of <m>S</m>,
+    denoted <m>{N(S)}</m> is the set of all vertices in <m>V</m> adjacent to at least one member of <m>S</m>.
+    Of course, we can consider the neighborhood of a single vertex <m>v</m>,
+    which is denoted <m>{N(v)}</m>.
+    A neighborhood of a single vertex does not include itself,
+    and is more specifically the <term>open neighborhood</term> of <m>v</m>.
+    It is also possible to define a neighborhood in which <m>v</m> itself is also included.
+    This is called the <term>closed neighborhood</term> of <m>v</m>,
+    sometimes denoted by <m>{N[v]}</m>.
+    Unless stated otherwise, a neighborhood is assumed to be open.
+  </p>
+  <problem>
+    <statement>
+      <p>
+        Make up a few examples of graphs and explore the concept of neighborhood.
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Consider the graph <m>K_{3,5}</m> with bipartition <m>V_1</m> and <m>V_2</m>,
+        where <m>|V_1|=3</m> and <m>|V_2|=5</m>.
+        <ol>
+          <li>
+            <p>
+              For <m>v\in V_1</m>, what is <m>N(v)</m>?
+            </p>
+          </li>
+          <li>
+            <p>
+              What is <m>N(V_1)</m>?
+            </p>
+          </li>
+          <li>
+            <p>
+              What is <m>N(V_2)</m>?
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+  <p>
+    A <term>matching</term>
+    (or <term>independent edge set</term>)
+    in a graph <m>G=(V,E)</m> is a subset of edges
+    <m>M\subseteq E</m> without common vertices.
+    That is, a subset of the edges is a matching if each vertex appears as an endpoint in at most one edge of that matching.
+    If <m>M</m> is a matching,
+    a vertex is said to be <term>matched</term>
+    if it is an endpoint of one of the edges in <m>M</m>.
+    Otherwise, the vertex is called <term>unmatched</term>.
+    We say that <m>M</m> <term>covers</term>
+    a subset <m>S\subseteq V</m> if every vertex of <m>S</m> is matched by <m>M</m>.
+  </p>
+  <p>
+    We now explore a type of matching problem.
+    Suppose we have a bipartite graph <m>G=(V,E)</m> with a bipartition <m>(V_1,V_2)</m>.
+    We want to match up each element
+    <m>v_1\in V_1</m> with exactly one element
+    <m>v_2 \in V_2</m> that is adjacent to it in <m>G</m> and that is not matched to any other element of <m>V_1</m>.
+  </p>
+  <p>
+    A <term>total matching</term> from <m>V_1</m> to <m>V_2</m> is matching that covers <m>V_1</m>.
+    In other words, for each <m>v_1\in V_1</m>,
+    there is a unique edge <m>m\in M</m> and a unique
+    <m>v_2\in V_2</m> such that <m>m</m> is incident to <m>v_1</m> and <m>v_2</m>.
+    We can think of <m>M</m> as specifying an injective function from <m>V_1</m> to <m>V_2</m>.
+    If every vertex in <m>V_2</m> is also matched (i.e., <m>V_2</m> is covered),
+    then the matching is called a <term>perfect matching</term>.
+  </p>
+  <p>
+    Finding a matching in a bipartite graph can be treated as a network flow problem.
+  </p>
+  <problem>
+    <statement>
+      <p>
+        Consider the bipartite graph <m>G</m> given below.
+        Is there a total matching from
+        <m>\{a_1,a_2,a_3,a_4\}</m> to <m>\{b_1,b_2,b_3,b_4,b_5\}</m>?
+        If so, find one.
+        If not, explain why.
+      </p>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\node (b1) at (1,0) [vert] {\scriptsize \(b_1\)};
+\node (b2) at (2,0) [vert] {\scriptsize \(b_2\)};
+\node (b3) at (3,0) [vert] {\scriptsize \(b_3\)};
+\node (b4) at (4,0) [vert] {\scriptsize \(b_4\)};
+\node (b5) at (5,0) [vert] {\scriptsize \(b_5\)};
+\node (a1) at (1.5,2) [vert] {\scriptsize \(a_1\)};
+\node (a2) at (2.5,2) [vert] {\scriptsize \(a_2\)};
+\node (a3) at (3.5,2) [vert] {\scriptsize \(a_3\)};
+\node (a4) at (4.5,2) [vert] {\scriptsize \(a_4\)};
+\path [e] (a1) to (b1);
+\path [e] (a1) to (b3);
+\path [e] (a2) to (b1);
+\path [e] (a2) to (b2);
+\path [e] (a2) to (b4);
+\path [e] (a3) to (b4);
+\path [e] (a3) to (b5);
+\path [e] (a4) to (b2);
+\path [e] (a4) to (b5);\end{tikzpicture}]]>
+</latex-image>
+      </image>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Consider the bipartite graph <m>G</m> given below.
+        Is there a total matching from
+        <m>\{a_1,a_2,a_3,a_4\}</m> to <m>\{b_1,b_2,b_3,b_4\}</m>?
+        If so, find one.
+        If not, explain why.
+      </p>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\node (b1) at (1,0) [vert] {\scriptsize \(b_1\)};
+\node (b2) at (2,0) [vert] {\scriptsize \(b_2\)};
+\node (b3) at (3,0) [vert] {\scriptsize \(b_3\)};
+\node (b4) at (4,0) [vert] {\scriptsize \(b_4\)};
+\node (a1) at (1,2) [vert] {\scriptsize \(a_1\)};
+\node (a2) at (2,2) [vert] {\scriptsize \(a_2\)};
+\node (a3) at (3,2) [vert] {\scriptsize \(a_3\)};
+\node (a4) at (4,2) [vert] {\scriptsize \(a_4\)};
+\path [e] (a1) to (b3);
+\path [e] (a2) to (b1);
+\path [e] (a2) to (b2);
+\path [e] (a2) to (b3);
+\path [e] (a2) to (b4);
+\path [e] (a3) to (b3);
+\path [e] (a4) to (b1);
+\path [e] (a4) to (b2);
+\path [e] (a4) to (b4);\end{tikzpicture}]]>
+</latex-image>
+      </image>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Determine whether each of the following statements is true or false.
+        If a statement is true, prove it.
+        Otherwise, provide a counterexample.
+        <ol>
+          <li>
+            <p>
+              If a bipartite graph <m>G=(V,E)</m> has a perfect matching,
+              then <m>|V|</m> is even.
+            </p>
+          </li>
+          <li>
+            <p>
+              If <m>G=(V,E)</m> is a bipartite graph such that <m>|V|</m> is even,
+              then <m>G</m> has a perfect matching.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+  <p>
+    In order for there to be a total matching from <m>V_1</m> to <m>V_2</m>,
+    we need <m>\deg(v_1)>0</m> for each <m>v_1\in V_1</m>.
+    However, that is not enough.
+    <url href="https://en.wikipedia.org/wiki/Philip_Hall">Phillip Hall</url>
+    (1904<ndash/>1982) discovered the following condition,
+    known as <term>Hall's Marriage Theorem</term>,
+    needed for a total matching.
+  </p>
+  <theorem>
+    <title>Hall's Marriage Theorem</title>
+    <statement>
+      <p>
+        A bipartite graph with bipartition
+        <m>(V_1,V_2)</m> has a total matching from <m>V_1</m> to <m>V_2</m> if and only if
+        <m>|N(S)| \ge |S|</m> for all subsets <m>S\subseteq V_1</m>.
+        In other words,
+        every subset <m>S</m> of <m>V_1</m> must have sufficiently many neighbors in <m>V_2</m>.
+      </p>
+    </statement>
+  </theorem>
+  <p>
+    Hall actually stated and proved a more general theorem,
+    but we have given its formulation in the context of graph theory.
+  </p>
+  <p>
+    A graph <m>G=(V,E)</m> is called
+    <term><m>k</m>-regular</term>
+    if <m>\deg(v)=k</m> for every <m>v\in V</m>.
+  </p>
+  <example>
+    <statement>
+      <p>
+        The cycle graph <m>C_n</m> is 2-regular,
+        the complete graph <m>K_n</m> is <m>(n-1)</m>-regular,
+        the hypercube graph <m>Q_n</m> is <m>n</m>-regular,
+        and the complete bipartite graph <m>K_{n,n}</m> is <m>n</m>-regular.
+      </p>
+    </statement>
+  </example>
+  <problem>
+    <statement>
+      <p>
+        Prove that if <m>G</m> is a <m>k</m>-regular bipartite graph with bipartition
+        <m>(V_1,V_2)</m>, then <m>|V_1|=|V_2|</m>.
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Prove that if <m>G</m> is a <m>k</m>-regular bipartite graph with <m>k>1</m>,
+        then <m>G</m> has a perfect matching.
+      </p>
+    </statement>
+  </problem>
+</chapter>

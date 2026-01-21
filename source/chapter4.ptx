@@ -1,0 +1,394 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Combinations</title>
+  <p>
+    The notion of <m>k</m>-permutations captures arrangements of distinct objects where order matters.
+    But what should we do if we want to capture a situation where the order of the objects does not matter?
+    Since the order of the objects in a set does not matter,
+    this is the model we should use.
+  </p>
+  <p>
+    If <m>A</m> is a set and <m>B\subseteq A</m> with <m>|B|=k</m>,
+    we refer to <m>B</m> as a <term><m>k</m>-subset</term> of <m>A</m>.
+    The collection of all <m>k</m>-subsets of <m>A</m> is defined via
+    <me>
+      {\binom{A}{k}:=\{B\subseteq A\mid |B|=k\}.}
+    </me>
+  </p>
+  <p>
+    The <term>binomial coefficient</term> is defined via
+    <me>
+      {\binom{n}{k}:=\text{ number of \(k\)-subsets of an \(n\)-element set } .}
+    </me>
+  </p>
+  <p>
+    In particular, if <m>|A|=n</m>,
+    then <m>\lvert\binom{A}{k}\rvert=\binom{n}{k}</m>.
+    We read
+    <q><m>\binom{n}{k}</m></q>
+    as
+    <q><m>n</m> choose <m>k</m></q>. Alternate notations for binomial coefficients include <m>C(n,k)</m> and <m>_n C_k</m>.
+    We will see later why <m>\binom{n}{k}</m> is referred to as a binomial coefficient.
+  </p>
+  <example>
+    <statement>
+      <p>
+        If <m>A=\{a,b,c,d\}</m>, then
+        <me>
+          \binom{A}{2}=\{\{a,b\},\{a,c\},\{a,d\},\{b,c\},\{b,d\},\{c,d\}\}
+        </me>,
+        which implies that <m>\binom{4}{2}=6</m>.
+      </p>
+    </statement>
+  </example>
+  <problem>
+    <statement>
+      <p>
+        For any <m>A</m>, including the empty set,
+        what is <m>\binom{A}{0}</m>?
+        For <m>n\geq 0</m>, what is <m>\binom{n}{0}</m> equal to?
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        For <m>n\geq 0</m>, what is <m>\binom{n}{n}</m> equal to?
+      </p>
+    </statement>
+  </problem>
+  <p>
+    If we let <m>n</m> and <m>k</m> vary,
+    we can organize the binomial coefficients in a triangular array,
+    often referred to as <term>Pascal's Triangle</term>.
+    See <xref ref="table_Pascal">Table</xref>.
+  </p>
+  <table xml:id="table_Pascal">
+    <title>Pascal's Triangle of binomial coefficients</title>
+    <tabular>
+      <row>
+        <cell><m>n\setminus k</m></cell>
+        <cell><m>0</m></cell>
+        <cell><m>1</m></cell>
+        <cell><m>2</m></cell>
+        <cell><m>3</m></cell>
+        <cell><m>4</m></cell>
+        <cell><m>5</m></cell>
+        <cell>6</cell>
+      </row>
+      <row>
+        <cell>\noalign{\hrule height 2pt}
+          <m>0</m></cell>
+        <cell><m>1</m></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell><m>1</m></cell>
+        <cell><m>1</m></cell>
+        <cell><m>1</m></cell>
+        <cell></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell><m>2</m></cell>
+        <cell><m>1</m></cell>
+        <cell><m>2</m></cell>
+        <cell><m>1</m></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell><m>3</m></cell>
+        <cell><m>1</m></cell>
+        <cell>3</cell>
+        <cell>3</cell>
+        <cell>1</cell>
+      </row>
+      <row>
+        <cell><m>4</m></cell>
+        <cell><m>1</m></cell>
+        <cell>4</cell>
+        <cell>6</cell>
+        <cell>4</cell>
+        <cell>1</cell>
+      </row>
+      <row>
+        <cell><m>5</m></cell>
+        <cell><m>1</m></cell>
+        <cell>5</cell>
+        <cell>10</cell>
+        <cell>10</cell>
+        <cell>5</cell>
+        <cell>1</cell>
+      </row>
+      <row>
+        <cell><m>6</m></cell>
+        <cell><m>1</m></cell>
+        <cell>6</cell>
+        <cell>15</cell>
+        <cell>20</cell>
+        <cell>15</cell>
+        <cell>6</cell>
+        <cell>1</cell>
+      </row>
+    </tabular>
+  </table>
+  <problem>
+    <statement>
+      <p>
+        Suppose you have a pool of 6 applicants for a job opening.
+        Let's assume you believe the values in <xref ref="table_Pascal">Table</xref>.
+        <ol>
+          <li>
+            <p>
+              How many ways can you choose 3 of the 6 applicants to interview?
+            </p>
+          </li>
+          <li>
+            <p>
+              How many ways can you hire 3 of the 6 applicants for 3 distinct jobs?
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+  <problem xml:id="prob_sum_of_row_in_Pascal">
+    <statement>
+      <p>
+        What are the row sums in Pascal's Triangle?
+        That is, what is the following sum equal to for any <m>n\geq 0</m>?
+        <me>
+          \sum_{k=0}^n\binom{n}{k}:=\binom{n}{0}+\binom{n}{1}+\cdots +\binom{n}{n}
+        </me>.
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Using the meanings of <m>k</m>-subset and <m>k</m>-permutation,
+        explain why
+        <me>
+          P(n,k)=\binom{n}{k} \cdot k!
+        </me>.
+      </p>
+    </statement>
+  </problem>
+  <p>
+    Using the previous problem,
+    we immediately get the following handy formula for computing binomial coefficients.
+  </p>
+  <theorem xml:id="thm_binomial_formula">
+    <statement>
+      <p>
+        For <m>0\leq k\leq n</m>, we have
+        <me>
+          {\binom{n}{k}=\frac{n!}{k!(n-k)!} =\frac{P(n,k)}{k!}.}
+        </me>
+      </p>
+    </statement>
+  </theorem>
+  <p>
+    In the last expression above,
+    the numerator of <m>\frac{P(n,k)}{k!}</m> is counting how many distinct arrangements
+    (order matters)
+    there are of <m>k</m> objects taken from <m>n</m> objects and the denominator is essentially unordering arrangements
+    (by Division Principle)
+    that consist of the same objects.
+  </p>
+  <problem>
+    <statement>
+      <p>
+        A state senate consists of 19 Republicans and 14 Democrats.
+        In how many ways can a committee be chosen if:
+        <ol>
+          <li>
+            <p>
+              The committee contains 6 senators without regard to party?
+            </p>
+          </li>
+          <li>
+            <p>
+              The committee contains 3 Republicans and 3 Democrats?
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        How many bit strings of length 10 have exactly three 1's?
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        How many bit strings of length 6 have an odd number of 0's?
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        As we noted earlier,
+        we did quite a bit of brute force to determine how many paths I could take to get coffee in <xref ref="prob_coffee">Problem</xref>.
+        Find a solution that utilizes binomial coefficients.
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        How many strings of 10 lower-case English letters have exactly two <m>g</m>'s and exactly three <m>v</m>'s?
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Assume <m>1\leq k\leq n</m>.
+        <ol>
+          <li>
+            <p>
+              Using the definition of <m>\binom{n}{k}</m> in terms of <m>k</m>-subsets
+              (as opposed to the formula in <xref ref="thm_binomial_formula">Theorem</xref>),
+              explain why
+              <me>
+                {\binom{n}{k}=\binom{n-1}{k}+\binom{n-1}{k-1}.}
+              </me>
+              This identity is often called <term>Pascal's Identity</term>
+              (or <term>Pascal's Recurrence</term>).
+            </p>
+          </li>
+          <li>
+            <p>
+              Connect the formula above with <xref ref="prob_coffee">Problem</xref>
+              involving my walk to get coffee.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Assume <m>1\leq k\leq n</m>.
+        It turns out that
+        <me>
+          {\binom{n}{k}=\binom{n}{n-k}.}
+        </me>
+        <ol>
+          <li>
+            <p>
+              Prove the identity above using the formula for
+              <m>\binom{n}{k}</m> given in <xref ref="thm_binomial_formula">Theorem</xref>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Explain why the identity is true by using the definition of
+              <m>\binom{n}{k}</m> in terms of <m>k</m>-subsets.
+            </p>
+          </li>
+        </ol>
+      </p>
+      <p>
+        The upshot is that each row of Pascal's Triangle is a palindrome.
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Explain why
+        <me>
+          {1+2+\cdots +n=\binom{n+1}{2}}
+        </me>
+        by counting the number of handshakes that could occur among a group of <m>n+1</m> people in two different ways.
+      </p>
+    </statement>
+  </problem>
+  <p>
+    By the way, the number defined by
+    <m>{t_n:=1+2+\cdots +n}</m> is called the <m>n</m>th
+    <term>Triangular number</term>
+    (due to the shape we get by representing each number in the sum by a stack of balls).
+  </p>
+  <problem>
+    <statement>
+      <p>
+        Without appealing to the previous problem,
+        find a visual proof of the following:
+        <me>
+          {1+2+\cdots +n=\frac{n(n+1)}{2}}
+        </me>.
+      </p>
+      <p>
+        <em>Hint:</em> Consider a rectangular array of balls that has <m>n</m> rows and <m>n+1</m> columns.
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Consider the linear equation <m>x_1+x_2+x_3=11</m>.
+        How many <em>integer</em> solutions are there if:
+        <ol>
+          <li>
+            <p>
+              <m>x_1,x_2,x_3\geq 0</m>?
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>x_1,x_2,x_3> 0</m>?
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>x_1\geq 1, x_2\geq 0, x_3\geq 2</m>?
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        How many ways can you distribute 5 identical lollipops to 6 kids?
+      </p>
+    </statement>
+  </problem>
+  <p>
+    These last two problems illustrate a technique known as
+    <term>stars and bars</term>.
+    In general, <m>n</m> stars tally the number of objects and <m>k-1</m> bars separate them into <m>k</m> distinct categories.
+  </p>
+  <theorem>
+    <statement>
+      <p>
+        The number of possible collections of <m>n</m> objects of <m>k</m> different types is
+        <me>
+          {\binom{n+k-1}{k-1}=\binom{n+k-1}{n}.}
+        </me>
+      </p>
+    </statement>
+  </theorem>
+  <problem>
+    <statement>
+      <p>
+        Zittles come in 5 colors: green,
+        yellow, red, orange, and purple.
+        How many different collections of 32 Zittles are possible?
+      </p>
+    </statement>
+  </problem>
+</chapter>

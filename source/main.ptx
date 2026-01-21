@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pretext xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+  <docinfo>
+<macros>
+\newcommand{\e}{\varepsilon}
+\renewcommand{\phi}{\varphi}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\cA}{{\cal  A}}
+\newcommand{\cB}{{\cal  B}}
+\newcommand{\cC}{{\cal  C}}
+\newcommand{\cG}{{\cal  G}}
+\newcommand{\cO}{{\cal  O}}
+\newcommand{\cP}{{\cal  P}}
+\newcommand{\cN}{{\cal  N}}
+\newcommand{\cM}{{\cal  M}}
+\newcommand{\s}{$\sigma$}
+\newcommand{\p}{\parallel}
+\newcommand{\defeq}{\mathrel{\mathop:}=}
+\newcommand{\dom}{\operatorname{Dom}}
+\DeclareMathOperator{\Dyck}{Dyck}
+\newcommand{\codom}{\operatorname{Codom}}
+\newcommand{\range}{\operatorname{Rng}}
+\newcommand{\blank}{\underline{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DeclareMathOperator{\TL}{TL}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\pk}{pk}
+\DeclareMathOperator{\coins}{coins}
+\DeclareMathOperator{\SYT}{SYT}
+\newcommand{\multiset}[1]{\{\!\!\{#1 \}\!\!\}}
+\newcommand{\euler}[2]{
+\displaystyle \left\langle\begin{matrix}#1  \\#2   \end{matrix}\right\rangle}
+\newcommand{\stirling}[2]{
+\displaystyle \left\{\begin{matrix}#1  \\#2   \end{matrix}\right\}}
+</macros>
+<latex-image-preamble>
+\usepackage{tikz}
+\usepackage{tkz-graph}
+\usepackage{tkz-euclide}
+\usetikzlibrary{patterns}
+\usetikzlibrary{positioning}
+\usetikzlibrary{matrix,arrows}
+\usetikzlibrary{calc}
+\usetikzlibrary{shapes}
+\usetikzlibrary{through,intersections,decorations,shadows,fadings}
+\usepackage{pgfplots}
+</latex-image-preamble>
+  </docinfo>
+  <book>
+    <title>Introduction to Discrete Mathematics</title>
+    <frontmatter>
+      <titlepage>
+        <author>
+          <personname>Dana C.~Ernst  John W.~Hagood</personname>
+        </author>
+      </titlepage>
+    </frontmatter>
+    <xi:include href="./chapter1.ptx"/>
+    <xi:include href="./chapter2.ptx"/>
+    <xi:include href="./chapter3.ptx"/>
+    <xi:include href="./chapter4.ptx"/>
+    <xi:include href="./chapter5.ptx"/>
+    <xi:include href="./chap_pigeonhole_principle.ptx"/>
+    <xi:include href="./chap_PIE.ptx"/>
+    <xi:include href="./chapter8.ptx"/>
+    <xi:include href="./chapter9.ptx"/>
+    <xi:include href="./chapter10.ptx"/>
+    <xi:include href="./chapter11.ptx"/>
+    <backmatter>
+      <xi:include href="./bibliography.ptx"/>
+    </backmatter>
+  </book>
+</pretext>
