@@ -11,7 +11,7 @@
     <term>term</term> of the sequence.
     We will abuse notation and associate a sequence with its list of outputs, namely:
     <me>
-      {(a_n)_{n=1}^{\infty}\coloneqq (a_1,a_2,\ldots)}
+      {(a_n)_{n=1}^{\infty}\:= (a_1,a_2,\ldots)}
     </me>,
     which we may abbreviate as <m>{(a_n)}</m>.
     Sometimes we may start our sequences at <m>n=0</m> as opposed to <m>n=1</m>.

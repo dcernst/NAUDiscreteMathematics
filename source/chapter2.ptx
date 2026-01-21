@@ -11,7 +11,7 @@
     of <m>f</m> and is denoted by
     <m>{\codom(f)}</m> while the subset of the codomain defined via
     <me>
-      {\range(f)\coloneqq \{y\in Y\mid \mbox{there exists } x\mbox{ such that }  (x,y)\in f\}}
+      {\range(f)\:= \{y\in Y\mid \mbox{there exists } x\mbox{ such that }  (x,y)\in f\}}
     </me>
     is called the <term>range</term> of <m>f</m> or the
     <term>image of <m>X</m></term> under <m>f</m>.

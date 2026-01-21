@@ -56,12 +56,12 @@
     <frontmatter>
       <titlepage>
         <author>
-          <personname>Dana C.~Ernst  John W.~Hagood</personname>
+          <personname>Dana C. Ernst and John W. Hagood</personname>
         </author>
       </titlepage>
     </frontmatter>
     <xi:include href="./chapter1.ptx"/>
-    <xi:include href="./chapter2.ptx"/>
+    <!-- <xi:include href="./chapter2.ptx"/>
     <xi:include href="./chapter3.ptx"/>
     <xi:include href="./chapter4.ptx"/>
     <xi:include href="./chapter5.ptx"/>
@@ -70,7 +70,7 @@
     <xi:include href="./chapter8.ptx"/>
     <xi:include href="./chapter9.ptx"/>
     <xi:include href="./chapter10.ptx"/>
-    <xi:include href="./chapter11.ptx"/>
+    <xi:include href="./chapter11.ptx"/> -->
     <backmatter>
       <xi:include href="./bibliography.ptx"/>
     </backmatter>

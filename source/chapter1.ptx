@@ -23,8 +23,8 @@
     Any set that is not finite is an
     <term>infinite set</term>.
     For example, the <term>natural numbers</term>
-    defined by <m>{\mathbb{N}\coloneqq \{1,2,3,\ldots\}}</m> and <term>integers</term>
-    defined by <m>{\mathbb{Z}\coloneqq \{0, \pm 1, \pm2, \pm 3, \ldots\}}</m> are both examples of infinite sets.
+    defined by <m>{\mathbb{N}\:= \{1,2,3,\ldots\}}</m> and <term>integers</term>
+    defined by <m>{\mathbb{Z}\:= \{0, \pm 1, \pm2, \pm 3, \ldots\}}</m> are both examples of infinite sets.
     Some books will include zero in the set of natural numbers,
     but we do not.
     Since the set of natural numbers consists of the positive integers,
@@ -32,8 +32,8 @@
     The <term>real numbers</term>,
     denoted by <m>{\mathbb{R}}</m>,
     is another example of an infinite set.
-    If you look closely at our definitions for the natural numbers and integers you will notice that we wrote <m>{\coloneqq}</m> instead of <m>=</m>.
-    We use <m>\coloneqq</m> to mean that the symbol or expression on the left is defined to be equal to the expression on the right.
+    If you look closely at our definitions for the natural numbers and integers you will notice that we wrote <m>{\:=}</m> instead of <m>=</m>.
+    We use <m>\:=</m> to mean that the symbol or expression on the left is defined to be equal to the expression on the right.
   </p>
   <p>
     The language associated to sets is specific.
@@ -63,7 +63,7 @@
         We can define the <term>rational numbers</term>
         using set-builder notation via
         <me>
-          {\mathbb{Q}\coloneqq \{a/b \mid a, b \in \mathbb{Z} \text{ and }  b \neq 0\}}
+          {\mathbb{Q}\:= \{a/b \mid a, b \in \mathbb{Z} \text{ and }  b \neq 0\}}
         </me>.
       </p>
     </statement>
@@ -171,12 +171,12 @@
     <ol>
       <li>
         <p>
-          The <term>union</term> of <m>A</m> and <m>B</m> is <m>{A \cup B \coloneqq \{x\in U \mid x\in A \mbox{ or } x\in B \}}</m>.
+          The <term>union</term> of <m>A</m> and <m>B</m> is <m>{A \cup B \:= \{x\in U \mid x\in A \mbox{ or } x\in B \}}</m>.
         </p>
       </li>
       <li>
         <p>
-          The <term>intersection</term> of <m>A</m> and <m>B</m> is <m>{A \cap B \coloneqq\{x\in U \mid x\in A \mbox{ and } x\in B \}}</m>.
+          The <term>intersection</term> of <m>A</m> and <m>B</m> is <m>{A \cap B \:=\{x\in U \mid x\in A \mbox{ and } x\in B \}}</m>.
         </p>
       </li>
       <li>
@@ -189,14 +189,14 @@
         <p>
           The <term>set difference</term>
           (relative to <m>U</m>)
-          of the sets <m>A</m> and <m>B</m> is <m>{A \setminus B \coloneqq\{x\in U \mid x\in A \mbox{ and } x\notin B \}}</m>.
+          of the sets <m>A</m> and <m>B</m> is <m>{A \setminus B \:=\{x\in U \mid x\in A \mbox{ and } x\notin B \}}</m>.
         </p>
       </li>
       <li>
         <p>
           The <term>complement</term>
           (relative to <m>U</m>)
-          of <m>A</m> is the set <m>{A^c\coloneqq U \setminus A =\{x \in U \mid x \notin A\}}</m>.
+          of <m>A</m> is the set <m>{A^c\:= U \setminus A =\{x \in U \mid x \notin A\}}</m>.
         </p>
       </li>
     </ol>
@@ -620,7 +620,7 @@
     where the first component is from <m>A</m> and the second component is from <m>B</m>.
     In set-builder notation, we have
     <me>
-      {A\times B\coloneqq \{(a,b)\mid a\in A, b\in B\}}
+      {A\times B\:= \{(a,b)\mid a\in A, b\in B\}}
     </me>.
   </p>
   <p>
@@ -628,7 +628,7 @@
     <m>A_1, \ldots, A_n</m> sets is the collection of
     <term><m>n</m>-tuples</term> given by
     <me>
-      {A_1\times \cdots \times A_n\coloneqq \{(a_1,\ldots,a_n)\mid  a_j\in A_j \mbox{ for all } 1\leq j\leq n\}}\
+      {A_1\times \cdots \times A_n\:= \{(a_1,\ldots,a_n)\mid  a_j\in A_j \mbox{ for all } 1\leq j\leq n\}}\
     </me>,
     where <m>A_i</m> is referred to as the <m>i</m>th <term>factor</term>
     of the Cartesian product.
