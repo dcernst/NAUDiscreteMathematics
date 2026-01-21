@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Permutations</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Introduction to Discrete Mathematics">
+<meta property="book:author" content="Dana C.~Ernst  John W.~Hagood">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.11.10';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.3dca4b99808f4053.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.80892ed1280c2803.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6ec5960970d8b364.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="root-1-2.html"><span class="title">Introduction to Discrete Mathematics</span></a></h1>
+<p class="byline">Dana C.~Ernst  John W.~Hagood</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="root-1-2-4.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="root-1-2.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="root-1-2-6.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\e}{\varepsilon}
+\renewcommand{\phi}{\varphi}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\cA}{{\cal  A}}
+\newcommand{\cB}{{\cal  B}}
+\newcommand{\cC}{{\cal  C}}
+\newcommand{\cG}{{\cal  G}}
+\newcommand{\cO}{{\cal  O}}
+\newcommand{\cP}{{\cal  P}}
+\newcommand{\cN}{{\cal  N}}
+\newcommand{\cM}{{\cal  M}}
+\newcommand{\s}{$\sigma$}
+\newcommand{\p}{\parallel}
+\newcommand{\defeq}{\mathrel{\mathop:}=}
+\newcommand{\dom}{\operatorname{Dom}}
+\DeclareMathOperator{\Dyck}{Dyck}
+\newcommand{\codom}{\operatorname{Codom}}
+\newcommand{\range}{\operatorname{Rng}}
+\newcommand{\blank}{\underline{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DeclareMathOperator{\TL}{TL}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\pk}{pk}
+\DeclareMathOperator{\coins}{coins}
+\DeclareMathOperator{\SYT}{SYT}
+\newcommand{\multiset}[1]{\{\!\!\{#1 \}\!\!\}}
+\newcommand{\euler}[2]{
+\displaystyle \left\langle\begin{matrix}#1  \\#2   \end{matrix}\right\rangle}
+\newcommand{\stirling}[2]{
+\displaystyle \left\{\begin{matrix}#1  \\#2   \end{matrix}\right\}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth1 focused" data-preexpanded-levels="0" data-max-levels="1"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="root-1-2-2.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="root-1-2-3.html" class="internal"><span class="codenumber">1</span> <span class="title">Sets and Counting Principles</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="root-1-2-4.html" class="internal"><span class="codenumber">2</span> <span class="title">Functions</span></a></div></li>
+<li class="toc-item toc-chapter active"><div class="toc-title-box"><a href="root-1-2-5.html" class="internal"><span class="codenumber">3</span> <span class="title">Permutations</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="root-1-2-6.html" class="internal"><span class="codenumber">4</span> <span class="title">Combinations</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="root-1-2-7.html" class="internal"><span class="codenumber">5</span> <span class="title">The Binomial Theorem</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="chap_pigeonhole_principle.html" class="internal"><span class="codenumber">6</span> <span class="title">Pigeonhole Principle</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="chap_PIE.html" class="internal"><span class="codenumber">7</span> <span class="title">Principle of Inclusion and Exclusion</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="root-1-2-10.html" class="internal"><span class="codenumber">8</span> <span class="title">Mathematical Induction</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="root-1-2-11.html" class="internal"><span class="codenumber">9</span> <span class="title">Sequences and Recurrence Relations</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="root-1-2-12.html" class="internal"><span class="codenumber">10</span> <span class="title">Introduction to Graph Theory</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="root-1-2-13.html" class="internal"><span class="codenumber">11</span> <span class="title">Additional Graph Theory</span></a></div></li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="root-1-2-14.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-references"><div class="toc-title-box"><a href="root-1-2-14-1.html" class="internal"><span class="title">Bibliography</span></a></div></li></ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="root-1-2-5"><h2 class="heading">
+<span class="type">Chapter</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Permutations</span>
+</h2>
+<div class="para" id="root-1-2-5-2">For <span class="process-math">\(n\in\mathbb{N}\text{,}\)</span> we define <span class="process-math">\({[n]:=\{1,2,\ldots,n\}}\text{.}\)</span> That is, <span class="process-math">\([n]\)</span> is just clever shorthand for the set containing 1 through <span class="process-math">\(n\text{.}\)</span> This notation is meant to resemble interval notation.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="root-1-2-5-3">For <span class="process-math">\(k\in\mathbb{N}\)</span> and a nonempty set <span class="process-math">\(A\text{,}\)</span> a <dfn class="terminology"><span class="process-math">\(k\)</span>-permutation</dfn> of <span class="process-math">\(A\)</span> is an injective function <span class="process-math">\(w:[k]\to A\text{.}\)</span> The set of all <span class="process-math">\(k\)</span>-permutations of <span class="process-math">\(A\)</span> is denoted by <span class="process-math">\({S_{A,k}}\text{.}\)</span> If <span class="process-math">\(A\)</span> happens to be the set <span class="process-math">\([n]\text{,}\)</span> we use the notation <span class="process-math">\({S_{n,k}}\text{.}\)</span> And if <span class="process-math">\(n=k\text{,}\)</span> we write <span class="process-math">\({S_n:=S_{n,n}}\)</span> and refer to each <span class="process-math">\(n\)</span>-permutation in <span class="process-math">\(S_n\)</span> as a <dfn class="terminology">permutation</dfn>. Let <span class="process-math">\({P(n,k):=|S_{n,k}|}\text{.}\)</span> By convention, we set <span class="process-math">\({P(n,0):=1}\text{,}\)</span> including the case when <span class="process-math">\(n=0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-5-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="root-1-2-5-4" class="problem example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.0.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2></summary><article class="problem example-like knowl__content"><div class="para logical" id="root-1-2-5-4-1-1">
+<div class="para">Complete the following.</div>
+<ol class="decimal" id="root-1-2-5-4-1-1-1">
+<li id="root-1-2-5-4-1-1-1-1">
+<div class="para" id="root-1-2-5-4-1-1-1-1-1">Write down all of the elements in <span class="process-math">\(S_3\text{.}\)</span> What is <span class="process-math">\(P(3,3)\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-5-4-1-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#root-1-2-5-4-1-1-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="root-1-2-5-4-1-1-1-2">
+<div class="para" id="root-1-2-5-4-1-1-1-2-1">Write down all of the elements in <span class="process-math">\(S_{4,3}\text{.}\)</span> What is <span class="process-math">\(P(4,3)\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-5-4-1-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#root-1-2-5-4-1-1-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-5-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 3.0.1"><a href="#root-1-2-5-4" title="Copy heading and permalink for Problem 3.0.1" aria-label="Copy heading and permalink for Problem 3.0.1">🔗</a></div></article></details><div class="para" id="root-1-2-5-5">The game of chess is played on an <span class="process-math">\(8\times 8\)</span> grid. We will consider chessboards with arbitrary dimensions, say <span class="process-math">\(n\times k\)</span> (<span class="process-math">\(n\)</span> rows, <span class="process-math">\(k\)</span> columns) with <span class="process-math">\(1\leq k \leq n\text{.}\)</span> A rook is a castle-shaped piece that can move horizontally or vertically any number of squares. In a typical chess game, there are two black rooks and two white rooks, but for our purposes we will assume we have <span class="process-math">\(k\)</span> rooks, where all the rooks are the same color. We say that an arrangement of rooks on an <span class="process-math">\(n\times k\)</span> chessboard is <dfn class="terminology">non-attacking</dfn> if no two rooks lie in the same row or column. <a href="root-1-2-5.html#fig_nonattacking" class="xref" data-knowl="./knowl/xref/fig_nonattacking.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.0.2">Figure 3.0.2</a> shows one possible non-attacking rook arrangement on an <span class="process-math">\(6\times 4\)</span> chessboard.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-5-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig_nonattacking"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/fig_nonattacking-2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.0.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A non-attacking rook arrangement on a <span class="process-math">\(6\times 4\)</span> chessboard.<div class="autopermalink" data-description="Figure 3.0.2"><a href="#fig_nonattacking" title="Copy heading and permalink for Figure 3.0.2" aria-label="Copy heading and permalink for Figure 3.0.2">🔗</a></div></figcaption></figure><details id="root-1-2-5-7" class="problem example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.0.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2></summary><article class="problem example-like knowl__content"><div class="para" id="root-1-2-5-7-1-1">Consider the collection of <span class="process-math">\(k\)</span>-permutations in <span class="process-math">\(S_{n,k}\)</span> with <span class="process-math">\(1\leq k\leq n\text{.}\)</span> Explain why <span class="process-math">\(P(n,k)\)</span> is equal to the number of non-attacking rook arrangements on an <span class="process-math">\(n\times k\)</span> chess board. <em class="emphasis">Hint:</em> Establish a bijection between the collection of non-attacking rook arrangements on an <span class="process-math">\(n\times k\)</span> chess board and the collection of <span class="process-math">\(k\)</span>-permutations.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-5-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 3.0.3"><a href="#root-1-2-5-7" title="Copy heading and permalink for Problem 3.0.3" aria-label="Copy heading and permalink for Problem 3.0.3">🔗</a></div></article></details><div class="para" id="root-1-2-5-8">Recall that for <span class="process-math">\(n\in\mathbb{N}\text{,}\)</span> the <dfn class="terminology">factorial</dfn> of <span class="process-math">\(n\)</span> is defined <span class="process-math">\({n!:=n\cdot (n-1)\cdots 2\cdot 1}\text{,}\)</span> and we define <span class="process-math">\({0!:=1}\)</span> for convenience.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-5-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="thm_permutations_formula"><h2 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.0.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
+<div class="para logical" id="thm_permutations_formula-1-1">
+<div class="para">For <span class="process-math">\(1\leq k\leq n\text{,}\)</span> we have</div>
+<div class="displaymath process-math" id="thm_permutations_formula-1-1-2">
+\begin{equation*}
+{P(n,k)=n\cdot (n-1)\cdots (n+1-k) = \frac{n!}{(n-k)!}.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm_permutations_formula-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 3.0.4"><a href="#thm_permutations_formula" title="Copy heading and permalink for Theorem 3.0.4" aria-label="Copy heading and permalink for Theorem 3.0.4">🔗</a></div></article><div class="para logical" id="root-1-2-5-10">
+<div class="para">Note that as a special case of the formula above, we have <span class="process-math">\(|S_n|=P(n,n)=n!\)</span> and we obtain</div>
+<div class="displaymath process-math" id="root-1-2-5-10-2">
+\begin{equation*}
+{P(0,0)=\frac{0!}{(0-0)!}=1} \text{ and }  {P(n,0)=\frac{n!}{(n-0)!}=1.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-5-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="root-1-2-5-11">
+<div class="para">We can think of a <span class="process-math">\(k\)</span>-permutation as a linearly-ordered arrangement (i.e., string) of <span class="process-math">\(k\)</span> of <span class="process-math">\(n\)</span> objects. That is, we can denote a <span class="process-math">\(k\)</span>-permutation as a string <span class="process-math">\(w=w(1)w(2)\cdots w(k)\text{,}\)</span> where each <span class="process-math">\(w(i)\in [n]\)</span> and <span class="process-math">\(w(i)\neq w(j)\)</span> for <span class="process-math">\(i\neq j\text{.}\)</span> For example, if <span class="process-math">\(n=6\)</span> and <span class="process-math">\(k=4\text{,}\)</span> then the string <span class="process-math">\(3624\)</span> represents the <span class="process-math">\(4\)</span>-permutation <span class="process-math">\(w:[4]\to [6]\)</span> given by</div>
+<div class="displaymath process-math" id="root-1-2-5-11-14">
+\begin{equation*}
+w(1)=3, w(2)=6, w(3)=2,w(4)=4\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-5-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="root-1-2-5-12">Do you see why this <span class="process-math">\(4\)</span>-permutation corresponds to the non-attacking rook arrangement in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "fig_non-attacking" missing or not unique]</code>?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-5-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="root-1-2-5-13">
+<div class="para">In the case when <span class="process-math">\(n=k\text{,}\)</span> we can denote a permutation as a string <span class="process-math">\(w=w(1)w(2)\cdots w(n)\text{,}\)</span> where each entry <span class="process-math">\(w(i)\)</span> appears once. For example, the string <span class="process-math">\(w=241365\)</span> represents the bijection <span class="process-math">\(w:[6]\to [6]\)</span> given by</div>
+<div class="displaymath process-math" id="root-1-2-5-13-6">
+\begin{equation*}
+w(1)=2, w(2)=4, w(3)=1, w(4)=3, w(5)=6, w(6)=5\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-5-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="root-1-2-5-14" class="problem example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.0.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2></summary><article class="problem example-like knowl__content"><div class="para" id="root-1-2-5-14-1-1">How many strings of length three are there using letters from <span class="process-math">\(\{a,b,c,d,e,f,g\}\)</span> if the letters in the string are not repeated?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-5-14-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 3.0.5"><a href="#root-1-2-5-14" title="Copy heading and permalink for Problem 3.0.5" aria-label="Copy heading and permalink for Problem 3.0.5">🔗</a></div></article></details><details id="root-1-2-5-15" class="problem example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.0.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2></summary><article class="problem example-like knowl__content"><div class="para logical" id="root-1-2-5-15-1-1">
+<div class="para">There are 8 finalists at the Olympic Games 100 meters sprint. Assume there are no ties.</div>
+<ol class="decimal" id="root-1-2-5-15-1-1-1">
+<li id="root-1-2-5-15-1-1-1-1">
+<div class="para" id="root-1-2-5-15-1-1-1-1-1">How many ways are there for the runners to finish?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-5-15-1-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#root-1-2-5-15-1-1-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="root-1-2-5-15-1-1-1-2">
+<div class="para" id="root-1-2-5-15-1-1-1-2-1">How many ways are there for the runners to get gold, silver, bronze?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-5-15-1-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#root-1-2-5-15-1-1-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="root-1-2-5-15-1-1-1-3">
+<div class="para" id="root-1-2-5-15-1-1-1-3-1">How many ways are there for the runners to get gold, silver, bronze given that Usain Bolt is sure to get the gold medal?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-5-15-1-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#root-1-2-5-15-1-1-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-5-15-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 3.0.6"><a href="#root-1-2-5-15" title="Copy heading and permalink for Problem 3.0.6" aria-label="Copy heading and permalink for Problem 3.0.6">🔗</a></div></article></details><details id="root-1-2-5-16" class="problem example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.0.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2></summary><article class="problem example-like knowl__content"><div class="para" id="root-1-2-5-16-1-1">If <span class="process-math">\(1\leq k\leq n\text{,}\)</span> prove that <span class="process-math">\({P(n,k)=P(n-1,k)+kP(n-1,k-1)}\text{,}\)</span> both using the formula in <a href="root-1-2-5.html#thm_permutations_formula" class="xref" data-knowl="./knowl/xref/thm_permutations_formula.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.0.4">Theorem 3.0.4</a>, and separately using the definition of <span class="process-math">\(k\)</span>-permutations together with Product and Sum Principles. The latter approach is an example of a <dfn class="terminology">combinatorial proof</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-5-16-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 3.0.7"><a href="#root-1-2-5-16" title="Copy heading and permalink for Problem 3.0.7" aria-label="Copy heading and permalink for Problem 3.0.7">🔗</a></div></article></details><div class="para" id="root-1-2-5-17">The formula in the previous problem is an example of a <dfn class="terminology">recurrence relation</dfn>, which will be a topic of focus in a later chapter.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-5-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="root-1-2-5-18">Interpreting a permutation as a linearly ordered arrangement of object (i.e., string), a <dfn class="terminology">circular permutation</dfn> is similar to a permutation except the objects are arranged on a circle, so that there is no beginning or end. We can present a circular permutation <span class="process-math">\(w\)</span> of length <span class="process-math">\(n\)</span> as in <a href="root-1-2-5.html#fig_circular_permutation" class="xref" data-knowl="./knowl/xref/fig_circular_permutation.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.0.8">Figure 3.0.8</a>. Each <span class="process-math">\(w(i)\)</span> is a distinct value from <span class="process-math">\([n]\text{,}\)</span> and reading clockwise we encounter <span class="process-math">\(w(1),
+w(2),\ldots,w(n)\text{,}\)</span> so that <span class="process-math">\(w(n)\)</span> is placed next to <span class="process-math">\(w(1)\text{.}\)</span> Any circular rotation yields the same circular permutation.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-5-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig_circular_permutation"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/fig_circular_permutation-2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.0.8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Representation of a circular permutation.<div class="autopermalink" data-description="Figure 3.0.8"><a href="#fig_circular_permutation" title="Copy heading and permalink for Figure 3.0.8" aria-label="Copy heading and permalink for Figure 3.0.8">🔗</a></div></figcaption></figure><div class="para" id="root-1-2-5-20">We encountered circular permutations back in <a href="root-1-2-3.html#prop_circular_table" class="xref" data-knowl="./knowl/xref/prop_circular_table.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 1.0.40">Problem 1.0.40</a> when we counted circular seating arrangements of six friends sitting around a circle to play a game. Recall that the trick in that problem was to make use of the Division Principle.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-5-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="root-1-2-5-21" class="problem example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.0.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2></summary><article class="problem example-like knowl__content"><div class="para" id="root-1-2-5-21-1-1">How many circular permutations are there of length <span class="process-math">\(n\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-5-21-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 3.0.9"><a href="#root-1-2-5-21" title="Copy heading and permalink for Problem 3.0.9" aria-label="Copy heading and permalink for Problem 3.0.9">🔗</a></div></article></details><div class="para" id="root-1-2-5-22">Moving away from circular permutations and back to <span class="process-math">\(k\)</span>-permutations, recall that we can represent each <span class="process-math">\(k\)</span>-permutation of <span class="process-math">\([n]\)</span> as a string of length <span class="process-math">\(k\text{,}\)</span> where each entry is from <span class="process-math">\([n]\)</span> and no repeats are allowed. What if we allow repeats?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-5-22" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="root-1-2-5-23" class="problem example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.0.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2></summary><article class="problem example-like knowl__content"><div class="para" id="root-1-2-5-23-1-1">How many ways can the letters of the word PRESCOTT be arranged?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-5-23-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 3.0.10"><a href="#root-1-2-5-23" title="Copy heading and permalink for Problem 3.0.10" aria-label="Copy heading and permalink for Problem 3.0.10">🔗</a></div></article></details><details id="root-1-2-5-24" class="problem example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.0.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2></summary><article class="problem example-like knowl__content"><div class="para" id="root-1-2-5-24-1-1">How many ways can the letters of the word POPPY be arranged? Try to solve this problem in two different ways.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-5-24-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 3.0.11"><a href="#root-1-2-5-24" title="Copy heading and permalink for Problem 3.0.11" aria-label="Copy heading and permalink for Problem 3.0.11">🔗</a></div></article></details><div class="para" id="root-1-2-5-25">Consider a set of <span class="process-math">\(n\)</span> objects that are not necessarily distinct, with <span class="process-math">\(p\)</span> different types objects and <span class="process-math">\(n_i\)</span> objects of type <span class="process-math">\(i\)</span> (for <span class="process-math">\(i=1,2,\ldots, p\)</span>), so that <span class="process-math">\(n=n_1+\cdots +n_p\text{.}\)</span> An ordered arrangement of these <span class="process-math">\(n\)</span> objects is called a <dfn class="terminology">generalized permutation</dfn> and the number of such arrangements is denoted by <span class="process-math">\({P(n;n_1,\ldots,n_p)}\text{.}\)</span> For example, the number of words we can make out of the letters of POPPY is <span class="process-math">\(P(5;3,1,1)\text{.}\)</span> The following theorem follows immediately from the Division Principle.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-5-25" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="root-1-2-5-26"><h2 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.0.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
+<div class="para logical" id="root-1-2-5-26-1-1">
+<div class="para">For <span class="process-math">\(n,n_1,\ldots,n_p\in \mathbb{N}\)</span> such that <span class="process-math">\(n=n_1+\cdots +n_p\text{,}\)</span> we have</div>
+<div class="displaymath process-math" id="root-1-2-5-26-1-1-3">
+\begin{equation*}
+{P(n;n_1,\ldots,n_p)=\frac{n!}{n_1!\cdots n_p!}.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-5-26-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 3.0.12"><a href="#root-1-2-5-26" title="Copy heading and permalink for Theorem 3.0.12" aria-label="Copy heading and permalink for Theorem 3.0.12">🔗</a></div></article><details id="root-1-2-5-27" class="problem example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.0.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2></summary><article class="problem example-like knowl__content"><div class="para" id="root-1-2-5-27-1-1">How many ways can the letters of the word MISSISSIPPI be arranged?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-5-27-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 3.0.13"><a href="#root-1-2-5-27" title="Copy heading and permalink for Problem 3.0.13" aria-label="Copy heading and permalink for Problem 3.0.13">🔗</a></div></article></details><details id="root-1-2-5-28" class="problem example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.0.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2></summary><article class="problem example-like knowl__content"><div class="para" id="root-1-2-5-28-1-1">In Professor X’s class of 9 graduate students she will give two A’s, one B, and six C’s. How many possible ways are there to do this?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-5-28-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 3.0.14"><a href="#root-1-2-5-28" title="Copy heading and permalink for Problem 3.0.14" aria-label="Copy heading and permalink for Problem 3.0.14">🔗</a></div></article></details><details id="root-1-2-5-29" class="problem example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.0.15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2></summary><article class="problem example-like knowl__content"><div class="para" id="root-1-2-5-29-1-1">Let’s revisit <a href="root-1-2-3.html#prob_coffee" class="xref" data-knowl="./knowl/xref/prob_coffee.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 1.0.16">Problem 1.0.16</a>, which involved my walk to get coffee. When we attacked that problem, we did a lot of brute force. Do we now have an easier method?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-5-29-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 3.0.15"><a href="#root-1-2-5-29" title="Copy heading and permalink for Problem 3.0.15" aria-label="Copy heading and permalink for Problem 3.0.15">🔗</a></div></article></details><details id="root-1-2-5-30" class="problem example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.0.16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2></summary><article class="problem example-like knowl__content"><div class="para" id="root-1-2-5-30-1-1">In how many ways can a deck of 52 cards be dealt to four players, say <span class="process-math">\(N\text{,}\)</span> <span class="process-math">\(E\text{,}\)</span> <span class="process-math">\(S\text{,}\)</span> and <span class="process-math">\(W\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-5-30-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 3.0.16"><a href="#root-1-2-5-30" title="Copy heading and permalink for Problem 3.0.16" aria-label="Copy heading and permalink for Problem 3.0.16">🔗</a></div></article></details><div class="autopermalink" data-description="Chapter 3: Permutations"><a href="#root-1-2-5" title="Copy heading and permalink for Chapter 3: Permutations" aria-label="Copy heading and permalink for Chapter 3: Permutations">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="root-1-2-4.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="root-1-2-6.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>
