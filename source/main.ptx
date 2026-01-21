@@ -54,30 +54,43 @@
   <book>
     <title>Introduction to Discrete Mathematics</title>
     <frontmatter>
-      <titlepage>
-        <author>
-        <personname>Dana C. Ernst and John W. Hagood</personname>
-        <department>Department of Mathematics and Statistics</department>
-        <institution>
-        <line>Northern Arizona University</line>
-        <line>Flagstaff, AZ, USA</line>
-        </institution>
-        <email>dana.ernst@nau.edu</email>
-        </author>
+          <bibinfo>
+  
+    <author>
+      <personname>Dana C. Ernst and John W. Hagood</personname>
+      <department>Department of Mathematics and Statistics</department>
+      <institution>
+      <line>Northern Arizona University</line>
+      <line>Flagstaff, AZ, USA</line>
+      </institution>
+      <email>dana.ernst@nau.edu</email>
+    </author>
+    <date>
+      <today />
+    </date>
 
-        <date><today /></date>
-      </titlepage>
-    </frontmatter>
-    
-    <colophon xml:id="colophon">
-        <copyright>
-        <year>2026</year>
-        <holder>Dana C. Ernst and John W. Hagood</holder>
-        <shortlicense>
-        All rights reserved. The contents are not to be modified, copied, or stored in any manner without the expressed written consent of the authors (Dana C. Ernst and John W. Hagood).
-        </shortlicense>
-        </copyright>
-    </colophon>
+    <!-- <website>
+      <url href="https://danaernst.com"></url>
+    </website> -->
+
+    <copyright>
+      <year>2026</year>
+      <holder>Dana C. Ernst</holder>
+      <shortlicense> This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit <url href="http://creativecommons.org/licenses/by-sa/4.0/" visual="creativecommons.org/licenses/by-sa/4.0"> CreativeCommons.org</url>
+      </shortlicense>
+    </copyright>
+  
+  </bibinfo>
+
+  <titlepage>
+    <titlepage-items/>
+  </titlepage>
+
+  <colophon xml:id="front-colophon">
+    <colophon-items/>
+  </colophon>
+
+</frontmatter>
 
     <acknowledgement xml:id="chap_acknowledgements">
     <title>Acknowledgements</title>
