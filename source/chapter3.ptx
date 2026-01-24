@@ -54,10 +54,10 @@
     <xref ref="fig_nonattacking">Figure</xref>
     shows one possible non-attacking rook arrangement on an <m>6\times 4</m> chessboard.
   </p>
-  <!-- <figure xml:id="fig_nonattacking">
+  <figure xml:id="fig_nonattacking">
     <caption>A non-attacking rook arrangement on a <m>6\times 4</m> chessboard.</caption>
-    <image>
-<latex-image>
+    <image>TO DO!!!
+<!-- <latex-image>
 <![CDATA[\begin{tikzpicture}\draw[step=1cm,color=gray] (-2,-3) grid (2,3);
 \matrix[matrix of nodes,nodes={inner sep=0pt,text width=1cm,align=center,minimum height=1cm}]{
 &amp; \symrook &amp;   &amp;   \\
@@ -66,9 +66,9 @@
 \symrook &amp;   &amp;   &amp;   \\
 &amp;   &amp; \symrook &amp;  \\
 &amp;   &amp;  &amp;  \\};\end{tikzpicture}]]>
-</latex-image>
+</latex-image> -->
     </image>
-  </figure> -->
+  </figure>
   <problem>
     <statement>
       <p>
@@ -112,7 +112,7 @@
     </me>.
   </p>
   <p>
-    Do you see why this <m>4</m>-permutation corresponds to the non-attacking rook arrangement in <xref ref="fig_non-attacking">Figure</xref>?
+    Do you see why this <m>4</m>-permutation corresponds to the non-attacking rook arrangement in <xref ref="fig_nonattacking">Figure</xref>?
   </p>
   <p>
     In the case when <m>n=k</m>,
@@ -187,19 +187,19 @@
     Any circular rotation yields the same circular permutation.
     FIX ME!
   </p>
-  <!-- <figure xml:id="fig_circular_permutation">
+  <figure xml:id="fig_circular_permutation">
     <caption>Representation of a circular permutation.</caption>
-    <image>
-<latex-image>
+    <image>TO DO!!!
+<!-- <latex-image>
 <![CDATA[\begin{tikzpicture}
 \path
 pic[rotate=90,circular diagram/.cd,radius=4,arcs={{[bend]}-}]{
 circular diagram={w(1)/,w(n)/,w(n-1)/,
 \rotatebox{-50}{\(\dots\)}/,w(i)/,\rotatebox{50}{\(\dots\)}/,w(3)/,w(2)/}}
 ;\end{tikzpicture}]]>
-</latex-image>
+</latex-image> -->
     </image>
-  </figure> -->
+  </figure>
   <p>
     We encountered circular permutations back in <xref ref="prop_circular_table">Problem</xref>
     when we counted circular seating arrangements of six friends sitting around a circle to play a game.
