@@ -444,7 +444,7 @@
           <cell><m>f</m></cell>
         </row>
         <row>
-          <cell>\noalign{\hrule height 2pt}
+          <cell> <!-- \noalign{\hrule height 2pt} -->
             <m>b</m></cell>
           <cell><m>bb</m></cell>
           <cell><m>bc</m></cell>
@@ -534,7 +534,7 @@
           <cell>5</cell>
         </row>
         <row>
-          <cell>\noalign{\hrule height 2pt}
+          <cell> <!-- \noalign{\hrule height 2pt} -->
             <m>bb</m></cell>
           <cell><m>bb1</m></cell>
           <cell><m>bb2</m></cell>
@@ -646,9 +646,9 @@
   <example xml:id="ex_CartesianProduct">
     <statement>
       <p>
-        If <m>A=\{a,b,c\}</m> and <m>B=\{\smiley,\frownie\}</m>, then
+        If <m>A=\{a,b,c\}</m> and <m>B=\{\alpha,\beta\}</m>, then
         <me>
-          A\times B=\{(a,\smiley), (a,\frownie),(b,\smiley),(b,\frownie), (c,\smiley),(c,\frownie)\}
+          A\times B=\{(a,\alpha), (a,\beta),(b,\alpha),(b,\beta), (c,\alpha),(c,\beta)\}
         </me>.
       </p>
     </statement>

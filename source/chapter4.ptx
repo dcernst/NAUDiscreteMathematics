@@ -76,7 +76,7 @@
         <cell>6</cell>
       </row>
       <row>
-        <cell>\noalign{\hrule height 2pt}
+        <cell> <!-- \noalign{\hrule height 2pt} -->
           <m>0</m></cell>
         <cell><m>1</m></cell>
         <cell></cell>
