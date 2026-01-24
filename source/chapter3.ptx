@@ -54,7 +54,7 @@
     <xref ref="fig_nonattacking">Figure</xref>
     shows one possible non-attacking rook arrangement on an <m>6\times 4</m> chessboard.
   </p>
-  <figure xml:id="fig_nonattacking">
+  <!-- <figure xml:id="fig_nonattacking">
     <caption>A non-attacking rook arrangement on a <m>6\times 4</m> chessboard.</caption>
     <image>
 <latex-image>
@@ -68,7 +68,7 @@
 &amp;   &amp;  &amp;  \\};\end{tikzpicture}]]>
 </latex-image>
     </image>
-  </figure>
+  </figure> -->
   <problem>
     <statement>
       <p>
@@ -185,8 +185,9 @@
     <m>w(1),
     w(2),\ldots,w(n)</m>, so that <m>w(n)</m> is placed next to <m>w(1)</m>.
     Any circular rotation yields the same circular permutation.
+    FIX ME!
   </p>
-  <figure xml:id="fig_circular_permutation">
+  <!-- <figure xml:id="fig_circular_permutation">
     <caption>Representation of a circular permutation.</caption>
     <image>
 <latex-image>
@@ -198,7 +199,7 @@ circular diagram={w(1)/,w(n)/,w(n-1)/,
 ;\end{tikzpicture}]]>
 </latex-image>
     </image>
-  </figure>
+  </figure> -->
   <p>
     We encountered circular permutations back in <xref ref="prop_circular_table">Problem</xref>
     when we counted circular seating arrangements of six friends sitting around a circle to play a game.
