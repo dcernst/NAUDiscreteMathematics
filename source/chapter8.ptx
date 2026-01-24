@@ -13,7 +13,7 @@
   </p>
   <p>
     Consider the claims:
-    <ol>
+    <ol marker="(a)">
       <li>
         <p>
           For all <m>n\in\mathbb{N}</m>,
@@ -120,42 +120,25 @@
   <p>
     Here is the general structure for a proof by induction.
   </p>
-  <p>
-    \begin{mdframed}[style=skeleton]
-  </p>
-  <proof>
-    <p>
-      We proceed by induction.
-      <ol>
-        <li>
-          <title>(i)</title>
-          <p>
-            <term>Base step:</term> <em>[Verify that <m>P(1)</m> is true.
-            This often, but not always,
-            amounts to plugging <m>n=1</m> into two sides of some claimed equation and <em>verifying</em>
-            that both sides are actually equal.]</em>
-          </p>
-        </li>
-        <li>
-          <title>(ii)</title>
-          <p>
-            <term>Inductive step:</term> <em>[Your goal is to prove
-            <q>For all <m>k\in\mathbb{N}</m>,
-            if <m>P(k)</m> is true, then <m>P(k+1)</m> is true.</q>
-            ]</em> Let <m>k\in\mathbb{N}</m> and assume that <m>P(k)</m> is true.
-            <em>[Do something to derive that <m>P(k+1)</m> is true.]</em>
-            Therefore, <m>P(k+1)</m> is true.
-          </p>
-        </li>
-      </ol>
-    </p>
-    <p>
-      Thus, by induction, <m>P(n)</m> is true for all <m>n\in\mathbb{N}</m>.
-    </p>
-  </proof>
-  <p>
-    \end{mdframed}
-  </p>
+
+<heuristic xml:id="skeleton_induction">
+<title>Proof of <q>For all <m>n\in\mathbb{N}</m>, <m>P(n)</m></q> by Induction</title>
+<statement>
+<p>Here is the general structure for a proof by induction.</p>
+
+<proof>
+<p>We proceed by induction.
+<ol marker="i">
+<li><p>Base step: <em>[Verify that <m>P(1)</m> is true. This often, but not always, amounts to plugging <m>n=1</m> into two sides of some claimed equation and verifying that both sides are actually equal.]</em>
+</p></li>
+<li><p>Inductive step: <em>[Your goal is to prove <q>For all <m>k\in\mathbb{N}</m>, if <m>P(k)</m> is true, then <m>P(k+1)</m> is true.</q>]</em> Let <m>k\in\mathbb{N}</m> and assume that <m>P(k)</m> is true. <em>[Do something to derive that <m>P(k+1)</m> is true.]</em> Therefore, <m>P(k+1)</m> is true.</p></li>
+</ol>
+</p>
+<p>Thus, by induction, <m>P(n)</m> is true for all <m>n\in\mathbb{N}</m>.</p>
+</proof>
+</statement>
+</heuristic>
+
   <problem>
     <statement>
       <p>
@@ -261,46 +244,24 @@
       </p>
     </statement>
   </theorem>
-  <p>
-    Here is the general structure for a proof by induction when the base case does not necessarily involve <m>a=1</m>.
-  </p>
-  <p>
-    \begin{mdframed}[style=skeleton]
-  </p>
-  <proof>
-    <p>
-      We proceed by induction.
-      <ol>
-        <li>
-          <title>(i)</title>
-          <p>
-            <term>Base step:</term> <em>[Verify that <m>P(a)</m> is true.
-            This often, but not always,
-            amounts to plugging <m>n=a</m> into two sides of some claimed equation and <em>verifying</em>
-            that both sides are actually equal.]</em>
-          </p>
-        </li>
-        <li>
-          <title>(ii)</title>
-          <p>
-            <term>Inductive step:</term> <em>[Your goal is to prove
-            <q>For all <m>k\geq a</m>,
-            if <m>P(k)</m> is true, then <m>P(k+1)</m> is true.</q>
-            ]</em> Let <m>k \geq a</m> be an integer and assume that <m>P(k)</m> is true.
-            <em>[Do something to derive that <m>P(k+1)</m> is true.]</em>
-            Therefore, <m>P(k+1)</m> is true.
-          </p>
-        </li>
-      </ol>
-    </p>
-    <p>
-      Thus, by induction,
-      <m>P(n)</m> is true for all integers <m>n \ge a</m>.
-    </p>
-  </proof>
-  <p>
-    \end{mdframed}
-  </p>
+
+<heuristic xml:id="skeleton_induction_greater_than_a">
+<title>Proof of <q>For all <m>n \in \mathbb{Z}</m>, if <m>n \geq a</m>, then <m>P(n)</m></q> by Induction</title>
+<statement>
+<p>Here is the general structure for a proof by induction when the base case does not necessarily involve <m>a=1</m>.</p>
+
+<proof>
+<p>We proceed by induction.
+<ol marker="i">
+<li><p>Base step: <em>[Verify that <m>P(a)</m> is true. This often, but not always, amounts to plugging <m>n=a</m> into two sides of some claimed equation and verifying that both sides are actually equal.]</em></p></li>
+<li><p>Inductive step: <em>[Your goal is to prove <q>For all <m>k\geq a</m>, if <m>P(k)</m> is true, then <m>P(k+1)</m> is true.</q>]</em> Let <m>k \geq a</m> be an integer and assume that <m>P(k)</m> is true. <em>[Do something to derive that <m>P(k+1)</m> is true.]</em> Therefore, <m>P(k+1)</m> is true.</p></li>
+</ol>
+</p>
+<p>Thus, by induction, <m>P(n)</m> is true for all integers <m>n \ge a</m>.</p>
+</proof>
+</statement>
+</heuristic>
+
   <p>
     We already encountered the next result back <xref ref="prob_number_of_subsets">Problem</xref>,
     but let's see if we can use induction to prove it.
@@ -400,43 +361,24 @@
     Here is the general structure for a proof by complete induction,
     where the base case includes <m>n=1</m> and possibly more.
   </p>
-  <p>
-    \begin{mdframed}[style=skeleton]
-  </p>
-  <proof>
-    <p>
-      We proceed by strong induction.
-      <ol>
-        <li>
-          <title>(i)</title>
-          <p>
-            Base step: <em>[Verify that each of the statements <m>P(1),P(2),\ldots, P(m)</m> are true.
-            The value of <m>m</m> depends on the statement.]</em>
-          </p>
-        </li>
-        <li>
-          <title>(ii)</title>
-          <p>
-            Inductive step: <em>[Your goal is to prove
-            <q>For all <m>k\in\mathbb{N}</m> with <m>m\leq k</m>,
-            if <m>P(j)</m> is true for all
-            <m>j\in \mathbb{N}</m> such that <m>m\leq j \leq k</m>,
-            then <m>P(k+1)</m> is true.</q>
-            ]</em> Let <m>k \in \mathbb{N}</m> with <m>m\leq k</m> and suppose <m>P(j)</m> is true for all <m>m\leq j \leq k</m>.
-            <em>[Do something to derive that <m>P(k+1)</m> is true.]</em>
-            Therefore, <m>P(k+1)</m> is true.
-          </p>
-        </li>
-      </ol>
-    </p>
-    <p>
-      Thus, by complete induction,
-      <m>P(n)</m> is true for all <m>n \in\mathbb{N}</m>.
-    </p>
-  </proof>
-  <p>
-    \end{mdframed}
-  </p>
+
+<heuristic xml:id="skeleton_complete_induction">
+<title>Proof of <q>For all <m>n\in\mathbb{N}</m>, <m>P(n)</m></q> by Complete Induction</title>
+<statement>
+<p>Here is the general structure for a proof by complete induction.</p>
+
+<proof>
+<p>We proceed by complete induction.
+<ol marker="i">
+<li><p>Base step: <em>[Verify that each of the statements <m>P(1),P(2),\ldots, P(m)</m> are true.  The value of <m>m</m> depends on the statement.]</em></p></li>
+<li><p>Inductive step: <em>[Your goal is to prove <q>For all <m>k\in\mathbb{N}</m> with <m>m\leq k</m>, if <m>P(j)</m> is true for all <m>j\in \mathbb{N}</m> such that <m>m\leq j \leq k</m>, then <m>P(k+1)</m> is true.</q>]</em> Let <m>k \in \mathbb{N}</m> with <m>m\leq k</m> and suppose <m>P(j)</m> is true for all <m>m\leq j \leq k</m>. <em>[Do something to derive that <m>P(k+1)</m> is true.]</em> Therefore, <m>P(k+1)</m> is true.</p></li>
+</ol>
+</p>
+<p>Thus, by complete induction, <m>P(n)</m> is true for all <m>n \in \mathbb{N}</m>. </p>
+</proof>
+</statement>
+</heuristic>
+
   <p>
     When tackling the remaining problems in this chapter,
     think carefully about how many base steps you must verify.
