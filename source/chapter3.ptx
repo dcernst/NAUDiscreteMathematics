@@ -51,24 +51,76 @@
     We say that an arrangement of rooks on an <m>n\times k</m> chessboard is
     <term>non-attacking</term>
     if no two rooks lie in the same row or column.
-    <xref ref="fig_nonattacking">Figure</xref>
+    <xref ref="fig_nonattack">Figure</xref>
     shows one possible non-attacking rook arrangement on an <m>6\times 4</m> chessboard.
   </p>
-  <figure xml:id="fig_nonattacking">
-    <caption>A non-attacking rook arrangement on a <m>6\times 4</m> chessboard.</caption>
-    <image>TO DO!!!
-<!-- <latex-image>
+
+<!-- <figure xml:id="fig_nonattack">
+<caption>A non-attacking rook arrangement on a <m>6\times 4</m> chessboard.</caption>
+<image>
+<description>A 6 by 4 grid with four rooks placed such that no two occupy the same row or column.</description>
+<latex-image>
 <![CDATA[\begin{tikzpicture}\draw[step=1cm,color=gray] (-2,-3) grid (2,3);
 \matrix[matrix of nodes,nodes={inner sep=0pt,text width=1cm,align=center,minimum height=1cm}]{
-&amp; \symrook &amp;   &amp;   \\
+&amp; X &amp;   &amp;   \\
 &amp;  &amp;   &amp;   \\
-&amp;   &amp;   &amp; \symrook \\
-\symrook &amp;   &amp;   &amp;   \\
-&amp;   &amp; \symrook &amp;  \\
-&amp;   &amp;  &amp;  \\};\end{tikzpicture}]]>
-</latex-image> -->
-    </image>
-  </figure>
+&amp;   &amp;   &amp; X \\
+X &amp;   &amp;   &amp;   \\
+&amp;   &amp; X &amp;  \\
+&amp;   &amp;  &amp;  \\};
+\end{tikzpicture}]]>
+</latex-image>
+</image>
+</figure> -->
+
+<figure xml:id="fig_nonattack">
+<caption>A non-attacking rook arrangement on a <m>6\times 4</m> chessboard. Four rooks are placed such that no two occupy the same row or column.</caption>
+<!-- <description>A 6 by 4 grid with four rooks placed such that no two occupy the same row or column.</description> -->
+<tabular bottom="minor" top="minor" left="minor" right="minor" halign="center">    
+    <col width="2cm" halign="center" right="minor"/>
+    <col width="2cm" halign="center" right="minor"/>
+    <col width="2cm" halign="center" right="minor"/>
+    <col width="2cm" halign="center" />
+
+    <row bottom="minor" height="1cm">
+      <cell></cell>
+      <cell><m>\bullet</m></cell>
+      <cell></cell>
+      <cell></cell>
+    </row>
+    <row bottom="minor" height="2cm">
+      <cell></cell>
+      <cell><m>\phantom{\bullet}</m></cell>
+      <cell></cell>
+      <cell></cell>
+    </row>
+    <row bottom="minor" height="2cm">
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+      <cell><m>\bullet</m></cell>
+    </row>
+    <row bottom="minor" height="2cm">
+      <cell><m>\bullet</m></cell>
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+    </row>
+    <row bottom="minor" height="2cm">
+      <cell></cell>
+      <cell></cell>
+      <cell><m>\bullet</m></cell>
+      <cell></cell>
+    </row>
+    <row bottom="minor" height="2cm">
+      <cell></cell>
+      <cell><m>\phantom{\bullet}</m></cell>
+      <cell></cell>
+      <cell></cell>
+    </row>
+  </tabular>
+</figure>
+
   <problem>
     <statement>
       <p>
@@ -112,7 +164,7 @@
     </me>.
   </p>
   <p>
-    Do you see why this <m>4</m>-permutation corresponds to the non-attacking rook arrangement in <xref ref="fig_nonattacking">Figure</xref>?
+    Do you see why this <m>4</m>-permutation corresponds to the non-attacking rook arrangement in <xref ref="fig_nonattack">Figure</xref>?
   </p>
   <p>
     In the case when <m>n=k</m>,
@@ -185,21 +237,49 @@
     <m>w(1),
     w(2),\ldots,w(n)</m>, so that <m>w(n)</m> is placed next to <m>w(1)</m>.
     Any circular rotation yields the same circular permutation.
-    FIX ME!
   </p>
-  <figure xml:id="fig_circular_permutation">
-    <caption>Representation of a circular permutation.</caption>
-    <image>TO DO!!!
-<!-- <latex-image>
-<![CDATA[\begin{tikzpicture}
+
+<figure xml:id="fig_circular_permutation">
+<caption>Representation of a circular permutation.</caption>
+<image>
+<latex-image>
+<![CDATA[
+      \begin{tikzpicture}[baseline=(current bounding box.center)]
+        % Define the radius
+        \def\R{2cm}
+        
+        % Place the elements in a circle
+        \node (w1) at (90:\R) {$w(1)$};
+        \node (w2) at (45:\R) {$w(2)$};
+        \node (w3) at (0:\R) {$w(3)$};
+        \node (dots1) at (-45:\R) {\rotatebox{45}{$\cdots$}};
+        \node (wi) at (-90:\R) {$w(i)$};
+        \node (dots2) at (-135:\R) {\rotatebox{-45}{$\cdots$}};
+        \node (wn1) at (180:\R) {$w(n-1)$};
+        \node (wn) at (135:\R) {$w(n)$};
+
+        % Draw the arrows between them
+        \draw[-, bend left=10] (w1) to (w2);
+        \draw[-, bend left=10] (w2) to (w3);
+        \draw[-, bend left=10] (w3) to (dots1);
+        \draw[-, bend left=10] (dots1) to (wi);
+        \draw[-, bend left=10] (wi) to (dots2);
+        \draw[-, bend left=10] (dots2) to (wn1);
+        \draw[-, bend left=10] (wn1) to (wn);
+        \draw[-, bend left=10] (wn) to (w1);
+      \end{tikzpicture}
+      ]]>
+</latex-image>
+</image>
+</figure>
+
+<!-- <![CDATA[\begin{tikzpicture}
 \path
 pic[rotate=90,circular diagram/.cd,radius=4,arcs={{[bend]}-}]{
 circular diagram={w(1)/,w(n)/,w(n-1)/,
 \rotatebox{-50}{\(\dots\)}/,w(i)/,\rotatebox{50}{\(\dots\)}/,w(3)/,w(2)/}}
-;\end{tikzpicture}]]>
-</latex-image> -->
-    </image>
-  </figure>
+;\end{tikzpicture}]]> -->
+
   <p>
     We encountered circular permutations back in <xref ref="prop_circular_table">Problem</xref>
     when we counted circular seating arrangements of six friends sitting around a circle to play a game.
