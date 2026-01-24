@@ -14,7 +14,7 @@
 <!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Combinations</title>
+<title>Permutations</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
@@ -178,367 +178,191 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="chap_acknowledgements.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
 <li class="toc-item toc-chapter"><div class="toc-title-box"><a href="root-1-2-4.html" class="internal"><span class="codenumber">1</span> <span class="title">Sets and Counting Principles</span></a></div></li>
 <li class="toc-item toc-chapter"><div class="toc-title-box"><a href="root-1-2-5.html" class="internal"><span class="codenumber">2</span> <span class="title">Functions</span></a></div></li>
-<li class="toc-item toc-chapter active"><div class="toc-title-box"><a href="root-1-2-6.html" class="internal"><span class="codenumber">3</span> <span class="title">Combinations</span></a></div></li>
-<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="root-1-2-7.html" class="internal"><span class="codenumber">4</span> <span class="title">The Binomial Theorem</span></a></div></li>
-<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="chap_pigeonhole_principle.html" class="internal"><span class="codenumber">5</span> <span class="title">Pigeonhole Principle</span></a></div></li>
-<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="chap_PIE.html" class="internal"><span class="codenumber">6</span> <span class="title">Principle of Inclusion and Exclusion</span></a></div></li>
-<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="root-1-2-10.html" class="internal"><span class="codenumber">7</span> <span class="title">Mathematical Induction</span></a></div></li>
-<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="root-1-2-11.html" class="internal"><span class="codenumber">8</span> <span class="title">Sequences and Recurrence Relations</span></a></div></li>
-<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="root-1-2-12.html" class="internal"><span class="codenumber">9</span> <span class="title">Introduction to Graph Theory</span></a></div></li>
+<li class="toc-item toc-chapter active"><div class="toc-title-box"><a href="root-1-2-6.html" class="internal"><span class="codenumber">3</span> <span class="title">Permutations</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="root-1-2-7.html" class="internal"><span class="codenumber">4</span> <span class="title">Combinations</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="root-1-2-8.html" class="internal"><span class="codenumber">5</span> <span class="title">The Binomial Theorem</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="chap_pigeonhole_principle.html" class="internal"><span class="codenumber">6</span> <span class="title">Pigeonhole Principle</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="chap_PIE.html" class="internal"><span class="codenumber">7</span> <span class="title">Principle of Inclusion and Exclusion</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="root-1-2-11.html" class="internal"><span class="codenumber">8</span> <span class="title">Mathematical Induction</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="root-1-2-12.html" class="internal"><span class="codenumber">9</span> <span class="title">Sequences and Recurrence Relations</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="root-1-2-13.html" class="internal"><span class="codenumber">10</span> <span class="title">Introduction to Graph Theory</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="root-1-2-14.html" class="internal"><span class="codenumber">11</span> <span class="title">Additional Graph Theory</span></a></div></li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="root-1-2-6"><h2 class="heading">
-<span class="type">Chapter</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Combinations</span>
+<span class="type">Chapter</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Permutations</span>
 </h2>
-<div class="para" id="root-1-2-6-2">The notion of <span class="process-math">\(k\)</span>-permutations captures arrangements of distinct objects where order matters. But what should we do if we want to capture a situation where the order of the objects does not matter? Since the order of the objects in a set does not matter, this is the model we should use.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="root-1-2-6-2">For <span class="process-math">\(n\in\mathbb{N}\text{,}\)</span> we define <span class="process-math">\({[n]:=\{1,2,\ldots,n\}}\text{.}\)</span> That is, <span class="process-math">\([n]\)</span> is just clever shorthand for the set containing 1 through <span class="process-math">\(n\text{.}\)</span> This notation is meant to resemble interval notation.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para logical" id="root-1-2-6-3">
-<div class="para">If <span class="process-math">\(A\)</span> is a set and <span class="process-math">\(B\subseteq A\)</span> with <span class="process-math">\(|B|=k\text{,}\)</span> we refer to <span class="process-math">\(B\)</span> as a <dfn class="terminology"><span class="process-math">\(k\)</span>-subset</dfn> of <span class="process-math">\(A\text{.}\)</span> The collection of all <span class="process-math">\(k\)</span>-subsets of <span class="process-math">\(A\)</span> is defined via</div>
-<div class="displaymath process-math" id="root-1-2-6-3-9">
-\begin{equation*}
-{\binom{A}{k}:=\{B\subseteq A\mid |B|=k\}.}
-\end{equation*}
+<div class="para" id="root-1-2-6-3">For <span class="process-math">\(k\in\mathbb{N}\)</span> and a nonempty set <span class="process-math">\(A\text{,}\)</span> a <dfn class="terminology"><span class="process-math">\(k\)</span>-permutation</dfn> of <span class="process-math">\(A\)</span> is an injective function <span class="process-math">\(w:[k]\to A\text{.}\)</span> The set of all <span class="process-math">\(k\)</span>-permutations of <span class="process-math">\(A\)</span> is denoted by <span class="process-math">\({S_{A,k}}\text{.}\)</span> If <span class="process-math">\(A\)</span> happens to be the set <span class="process-math">\([n]\text{,}\)</span> we use the notation <span class="process-math">\({S_{n,k}}\text{.}\)</span> And if <span class="process-math">\(n=k\text{,}\)</span> we write <span class="process-math">\({S_n:=S_{n,n}}\)</span> and refer to each <span class="process-math">\(n\)</span>-permutation in <span class="process-math">\(S_n\)</span> as a <dfn class="terminology">permutation</dfn>. Let <span class="process-math">\({P(n,k):=|S_{n,k}|}\text{.}\)</span> By convention, we set <span class="process-math">\({P(n,0):=1}\text{,}\)</span> including the case when <span class="process-math">\(n=0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para logical" id="root-1-2-6-4">
-<div class="para">The <dfn class="terminology">binomial coefficient</dfn> is defined via</div>
-<div class="displaymath process-math" id="root-1-2-6-4-2">
-\begin{equation*}
-{\binom{n}{k}:=\text{ number of \(k\)-subsets of an \(n\)-element set } .}
-\end{equation*}
-</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para" id="root-1-2-6-5">In particular, if <span class="process-math">\(|A|=n\text{,}\)</span> then <span class="process-math">\(\lvert\binom{A}{k}\rvert=\binom{n}{k}\text{.}\)</span> We read “<span class="process-math">\(\binom{n}{k}\)</span>” as “<span class="process-math">\(n\)</span> choose <span class="process-math">\(k\)</span>”. Alternate notations for binomial coefficients include <span class="process-math">\(C(n,k)\)</span> and <span class="process-math">\(_n C_k\text{.}\)</span> We will see later why <span class="process-math">\(\binom{n}{k}\)</span> is referred to as a binomial coefficient.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<article class="example example-like" id="root-1-2-6-6"><h2 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<article class="problem example-like" id="root-1-2-6-4"><h2 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h2>
-<div class="para logical" id="root-1-2-6-6-1-1">
-<div class="para">If <span class="process-math">\(A=\{a,b,c,d\}\text{,}\)</span> then</div>
-<div class="displaymath process-math" id="root-1-2-6-6-1-1-2">
-\begin{equation*}
-\binom{A}{2}=\{\{a,b\},\{a,c\},\{a,d\},\{b,c\},\{b,d\},\{c,d\}\}\text{,}
-\end{equation*}
+<div class="para logical" id="root-1-2-6-4-1-1">
+<div class="para">Complete the following.</div>
+<ol class="decimal" id="root-1-2-6-4-1-1-1">
+<li id="root-1-2-6-4-1-1-1-1">
+<div class="para" id="root-1-2-6-4-1-1-1-1-1">Write down all of the elements in <span class="process-math">\(S_3\text{.}\)</span> What is <span class="process-math">\(P(3,3)\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-4-1-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para">which implies that <span class="process-math">\(\binom{4}{2}=6\text{.}\)</span>
+<div class="autopermalink" data-description="Item 1"><a href="#root-1-2-6-4-1-1-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="root-1-2-6-4-1-1-1-2">
+<div class="para" id="root-1-2-6-4-1-1-1-2-1">Write down all of the elements in <span class="process-math">\(S_{4,3}\text{.}\)</span> What is <span class="process-math">\(P(4,3)\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-4-1-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Item 2"><a href="#root-1-2-6-4-1-1-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 3.1"><a href="#root-1-2-6-6" title="Copy heading and permalink for Example 3.1" aria-label="Copy heading and permalink for Example 3.1">🔗</a></div></article><article class="problem example-like" id="root-1-2-6-7"><h2 class="heading">
-<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2>
-<div class="para" id="root-1-2-6-7-1-1">For any <span class="process-math">\(A\text{,}\)</span> including the empty set, what is <span class="process-math">\(\binom{A}{0}\text{?}\)</span> For <span class="process-math">\(n\geq 0\text{,}\)</span> what is <span class="process-math">\(\binom{n}{0}\)</span> equal to?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Problem 3.1"><a href="#root-1-2-6-4" title="Copy heading and permalink for Problem 3.1" aria-label="Copy heading and permalink for Problem 3.1">🔗</a></div></article><div class="para" id="root-1-2-6-5">The game of chess is played on an <span class="process-math">\(8\times 8\)</span> grid. We will consider chessboards with arbitrary dimensions, say <span class="process-math">\(n\times k\)</span> (<span class="process-math">\(n\)</span> rows, <span class="process-math">\(k\)</span> columns) with <span class="process-math">\(1\leq k \leq n\text{.}\)</span> A rook is a castle-shaped piece that can move horizontally or vertically any number of squares. In a typical chess game, there are two black rooks and two white rooks, but for our purposes we will assume we have <span class="process-math">\(k\)</span> rooks, where all the rooks are the same color. We say that an arrangement of rooks on an <span class="process-math">\(n\times k\)</span> chessboard is <dfn class="terminology">non-attacking</dfn> if no two rooks lie in the same row or column. <a href="root-1-2-6.html#fig_nonattacking" class="xref" data-knowl="./knowl/xref/fig_nonattacking.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.2">Figure 3.2</a> shows one possible non-attacking rook arrangement on an <span class="process-math">\(6\times 4\)</span> chessboard.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Problem 3.2"><a href="#root-1-2-6-7" title="Copy heading and permalink for Problem 3.2" aria-label="Copy heading and permalink for Problem 3.2">🔗</a></div></article><article class="problem example-like" id="root-1-2-6-8"><h2 class="heading">
+<figure class="figure figure-like" id="fig_nonattacking"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;">TO DO!!!
+
+    </div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A non-attacking rook arrangement on a <span class="process-math">\(6\times 4\)</span> chessboard.<div class="autopermalink" data-description="Figure 3.2"><a href="#fig_nonattacking" title="Copy heading and permalink for Figure 3.2" aria-label="Copy heading and permalink for Figure 3.2">🔗</a></div></figcaption></figure><article class="problem example-like" id="root-1-2-6-7"><h2 class="heading">
 <span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h2>
-<div class="para" id="root-1-2-6-8-1-1">For <span class="process-math">\(n\geq 0\text{,}\)</span> what is <span class="process-math">\(\binom{n}{n}\)</span> equal to?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="root-1-2-6-7-1-1">Consider the collection of <span class="process-math">\(k\)</span>-permutations in <span class="process-math">\(S_{n,k}\)</span> with <span class="process-math">\(1\leq k\leq n\text{.}\)</span> Explain why <span class="process-math">\(P(n,k)\)</span> is equal to the number of non-attacking rook arrangements on an <span class="process-math">\(n\times k\)</span> chess board. <em class="emphasis">Hint:</em> Establish a bijection between the collection of non-attacking rook arrangements on an <span class="process-math">\(n\times k\)</span> chess board and the collection of <span class="process-math">\(k\)</span>-permutations.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Problem 3.3"><a href="#root-1-2-6-8" title="Copy heading and permalink for Problem 3.3" aria-label="Copy heading and permalink for Problem 3.3">🔗</a></div></article><div class="para" id="root-1-2-6-9">If we let <span class="process-math">\(n\)</span> and <span class="process-math">\(k\)</span> vary, we can organize the binomial coefficients in a triangular array, often referred to as <dfn class="terminology">Pascal’s Triangle</dfn>. See <a href="root-1-2-6.html#table_Pascal" class="xref" data-knowl="./knowl/xref/table_Pascal.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 3.4: Pascal’s Triangle of binomial coefficients">Table 3.4</a>.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Problem 3.3"><a href="#root-1-2-6-7" title="Copy heading and permalink for Problem 3.3" aria-label="Copy heading and permalink for Problem 3.3">🔗</a></div></article><div class="para" id="root-1-2-6-8">Recall that for <span class="process-math">\(n\in\mathbb{N}\text{,}\)</span> the <dfn class="terminology">factorial</dfn> of <span class="process-math">\(n\)</span> is defined <span class="process-math">\({n!:=n\cdot (n-1)\cdots 2\cdot 1}\text{,}\)</span> and we define <span class="process-math">\({0!:=1}\)</span> for convenience.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<figure class="table table-like" id="table_Pascal"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Pascal’s Triangle of binomial coefficients<div class="autopermalink" data-description="Table 3.4: Pascal’s Triangle of binomial coefficients"><a href="#table_Pascal" title="Copy heading and permalink for Table 3.4: Pascal’s Triangle of binomial coefficients" aria-label="Copy heading and permalink for Table 3.4: Pascal’s Triangle of binomial coefficients">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(n\setminus k\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(3\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(4\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(5\)</span></td>
-<td class="l m b0 r0 l0 t0 lines">6</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">\noalign{\hrule height 2pt} <span class="process-math">\(0\)</span>
-</td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(3\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
-<td class="l m b0 r0 l0 t0 lines">3</td>
-<td class="l m b0 r0 l0 t0 lines">3</td>
-<td class="l m b0 r0 l0 t0 lines">1</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(4\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
-<td class="l m b0 r0 l0 t0 lines">4</td>
-<td class="l m b0 r0 l0 t0 lines">6</td>
-<td class="l m b0 r0 l0 t0 lines">4</td>
-<td class="l m b0 r0 l0 t0 lines">1</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(5\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
-<td class="l m b0 r0 l0 t0 lines">5</td>
-<td class="l m b0 r0 l0 t0 lines">10</td>
-<td class="l m b0 r0 l0 t0 lines">10</td>
-<td class="l m b0 r0 l0 t0 lines">5</td>
-<td class="l m b0 r0 l0 t0 lines">1</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(6\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
-<td class="l m b0 r0 l0 t0 lines">6</td>
-<td class="l m b0 r0 l0 t0 lines">15</td>
-<td class="l m b0 r0 l0 t0 lines">20</td>
-<td class="l m b0 r0 l0 t0 lines">15</td>
-<td class="l m b0 r0 l0 t0 lines">6</td>
-<td class="l m b0 r0 l0 t0 lines">1</td>
-</tr>
-</table></div></figure><article class="problem example-like" id="root-1-2-6-11"><h2 class="heading">
+<article class="theorem theorem-like" id="thm_permutations_formula"><h2 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
+<div class="para logical" id="thm_permutations_formula-1-1">
+<div class="para">For <span class="process-math">\(1\leq k\leq n\text{,}\)</span> we have</div>
+<div class="displaymath process-math" id="thm_permutations_formula-1-1-2">
+\begin{equation*}
+{P(n,k)=n\cdot (n-1)\cdots (n+1-k) = \frac{n!}{(n-k)!}.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm_permutations_formula-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 3.4"><a href="#thm_permutations_formula" title="Copy heading and permalink for Theorem 3.4" aria-label="Copy heading and permalink for Theorem 3.4">🔗</a></div></article><div class="para logical" id="root-1-2-6-10">
+<div class="para">Note that as a special case of the formula above, we have <span class="process-math">\(|S_n|=P(n,n)=n!\)</span> and we obtain</div>
+<div class="displaymath process-math" id="root-1-2-6-10-2">
+\begin{equation*}
+{P(0,0)=\frac{0!}{(0-0)!}=1} \text{ and }  {P(n,0)=\frac{n!}{(n-0)!}=1.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="root-1-2-6-11">
+<div class="para">We can think of a <span class="process-math">\(k\)</span>-permutation as a linearly-ordered arrangement (i.e., string) of <span class="process-math">\(k\)</span> of <span class="process-math">\(n\)</span> objects. That is, we can denote a <span class="process-math">\(k\)</span>-permutation as a string <span class="process-math">\(w=w(1)w(2)\cdots w(k)\text{,}\)</span> where each <span class="process-math">\(w(i)\in [n]\)</span> and <span class="process-math">\(w(i)\neq w(j)\)</span> for <span class="process-math">\(i\neq j\text{.}\)</span> For example, if <span class="process-math">\(n=6\)</span> and <span class="process-math">\(k=4\text{,}\)</span> then the string <span class="process-math">\(3624\)</span> represents the <span class="process-math">\(4\)</span>-permutation <span class="process-math">\(w:[4]\to [6]\)</span> given by</div>
+<div class="displaymath process-math" id="root-1-2-6-11-14">
+\begin{equation*}
+w(1)=3, w(2)=6, w(3)=2,w(4)=4\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="root-1-2-6-12">Do you see why this <span class="process-math">\(4\)</span>-permutation corresponds to the non-attacking rook arrangement in <a href="root-1-2-6.html#fig_nonattacking" class="xref" data-knowl="./knowl/xref/fig_nonattacking.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.2">Figure 3.2</a>?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="root-1-2-6-13">
+<div class="para">In the case when <span class="process-math">\(n=k\text{,}\)</span> we can denote a permutation as a string <span class="process-math">\(w=w(1)w(2)\cdots w(n)\text{,}\)</span> where each entry <span class="process-math">\(w(i)\)</span> appears once. For example, the string <span class="process-math">\(w=241365\)</span> represents the bijection <span class="process-math">\(w:[6]\to [6]\)</span> given by</div>
+<div class="displaymath process-math" id="root-1-2-6-13-6">
+\begin{equation*}
+w(1)=2, w(2)=4, w(3)=1, w(4)=3, w(5)=6, w(6)=5\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="problem example-like" id="root-1-2-6-14"><h2 class="heading">
 <span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h2>
-<div class="para logical" id="root-1-2-6-11-1-1">
-<div class="para">Suppose you have a pool of 6 applicants for a job opening. Let’s assume you believe the values in <a href="root-1-2-6.html#table_Pascal" class="xref" data-knowl="./knowl/xref/table_Pascal.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 3.4: Pascal’s Triangle of binomial coefficients">Table 3.4</a>.</div>
-<ol class="decimal" id="root-1-2-6-11-1-1-2">
-<li id="root-1-2-6-11-1-1-2-1">
-<div class="para" id="root-1-2-6-11-1-1-2-1-1">How many ways can you choose 3 of the 6 applicants to interview?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-11-1-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="root-1-2-6-14-1-1">How many strings of length three are there using letters from <span class="process-math">\(\{a,b,c,d,e,f,g\}\)</span> if the letters in the string are not repeated?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-14-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 1"><a href="#root-1-2-6-11-1-1-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
-</li>
-<li id="root-1-2-6-11-1-1-2-2">
-<div class="para" id="root-1-2-6-11-1-1-2-2-1">How many ways can you hire 3 of the 6 applicants for 3 distinct jobs?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-11-1-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 2"><a href="#root-1-2-6-11-1-1-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
-</li>
-</ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-11-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Problem 3.5"><a href="#root-1-2-6-11" title="Copy heading and permalink for Problem 3.5" aria-label="Copy heading and permalink for Problem 3.5">🔗</a></div></article><article class="problem example-like" id="prob_sum_of_row_in_Pascal"><h2 class="heading">
+<div class="autopermalink" data-description="Problem 3.5"><a href="#root-1-2-6-14" title="Copy heading and permalink for Problem 3.5" aria-label="Copy heading and permalink for Problem 3.5">🔗</a></div></article><article class="problem example-like" id="root-1-2-6-15"><h2 class="heading">
 <span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h2>
-<div class="para logical" id="prob_sum_of_row_in_Pascal-1-1">
-<div class="para">What are the row sums in Pascal’s Triangle? That is, what is the following sum equal to for any <span class="process-math">\(n\geq 0\text{?}\)</span>
+<div class="para logical" id="root-1-2-6-15-1-1">
+<div class="para">There are 8 finalists at the Olympic Games 100 meters sprint. Assume there are no ties.</div>
+<ol class="decimal" id="root-1-2-6-15-1-1-1">
+<li id="root-1-2-6-15-1-1-1-1">
+<div class="para" id="root-1-2-6-15-1-1-1-1-1">How many ways are there for the runners to finish?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-15-1-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" id="prob_sum_of_row_in_Pascal-1-1-2">
-\begin{equation*}
-\sum_{k=0}^n\binom{n}{k}:=\binom{n}{0}+\binom{n}{1}+\cdots +\binom{n}{n}\text{.}
-\end{equation*}
+<div class="autopermalink" data-description="Item 1"><a href="#root-1-2-6-15-1-1-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="root-1-2-6-15-1-1-1-2">
+<div class="para" id="root-1-2-6-15-1-1-1-2-1">How many ways are there for the runners to get gold, silver, bronze?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-15-1-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#prob_sum_of_row_in_Pascal-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Item 2"><a href="#root-1-2-6-15-1-1-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="root-1-2-6-15-1-1-1-3">
+<div class="para" id="root-1-2-6-15-1-1-1-3-1">How many ways are there for the runners to get gold, silver, bronze given that Usain Bolt is sure to get the gold medal?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-15-1-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Problem 3.6"><a href="#prob_sum_of_row_in_Pascal" title="Copy heading and permalink for Problem 3.6" aria-label="Copy heading and permalink for Problem 3.6">🔗</a></div></article><article class="problem example-like" id="root-1-2-6-13"><h2 class="heading">
+<div class="autopermalink" data-description="Item 3"><a href="#root-1-2-6-15-1-1-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-15-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 3.6"><a href="#root-1-2-6-15" title="Copy heading and permalink for Problem 3.6" aria-label="Copy heading and permalink for Problem 3.6">🔗</a></div></article><article class="problem example-like" id="root-1-2-6-16"><h2 class="heading">
 <span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h2>
-<div class="para logical" id="root-1-2-6-13-1-1">
-<div class="para">Using the meanings of <span class="process-math">\(k\)</span>-subset and <span class="process-math">\(k\)</span>-permutation, explain why</div>
-<div class="displaymath process-math" id="root-1-2-6-13-1-1-3">
-\begin{equation*}
-P(n,k)=\binom{n}{k} \cdot k!\text{.}
-\end{equation*}
+<div class="para" id="root-1-2-6-16-1-1">If <span class="process-math">\(1\leq k\leq n\text{,}\)</span> prove that <span class="process-math">\({P(n,k)=P(n-1,k)+kP(n-1,k-1)}\text{,}\)</span> both using the formula in <a href="root-1-2-6.html#thm_permutations_formula" class="xref" data-knowl="./knowl/xref/thm_permutations_formula.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.4">Theorem 3.4</a>, and separately using the definition of <span class="process-math">\(k\)</span>-permutations together with Product and Sum Principles. The latter approach is an example of a <dfn class="terminology">combinatorial proof</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-16-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-13-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Problem 3.7"><a href="#root-1-2-6-16" title="Copy heading and permalink for Problem 3.7" aria-label="Copy heading and permalink for Problem 3.7">🔗</a></div></article><div class="para" id="root-1-2-6-17">The formula in the previous problem is an example of a <dfn class="terminology">recurrence relation</dfn>, which will be a topic of focus in a later chapter.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Problem 3.7"><a href="#root-1-2-6-13" title="Copy heading and permalink for Problem 3.7" aria-label="Copy heading and permalink for Problem 3.7">🔗</a></div></article><div class="para" id="root-1-2-6-14">Using the previous problem, we immediately get the following handy formula for computing binomial coefficients.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="root-1-2-6-18">Interpreting a permutation as a linearly ordered arrangement of object (i.e., string), a <dfn class="terminology">circular permutation</dfn> is similar to a permutation except the objects are arranged on a circle, so that there is no beginning or end. We can present a circular permutation <span class="process-math">\(w\)</span> of length <span class="process-math">\(n\)</span> as in <a href="root-1-2-6.html#fig_circular_permutation" class="xref" data-knowl="./knowl/xref/fig_circular_permutation.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.8">Figure 3.8</a>. Each <span class="process-math">\(w(i)\)</span> is a distinct value from <span class="process-math">\([n]\text{,}\)</span> and reading clockwise we encounter <span class="process-math">\(w(1),
+w(2),\ldots,w(n)\text{,}\)</span> so that <span class="process-math">\(w(n)\)</span> is placed next to <span class="process-math">\(w(1)\text{.}\)</span> Any circular rotation yields the same circular permutation. FIX ME!<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="theorem theorem-like" id="thm_binomial_formula"><h2 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2>
-<div class="para logical" id="thm_binomial_formula-1-1">
-<div class="para">For <span class="process-math">\(0\leq k\leq n\text{,}\)</span> we have</div>
-<div class="displaymath process-math" id="thm_binomial_formula-1-1-2">
-\begin{equation*}
-{\binom{n}{k}=\frac{n!}{k!(n-k)!} =\frac{P(n,k)}{k!}.}
-\end{equation*}
+<figure class="figure figure-like" id="fig_circular_permutation"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;">TO DO!!!
+
+    </div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Representation of a circular permutation.<div class="autopermalink" data-description="Figure 3.8"><a href="#fig_circular_permutation" title="Copy heading and permalink for Figure 3.8" aria-label="Copy heading and permalink for Figure 3.8">🔗</a></div></figcaption></figure><div class="para" id="root-1-2-6-20">We encountered circular permutations back in <a href="root-1-2-4.html#prop_circular_table" class="xref" data-knowl="./knowl/xref/prop_circular_table.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 1.40">Problem 1.40</a> when we counted circular seating arrangements of six friends sitting around a circle to play a game. Recall that the trick in that problem was to make use of the Division Principle.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#thm_binomial_formula-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Theorem 3.8"><a href="#thm_binomial_formula" title="Copy heading and permalink for Theorem 3.8" aria-label="Copy heading and permalink for Theorem 3.8">🔗</a></div></article><div class="para" id="root-1-2-6-16">In the last expression above, the numerator of <span class="process-math">\(\frac{P(n,k)}{k!}\)</span> is counting how many distinct arrangements (order matters) there are of <span class="process-math">\(k\)</span> objects taken from <span class="process-math">\(n\)</span> objects and the denominator is essentially unordering arrangements (by Division Principle) that consist of the same objects.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<article class="problem example-like" id="root-1-2-6-17"><h2 class="heading">
+<article class="problem example-like" id="root-1-2-6-21"><h2 class="heading">
 <span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h2>
-<div class="para logical" id="root-1-2-6-17-1-1">
-<div class="para">A state senate consists of 19 Republicans and 14 Democrats. In how many ways can a committee be chosen if:</div>
-<ol class="decimal" id="root-1-2-6-17-1-1-1">
-<li id="root-1-2-6-17-1-1-1-1">
-<div class="para" id="root-1-2-6-17-1-1-1-1-1">The committee contains 6 senators without regard to party?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-17-1-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="root-1-2-6-21-1-1">How many circular permutations are there of length <span class="process-math">\(n\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-21-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 1"><a href="#root-1-2-6-17-1-1-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
-</li>
-<li id="root-1-2-6-17-1-1-1-2">
-<div class="para" id="root-1-2-6-17-1-1-1-2-1">The committee contains 3 Republicans and 3 Democrats?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-17-1-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Problem 3.9"><a href="#root-1-2-6-21" title="Copy heading and permalink for Problem 3.9" aria-label="Copy heading and permalink for Problem 3.9">🔗</a></div></article><div class="para" id="root-1-2-6-22">Moving away from circular permutations and back to <span class="process-math">\(k\)</span>-permutations, recall that we can represent each <span class="process-math">\(k\)</span>-permutation of <span class="process-math">\([n]\)</span> as a string of length <span class="process-math">\(k\text{,}\)</span> where each entry is from <span class="process-math">\([n]\)</span> and no repeats are allowed. What if we allow repeats?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-22" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 2"><a href="#root-1-2-6-17-1-1-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
-</li>
-</ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-17-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Problem 3.9"><a href="#root-1-2-6-17" title="Copy heading and permalink for Problem 3.9" aria-label="Copy heading and permalink for Problem 3.9">🔗</a></div></article><article class="problem example-like" id="root-1-2-6-18"><h2 class="heading">
+<article class="problem example-like" id="root-1-2-6-23"><h2 class="heading">
 <span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h2>
-<div class="para" id="root-1-2-6-18-1-1">How many bit strings of length 10 have exactly three 1’s?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-18-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="root-1-2-6-23-1-1">How many ways can the letters of the word PRESCOTT be arranged?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-23-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Problem 3.10"><a href="#root-1-2-6-18" title="Copy heading and permalink for Problem 3.10" aria-label="Copy heading and permalink for Problem 3.10">🔗</a></div></article><article class="problem example-like" id="root-1-2-6-19"><h2 class="heading">
+<div class="autopermalink" data-description="Problem 3.10"><a href="#root-1-2-6-23" title="Copy heading and permalink for Problem 3.10" aria-label="Copy heading and permalink for Problem 3.10">🔗</a></div></article><article class="problem example-like" id="root-1-2-6-24"><h2 class="heading">
 <span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h2>
-<div class="para" id="root-1-2-6-19-1-1">How many bit strings of length 6 have an odd number of 0’s?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-19-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="root-1-2-6-24-1-1">How many ways can the letters of the word POPPY be arranged? Try to solve this problem in two different ways.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-24-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Problem 3.11"><a href="#root-1-2-6-19" title="Copy heading and permalink for Problem 3.11" aria-label="Copy heading and permalink for Problem 3.11">🔗</a></div></article><article class="problem example-like" id="root-1-2-6-20"><h2 class="heading">
-<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2>
-<div class="para" id="root-1-2-6-20-1-1">As we noted earlier, we did quite a bit of brute force to determine how many paths I could take to get coffee in <a href="root-1-2-4.html#prob_coffee" class="xref" data-knowl="./knowl/xref/prob_coffee.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 1.16">Problem 1.16</a>. Find a solution that utilizes binomial coefficients.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-20-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Problem 3.11"><a href="#root-1-2-6-24" title="Copy heading and permalink for Problem 3.11" aria-label="Copy heading and permalink for Problem 3.11">🔗</a></div></article><div class="para" id="root-1-2-6-25">Consider a set of <span class="process-math">\(n\)</span> objects that are not necessarily distinct, with <span class="process-math">\(p\)</span> different types objects and <span class="process-math">\(n_i\)</span> objects of type <span class="process-math">\(i\)</span> (for <span class="process-math">\(i=1,2,\ldots, p\)</span>), so that <span class="process-math">\(n=n_1+\cdots +n_p\text{.}\)</span> An ordered arrangement of these <span class="process-math">\(n\)</span> objects is called a <dfn class="terminology">generalized permutation</dfn> and the number of such arrangements is denoted by <span class="process-math">\({P(n;n_1,\ldots,n_p)}\text{.}\)</span> For example, the number of words we can make out of the letters of POPPY is <span class="process-math">\(P(5;3,1,1)\text{.}\)</span> The following theorem follows immediately from the Division Principle.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-25" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Problem 3.12"><a href="#root-1-2-6-20" title="Copy heading and permalink for Problem 3.12" aria-label="Copy heading and permalink for Problem 3.12">🔗</a></div></article><article class="problem example-like" id="root-1-2-6-21"><h2 class="heading">
-<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2>
-<div class="para" id="root-1-2-6-21-1-1">How many strings of 10 lower-case English letters have exactly two <span class="process-math">\(g\)</span>’s and exactly three <span class="process-math">\(v\)</span>’s?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-21-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Problem 3.13"><a href="#root-1-2-6-21" title="Copy heading and permalink for Problem 3.13" aria-label="Copy heading and permalink for Problem 3.13">🔗</a></div></article><article class="problem example-like" id="root-1-2-6-22"><h2 class="heading">
-<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2>
-<div class="para logical" id="root-1-2-6-22-1-1">
-<div class="para">Assume <span class="process-math">\(1\leq k\leq n\text{.}\)</span>
-</div>
-<ol class="decimal" id="root-1-2-6-22-1-1-2">
-<li id="root-1-2-6-22-1-1-2-1">
-<div class="para logical" id="root-1-2-6-22-1-1-2-1-1">
-<div class="para">Using the definition of <span class="process-math">\(\binom{n}{k}\)</span> in terms of <span class="process-math">\(k\)</span>-subsets (as opposed to the formula in <a href="root-1-2-6.html#thm_binomial_formula" class="xref" data-knowl="./knowl/xref/thm_binomial_formula.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.8">Theorem 3.8</a>), explain why</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm_binomial_formula.html" id="root-1-2-6-22-1-1-2-1-1-4">
-\begin{equation*}
-{\binom{n}{k}=\binom{n-1}{k}+\binom{n-1}{k-1}.}
-\end{equation*}
-</div>
-<div class="para">This identity is often called <dfn class="terminology">Pascal’s Identity</dfn> (or <dfn class="terminology">Pascal’s Recurrence</dfn>).</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-22-1-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 1"><a href="#root-1-2-6-22-1-1-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
-</li>
-<li id="root-1-2-6-22-1-1-2-2">
-<div class="para" id="root-1-2-6-22-1-1-2-2-1">Connect the formula above with <a href="root-1-2-4.html#prob_coffee" class="xref" data-knowl="./knowl/xref/prob_coffee.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 1.16">Problem 1.16</a> involving my walk to get coffee.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-22-1-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 2"><a href="#root-1-2-6-22-1-1-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
-</li>
-</ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-22-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Problem 3.14"><a href="#root-1-2-6-22" title="Copy heading and permalink for Problem 3.14" aria-label="Copy heading and permalink for Problem 3.14">🔗</a></div></article><article class="problem example-like" id="root-1-2-6-23"><h2 class="heading">
-<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2>
-<div class="para logical" id="root-1-2-6-23-1-1">
-<div class="para">Assume <span class="process-math">\(1\leq k\leq n\text{.}\)</span> It turns out that</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm_binomial_formula.html" id="root-1-2-6-23-1-1-2">
-\begin{equation*}
-{\binom{n}{k}=\binom{n}{n-k}.}
-\end{equation*}
-</div>
-<ol class="decimal" id="root-1-2-6-23-1-1-3">
-<li id="root-1-2-6-23-1-1-3-1">
-<div class="para" id="root-1-2-6-23-1-1-3-1-1">Prove the identity above using the formula for <span class="process-math">\(\binom{n}{k}\)</span> given in <a href="root-1-2-6.html#thm_binomial_formula" class="xref" data-knowl="./knowl/xref/thm_binomial_formula.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.8">Theorem 3.8</a>.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-23-1-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 1"><a href="#root-1-2-6-23-1-1-3-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
-</li>
-<li id="root-1-2-6-23-1-1-3-2">
-<div class="para" id="root-1-2-6-23-1-1-3-2-1">Explain why the identity is true by using the definition of <span class="process-math">\(\binom{n}{k}\)</span> in terms of <span class="process-math">\(k\)</span>-subsets.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-23-1-1-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 2"><a href="#root-1-2-6-23-1-1-3-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
-</li>
-</ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-23-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para" id="root-1-2-6-23-1-2">The upshot is that each row of Pascal’s Triangle is a palindrome.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-23-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Problem 3.15"><a href="#root-1-2-6-23" title="Copy heading and permalink for Problem 3.15" aria-label="Copy heading and permalink for Problem 3.15">🔗</a></div></article><article class="problem example-like" id="root-1-2-6-24"><h2 class="heading">
-<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2>
-<div class="para logical" id="root-1-2-6-24-1-1">
-<div class="para">Explain why</div>
-<div class="displaymath process-math" id="root-1-2-6-24-1-1-1">
-\begin{equation*}
-{1+2+\cdots +n=\binom{n+1}{2}}
-\end{equation*}
-</div>
-<div class="para">by counting the number of handshakes that could occur among a group of <span class="process-math">\(n+1\)</span> people in two different ways.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-24-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Problem 3.16"><a href="#root-1-2-6-24" title="Copy heading and permalink for Problem 3.16" aria-label="Copy heading and permalink for Problem 3.16">🔗</a></div></article><div class="para" id="root-1-2-6-25">By the way, the number defined by <span class="process-math">\({t_n:=1+2+\cdots +n}\)</span> is called the <span class="process-math">\(n\)</span>th <dfn class="terminology">Triangular number</dfn> (due to the shape we get by representing each number in the sum by a stack of balls).<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-25" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<article class="problem example-like" id="root-1-2-6-26"><h2 class="heading">
-<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.17</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<article class="theorem theorem-like" id="root-1-2-6-26"><h2 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h2>
 <div class="para logical" id="root-1-2-6-26-1-1">
-<div class="para">Without appealing to the previous problem, find a visual proof of the following:</div>
-<div class="displaymath process-math" id="root-1-2-6-26-1-1-1">
+<div class="para">For <span class="process-math">\(n,n_1,\ldots,n_p\in \mathbb{N}\)</span> such that <span class="process-math">\(n=n_1+\cdots +n_p\text{,}\)</span> we have</div>
+<div class="displaymath process-math" id="root-1-2-6-26-1-1-3">
 \begin{equation*}
-{1+2+\cdots +n=\frac{n(n+1)}{2}}\text{.}
+{P(n;n_1,\ldots,n_p)=\frac{n!}{n_1!\cdots n_p!}.}
 \end{equation*}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-26-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para" id="root-1-2-6-26-1-2">
-<em class="emphasis">Hint:</em> Consider a rectangular array of balls that has <span class="process-math">\(n\)</span> rows and <span class="process-math">\(n+1\)</span> columns.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-26-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Problem 3.17"><a href="#root-1-2-6-26" title="Copy heading and permalink for Problem 3.17" aria-label="Copy heading and permalink for Problem 3.17">🔗</a></div></article><article class="problem example-like" id="root-1-2-6-27"><h2 class="heading">
-<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.18</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<div class="autopermalink" data-description="Theorem 3.12"><a href="#root-1-2-6-26" title="Copy heading and permalink for Theorem 3.12" aria-label="Copy heading and permalink for Theorem 3.12">🔗</a></div></article><article class="problem example-like" id="root-1-2-6-27"><h2 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h2>
-<div class="para logical" id="root-1-2-6-27-1-1">
-<div class="para">Consider the linear equation <span class="process-math">\(x_1+x_2+x_3=11\text{.}\)</span> How many <em class="emphasis">integer</em> solutions are there if:</div>
-<ol class="decimal" id="root-1-2-6-27-1-1-3">
-<li id="root-1-2-6-27-1-1-3-1">
-<div class="para" id="root-1-2-6-27-1-1-3-1-1">
-<span class="process-math">\(x_1,x_2,x_3\geq 0\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-27-1-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="root-1-2-6-27-1-1">How many ways can the letters of the word MISSISSIPPI be arranged?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-27-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 1"><a href="#root-1-2-6-27-1-1-3-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
-</li>
-<li id="root-1-2-6-27-1-1-3-2">
-<div class="para" id="root-1-2-6-27-1-1-3-2-1">
-<span class="process-math">\(x_1,x_2,x_3&gt; 0\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-27-1-1-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 2"><a href="#root-1-2-6-27-1-1-3-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
-</li>
-<li id="root-1-2-6-27-1-1-3-3">
-<div class="para" id="root-1-2-6-27-1-1-3-3-1">
-<span class="process-math">\(x_1\geq 1, x_2\geq 0, x_3\geq 2\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-27-1-1-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 3"><a href="#root-1-2-6-27-1-1-3-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
-</li>
-</ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-27-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Problem 3.18"><a href="#root-1-2-6-27" title="Copy heading and permalink for Problem 3.18" aria-label="Copy heading and permalink for Problem 3.18">🔗</a></div></article><article class="problem example-like" id="root-1-2-6-28"><h2 class="heading">
-<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.19</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<div class="autopermalink" data-description="Problem 3.13"><a href="#root-1-2-6-27" title="Copy heading and permalink for Problem 3.13" aria-label="Copy heading and permalink for Problem 3.13">🔗</a></div></article><article class="problem example-like" id="root-1-2-6-28"><h2 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h2>
-<div class="para" id="root-1-2-6-28-1-1">How many ways can you distribute 5 identical lollipops to 6 kids?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-28-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="root-1-2-6-28-1-1">In Professor X’s class of 9 graduate students she will give two A’s, one B, and six C’s. How many possible ways are there to do this?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-28-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Problem 3.19"><a href="#root-1-2-6-28" title="Copy heading and permalink for Problem 3.19" aria-label="Copy heading and permalink for Problem 3.19">🔗</a></div></article><div class="para" id="root-1-2-6-29">These last two problems illustrate a technique known as <dfn class="terminology">stars and bars</dfn>. In general, <span class="process-math">\(n\)</span> stars tally the number of objects and <span class="process-math">\(k-1\)</span> bars separate them into <span class="process-math">\(k\)</span> distinct categories.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-29" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<article class="theorem theorem-like" id="root-1-2-6-30"><h2 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.20</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<div class="autopermalink" data-description="Problem 3.14"><a href="#root-1-2-6-28" title="Copy heading and permalink for Problem 3.14" aria-label="Copy heading and permalink for Problem 3.14">🔗</a></div></article><article class="problem example-like" id="root-1-2-6-29"><h2 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h2>
-<div class="para logical" id="root-1-2-6-30-1-1">
-<div class="para">The number of possible collections of <span class="process-math">\(n\)</span> objects of <span class="process-math">\(k\)</span> different types is</div>
-<div class="displaymath process-math" id="root-1-2-6-30-1-1-3">
-\begin{equation*}
-{\binom{n+k-1}{k-1}=\binom{n+k-1}{n}.}
-\end{equation*}
+<div class="para" id="root-1-2-6-29-1-1">Let’s revisit <a href="root-1-2-4.html#prob_coffee" class="xref" data-knowl="./knowl/xref/prob_coffee.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 1.16">Problem 1.16</a>, which involved my walk to get coffee. When we attacked that problem, we did a lot of brute force. Do we now have an easier method?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-29-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-30-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Theorem 3.20"><a href="#root-1-2-6-30" title="Copy heading and permalink for Theorem 3.20" aria-label="Copy heading and permalink for Theorem 3.20">🔗</a></div></article><article class="problem example-like" id="root-1-2-6-31"><h2 class="heading">
-<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.21</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<div class="autopermalink" data-description="Problem 3.15"><a href="#root-1-2-6-29" title="Copy heading and permalink for Problem 3.15" aria-label="Copy heading and permalink for Problem 3.15">🔗</a></div></article><article class="problem example-like" id="root-1-2-6-30"><h2 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h2>
-<div class="para" id="root-1-2-6-31-1-1">Zittles come in 5 colors: green, yellow, red, orange, and purple. How many different collections of 32 Zittles are possible?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-31-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="root-1-2-6-30-1-1">In how many ways can a deck of 52 cards be dealt to four players, say <span class="process-math">\(N\text{,}\)</span> <span class="process-math">\(E\text{,}\)</span> <span class="process-math">\(S\text{,}\)</span> and <span class="process-math">\(W\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-30-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Problem 3.21"><a href="#root-1-2-6-31" title="Copy heading and permalink for Problem 3.21" aria-label="Copy heading and permalink for Problem 3.21">🔗</a></div></article><div class="autopermalink" data-description="Chapter 3: Combinations"><a href="#root-1-2-6" title="Copy heading and permalink for Chapter 3: Combinations" aria-label="Copy heading and permalink for Chapter 3: Combinations">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Problem 3.16"><a href="#root-1-2-6-30" title="Copy heading and permalink for Problem 3.16" aria-label="Copy heading and permalink for Problem 3.16">🔗</a></div></article><div class="autopermalink" data-description="Chapter 3: Permutations"><a href="#root-1-2-6" title="Copy heading and permalink for Chapter 3: Permutations" aria-label="Copy heading and permalink for Chapter 3: Permutations">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="root-1-2-5.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="root-1-2-7.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
