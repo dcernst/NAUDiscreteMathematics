@@ -9,12 +9,12 @@
 <!--******************************************-->
 <!--*  Authored with PreTeXt                 *-->
 <!--*  pretextbook.org                       *-->
-<!--*  Theme: default-modern                 *-->
+<!--*  Theme: denver                         *-->
 <!--*  Palette:                              *-->
 <!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Additional Graph Theory</title>
+<title>Introduction to Graph Theory</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
@@ -79,7 +79,7 @@ window.MathJax = {
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
 <meta property="book:title" content="Introduction to Discrete Mathematics">
-<meta property="book:author" content="Dana C.~Ernst  John W.~Hagood">
+<meta property="book:author" content="Dana C. Ernst and John W. Hagood">
 <script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
@@ -117,7 +117,7 @@ eBookConfig.enable_chatcodes =  false;
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
 <h1 class="heading"><a href="root-1-2.html"><span class="title">Introduction to Discrete Mathematics</span></a></h1>
-<p class="byline">Dana C.~Ernst  John W.~Hagood</p>
+<p class="byline">Dana C. Ernst and John W. Hagood</p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
 <div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
@@ -173,513 +173,455 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth1 focused" data-preexpanded-levels="0" data-max-levels="1"><ul class="structural toc-item-list contains-active">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="root-1-2-2.html" class="internal"><span class="title">Front Matter</span></a></div></li>
-<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="root-1-2-3.html" class="internal"><span class="codenumber">1</span> <span class="title">Sets and Counting Principles</span></a></div></li>
-<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="root-1-2-4.html" class="internal"><span class="codenumber">2</span> <span class="title">Functions</span></a></div></li>
-<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="root-1-2-5.html" class="internal"><span class="codenumber">3</span> <span class="title">Permutations</span></a></div></li>
-<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="root-1-2-6.html" class="internal"><span class="codenumber">4</span> <span class="title">Combinations</span></a></div></li>
-<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="root-1-2-7.html" class="internal"><span class="codenumber">5</span> <span class="title">The Binomial Theorem</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="chap_acknowledgements.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="root-1-2-4.html" class="internal"><span class="codenumber">1</span> <span class="title">Sets and Counting Principles</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="root-1-2-5.html" class="internal"><span class="codenumber">2</span> <span class="title">Functions</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="root-1-2-6.html" class="internal"><span class="codenumber">3</span> <span class="title">Permutations</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="root-1-2-7.html" class="internal"><span class="codenumber">4</span> <span class="title">Combinations</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="root-1-2-8.html" class="internal"><span class="codenumber">5</span> <span class="title">The Binomial Theorem</span></a></div></li>
 <li class="toc-item toc-chapter"><div class="toc-title-box"><a href="chap_pigeonhole_principle.html" class="internal"><span class="codenumber">6</span> <span class="title">Pigeonhole Principle</span></a></div></li>
 <li class="toc-item toc-chapter"><div class="toc-title-box"><a href="chap_PIE.html" class="internal"><span class="codenumber">7</span> <span class="title">Principle of Inclusion and Exclusion</span></a></div></li>
-<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="root-1-2-10.html" class="internal"><span class="codenumber">8</span> <span class="title">Mathematical Induction</span></a></div></li>
-<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="root-1-2-11.html" class="internal"><span class="codenumber">9</span> <span class="title">Sequences and Recurrence Relations</span></a></div></li>
-<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="root-1-2-12.html" class="internal"><span class="codenumber">10</span> <span class="title">Introduction to Graph Theory</span></a></div></li>
-<li class="toc-item toc-chapter active"><div class="toc-title-box"><a href="root-1-2-13.html" class="internal"><span class="codenumber">11</span> <span class="title">Additional Graph Theory</span></a></div></li>
-<li class="toc-item toc-backmatter">
-<div class="toc-title-box"><a href="root-1-2-14.html" class="internal"><span class="title">Back Matter</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-references"><div class="toc-title-box"><a href="root-1-2-14-1.html" class="internal"><span class="title">Bibliography</span></a></div></li></ul>
-</li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="root-1-2-11.html" class="internal"><span class="codenumber">8</span> <span class="title">Mathematical Induction</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="root-1-2-12.html" class="internal"><span class="codenumber">9</span> <span class="title">Sequences and Recurrence Relations</span></a></div></li>
+<li class="toc-item toc-chapter active"><div class="toc-title-box"><a href="root-1-2-13.html" class="internal"><span class="codenumber">10</span> <span class="title">Introduction to Graph Theory</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="root-1-2-14.html" class="internal"><span class="codenumber">11</span> <span class="title">Additional Graph Theory</span></a></div></li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="root-1-2-13"><h2 class="heading">
-<span class="type">Chapter</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Additional Graph Theory</span>
+<span class="type">Chapter</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Introduction to Graph Theory</span>
 </h2>
-<div class="para" id="root-1-2-13-2">A <dfn class="terminology">digraph</dfn> (or <dfn class="terminology">directed graph</dfn>) <span class="process-math">\(D\)</span> consists of a set <span class="process-math">\(V\)</span> of vertices and a set <span class="process-math">\(E\)</span> of <dfn class="terminology">directed edges</dfn> (or <dfn class="terminology">arrows</dfn>), each of which is represented as an ordered pair <span class="process-math">\((u,v)\text{,}\)</span> where <span class="process-math">\(u,v\in V\text{.}\)</span> We say that <span class="process-math">\(u\)</span> is the <dfn class="terminology">initial vertex</dfn> and <span class="process-math">\(v\)</span> is the <dfn class="terminology">terminal vertex</dfn> of the directed edge <span class="process-math">\((u,v)\text{.}\)</span> We write <span class="process-math">\(D=(V,E)\)</span> as we did with undirected graphs. The <dfn class="terminology">indegree</dfn> of a vertex <span class="process-math">\(v\)</span> in a digraph, denoted <span class="process-math">\({\deg^-(v)}\text{,}\)</span> is the number of directed edges that have <span class="process-math">\(v\)</span> as a terminal vertex while the <dfn class="terminology">outdegree</dfn> of <span class="process-math">\(v\text{,}\)</span> denoted <span class="process-math">\({\deg^+(v)}\text{,}\)</span> is the number of edges having <span class="process-math">\(v\)</span> as an initial vertex.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="root-1-2-13-2">Loosely speaking, a graph is a collection of points called vertices and connecting segments called edges, each of which starts at a vertex, ends at a vertex and contains no other vertices beside these. More formally, we define the term as follows. A <dfn class="terminology">graph</dfn> consists of two sets, a nonempty set <span class="process-math">\(V\)</span> of points called <dfn class="terminology">vertices</dfn> and a set <span class="process-math">\(E\)</span> whose elements, called <dfn class="terminology">edges</dfn>, are multisets of size two from <span class="process-math">\(V\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="root-1-2-13-3" class="problem example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
-<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.0.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2></summary><article class="problem example-like knowl__content"><div class="para" id="root-1-2-13-3-1-1">Find the indegree and outdegree of each vertex in the following graph.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/root-1-2-13-3-1-2.svg" role="img" class="contained"></div>
-<div class="autopermalink" data-description="Problem 11.0.1"><a href="#root-1-2-13-3" title="Copy heading and permalink for Problem 11.0.1" aria-label="Copy heading and permalink for Problem 11.0.1">🔗</a></div></article></details><div class="para" id="root-1-2-13-4">As expected, we have the following result that is analogous to the Handshake Lemma (<a href="root-1-2-12.html#thm_Handshake" class="xref" data-knowl="./knowl/xref/thm_Handshake.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 10.0.14: Degree Sum Formula">Theorem 10.0.14</a>).<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="root-1-2-13-3">Each edge is associated with either one vertex which serves as both endpoints or two vertices as its endpoints. Technically, each edge is a multiset of the form <span class="process-math">\({\multiset{u,v}}\)</span> where <span class="process-math">\(u,v\in V\text{.}\)</span> We say that <span class="process-math">\(u\)</span> and <span class="process-math">\(v\)</span> are <dfn class="terminology">endpoints</dfn> of the edge <span class="process-math">\(\multiset{u,v}\text{.}\)</span> In an abuse of notation, it is customary to write <span class="process-math">\({\{u,v\}}\)</span> even if <span class="process-math">\(u=v\text{.}\)</span> In fact, we may abbreviate further and denote the edge by <span class="process-math">\({uv}\text{.}\)</span> Note that the order in which the vertices of an edge are listed is irrelevant. That is, <span class="process-math">\(\multiset{u,v}=\multiset{v,u}\text{,}\)</span> <span class="process-math">\(\{u,v\}=\{v,u\}\text{,}\)</span> and <span class="process-math">\(uv=vu\text{.}\)</span> If <span class="process-math">\(G\)</span> is the graph associated with the vertex set <span class="process-math">\(V\)</span> and edge set <span class="process-math">\(E\text{,}\)</span> we write <span class="process-math">\({G=(V,E)}\text{.}\)</span> It is worth pointing out that we assumed that <span class="process-math">\(V\)</span> is nonempty, but <span class="process-math">\(E\)</span> is allowed to be empty (i.e., the graph has no edges).<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="theorem theorem-like" id="root-1-2-13-5"><h2 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.0.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<div class="para" id="root-1-2-13-4">It is customary to represent a graph using visual representations, where each vertex is a dot and each edge is a connecting segment, not necessarily straight.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="ex_graph"><h2 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h2>
-<div class="para logical" id="root-1-2-13-5-1-1">
-<div class="para">If <span class="process-math">\(D = (V,E)\)</span> is a digraph, then</div>
-<div class="displaymath process-math" id="root-1-2-13-5-1-1-2">
-\begin{equation*}
-|E|=\sum_{v \in V} \deg^-(v) = \sum_{v \in V} \deg^+(v)\text{.}
-\end{equation*}
+<div class="para" id="ex_graph-1-1">Here is an example of a graph with vertex set <span class="process-math">\(V=\{v_1, v_2, v_3,v_4,v_5\}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex_graph-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/ex_graph-1-2.svg" role="img" class="contained"></div>
+<div class="autopermalink" data-description="Example 10.1"><a href="#ex_graph" title="Copy heading and permalink for Example 10.1" aria-label="Copy heading and permalink for Example 10.1">🔗</a></div></article><article class="problem example-like" id="root-1-2-13-6"><h2 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
+<div class="para" id="root-1-2-13-6-1-1">Find at least five different graphs with vertex sets <span class="process-math">\(V=\{a,b,c\}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Problem 10.2"><a href="#root-1-2-13-6" title="Copy heading and permalink for Problem 10.2" aria-label="Copy heading and permalink for Problem 10.2">🔗</a></div></article><div class="para logical" id="root-1-2-13-7">
+<div class="para">There is a lot of terminology associated to graphs! Here are some of the relevant concepts.</div>
+<ul class="disc" id="root-1-2-13-7-1">
+<li id="root-1-2-13-7-1-1">
+<div class="para" id="root-1-2-13-7-1-1-1">Vertices <span class="process-math">\(u\)</span> and <span class="process-math">\(v\)</span> of a graph are <dfn class="terminology">adjacent</dfn> if they are the endpoints of the same edge.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-7-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 11.0.2"><a href="#root-1-2-13-5" title="Copy heading and permalink for Theorem 11.0.2" aria-label="Copy heading and permalink for Theorem 11.0.2">🔗</a></div></article><div class="para" id="root-1-2-13-6">Each graph/digraph is determined by its vertices and the manner in which they are connected by edges, not the way a graph/digraph might be sketched. We can represent a graph in a couple of ways.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para" id="root-1-2-13-7">The <dfn class="terminology">adjacency list</dfn> of a simple graph lists all vertices in one column and all adjacent vertices in second column. For a digraph, the columns contain the initial vertices and the associated terminal vertices.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<details id="root-1-2-13-8" class="problem example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
-<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.0.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2></summary><article class="problem example-like knowl__content"><div class="para" id="root-1-2-13-8-1-1">Make up a couple examples to explore adjacency lists for simple graphs and digraphs.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Problem 11.0.3"><a href="#root-1-2-13-8" title="Copy heading and permalink for Problem 11.0.3" aria-label="Copy heading and permalink for Problem 11.0.3">🔗</a></div></article></details><div class="para" id="root-1-2-13-9">An <span class="process-math">\(m\times n\)</span> <dfn class="terminology">matrix</dfn> <span class="process-math">\(A\)</span> is a rectangular array of numbers with <span class="process-math">\(m\)</span> rows and <span class="process-math">\(n\)</span> columns. The entry in the <span class="process-math">\(i\)</span>th row and <span class="process-math">\(j\)</span>th column is indicated by <span class="process-math">\(A_{i,j}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<details id="root-1-2-13-10" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.0.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2></summary><article class="example example-like knowl__content"><div class="para logical" id="root-1-2-13-10-1-1">
-<div class="para">The example below is a <span class="process-math">\(2 \times 3\)</span> matrix:</div>
-<div class="displaymath process-math" id="root-1-2-13-10-1-1-2">
-\begin{equation*}
-A = \left[\begin{array}{rrr} 2 \amp  3 \amp  5  \\ 10 \amp  6 \amp  7 \end{array} \right]
-\end{equation*}
-</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-10-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para" id="root-1-2-13-10-1-2">In this example, <span class="process-math">\(A_{1,2} = 3\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-10-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Example 11.0.4"><a href="#root-1-2-13-10" title="Copy heading and permalink for Example 11.0.4" aria-label="Copy heading and permalink for Example 11.0.4">🔗</a></div></article></details><div class="para" id="root-1-2-13-11">The <dfn class="terminology">adjacency matrix</dfn> <span class="process-math">\(A\)</span> of a graph (respectively, digraph) <span class="process-math">\(G\)</span> with vertices listed as <span class="process-math">\(v_1, v_2, \dots,
-v_n\)</span> is the <span class="process-math">\(n\times n\)</span> matrix <span class="process-math">\(A\)</span> whose entry <span class="process-math">\(A_{i,j}\)</span> in row <span class="process-math">\(i\)</span> and column <span class="process-math">\(j\)</span> is the number of edges connecting <span class="process-math">\(v_i\)</span> and <span class="process-math">\(v_j\)</span> (respectively, the number of edges from <span class="process-math">\(v_i\)</span> to <span class="process-math">\(v_j\)</span>).<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<details id="root-1-2-13-12" class="problem example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
-<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.0.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2></summary><article class="problem example-like knowl__content"><div class="para" id="root-1-2-13-12-1-1">Find the adjacency matrix for the following graph.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-12-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/root-1-2-13-12-1-2.svg" role="img" class="contained"></div>
-<div class="autopermalink" data-description="Problem 11.0.5"><a href="#root-1-2-13-12" title="Copy heading and permalink for Problem 11.0.5" aria-label="Copy heading and permalink for Problem 11.0.5">🔗</a></div></article></details><details id="root-1-2-13-13" class="problem example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
-<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.0.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2></summary><article class="problem example-like knowl__content"><div class="para" id="root-1-2-13-13-1-1">What properties will the adjacency matrix for a simple graph have?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-13-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Problem 11.0.6"><a href="#root-1-2-13-13" title="Copy heading and permalink for Problem 11.0.6" aria-label="Copy heading and permalink for Problem 11.0.6">🔗</a></div></article></details><details id="root-1-2-13-14" class="problem example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
-<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.0.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2></summary><article class="problem example-like knowl__content"><div class="para logical" id="root-1-2-13-14-1-1">
-<div class="para">Sketch a graph that has the following adjacency matrix.</div>
-<div class="displaymath process-math" id="root-1-2-13-14-1-1-1">
-\begin{equation*}
-A = \left[\begin{array}{rrrrr} 1\amp 0\amp 1\amp 0\amp 1  \\ 0\amp 1\amp 1\amp 0\amp 1 \\ 1\amp  1\amp  0 \amp  0\amp  1\\ 0\amp 0\amp 0\amp 0\amp 2 \\ 1\amp  1\amp  1 \amp  2 \amp 0 \end{array}  \right]
-\end{equation*}
-</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-14-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Problem 11.0.7"><a href="#root-1-2-13-14" title="Copy heading and permalink for Problem 11.0.7" aria-label="Copy heading and permalink for Problem 11.0.7">🔗</a></div></article></details><details id="root-1-2-13-15" class="problem example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
-<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.0.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2></summary><article class="problem example-like knowl__content"><div class="para logical" id="root-1-2-13-15-1-1">
-<div class="para">Sketch a digraph that has the following adjacency matrix.</div>
-<div class="displaymath process-math" id="root-1-2-13-15-1-1-1">
-\begin{equation*}
-A = \left[\begin{array}{rrrrr} 0\amp 1\amp 0\amp 1\amp 1  \\ 0\amp 0\amp 1\amp 1\amp 1 \\ 1\amp  0\amp  0 \amp  0\amp  1\\ 0\amp 0\amp 0\amp 0\amp 0 \\ 1\amp  1\amp  1 \amp  2 \amp 0 \end{array}  \right]
-\end{equation*}
-</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-15-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Problem 11.0.8"><a href="#root-1-2-13-15" title="Copy heading and permalink for Problem 11.0.8" aria-label="Copy heading and permalink for Problem 11.0.8">🔗</a></div></article></details><details id="root-1-2-13-16" class="problem example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
-<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.0.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2></summary><article class="problem example-like knowl__content"><div class="para" id="root-1-2-13-16-1-1">What will the adjacency matrix for <span class="process-math">\(P_n\)</span> look like, assuming the vertices are taken in the natural order (start at one end of the path and end at the other)? What about <span class="process-math">\(C_n\text{?}\)</span> <span class="process-math">\(K_n\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-16-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Problem 11.0.9"><a href="#root-1-2-13-16" title="Copy heading and permalink for Problem 11.0.9" aria-label="Copy heading and permalink for Problem 11.0.9">🔗</a></div></article></details><div class="para" id="root-1-2-13-17">Recall that a graph is not determined by a sketch since many sketches give the same graph. It may be hard to recognize from sketches whether two graphs are “essentially” the same even though the vertices may be different points. The notion of isomorphism (same form) gives us a way to deal with this. Two <em class="emphasis">simple</em> graphs <span class="process-math">\(G_1 = (V_1, E_1)\)</span> and <span class="process-math">\(G_2 = (V_2, E_2)\)</span> are the <dfn class="terminology">isomorphic</dfn>, written <span class="process-math">\(G_1 \cong G_2\text{,}\)</span> if there is a a bijection <span class="process-math">\(f:V_1\to V_2\)</span> such that <span class="process-math">\(\{u,v\}\)</span> is an edge in <span class="process-math">\(G_1\)</span> if and only if <span class="process-math">\(\{f(u),f(v)\}\)</span> is an edge in <span class="process-math">\(G_2\text{.}\)</span> The function <span class="process-math">\(f\)</span> is called an <dfn class="terminology">isomorphism</dfn>. For digraphs, we require that <span class="process-math">\((u,v)\)</span> is a directed edge in <span class="process-math">\(G_1\)</span> if and only if <span class="process-math">\((f(u),f(v))\)</span> is a directed edge in <span class="process-math">\(G_2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para" id="root-1-2-13-18">For <span class="process-math">\(G_1=(V_1,E_1)\)</span> and <span class="process-math">\(G_2=(V_2,E_2)\text{,}\)</span> to show that <span class="process-math">\(G_1\cong G_2\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<ol class="decimal" id="root-1-2-13-19">
-<li id="root-1-2-13-19-1">
-<div class="para" id="root-1-2-13-19-1-1">State a vertex matching explicitly, and<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-19-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 1"><a href="#root-1-2-13-19-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#root-1-2-13-7-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="root-1-2-13-19-2">
-<div class="para" id="root-1-2-13-19-2-1">Either<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-19-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="root-1-2-13-7-1-2">
+<div class="para" id="root-1-2-13-7-1-2-1">If <span class="process-math">\(v\)</span> is an endpoint of the edge <span class="process-math">\(e\text{,}\)</span> we say that <span class="process-math">\(e\)</span> is <dfn class="terminology">incident</dfn> to <span class="process-math">\(v\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-7-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<ol class="lower-alpha lower-alpha-level-1" id="root-1-2-13-19-2-2">
-<li id="root-1-2-13-19-2-2-1">
-<div class="para" id="root-1-2-13-19-2-2-1-1">Check adjacency for each pair of vertices in <span class="process-math">\(G_1\)</span> and the corresponding pair in <span class="process-math">\(G_2\)</span> (a total of <span class="process-math">\(\binom{|V_1|}{2}\)</span> checks). This could also be as simple as providing sketches for each graph that clearly exhibit the correspondence of vertices and edges.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-19-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 2.a"><a href="#root-1-2-13-19-2-2-1" title="Copy heading and permalink for Item 2.a" aria-label="Copy heading and permalink for Item 2.a">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#root-1-2-13-7-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="root-1-2-13-19-2-2-2">
-<div class="para" id="root-1-2-13-19-2-2-2-1">Demonstrate that the adjacency matrices of <span class="process-math">\(G_1\)</span> and <span class="process-math">\(G_2\)</span> are the same using an ordering that is compatible with the vertex matching.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-19-2-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="root-1-2-13-7-1-3">
+<div class="para" id="root-1-2-13-7-1-3-1">If an edge <span class="process-math">\(e\)</span> is incident to vertices <span class="process-math">\(u\)</span> and <span class="process-math">\(v\text{,}\)</span> we say that <span class="process-math">\(u\)</span> and <span class="process-math">\(v\)</span> are <dfn class="terminology">connected</dfn> by edge <span class="process-math">\(e\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-7-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 2.b"><a href="#root-1-2-13-19-2-2-2" title="Copy heading and permalink for Item 2.b" aria-label="Copy heading and permalink for Item 2.b">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#root-1-2-13-7-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-</ol>
-<div class="autopermalink" data-description="Item 2"><a href="#root-1-2-13-19-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+<li id="root-1-2-13-7-1-4">
+<div class="para" id="root-1-2-13-7-1-4-1">An edge <span class="process-math">\(e\)</span> that is incident to a single vertex (i.e., <span class="process-math">\(e=uu\)</span> for some <span class="process-math">\(u\in V\)</span>) is called a <dfn class="terminology">loop</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-7-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#root-1-2-13-7-1-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-</ol>
-<div class="para" id="root-1-2-13-20">
-<em class="emphasis">Warning!</em> The second method above usually involves much less writing, but be aware that the adjacency matrices may differ in one ordering but agree with a different ordering.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="root-1-2-13-7-1-5">
+<div class="para" id="root-1-2-13-7-1-5-1">The <dfn class="terminology">order</dfn> of a graph is the number of vertices in the graph. That is, if <span class="process-math">\(G=(V,E)\text{,}\)</span> then the order of <span class="process-math">\(G\)</span> is <span class="process-math">\(|V|\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-7-1-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para logical" id="root-1-2-13-21">
-<div class="para">The simplest way to show that <span class="process-math">\(G_1 \not\cong G_2\)</span> is to show that a feature preserved under isomorphism (called an <dfn class="terminology">invariant</dfn>) holds for one graph but not the other. Here are a few isomorphic invariants:</div>
-<ol class="decimal" id="root-1-2-13-21-3">
-<li id="root-1-2-13-21-3-1">
-<div class="para" id="root-1-2-13-21-3-1-1">Order of the graph<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-21-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 1"><a href="#root-1-2-13-21-3-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#root-1-2-13-7-1-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="root-1-2-13-21-3-2">
-<div class="para" id="root-1-2-13-21-3-2-1">Number of edges in the graph<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-21-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="root-1-2-13-7-1-6">
+<div class="para" id="root-1-2-13-7-1-6-1">The <dfn class="terminology">degree</dfn> of a vertex <span class="process-math">\(v\text{,}\)</span> written <span class="process-math">\(\deg(v)\text{,}\)</span> is the number of edges incident to <span class="process-math">\(v\)</span> (i.e., the number of edges that have <span class="process-math">\(v\)</span> as an endpoint). Note that a loop contributes 2 to a vertex’s degree, one for each of the two ends of the edge. The degree of a vertex <span class="process-math">\(v\)</span> is denoted <span class="process-math">\({\deg(v)}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-7-1-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 2"><a href="#root-1-2-13-21-3-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
-</li>
-<li id="root-1-2-13-21-3-3">
-<div class="para" id="root-1-2-13-21-3-3-1">Number of vertices of a given degree<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-21-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 3"><a href="#root-1-2-13-21-3-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
-</li>
-<li id="root-1-2-13-21-3-4">
-<div class="para" id="root-1-2-13-21-3-4-1">Degree sequence<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-21-3-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 4"><a href="#root-1-2-13-21-3-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
-</li>
-<li id="root-1-2-13-21-3-5">
-<div class="para" id="root-1-2-13-21-3-5-1">Vertices of degree <span class="process-math">\(k\)</span> and <span class="process-math">\(\ell\)</span> are adjacent<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-21-3-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 5"><a href="#root-1-2-13-21-3-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
-</li>
-<li id="root-1-2-13-21-3-6">
-<div class="para" id="root-1-2-13-21-3-6-1">Subgraph that is isomorphic to <span class="process-math">\(C_n\)</span> or <span class="process-math">\(P_n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-21-3-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 6"><a href="#root-1-2-13-21-3-6" title="Copy heading and permalink for Item 6" aria-label="Copy heading and permalink for Item 6">🔗</a></div>
-</li>
-</ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-21" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<details id="root-1-2-13-22" class="problem example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
-<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.0.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2></summary><article class="problem example-like knowl__content"><div class="para" id="root-1-2-13-22-1-1">Determine whether the following graphs are isomorphic.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-22-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="tabular-box natural-width"><table class="tabular">
-<tr>
-<td class="l m b0 r0 l0 t0 lines">   <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/root-1-2-13-22-1-2-1-1-3.svg" role="img" class="contained"></div>   </td>
-<td class="l m b0 r0 l0 t0 lines">   <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/root-1-2-13-22-1-2-1-2-3.svg" role="img" class="contained"></div>   </td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">   <span class="process-math">\(G\)</span>   </td>
-<td class="l m b0 r0 l0 t0 lines">   <span class="process-math">\(H\)</span>   </td>
-</tr>
-</table></div>
-<div class="autopermalink" data-description="Problem 11.0.10"><a href="#root-1-2-13-22" title="Copy heading and permalink for Problem 11.0.10" aria-label="Copy heading and permalink for Problem 11.0.10">🔗</a></div></article></details><details id="root-1-2-13-23" class="problem example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
-<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.0.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2></summary><article class="problem example-like knowl__content"><div class="para" id="root-1-2-13-23-1-1">Let <span class="process-math">\(G\)</span> be the graph with vertex set <span class="process-math">\(V=\{a,b,c,d,e\}\)</span> and edge set <span class="process-math">\(E=\{\{a,b\},\{a,c\},\{a,e\},\{b,d\},\{b,e\},\{c,d\}\}\)</span> and let <span class="process-math">\(H\)</span> be the following graph.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-23-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/root-1-2-13-23-1-2.svg" role="img" class="contained"></div> <div class="para" id="root-1-2-13-23-1-3">Determine whether <span class="process-math">\(G\)</span> and <span class="process-math">\(H\)</span> are isomorphic.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-23-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Problem 11.0.11"><a href="#root-1-2-13-23" title="Copy heading and permalink for Problem 11.0.11" aria-label="Copy heading and permalink for Problem 11.0.11">🔗</a></div></article></details><details id="root-1-2-13-24" class="problem example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
-<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.0.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2></summary><article class="problem example-like knowl__content"><div class="para" id="root-1-2-13-24-1-1">Determine which pairs of the following graphs are isomorphic.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-24-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="tabular-box natural-width"><table class="tabular">
-<tr>
-<td class="l m b0 r0 l0 t0 lines">   <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/root-1-2-13-24-1-2-1-1-3.svg" role="img" class="contained"></div>   </td>
-<td class="l m b0 r0 l0 t0 lines">   <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/root-1-2-13-24-1-2-1-2-3.svg" role="img" class="contained"></div>   </td>
-<td class="l m b0 r0 l0 t0 lines">   <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/root-1-2-13-24-1-2-1-3-3.svg" role="img" class="contained"></div>   </td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">   <span class="process-math">\(G\)</span>   </td>
-<td class="l m b0 r0 l0 t0 lines">   <span class="process-math">\(H\)</span>   </td>
-<td class="l m b0 r0 l0 t0 lines">   <span class="process-math">\(K\)</span>   </td>
-</tr>
-</table></div>
-<div class="autopermalink" data-description="Problem 11.0.12"><a href="#root-1-2-13-24" title="Copy heading and permalink for Problem 11.0.12" aria-label="Copy heading and permalink for Problem 11.0.12">🔗</a></div></article></details><details id="root-1-2-13-25" class="problem example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
-<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.0.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2></summary><article class="problem example-like knowl__content"><div class="para" id="root-1-2-13-25-1-1">Determine whether the following digraphs are isomorphic.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-25-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="tabular-box natural-width"><table class="tabular">
-<tr>
-<td class="l m b0 r0 l0 t0 lines">   <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/root-1-2-13-25-1-2-1-1-3.svg" role="img" class="contained"></div>   </td>
-<td class="l m b0 r0 l0 t0 lines">   <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/root-1-2-13-25-1-2-1-2-3.svg" role="img" class="contained"></div>   </td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">   <span class="process-math">\(G\)</span>   </td>
-<td class="l m b0 r0 l0 t0 lines">   <span class="process-math">\(H\)</span>   </td>
-</tr>
-</table></div>
-<div class="autopermalink" data-description="Problem 11.0.13"><a href="#root-1-2-13-25" title="Copy heading and permalink for Problem 11.0.13" aria-label="Copy heading and permalink for Problem 11.0.13">🔗</a></div></article></details><div class="para logical" id="root-1-2-13-26">
-<div class="para">We now introduce several new terms.</div>
-<ul class="disc" id="root-1-2-13-26-1">
-<li id="root-1-2-13-26-1-1">
-<div class="para" id="root-1-2-13-26-1-1-1">A <dfn class="terminology">walk</dfn> in a graph is an alternating sequence of vertices and edges that starts with a vertex and ends with a vertex such that consecutive vertices in the walk are the endpoints of the edge that separates them. In a simple graph, a walk can be specified by a sequence of vertices.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-26-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item"><a href="#root-1-2-13-26-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
-</li>
-<li id="root-1-2-13-26-1-2">
-<div class="para" id="root-1-2-13-26-1-2-1">The <dfn class="terminology">length</dfn> of a walk is the number of edges in the walk.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-26-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item"><a href="#root-1-2-13-26-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
-</li>
-<li id="root-1-2-13-26-1-3">
-<div class="para" id="root-1-2-13-26-1-3-1">If the initial and terminal vertices of a walk are the same, then the walk is a <dfn class="terminology">closed walk</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-26-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item"><a href="#root-1-2-13-26-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
-</li>
-<li id="root-1-2-13-26-1-4">
-<div class="para" id="root-1-2-13-26-1-4-1">A <dfn class="terminology">trail</dfn> is a walk with distinct edges (no repeated edges).<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-26-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item"><a href="#root-1-2-13-26-1-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
-</li>
-<li id="root-1-2-13-26-1-5">
-<div class="para" id="root-1-2-13-26-1-5-1">A <dfn class="terminology">circuit</dfn> is a closed trail, that is, a closed walk with no repeated edges.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-26-1-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item"><a href="#root-1-2-13-26-1-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
-</li>
-<li id="root-1-2-13-26-1-6">
-<div class="para" id="root-1-2-13-26-1-6-1">A <dfn class="terminology">path</dfn> is a walk with distinct vertices. This is a subgraph isomorphic to <span class="process-math">\(P_n\)</span> for some <span class="process-math">\(n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-26-1-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item"><a href="#root-1-2-13-26-1-6" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
-</li>
-<li id="root-1-2-13-26-1-7">
-<div class="para" id="root-1-2-13-26-1-7-1">A <dfn class="terminology">cycle</dfn> is a closed walk with distinct vertices except the initial and terminal vertices. This corresponds to a subgraph isomorphic to <span class="process-math">\(C_n\)</span> for some <span class="process-math">\(n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-26-1-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item"><a href="#root-1-2-13-26-1-7" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
-</li>
-<li id="root-1-2-13-26-1-8">
-<div class="para" id="root-1-2-13-26-1-8-1">A graph <span class="process-math">\(G\)</span> is <dfn class="terminology">connected</dfn> if for each pair of distinct vertices <span class="process-math">\(u\)</span> and <span class="process-math">\(v\text{,}\)</span> there is a walk from <span class="process-math">\(u\)</span> to <span class="process-math">\(v\text{.}\)</span> A <dfn class="terminology">component</dfn> of a graph is a connected subgraph that is not contained in a larger connected subgraph.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-26-1-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item"><a href="#root-1-2-13-26-1-8" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
-</li>
-<li id="root-1-2-13-26-1-9">
-<div class="para" id="root-1-2-13-26-1-9-1">A <dfn class="terminology">cut vertex</dfn> of a connected graph <span class="process-math">\(G\)</span> is a vertex which when removed along with all incident edges results in a disconnected graph.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-26-1-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item"><a href="#root-1-2-13-26-1-9" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
-</li>
-<li id="root-1-2-13-26-1-10">
-<div class="para" id="root-1-2-13-26-1-10-1">A <dfn class="terminology">bridge</dfn> (or <dfn class="terminology">cut edge</dfn>) is an edge of a connected graph which when removed results in a disconnected graph.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-26-1-10-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item"><a href="#root-1-2-13-26-1-10" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#root-1-2-13-7-1-6" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 </ul>
-<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-26" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="root-1-2-13-27">The following theorem likely does not come as a surprise.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-27" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<article class="theorem theorem-like" id="root-1-2-13-28"><h2 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.0.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<article class="problem example-like" id="root-1-2-13-8"><h2 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h2>
-<div class="para" id="root-1-2-13-28-1-1">A graph <span class="process-math">\(G\)</span> is connected if and only if for each pair of distinct vertices <span class="process-math">\(u\)</span> and <span class="process-math">\(v\text{,}\)</span> there is a path from <span class="process-math">\(u\)</span> to <span class="process-math">\(v\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-28-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="root-1-2-13-8-1-1">Discuss each of the concepts introduced above in the context of <a href="root-1-2-13.html#ex_graph" class="xref" data-knowl="./knowl/xref/ex_graph.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 10.1">Example 10.1</a>.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 11.0.14"><a href="#root-1-2-13-28" title="Copy heading and permalink for Theorem 11.0.14" aria-label="Copy heading and permalink for Theorem 11.0.14">🔗</a></div></article><div class="para" id="root-1-2-13-29">A digraph is <dfn class="terminology">strongly connected</dfn> if for each pair of distinct vertices <span class="process-math">\(u\)</span> and <span class="process-math">\(v\)</span> there is a (directed) walk from <span class="process-math">\(u\)</span> to <span class="process-math">\(v\text{.}\)</span> A digraph is <dfn class="terminology">weakly connected</dfn> if the underlying undirected graph in which the direction of edges is removed is connected. Note that a strongly connected digraph will always be weakly connected. A <dfn class="terminology">strongly connected component</dfn> of a digraph is a maximal strongly connected subgraph.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-29" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Problem 10.3"><a href="#root-1-2-13-8" title="Copy heading and permalink for Problem 10.3" aria-label="Copy heading and permalink for Problem 10.3">🔗</a></div></article><div class="para logical" id="root-1-2-13-9">
+<div class="para">Many graphs have similar properties that allow us to categorize them. Here are several families of graphs.</div>
+<ul class="disc" id="root-1-2-13-9-1">
+<li id="root-1-2-13-9-1-1">
+<div class="para" id="root-1-2-13-9-1-1-1">
+<em class="emphasis">Complete Graphs</em>. The <dfn class="terminology">complete graph</dfn> on <span class="process-math">\(n\geq 1\)</span> vertices, denoted <span class="process-math">\({K_n}\text{,}\)</span> is the graph of order <span class="process-math">\(n\)</span> such that each pair of vertices is connected by exactly one edge, and there are no other edges (i.e., no loops).<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-9-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="root-1-2-13-30">We now introduce a couple of important circuits that a graph may or may not possess. An <dfn class="terminology">Euler circuit</dfn> in a graph <span class="process-math">\(G\)</span> is a circuit that contains every edge of the graph. An <dfn class="terminology">Euler trail</dfn> in a graph is a trail that contains every edge of the graph. Note that an Euler circuit is also an Euler trail as well.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-30" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<details id="root-1-2-13-31" class="problem example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
-<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.0.15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2></summary><article class="problem example-like knowl__content"><div class="para" id="root-1-2-13-31-1-1">Determine whether each of the following graphs has an Euler trail. How about an Euler circuit?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-31-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="tabular-box natural-width"><table class="tabular">
-<tr>
-<td class="l m b0 r0 l0 t0 lines">   <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/root-1-2-13-31-1-2-1-1-3.svg" role="img" class="contained"></div>   </td>
-<td class="l m b0 r0 l0 t0 lines">   <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/root-1-2-13-31-1-2-1-2-3.svg" role="img" class="contained"></div>   </td>
-<td class="l m b0 r0 l0 t0 lines">   <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/root-1-2-13-31-1-2-1-3-3.svg" role="img" class="contained"></div>   </td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">   <span class="process-math">\(G\)</span>   </td>
-<td class="l m b0 r0 l0 t0 lines">   <span class="process-math">\(H\)</span>   </td>
-<td class="l m b0 r0 l0 t0 lines">   <span class="process-math">\(K\)</span>   </td>
-</tr>
-</table></div>
-<div class="autopermalink" data-description="Problem 11.0.15"><a href="#root-1-2-13-31" title="Copy heading and permalink for Problem 11.0.15" aria-label="Copy heading and permalink for Problem 11.0.15">🔗</a></div></article></details><article class="theorem theorem-like" id="root-1-2-13-32"><h2 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.0.16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2>
-<div class="para" id="root-1-2-13-32-1-1">If <span class="process-math">\(G\)</span> is a connected graph of order <span class="process-math">\(n \ge 2\text{,}\)</span> then <span class="process-math">\(G\)</span> has an Euler circuit if and only if every vertex is even.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-32-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Theorem 11.0.16"><a href="#root-1-2-13-32" title="Copy heading and permalink for Theorem 11.0.16" aria-label="Copy heading and permalink for Theorem 11.0.16">🔗</a></div></article><article class="corollary theorem-like" id="root-1-2-13-33"><h2 class="heading">
-<span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.0.17</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2>
-<div class="para" id="root-1-2-13-33-1-1">If <span class="process-math">\(G\)</span> is a connected graph of order <span class="process-math">\(n \geq 2\text{,}\)</span> then <span class="process-math">\(G\)</span> has an Euler trail that is not a circuit if and only if <span class="process-math">\(G\)</span> has exactly two odd vertices.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-33-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Corollary 11.0.17"><a href="#root-1-2-13-33" title="Copy heading and permalink for Corollary 11.0.17" aria-label="Copy heading and permalink for Corollary 11.0.17">🔗</a></div></article><div class="para" id="root-1-2-13-34">Edges can be added to a connected graph in order to cause it to have an Euler circuit (or trail). In particular, an <dfn class="terminology">Eulerization</dfn> of a connected graph is the addition of suitable multiple edges (i.e., duplicate existing edges) to permit an Euler circuit, mimicking what must be done to complete a circuit such as a postal route or other delivery/pick-up route.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-34" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<details id="root-1-2-13-35" class="problem example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
-<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.0.18</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2></summary><article class="problem example-like knowl__content"><div class="para" id="root-1-2-13-35-1-1">Eulerize the following graph.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-35-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/root-1-2-13-35-1-2.svg" role="img" class="contained"></div>
-<div class="autopermalink" data-description="Problem 11.0.18"><a href="#root-1-2-13-35" title="Copy heading and permalink for Problem 11.0.18" aria-label="Copy heading and permalink for Problem 11.0.18">🔗</a></div></article></details><div class="para" id="root-1-2-13-36">A cycle in a graph that passes through every vertex is a <dfn class="terminology">Hamilton cycle</dfn>. This is often called a <dfn class="terminology">Hamilton circuit</dfn>. A <dfn class="terminology">Hamilton path</dfn> is a path in a graph that includes every vertex.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-36" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<details id="root-1-2-13-37" class="problem example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
-<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.0.19</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2></summary><article class="problem example-like knowl__content"><div class="para" id="root-1-2-13-37-1-1">Determine whether each of the following graphs has a Hamilton circuit or a Hamilton path that is not a circuit.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-37-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="tabular-box natural-width"><table class="tabular">
-<tr>
-<td class="l m b0 r0 l0 t0 lines">   <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/root-1-2-13-37-1-2-1-1-3.svg" role="img" class="contained"></div>   </td>
-<td class="l m b0 r0 l0 t0 lines">   <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/root-1-2-13-37-1-2-1-2-3.svg" role="img" class="contained"></div>   </td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">   <span class="process-math">\(G\)</span>   </td>
-<td class="l m b0 r0 l0 t0 lines">   <span class="process-math">\(H\)</span>   </td>
-</tr>
-</table></div>
-<div class="autopermalink" data-description="Problem 11.0.19"><a href="#root-1-2-13-37" title="Copy heading and permalink for Problem 11.0.19" aria-label="Copy heading and permalink for Problem 11.0.19">🔗</a></div></article></details><div class="para" id="root-1-2-13-38">Unfortunately, unlike the situation for Euler circuits, there is no known simple necessary and sufficient condition for a Hamilton cycle to exist in a graph. We can state some simple cases when one cannot exist, and there are some theorems for the existence of a Hamilton cycle, but these do not cover all possibilities.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-38" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<article class="theorem theorem-like" id="root-1-2-13-39"><h2 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.0.20</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Dirac’s Theorem.</span>
-</h2>
-<div class="para" id="root-1-2-13-39-2-1">If <span class="process-math">\(G\)</span> is a simple graph of order <span class="process-math">\(n \ge 3\)</span> in which <span class="process-math">\(\deg(v) \geq n/2\)</span> for each vertex, then <span class="process-math">\(G\)</span> has a Hamilton cycle.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-39-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Theorem 11.0.20: Dirac’s Theorem"><a href="#root-1-2-13-39" title="Copy heading and permalink for Theorem 11.0.20: Dirac’s Theorem" aria-label="Copy heading and permalink for Theorem 11.0.20: Dirac’s Theorem">🔗</a></div></article><article class="theorem theorem-like" id="root-1-2-13-40"><h2 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.0.21</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Ore’s Theorem.</span>
-</h2>
-<div class="para" id="root-1-2-13-40-2-1">If <span class="process-math">\(G\)</span> is a simple graph of order <span class="process-math">\(n \geq 3\)</span> in which <span class="process-math">\(\deg(u) + \deg(v) \geq n\)</span> for each pair of vertices <span class="process-math">\(u\)</span> and <span class="process-math">\(v\text{,}\)</span> then <span class="process-math">\(G\)</span> has a Hamilton cycle.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-40-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Theorem 11.0.21: Ore’s Theorem"><a href="#root-1-2-13-40" title="Copy heading and permalink for Theorem 11.0.21: Ore’s Theorem" aria-label="Copy heading and permalink for Theorem 11.0.21: Ore’s Theorem">🔗</a></div></article><details id="root-1-2-13-41" class="problem example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
-<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.0.22</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2></summary><article class="problem example-like knowl__content"><div class="para" id="root-1-2-13-41-1-1">How many distinct Hamilton cycles does <span class="process-math">\(K_n\)</span> have that start/end at a fixed vertex?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-41-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Problem 11.0.22"><a href="#root-1-2-13-41" title="Copy heading and permalink for Problem 11.0.22" aria-label="Copy heading and permalink for Problem 11.0.22">🔗</a></div></article></details><div class="para" id="root-1-2-13-42">We now turn our attention to trees. A <dfn class="terminology">tree</dfn> is a connected graph that has no cycles. A <dfn class="terminology">forest</dfn> is a graph in which every connected component is a tree. Trees provide a useful structure for organizing data, for displaying organization, and for decision processes.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-42" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<details id="root-1-2-13-43" class="problem example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
-<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.0.23</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2></summary><article class="problem example-like knowl__content"><div class="para" id="root-1-2-13-43-1-1">Is every tree necessarily a simple graph?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-43-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Problem 11.0.23"><a href="#root-1-2-13-43" title="Copy heading and permalink for Problem 11.0.23" aria-label="Copy heading and permalink for Problem 11.0.23">🔗</a></div></article></details><article class="theorem theorem-like" id="root-1-2-13-44"><h2 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.0.24</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2>
-<div class="para" id="root-1-2-13-44-1-1">A graph <span class="process-math">\(G\)</span> is a tree if and only if for each pair of distinct vertices <span class="process-math">\(u\)</span> and <span class="process-math">\(v\text{,}\)</span> there is a unique path from <span class="process-math">\(u\)</span> to <span class="process-math">\(v\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-44-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Theorem 11.0.24"><a href="#root-1-2-13-44" title="Copy heading and permalink for Theorem 11.0.24" aria-label="Copy heading and permalink for Theorem 11.0.24">🔗</a></div></article><article class="theorem theorem-like" id="root-1-2-13-45"><h2 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.0.25</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2>
-<div class="para logical" id="root-1-2-13-45-1-1">
-<div class="para">Some properties of trees.</div>
-<ol class="decimal" id="root-1-2-13-45-1-1-1">
-<li id="root-1-2-13-45-1-1-1-1">
-<div class="para" id="root-1-2-13-45-1-1-1-1-1">A tree of order 2 or more has at least two vertices of degree 1.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-45-1-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 1"><a href="#root-1-2-13-45-1-1-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#root-1-2-13-9-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="root-1-2-13-45-1-1-1-2">
-<div class="para" id="root-1-2-13-45-1-1-1-2-1">Every edge of a tree is a bridge.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-45-1-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="root-1-2-13-9-1-2">
+<div class="para" id="root-1-2-13-9-1-2-1">
+<em class="emphasis">Cycle Graphs</em>. The <dfn class="terminology">cycle graph</dfn> on <span class="process-math">\(n\ge 3\)</span> vertices, denoted <span class="process-math">\({C_n}\text{,}\)</span> is the graph such that when the <span class="process-math">\(n\)</span> vertices are suitably labeled <span class="process-math">\(v_1, v_2, \dots, v_n\text{,}\)</span> the edges of <span class="process-math">\(C_n\)</span> are <span class="process-math">\(\{v_1,v_2\}, \{v_2,v_3\}, \dots, \{v_{n-1},v_n\}, \{v_n,v_1\}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-9-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 2"><a href="#root-1-2-13-45-1-1-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#root-1-2-13-9-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="root-1-2-13-45-1-1-1-3">
-<div class="para" id="root-1-2-13-45-1-1-1-3-1">A connected graph in which every edge is a bridge is a tree.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-45-1-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="root-1-2-13-9-1-3">
+<div class="para" id="root-1-2-13-9-1-3-1">
+<em class="emphasis">Path Graphs</em>. The <dfn class="terminology">path</dfn> on <span class="process-math">\(n\geq 1\)</span> vertices, denoted <span class="process-math">\({P_n}\text{,}\)</span> has a description similar to <span class="process-math">\(C_n\text{:}\)</span> for distinct vertices suitably labeled <span class="process-math">\(v_1, v_2, \dots, v_n\text{,}\)</span> the edges of <span class="process-math">\(P_n\)</span> are <span class="process-math">\(\{v_1,v_2\}, \{v_2,v_3\}, \dots, \{v_{n-1},v_n\}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-9-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 3"><a href="#root-1-2-13-45-1-1-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#root-1-2-13-9-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="root-1-2-13-45-1-1-1-4">
-<div class="para" id="root-1-2-13-45-1-1-1-4-1">A tree of order <span class="process-math">\(n\)</span> has <span class="process-math">\(n-1\)</span> edges.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-45-1-1-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="root-1-2-13-9-1-4">
+<div class="para" id="root-1-2-13-9-1-4-1">
+<em class="emphasis">Wheel Graphs</em>. The <dfn class="terminology">wheel graph</dfn> on <span class="process-math">\(n \ge 4\)</span> vertices, denoted <span class="process-math">\({W_n}\text{,}\)</span> is the graph <span class="process-math">\(C_{n-1}\)</span> together with one additional vertex that is connected to each of the vertices of <span class="process-math">\(C_{n-1}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-9-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 4"><a href="#root-1-2-13-45-1-1-1-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#root-1-2-13-9-1-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="root-1-2-13-45-1-1-1-5">
-<div class="para" id="root-1-2-13-45-1-1-1-5-1">A connected graph of order <span class="process-math">\(n\)</span> with <span class="process-math">\(n-1\)</span> edges is a tree.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-45-1-1-1-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="root-1-2-13-9-1-5">
+<div class="para" id="root-1-2-13-9-1-5-1">
+<em class="emphasis">Hypercube Graphs</em>. The <dfn class="terminology">hypercube</dfn> of dimension <span class="process-math">\(n\geq 1\text{,}\)</span> denoted <span class="process-math">\({Q_n}\text{,}\)</span> is the graph whose vertices are labeled with the <span class="process-math">\(2^n\)</span> bit strings of length <span class="process-math">\(n\)</span> with an edge connecting two vertices if and only if their labels differ in exactly one bit.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-9-1-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 5"><a href="#root-1-2-13-45-1-1-1-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#root-1-2-13-9-1-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="problem example-like" id="root-1-2-13-10"><h2 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
+<div class="para" id="root-1-2-13-10-1-1">Draw the first few graphs of each of the graph families above.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-10-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 10.4"><a href="#root-1-2-13-10" title="Copy heading and permalink for Problem 10.4" aria-label="Copy heading and permalink for Problem 10.4">🔗</a></div></article><article class="problem example-like" id="root-1-2-13-11"><h2 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
+<div class="para logical" id="root-1-2-13-11-1-1">
+<div class="para">How many edges do each of the following have?</div>
+<ol class="decimal" id="root-1-2-13-11-1-1-1">
+<li id="root-1-2-13-11-1-1-1-1">
+<div class="para" id="root-1-2-13-11-1-1-1-1-1">
+<span class="process-math">\(\displaystyle K_n\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-11-1-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#root-1-2-13-11-1-1-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="root-1-2-13-11-1-1-1-2">
+<div class="para" id="root-1-2-13-11-1-1-1-2-1">
+<span class="process-math">\(\displaystyle C_n\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-11-1-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#root-1-2-13-11-1-1-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="root-1-2-13-11-1-1-1-3">
+<div class="para" id="root-1-2-13-11-1-1-1-3-1">
+<span class="process-math">\(\displaystyle P_n\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-11-1-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#root-1-2-13-11-1-1-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="root-1-2-13-11-1-1-1-4">
+<div class="para" id="root-1-2-13-11-1-1-1-4-1">
+<span class="process-math">\(\displaystyle W_n\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-11-1-1-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4"><a href="#root-1-2-13-11-1-1-1-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+<li id="root-1-2-13-11-1-1-1-5">
+<div class="para" id="root-1-2-13-11-1-1-1-5-1">
+<span class="process-math">\(\displaystyle Q_n\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-11-1-1-1-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 5"><a href="#root-1-2-13-11-1-1-1-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-45-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-11-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 11.0.25"><a href="#root-1-2-13-45" title="Copy heading and permalink for Theorem 11.0.25" aria-label="Copy heading and permalink for Theorem 11.0.25">🔗</a></div></article><div class="para" id="root-1-2-13-46">A <dfn class="terminology">spanning tree</dfn> of a simple graph <span class="process-math">\(G\)</span> is a subgraph <span class="process-math">\(T\)</span> of <span class="process-math">\(G\)</span> such that <span class="process-math">\(T\)</span> is a tree contains every vertex of <span class="process-math">\(G\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-46" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Problem 10.5"><a href="#root-1-2-13-11" title="Copy heading and permalink for Problem 10.5" aria-label="Copy heading and permalink for Problem 10.5">🔗</a></div></article><div class="para" id="root-1-2-13-12">A <dfn class="terminology">simple graph</dfn> is a graph in which each edge connects two distinct vertices and each pair of vertices is connected by at most one edge. Note that the graphs <span class="process-math">\(K_n, C_n, P_n, W_n\text{,}\)</span> and <span class="process-math">\(Q_n\)</span> are all simple graphs. A <dfn class="terminology">pseudograph</dfn> (or <dfn class="terminology">multigraph</dfn>) is like a graph but we allow <dfn class="terminology">multiple edges</dfn> between a pair of vertices (i.e., <span class="process-math">\(E\)</span> is a multiset instead of a set).<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="root-1-2-13-47" class="problem example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
-<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.0.26</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2></summary><article class="problem example-like knowl__content"><div class="para" id="root-1-2-13-47-1-1">Find a spanning tree for each of the following.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-47-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="tabular-box natural-width"><table class="tabular">
-<tr>
-<td class="l m b0 r0 l0 t0 lines">   <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/root-1-2-13-47-1-2-1-1-3.svg" role="img" class="contained"></div>   </td>
-<td class="l m b0 r0 l0 t0 lines">   <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/root-1-2-13-47-1-2-1-2-3.svg" role="img" class="contained"></div>   </td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">   <span class="process-math">\(G\)</span>   </td>
-<td class="l m b0 r0 l0 t0 lines">   <span class="process-math">\(H\)</span>   </td>
-</tr>
-</table></div>
-<div class="autopermalink" data-description="Problem 11.0.26"><a href="#root-1-2-13-47" title="Copy heading and permalink for Problem 11.0.26" aria-label="Copy heading and permalink for Problem 11.0.26">🔗</a></div></article></details><details id="root-1-2-13-48" class="problem example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
-<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.0.27</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2></summary><article class="problem example-like knowl__content"><div class="para" id="root-1-2-13-48-1-1">Do you think every connected simple graph contains a spanning tree?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-48-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<article class="problem example-like" id="root-1-2-13-13"><h2 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
+<div class="para" id="root-1-2-13-13-1-1">Draw examples of simple graphs, non-simple graphs, and psuedographs on 3 vertices.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-13-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Problem 11.0.27"><a href="#root-1-2-13-48" title="Copy heading and permalink for Problem 11.0.27" aria-label="Copy heading and permalink for Problem 11.0.27">🔗</a></div></article></details><div class="para" id="root-1-2-13-49">In fact, we have the following theorem.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-49" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Problem 10.6"><a href="#root-1-2-13-13" title="Copy heading and permalink for Problem 10.6" aria-label="Copy heading and permalink for Problem 10.6">🔗</a></div></article><div class="para" id="root-1-2-13-14">A simple graph <span class="process-math">\(G = (V,E)\)</span> is <dfn class="terminology">bipartite</dfn> if there is a partition of <span class="process-math">\(V\)</span> into two nonempty sets <span class="process-math">\(V_1,V_2\)</span> (i.e., <span class="process-math">\(V_1\neq \emptyset\text{,}\)</span> <span class="process-math">\(V_2\neq \emptyset\text{,}\)</span> <span class="process-math">\(V_1\cap V_2=\emptyset\text{,}\)</span> and <span class="process-math">\(V_1 \cup V_2 = V\)</span>) such that each edge of <span class="process-math">\(G\)</span> connects a vertex in <span class="process-math">\(V_1\)</span> and a vertex in <span class="process-math">\(V_2\text{.}\)</span> The pair <span class="process-math">\((V_1,V_2)\)</span> is called a <dfn class="terminology">bipartition</dfn> of the graph.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="problem example-like" id="root-1-2-13-15"><h2 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
+<div class="para" id="root-1-2-13-15-1-1">Provide an example of a bipartite graph with 5 vertices.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-15-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 10.7"><a href="#root-1-2-13-15" title="Copy heading and permalink for Problem 10.7" aria-label="Copy heading and permalink for Problem 10.7">🔗</a></div></article><div class="para" id="root-1-2-13-16">The following theorem provides a nice characterization of bipartite graphs.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="root-1-2-13-17"><h2 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
+<div class="para" id="root-1-2-13-17-1-1">A graph is bipartite if each vertex can be colored with one of two colors so that each pair of adjacent vertices have different colors.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-17-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 10.8"><a href="#root-1-2-13-17" title="Copy heading and permalink for Theorem 10.8" aria-label="Copy heading and permalink for Theorem 10.8">🔗</a></div></article><article class="problem example-like" id="root-1-2-13-18"><h2 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
+<div class="para" id="root-1-2-13-18-1-1">Which complete graphs are bipartite?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-18-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 10.9"><a href="#root-1-2-13-18" title="Copy heading and permalink for Problem 10.9" aria-label="Copy heading and permalink for Problem 10.9">🔗</a></div></article><article class="problem example-like" id="root-1-2-13-19"><h2 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
+<div class="para" id="root-1-2-13-19-1-1">Which path graphs are bipartite?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-19-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 10.10"><a href="#root-1-2-13-19" title="Copy heading and permalink for Problem 10.10" aria-label="Copy heading and permalink for Problem 10.10">🔗</a></div></article><article class="problem example-like" id="root-1-2-13-20"><h2 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
+<div class="para" id="root-1-2-13-20-1-1">Which cycle graphs are bipartite?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-20-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 10.11"><a href="#root-1-2-13-20" title="Copy heading and permalink for Problem 10.11" aria-label="Copy heading and permalink for Problem 10.11">🔗</a></div></article><article class="problem example-like" id="root-1-2-13-21"><h2 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
+<div class="para" id="root-1-2-13-21-1-1">Is <span class="process-math">\(Q_3\)</span> bipartite?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-21-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 10.12"><a href="#root-1-2-13-21" title="Copy heading and permalink for Problem 10.12" aria-label="Copy heading and permalink for Problem 10.12">🔗</a></div></article><div class="para" id="root-1-2-13-22">A bipartite graph with bipartition <span class="process-math">\((V_1,V_2)\)</span> such that <span class="process-math">\(|V_1|=m\)</span> and <span class="process-math">\(|V_2|=n\)</span> is the <dfn class="terminology">complete bipartite graph</dfn> <span class="process-math">\(K_{m,n}\)</span> if it contains each edge <span class="process-math">\(\{u,v\}\)</span> for every pair <span class="process-math">\(u \in V_1\)</span> and <span class="process-math">\(v \in V_2\text{.}\)</span> Note that <span class="process-math">\(K_{m,n}=K_{n,m}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-22" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="problem example-like" id="root-1-2-13-23"><h2 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
+<div class="para" id="root-1-2-13-23-1-1">Draw <span class="process-math">\(K_{1,1}\text{,}\)</span> <span class="process-math">\(K_{1,2}\text{,}\)</span> <span class="process-math">\(K_{2,2}\text{,}\)</span> <span class="process-math">\(K_{2,3}\text{,}\)</span> <span class="process-math">\(K_{3,3}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-23-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 10.13"><a href="#root-1-2-13-23" title="Copy heading and permalink for Problem 10.13" aria-label="Copy heading and permalink for Problem 10.13">🔗</a></div></article><div class="para" id="root-1-2-13-24">The next result is sometimes referred to as the <dfn class="terminology">Handshake Lemma</dfn>. Do you see why?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-24" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="thm_Handshake"><h2 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Degree Sum Formula.</span>
+</h2>
+<div class="para logical" id="thm_Handshake-2-1">
+<div class="para">In any graph, the sum of the degrees of vertices in the graph is always twice the number of edges. In other words, in a graph <span class="process-math">\(G = (V,E)\text{,}\)</span>
+</div>
+<div class="displaymath process-math" id="thm_Handshake-2-1-2">
+\begin{equation*}
+2|E| = \sum_{v \in V} \deg(v)\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm_Handshake-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 10.14: Degree Sum Formula"><a href="#thm_Handshake" title="Copy heading and permalink for Theorem 10.14: Degree Sum Formula" aria-label="Copy heading and permalink for Theorem 10.14: Degree Sum Formula">🔗</a></div></article><article class="problem example-like" id="root-1-2-13-26"><h2 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
+<div class="para" id="root-1-2-13-26-1-1">At a recent party, 9 people greeted each other by shaking hands. Is it possible that each person shook hands with exactly 7 people at the party?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-26-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 10.15"><a href="#root-1-2-13-26" title="Copy heading and permalink for Problem 10.15" aria-label="Copy heading and permalink for Problem 10.15">🔗</a></div></article><div class="para" id="root-1-2-13-27">Sometimes it is convenient to use the term <dfn class="terminology">even vertex</dfn> or <dfn class="terminology">odd vertex</dfn> to refer to a vertex whose degree is even or odd, respectively.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-27" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="problem example-like" id="root-1-2-13-28"><h2 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
+<div class="para" id="root-1-2-13-28-1-1">Explain why every graph has an even number of odd vertices.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-28-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 10.16"><a href="#root-1-2-13-28" title="Copy heading and permalink for Problem 10.16" aria-label="Copy heading and permalink for Problem 10.16">🔗</a></div></article><div class="para" id="root-1-2-13-29">The <dfn class="terminology">degree sequence</dfn> of a graph is the list of the degrees of the vertices of the graph in descending order. A finite list of nonnegative integers in descending order is <dfn class="terminology">graphic</dfn> if it is the degree sequence of a simple graph.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-29" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="problem example-like" id="root-1-2-13-30"><h2 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.17</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
+<div class="para" id="root-1-2-13-30-1-1">Find the degree sequences for <span class="process-math">\(K_n\)</span> (<span class="process-math">\(n\geq 1\)</span>), <span class="process-math">\(C_n\)</span> (<span class="process-math">\(n\geq 3\)</span>), <span class="process-math">\(P_n\)</span> (<span class="process-math">\(n\geq 1\)</span>), <span class="process-math">\(W_n\)</span> (<span class="process-math">\(n\geq 4\)</span>), and <span class="process-math">\(Q_n\)</span> (<span class="process-math">\(n\geq 1\)</span>).<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-30-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 10.17"><a href="#root-1-2-13-30" title="Copy heading and permalink for Problem 10.17" aria-label="Copy heading and permalink for Problem 10.17">🔗</a></div></article><article class="problem example-like" id="root-1-2-13-31"><h2 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.18</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
+<div class="para logical" id="root-1-2-13-31-1-1">
+<div class="para">Which of the following are graphic sequences?</div>
+<ol class="decimal" id="root-1-2-13-31-1-1-1">
+<li id="root-1-2-13-31-1-1-1-1">
+<div class="para" id="root-1-2-13-31-1-1-1-1-1">3332<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-31-1-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#root-1-2-13-31-1-1-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="root-1-2-13-31-1-1-1-2">
+<div class="para" id="root-1-2-13-31-1-1-1-2-1">3331<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-31-1-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#root-1-2-13-31-1-1-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="root-1-2-13-31-1-1-1-3">
+<div class="para" id="root-1-2-13-31-1-1-1-3-1">44332<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-31-1-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#root-1-2-13-31-1-1-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-31-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 10.18"><a href="#root-1-2-13-31" title="Copy heading and permalink for Problem 10.18" aria-label="Copy heading and permalink for Problem 10.18">🔗</a></div></article><article class="problem example-like" id="root-1-2-13-32"><h2 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.19</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
+<div class="para" id="root-1-2-13-32-1-1">Find two different graphs that have 32222111 as their degree sequence.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-32-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 10.19"><a href="#root-1-2-13-32" title="Copy heading and permalink for Problem 10.19" aria-label="Copy heading and permalink for Problem 10.19">🔗</a></div></article><article class="theorem theorem-like" id="root-1-2-13-33"><h2 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.20</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
+<div class="para" id="root-1-2-13-33-1-1">If <span class="process-math">\(d_1d_2\cdots d_n\)</span> is the degree sequence for a graph <span class="process-math">\(G\)</span> of order <span class="process-math">\(n\text{,}\)</span> then <span class="process-math">\(\sum_{i=1}^n d_i\)</span> must be even.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-33-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 10.20"><a href="#root-1-2-13-33" title="Copy heading and permalink for Theorem 10.20" aria-label="Copy heading and permalink for Theorem 10.20">🔗</a></div></article><div class="para" id="root-1-2-13-34">One consequence of the previous theorem is that any sequence with an odd sum (e.g., 331) is not graphic. It turns out that if a sequence has an even sum, it is the degree sequence of a multigraph. The construction of such a graph is straightforward: connect vertices with odd degrees in pairs, and fill out the remaining even degree counts by self-loops. The question of whether a given degree sequence can be realized by a simple graph is more challenging. This problem is also called <dfn class="terminology">graph realization problem</dfn> and can be solved by either the Erdös–Gallai theorem or the Havel–Hakimi algorithm. Unfortunately, this is beyond the scope of this course.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-34" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="root-1-2-13-35">
+<div class="para">We will now focus on making new graphs from old. Below are several definitions.</div>
+<ul class="disc" id="root-1-2-13-35-1">
+<li id="root-1-2-13-35-1-1">
+<div class="para" id="root-1-2-13-35-1-1-1">A graph <span class="process-math">\(H=(V_H,E_H)\)</span> is a <dfn class="terminology">subgraph</dfn> of a graph <span class="process-math">\(G=(V_G,E_G)\)</span> if <span class="process-math">\(V_H\subseteq V_G\)</span> and <span class="process-math">\(E_H\subseteq E_G\)</span> (i.e., the vertices of <span class="process-math">\(H\)</span> are vertices of <span class="process-math">\(G\)</span> and the edges of <span class="process-math">\(H\)</span> are edges of <span class="process-math">\(G\)</span>). If <span class="process-math">\(H\)</span> is a subgraph of <span class="process-math">\(G\text{,}\)</span> we may write <span class="process-math">\({H\subseteq G}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-35-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#root-1-2-13-35-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="root-1-2-13-35-1-2">
+<div class="para" id="root-1-2-13-35-1-2-1">A graph <span class="process-math">\(H=(V_H,E_H)\)</span> is an <dfn class="terminology">induced subgraph</dfn> of a graph <span class="process-math">\(G=(V_G,E_G)\)</span> if <span class="process-math">\(V_H\subseteq V_G\)</span> and <span class="process-math">\(E_H\)</span> consists of all of the edges in <span class="process-math">\(E_G\)</span> that have both endpoints in <span class="process-math">\(E_H\text{.}\)</span> That is, for any two vertices <span class="process-math">\(u,v\in V_H\text{,}\)</span> <span class="process-math">\(u\)</span> and <span class="process-math">\(v\)</span> are adjacent in <span class="process-math">\(H\)</span> if and only if <span class="process-math">\(u\)</span> and <span class="process-math">\(v\)</span> are adjacent in <span class="process-math">\(G\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-35-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#root-1-2-13-35-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="root-1-2-13-35-1-3">
+<div class="para" id="root-1-2-13-35-1-3-1">If <span class="process-math">\(G=(V,E)\)</span> is a graph and <span class="process-math">\(S\subseteq V\text{,}\)</span> then the <dfn class="terminology">subgraph of <span class="process-math">\(G\)</span> induced by <span class="process-math">\(S\)</span></dfn>, denoted <span class="process-math">\({G[S]}\text{,}\)</span> is the induced subgraph of <span class="process-math">\(G\)</span> with vertex set <span class="process-math">\(S\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-35-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#root-1-2-13-35-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="root-1-2-13-35-1-4">
+<div class="para" id="root-1-2-13-35-1-4-1">The <dfn class="terminology">union</dfn> of two graphs <span class="process-math">\(G_1 = (V_1,E_1)\)</span> and <span class="process-math">\(G_2 = (V_2,E_2)\)</span> is the graph with vertex set <span class="process-math">\(V = V_1\cup V_2\)</span> and edge set <span class="process-math">\(E = E_1 \cup E_2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-35-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#root-1-2-13-35-1-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="root-1-2-13-35-1-5">
+<div class="para" id="root-1-2-13-35-1-5-1">The <dfn class="terminology">complement</dfn> of a <em class="emphasis">simple</em> graph <span class="process-math">\(G\)</span> of order <span class="process-math">\(n\)</span> is the graph <span class="process-math">\({\overline{G}}\)</span> on the same <span class="process-math">\(n\)</span> vertices such for each pair of distinct vertices <span class="process-math">\(u\)</span> and <span class="process-math">\(v\text{,}\)</span> <span class="process-math">\(\{u,v\}\)</span> is an edge of <span class="process-math">\(\overline{G}\)</span> if and only if it is not an edge of <span class="process-math">\(G\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-35-1-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#root-1-2-13-35-1-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-35" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="problem example-like" id="root-1-2-13-36"><h2 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.21</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
+<div class="para logical" id="root-1-2-13-36-1-1">
+<div class="para">Consider the graph <span class="process-math">\(C_4\text{.}\)</span> Label the vertices clockwise as <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> <span class="process-math">\(c\text{,}\)</span> and <span class="process-math">\(d\text{.}\)</span>
+</div>
+<ol class="decimal" id="root-1-2-13-36-1-1-6">
+<li id="root-1-2-13-36-1-1-6-1">
+<div class="para" id="root-1-2-13-36-1-1-6-1-1">Find all induced subgraphs of <span class="process-math">\(C_4\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-36-1-1-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#root-1-2-13-36-1-1-6-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="root-1-2-13-36-1-1-6-2">
+<div class="para" id="root-1-2-13-36-1-1-6-2-1">Find a subgraph of <span class="process-math">\(C_4\)</span> that is not an induced subgraph of <span class="process-math">\(C_4\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-36-1-1-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#root-1-2-13-36-1-1-6-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-36-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 10.21"><a href="#root-1-2-13-36" title="Copy heading and permalink for Problem 10.21" aria-label="Copy heading and permalink for Problem 10.21">🔗</a></div></article><article class="problem example-like" id="root-1-2-13-37"><h2 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.22</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
+<div class="para" id="root-1-2-13-37-1-1">Make up a few examples to explore the concepts of union and complement of graphs.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-37-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 10.22"><a href="#root-1-2-13-37" title="Copy heading and permalink for Problem 10.22" aria-label="Copy heading and permalink for Problem 10.22">🔗</a></div></article><article class="problem example-like" id="root-1-2-13-38"><h2 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.23</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
+<div class="para logical" id="root-1-2-13-38-1-1">
+<div class="para">Determine whether each of the following statements is true or false. If a statement is true, prove it. Otherwise, provide a counterexample.</div>
+<ol class="decimal" id="root-1-2-13-38-1-1-1">
+<li id="root-1-2-13-38-1-1-1-1">
+<div class="para" id="root-1-2-13-38-1-1-1-1-1">Any subgraph of a complete graph is also complete.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-38-1-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#root-1-2-13-38-1-1-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="root-1-2-13-38-1-1-1-2">
+<div class="para" id="root-1-2-13-38-1-1-1-2-1">Any induced subgraph of a complete graph is also complete.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-38-1-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#root-1-2-13-38-1-1-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="root-1-2-13-38-1-1-1-3">
+<div class="para" id="root-1-2-13-38-1-1-1-3-1">Any subgraph of a bipartite graph is bipartite.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-38-1-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#root-1-2-13-38-1-1-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-38-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 10.23"><a href="#root-1-2-13-38" title="Copy heading and permalink for Problem 10.23" aria-label="Copy heading and permalink for Problem 10.23">🔗</a></div></article><div class="para" id="root-1-2-13-39">If <span class="process-math">\(G=(V,E)\)</span> is a graph and <span class="process-math">\(S\subseteq V\text{,}\)</span> the <dfn class="terminology">neighborhood</dfn> of <span class="process-math">\(S\text{,}\)</span> denoted <span class="process-math">\({N(S)}\)</span> is the set of all vertices in <span class="process-math">\(V\)</span> adjacent to at least one member of <span class="process-math">\(S\text{.}\)</span> Of course, we can consider the neighborhood of a single vertex <span class="process-math">\(v\text{,}\)</span> which is denoted <span class="process-math">\({N(v)}\text{.}\)</span> A neighborhood of a single vertex does not include itself, and is more specifically the <dfn class="terminology">open neighborhood</dfn> of <span class="process-math">\(v\text{.}\)</span> It is also possible to define a neighborhood in which <span class="process-math">\(v\)</span> itself is also included. This is called the <dfn class="terminology">closed neighborhood</dfn> of <span class="process-math">\(v\text{,}\)</span> sometimes denoted by <span class="process-math">\({N[v]}\text{.}\)</span> Unless stated otherwise, a neighborhood is assumed to be open.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-39" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="problem example-like" id="root-1-2-13-40"><h2 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.24</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
+<div class="para" id="root-1-2-13-40-1-1">Make up a few examples of graphs and explore the concept of neighborhood.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-40-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 10.24"><a href="#root-1-2-13-40" title="Copy heading and permalink for Problem 10.24" aria-label="Copy heading and permalink for Problem 10.24">🔗</a></div></article><article class="problem example-like" id="root-1-2-13-41"><h2 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.25</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
+<div class="para logical" id="root-1-2-13-41-1-1">
+<div class="para">Consider the graph <span class="process-math">\(K_{3,5}\)</span> with bipartition <span class="process-math">\(V_1\)</span> and <span class="process-math">\(V_2\text{,}\)</span> where <span class="process-math">\(|V_1|=3\)</span> and <span class="process-math">\(|V_2|=5\text{.}\)</span>
+</div>
+<ol class="decimal" id="root-1-2-13-41-1-1-6">
+<li id="root-1-2-13-41-1-1-6-1">
+<div class="para" id="root-1-2-13-41-1-1-6-1-1">For <span class="process-math">\(v\in V_1\text{,}\)</span> what is <span class="process-math">\(N(v)\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-41-1-1-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#root-1-2-13-41-1-1-6-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="root-1-2-13-41-1-1-6-2">
+<div class="para" id="root-1-2-13-41-1-1-6-2-1">What is <span class="process-math">\(N(V_1)\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-41-1-1-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#root-1-2-13-41-1-1-6-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="root-1-2-13-41-1-1-6-3">
+<div class="para" id="root-1-2-13-41-1-1-6-3-1">What is <span class="process-math">\(N(V_2)\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-41-1-1-6-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#root-1-2-13-41-1-1-6-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-41-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 10.25"><a href="#root-1-2-13-41" title="Copy heading and permalink for Problem 10.25" aria-label="Copy heading and permalink for Problem 10.25">🔗</a></div></article><div class="para" id="root-1-2-13-42">A <dfn class="terminology">matching</dfn> (or <dfn class="terminology">independent edge set</dfn>) in a graph <span class="process-math">\(G=(V,E)\)</span> is a subset of edges <span class="process-math">\(M\subseteq E\)</span> without common vertices. That is, a subset of the edges is a matching if each vertex appears as an endpoint in at most one edge of that matching. If <span class="process-math">\(M\)</span> is a matching, a vertex is said to be <dfn class="terminology">matched</dfn> if it is an endpoint of one of the edges in <span class="process-math">\(M\text{.}\)</span> Otherwise, the vertex is called <dfn class="terminology">unmatched</dfn>. We say that <span class="process-math">\(M\)</span> <dfn class="terminology">covers</dfn> a subset <span class="process-math">\(S\subseteq V\)</span> if every vertex of <span class="process-math">\(S\)</span> is matched by <span class="process-math">\(M\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-42" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="root-1-2-13-43">We now explore a type of matching problem. Suppose we have a bipartite graph <span class="process-math">\(G=(V,E)\)</span> with a bipartition <span class="process-math">\((V_1,V_2)\text{.}\)</span> We want to match up each element <span class="process-math">\(v_1\in V_1\)</span> with exactly one element <span class="process-math">\(v_2 \in V_2\)</span> that is adjacent to it in <span class="process-math">\(G\)</span> and that is not matched to any other element of <span class="process-math">\(V_1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-43" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="root-1-2-13-44">A <dfn class="terminology">total matching</dfn> from <span class="process-math">\(V_1\)</span> to <span class="process-math">\(V_2\)</span> is matching that covers <span class="process-math">\(V_1\text{.}\)</span> In other words, for each <span class="process-math">\(v_1\in V_1\text{,}\)</span> there is a unique edge <span class="process-math">\(m\in M\)</span> and a unique <span class="process-math">\(v_2\in V_2\)</span> such that <span class="process-math">\(m\)</span> is incident to <span class="process-math">\(v_1\)</span> and <span class="process-math">\(v_2\text{.}\)</span> We can think of <span class="process-math">\(M\)</span> as specifying an injective function from <span class="process-math">\(V_1\)</span> to <span class="process-math">\(V_2\text{.}\)</span> If every vertex in <span class="process-math">\(V_2\)</span> is also matched (i.e., <span class="process-math">\(V_2\)</span> is covered), then the matching is called a <dfn class="terminology">perfect matching</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-44" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="root-1-2-13-45">Finding a matching in a bipartite graph can be treated as a network flow problem.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-45" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="problem example-like" id="root-1-2-13-46"><h2 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.26</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
+<div class="para" id="root-1-2-13-46-1-1">Consider the bipartite graph <span class="process-math">\(G\)</span> given below. Is there a total matching from <span class="process-math">\(\{a_1,a_2,a_3,a_4\}\)</span> to <span class="process-math">\(\{b_1,b_2,b_3,b_4,b_5\}\text{?}\)</span> If so, find one. If not, explain why.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-46-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/root-1-2-13-46-1-2.svg" role="img" class="contained"></div>
+<div class="autopermalink" data-description="Problem 10.26"><a href="#root-1-2-13-46" title="Copy heading and permalink for Problem 10.26" aria-label="Copy heading and permalink for Problem 10.26">🔗</a></div></article><article class="problem example-like" id="root-1-2-13-47"><h2 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.27</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
+<div class="para" id="root-1-2-13-47-1-1">Consider the bipartite graph <span class="process-math">\(G\)</span> given below. Is there a total matching from <span class="process-math">\(\{a_1,a_2,a_3,a_4\}\)</span> to <span class="process-math">\(\{b_1,b_2,b_3,b_4\}\text{?}\)</span> If so, find one. If not, explain why.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-47-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/root-1-2-13-47-1-2.svg" role="img" class="contained"></div>
+<div class="autopermalink" data-description="Problem 10.27"><a href="#root-1-2-13-47" title="Copy heading and permalink for Problem 10.27" aria-label="Copy heading and permalink for Problem 10.27">🔗</a></div></article><article class="problem example-like" id="root-1-2-13-48"><h2 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.28</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
+<div class="para logical" id="root-1-2-13-48-1-1">
+<div class="para">Determine whether each of the following statements is true or false. If a statement is true, prove it. Otherwise, provide a counterexample.</div>
+<ol class="decimal" id="root-1-2-13-48-1-1-1">
+<li id="root-1-2-13-48-1-1-1-1">
+<div class="para" id="root-1-2-13-48-1-1-1-1-1">If a bipartite graph <span class="process-math">\(G=(V,E)\)</span> has a perfect matching, then <span class="process-math">\(|V|\)</span> is even.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-48-1-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#root-1-2-13-48-1-1-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="root-1-2-13-48-1-1-1-2">
+<div class="para" id="root-1-2-13-48-1-1-1-2-1">If <span class="process-math">\(G=(V,E)\)</span> is a bipartite graph such that <span class="process-math">\(|V|\)</span> is even, then <span class="process-math">\(G\)</span> has a perfect matching.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-48-1-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#root-1-2-13-48-1-1-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-48-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 10.28"><a href="#root-1-2-13-48" title="Copy heading and permalink for Problem 10.28" aria-label="Copy heading and permalink for Problem 10.28">🔗</a></div></article><div class="para" id="root-1-2-13-49">In order for there to be a total matching from <span class="process-math">\(V_1\)</span> to <span class="process-math">\(V_2\text{,}\)</span> we need <span class="process-math">\(\deg(v_1)&gt;0\)</span> for each <span class="process-math">\(v_1\in V_1\text{.}\)</span> However, that is not enough. <a class="external" href="https://en.wikipedia.org/wiki/Philip_Hall" target="_blank">Phillip Hall</a> (1904–1982) discovered the following condition, known as <dfn class="terminology">Hall’s Marriage Theorem</dfn>, needed for a total matching.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-49" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="theorem theorem-like" id="root-1-2-13-50"><h2 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.0.28</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.29</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Hall’s Marriage Theorem.</span>
 </h2>
-<div class="para" id="root-1-2-13-50-1-1">A simple graph <span class="process-math">\(G\)</span> is connected if and only if it contains a spanning tree.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-50-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="root-1-2-13-50-2-1">A bipartite graph with bipartition <span class="process-math">\((V_1,V_2)\)</span> has a total matching from <span class="process-math">\(V_1\)</span> to <span class="process-math">\(V_2\)</span> if and only if <span class="process-math">\(|N(S)| \ge |S|\)</span> for all subsets <span class="process-math">\(S\subseteq V_1\text{.}\)</span> In other words, every subset <span class="process-math">\(S\)</span> of <span class="process-math">\(V_1\)</span> must have sufficiently many neighbors in <span class="process-math">\(V_2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-50-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 11.0.28"><a href="#root-1-2-13-50" title="Copy heading and permalink for Theorem 11.0.28" aria-label="Copy heading and permalink for Theorem 11.0.28">🔗</a></div></article><div class="para" id="root-1-2-13-51">Below, we provide informal descriptions of the depth-first and breadth-first algorithms for identifying a spanning tree in a connected simple graph <span class="process-math">\(G\)</span> with vertices ordered as <span class="process-math">\(v_1, v_2, \dots, v_n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-51" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Theorem 10.29: Hall’s Marriage Theorem"><a href="#root-1-2-13-50" title="Copy heading and permalink for Theorem 10.29: Hall’s Marriage Theorem" aria-label="Copy heading and permalink for Theorem 10.29: Hall’s Marriage Theorem">🔗</a></div></article><div class="para" id="root-1-2-13-51">Hall actually stated and proved a more general theorem, but we have given its formulation in the context of graph theory.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-51" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para logical" id="root-1-2-13-52">
-<div class="para">
-<dfn class="terminology">Depth-First Search.</dfn> Initialize: <span class="process-math">\(T = \{v_1\}\text{,}\)</span> <span class="process-math">\(v = v_1\text{.}\)</span> As long as <span class="process-math">\(T\)</span> does not contain all vertices, do the following:</div>
-<ul class="disc" id="root-1-2-13-52-5">
-<li id="root-1-2-13-52-5-1">
-<div class="para" id="root-1-2-13-52-5-1-1">Choose the first vertex <span class="process-math">\(w\)</span> in the ordered list that is adjacent to <span class="process-math">\(v\)</span> and is not yet in <span class="process-math">\(T\text{.}\)</span> If there are no vertices adjacent to <span class="process-math">\(v\)</span> that are not yet in <span class="process-math">\(T\text{,}\)</span> return to the most recently added previous vertex <span class="process-math">\(u\)</span> and let <span class="process-math">\(v = u\)</span> and repeat this step with the revised <span class="process-math">\(v\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-52-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="root-1-2-13-52">A graph <span class="process-math">\(G=(V,E)\)</span> is called <dfn class="terminology"><span class="process-math">\(k\)</span>-regular</dfn> if <span class="process-math">\(\deg(v)=k\)</span> for every <span class="process-math">\(v\in V\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-52" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#root-1-2-13-52-5-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
-</li>
-<li id="root-1-2-13-52-5-2">
-<div class="para" id="root-1-2-13-52-5-2-1">Add <span class="process-math">\(w\)</span> and edge <span class="process-math">\(\{v,w\}\)</span> to <span class="process-math">\(T\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-52-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<article class="example example-like" id="root-1-2-13-53"><h2 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.30</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
+<div class="para" id="root-1-2-13-53-1-1">The cycle graph <span class="process-math">\(C_n\)</span> is 2-regular, the complete graph <span class="process-math">\(K_n\)</span> is <span class="process-math">\((n-1)\)</span>-regular, the hypercube graph <span class="process-math">\(Q_n\)</span> is <span class="process-math">\(n\)</span>-regular, and the complete bipartite graph <span class="process-math">\(K_{n,n}\)</span> is <span class="process-math">\(n\)</span>-regular.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-53-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#root-1-2-13-52-5-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
-</li>
-<li id="root-1-2-13-52-5-3">
-<div class="para" id="root-1-2-13-52-5-3-1">Set <span class="process-math">\(v = w\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-52-5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Example 10.30"><a href="#root-1-2-13-53" title="Copy heading and permalink for Example 10.30" aria-label="Copy heading and permalink for Example 10.30">🔗</a></div></article><article class="problem example-like" id="root-1-2-13-54"><h2 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.31</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
+<div class="para" id="root-1-2-13-54-1-1">Prove that if <span class="process-math">\(G\)</span> is a <span class="process-math">\(k\)</span>-regular bipartite graph with bipartition <span class="process-math">\((V_1,V_2)\text{,}\)</span> then <span class="process-math">\(|V_1|=|V_2|\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-54-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#root-1-2-13-52-5-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
-</li>
-</ul>
-<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-52" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Problem 10.31"><a href="#root-1-2-13-54" title="Copy heading and permalink for Problem 10.31" aria-label="Copy heading and permalink for Problem 10.31">🔗</a></div></article><article class="problem example-like" id="root-1-2-13-55"><h2 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.32</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
+<div class="para" id="root-1-2-13-55-1-1">Prove that if <span class="process-math">\(G\)</span> is a <span class="process-math">\(k\)</span>-regular bipartite graph with <span class="process-math">\(k&gt;1\text{,}\)</span> then <span class="process-math">\(G\)</span> has a perfect matching.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-55-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="root-1-2-13-53">Repeat the steps above (with revised <span class="process-math">\(v\)</span>’s) as often as needed.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-53" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para" id="root-1-2-13-54">
-<dfn class="terminology">Breadth-First Search.</dfn> Initialize: <span class="process-math">\(T = \{v_1\}\text{,}\)</span> <span class="process-math">\(L = v_1\text{.}\)</span> As long as <span class="process-math">\(T\)</span> does not contain all vertices, do the following.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-54" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<ul class="disc" id="root-1-2-13-55">
-<li id="root-1-2-13-55-1">
-<div class="para" id="root-1-2-13-55-1-1">Put <span class="process-math">\(v =\)</span> the first vertex in <span class="process-math">\(L\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-55-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item"><a href="#root-1-2-13-55-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
-</li>
-<li id="root-1-2-13-55-2">
-<div class="para" id="root-1-2-13-55-2-1">Remove that vertex from <span class="process-math">\(L\text{.}\)</span> (On paper, just mark out.)<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-55-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item"><a href="#root-1-2-13-55-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
-</li>
-<li id="root-1-2-13-55-3">
-<div class="para" id="root-1-2-13-55-3-1">For all vertices adjacent to <span class="process-math">\(v\)</span> not yet in <span class="process-math">\(T\text{,}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-55-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<ul class="circle" id="root-1-2-13-55-3-2">
-<li id="root-1-2-13-55-3-2-1">
-<div class="para" id="root-1-2-13-55-3-2-1-1">If <span class="process-math">\(w\)</span> is the first vertex in order that is adjacent to <span class="process-math">\(v\)</span> and not yet in <span class="process-math">\(T\text{,}\)</span> add <span class="process-math">\(w\)</span> and edge <span class="process-math">\(\{v,w\}\)</span> to <span class="process-math">\(T\)</span> and put <span class="process-math">\(w\)</span> at the end of list <span class="process-math">\(L\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-55-3-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item"><a href="#root-1-2-13-55-3-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
-</li>
-<li id="root-1-2-13-55-3-2-2">
-<div class="para" id="root-1-2-13-55-3-2-2-1">Repeat until all vertices adjacent to <span class="process-math">\(v\)</span> not yet in <span class="process-math">\(T\)</span> have been examined.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-55-3-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item"><a href="#root-1-2-13-55-3-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
-</li>
-</ul>
-<div class="autopermalink" data-description="Item"><a href="#root-1-2-13-55-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
-</li>
-</ul>
-<div class="para" id="root-1-2-13-56">Repeat the above steps as needed.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-56" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para" id="root-1-2-13-57">A <dfn class="terminology">weighted graph</dfn> is a graph with a positive numerical values assigned to each edge of the graph. A <dfn class="terminology">minimal spanning tree</dfn> of a connected weighted graph is a spanning tree that has the smallest possible sum of weights for its edges.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-57" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para" id="root-1-2-13-58">Minimal spanning trees arose in the practical matter of designing an efficient electrical network, and the concept applies to similar network notions in many areas such as transportation, utilities, and others. We will discuss one early, elementary, and effective algorithms for finding a minimal spanning tree in a connected undirected weighted graph.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-58" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para logical" id="root-1-2-13-59">
-<div class="para">
-<dfn class="terminology">Prim’s Algorithm</dfn> (Jarnik 1930, Prim 1957). Assume <span class="process-math">\(G\)</span> is a connected, undirected, weighted loopless graph of order <span class="process-math">\(n\text{.}\)</span>
-</div>
-<ol class="decimal" id="root-1-2-13-59-4">
-<li id="root-1-2-13-59-4-1">
-<div class="para" id="root-1-2-13-59-4-1-1">Initialize a tree with a single vertex, chosen arbitrarily from the graph.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-59-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 1"><a href="#root-1-2-13-59-4-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
-</li>
-<li id="root-1-2-13-59-4-2">
-<div class="para" id="root-1-2-13-59-4-2-1">Grow the tree by one edge: Of the edges that connect the tree to vertices not yet in the tree, find a minimum-weight edge, and transfer it to the tree.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-59-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 2"><a href="#root-1-2-13-59-4-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
-</li>
-<li id="root-1-2-13-59-4-3">
-<div class="para" id="root-1-2-13-59-4-3-1">Repeat step 2 (until all vertices are in the tree).<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-59-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 3"><a href="#root-1-2-13-59-4-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
-</li>
-</ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-59" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para" id="root-1-2-13-60">Prim’s Algorithm is an example of a greedy algorithm.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-60" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<details id="root-1-2-13-61" class="problem example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
-<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.0.29</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2></summary><article class="problem example-like knowl__content"><div class="para" id="root-1-2-13-61-1-1">Make up an example of a connected, undirected, weighted loopless graph and find a minimal spanning tree.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-13-61-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Problem 11.0.29"><a href="#root-1-2-13-61" title="Copy heading and permalink for Problem 11.0.29" aria-label="Copy heading and permalink for Problem 11.0.29">🔗</a></div></article></details><div class="autopermalink" data-description="Chapter 11: Additional Graph Theory"><a href="#root-1-2-13" title="Copy heading and permalink for Chapter 11: Additional Graph Theory" aria-label="Copy heading and permalink for Chapter 11: Additional Graph Theory">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Problem 10.32"><a href="#root-1-2-13-55" title="Copy heading and permalink for Problem 10.32" aria-label="Copy heading and permalink for Problem 10.32">🔗</a></div></article><div class="autopermalink" data-description="Chapter 10: Introduction to Graph Theory"><a href="#root-1-2-13" title="Copy heading and permalink for Chapter 10: Introduction to Graph Theory" aria-label="Copy heading and permalink for Chapter 10: Introduction to Graph Theory">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="root-1-2-12.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="root-1-2-14.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

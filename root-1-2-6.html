@@ -14,11 +14,12 @@
 <!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Functions</title>
+<title>Combinations</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
 <script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
@@ -129,7 +130,7 @@ eBookConfig.enable_chatcodes =  false;
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="root-1-2-5.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="root-1-2.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span></span>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="root-1-2-5.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="root-1-2.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="root-1-2-7.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\e}{\varepsilon}
 \renewcommand{\phi}{\varphi}
 \newcommand{\ds}{\displaystyle}
@@ -175,329 +176,371 @@ eBookConfig.enable_chatcodes =  false;
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="root-1-2-2.html" class="internal"><span class="title">Front Matter</span></a></div></li>
 <li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="chap_acknowledgements.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
-<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="root-1-2-5.html" class="internal"><span class="codenumber">1</span> <span class="title">Sets and Counting Principles</span></a></div></li>
-<li class="toc-item toc-chapter active"><div class="toc-title-box"><a href="root-1-2-6.html" class="internal"><span class="codenumber">2</span> <span class="title">Functions</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="root-1-2-4.html" class="internal"><span class="codenumber">1</span> <span class="title">Sets and Counting Principles</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="root-1-2-5.html" class="internal"><span class="codenumber">2</span> <span class="title">Functions</span></a></div></li>
+<li class="toc-item toc-chapter active"><div class="toc-title-box"><a href="root-1-2-6.html" class="internal"><span class="codenumber">3</span> <span class="title">Combinations</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="root-1-2-7.html" class="internal"><span class="codenumber">4</span> <span class="title">The Binomial Theorem</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="chap_pigeonhole_principle.html" class="internal"><span class="codenumber">5</span> <span class="title">Pigeonhole Principle</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="chap_PIE.html" class="internal"><span class="codenumber">6</span> <span class="title">Principle of Inclusion and Exclusion</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="root-1-2-10.html" class="internal"><span class="codenumber">7</span> <span class="title">Mathematical Induction</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="root-1-2-11.html" class="internal"><span class="codenumber">8</span> <span class="title">Sequences and Recurrence Relations</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="root-1-2-12.html" class="internal"><span class="codenumber">9</span> <span class="title">Introduction to Graph Theory</span></a></div></li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="root-1-2-6"><h2 class="heading">
-<span class="type">Chapter</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Functions</span>
+<span class="type">Chapter</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Combinations</span>
 </h2>
-<div class="para logical" id="root-1-2-6-2">
-<div class="para">Let <span class="process-math">\(X\)</span> and <span class="process-math">\(Y\)</span> be two nonempty sets. A <dfn class="terminology">function <span class="process-math">\(f\)</span> from <span class="process-math">\(X\)</span> to <span class="process-math">\(Y\)</span></dfn> is a subset of <span class="process-math">\(X\times Y\)</span> such that for every <span class="process-math">\(x\in X\text{,}\)</span> there exists a unique <span class="process-math">\(y\in Y\)</span> such that <span class="process-math">\((x,y)\in f\text{.}\)</span> The set <span class="process-math">\(X\)</span> is called the <dfn class="terminology">domain</dfn> of <span class="process-math">\(f\)</span> and is denoted by <span class="process-math">\({\dom(f)}\text{.}\)</span> The set <span class="process-math">\(Y\)</span> is called the <dfn class="terminology">codomain</dfn> of <span class="process-math">\(f\)</span> and is denoted by <span class="process-math">\({\codom(f)}\)</span> while the subset of the codomain defined via</div>
-<div class="displaymath process-math" id="root-1-2-6-2-16">
+<div class="para" id="root-1-2-6-2">The notion of <span class="process-math">\(k\)</span>-permutations captures arrangements of distinct objects where order matters. But what should we do if we want to capture a situation where the order of the objects does not matter? Since the order of the objects in a set does not matter, this is the model we should use.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="root-1-2-6-3">
+<div class="para">If <span class="process-math">\(A\)</span> is a set and <span class="process-math">\(B\subseteq A\)</span> with <span class="process-math">\(|B|=k\text{,}\)</span> we refer to <span class="process-math">\(B\)</span> as a <dfn class="terminology"><span class="process-math">\(k\)</span>-subset</dfn> of <span class="process-math">\(A\text{.}\)</span> The collection of all <span class="process-math">\(k\)</span>-subsets of <span class="process-math">\(A\)</span> is defined via</div>
+<div class="displaymath process-math" id="root-1-2-6-3-9">
 \begin{equation*}
-{\range(f)\:= \{y\in Y\mid \mbox{there exists } x\mbox{ such that }  (x,y)\in f\}}
+{\binom{A}{k}:=\{B\subseteq A\mid |B|=k\}.}
 \end{equation*}
 </div>
-<div class="para">is called the <dfn class="terminology">range</dfn> of <span class="process-math">\(f\)</span> or the <dfn class="terminology">image of <span class="process-math">\(X\)</span></dfn> under <span class="process-math">\(f\text{.}\)</span>
+<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="root-1-2-6-4">
+<div class="para">The <dfn class="terminology">binomial coefficient</dfn> is defined via</div>
+<div class="displaymath process-math" id="root-1-2-6-4-2">
+\begin{equation*}
+{\binom{n}{k}:=\text{ number of \(k\)-subsets of an \(n\)-element set } .}
+\end{equation*}
 </div>
-<div class="para" id="root-1-2-6-3">There is a variety of notation and terminology associated to functions. We will write <span class="process-math">\({f:X\to Y}\)</span> to indicate that <span class="process-math">\(f\)</span> is a function from <span class="process-math">\(X\)</span> to <span class="process-math">\(Y\text{.}\)</span> We will make use of statements such as “Let <span class="process-math">\(f:X\to Y\)</span> be the function defined via…” or “Define <span class="process-math">\(f:X\to Y\)</span> via…”, where <span class="process-math">\(f\)</span> is understood to be a function in the second statement. Sometimes the word <dfn class="terminology">mapping</dfn> (or <dfn class="terminology">map</dfn>) is used in place of the word function. If <span class="process-math">\((x,y)\in f\)</span> for a function <span class="process-math">\(f\text{,}\)</span> we often write <span class="process-math">\({f(x)=y}\)</span> and say that “<span class="process-math">\(f\)</span> maps <span class="process-math">\(x\)</span> to <span class="process-math">\(y\)</span>” or “<span class="process-math">\(f\)</span> of <span class="process-math">\(x\)</span> equals <span class="process-math">\(y\)</span>”. In this case, <span class="process-math">\(x\)</span> may be called an <dfn class="terminology">input</dfn> of <span class="process-math">\(f\)</span> and is the <dfn class="terminology">preimage</dfn> of <span class="process-math">\(y\)</span> under <span class="process-math">\(f\)</span> while <span class="process-math">\(y\)</span> is called an <dfn class="terminology">output</dfn> of <span class="process-math">\(f\)</span> and is the <dfn class="terminology">image</dfn> of <span class="process-math">\(x\)</span> under <span class="process-math">\(f\text{.}\)</span> Note that the domain of a function is the set of inputs while the range is the set of outputs for the function.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="root-1-2-6-4">Sometimes we can represent functions visual representations called <dfn class="terminology">function</dfn> (or <dfn class="terminology">mapping</dfn>) <dfn class="terminology">diagrams</dfn>, where the elements of the domain and codomain are indicated by labeled nodes and ordered pairs for the function are indicated by an arrow pointing from the node for input to the node for the output. When drawing function diagrams, it is standard practice to put the elements for the domain on the left and the elements for the codomain on the right, so that all directed edges point from left to right. We may also draw an additional arrow labeled by the name of the function from the domain to the codomain.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="root-1-2-6-5">In particular, if <span class="process-math">\(|A|=n\text{,}\)</span> then <span class="process-math">\(\lvert\binom{A}{k}\rvert=\binom{n}{k}\text{.}\)</span> We read “<span class="process-math">\(\binom{n}{k}\)</span>” as “<span class="process-math">\(n\)</span> choose <span class="process-math">\(k\)</span>”. Alternate notations for binomial coefficients include <span class="process-math">\(C(n,k)\)</span> and <span class="process-math">\(_n C_k\text{.}\)</span> We will see later why <span class="process-math">\(\binom{n}{k}\)</span> is referred to as a binomial coefficient.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="example example-like" id="ex_function"><h2 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<article class="example example-like" id="root-1-2-6-6"><h2 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h2>
-<div class="para" id="ex_function-1-1">
-<a href="root-1-2-6.html#fig_function_diagram" class="xref" data-knowl="./knowl/xref/fig_function_diagram.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.2">Figure 2.2</a> depicts a function <span class="process-math">\(f:X\to Y\)</span> for the sets <span class="process-math">\(X=\{a,b,c,d\}\)</span> to <span class="process-math">\(Y=\{1,2,3,4\}\text{.}\)</span> In this case, we see that <span class="process-math">\(\range(f)=\{1,2,4\}\text{.}\)</span> Moreover, we can write things like <span class="process-math">\(f(a)=2\)</span> and <span class="process-math">\(c\mapsto 4\text{,}\)</span> and say things like “<span class="process-math">\(f\)</span> maps <span class="process-math">\(b\)</span> to 4” and “the image of <span class="process-math">\(d\)</span> is 1.” Note that it is perfectly okay to have both <span class="process-math">\(b\)</span> and <span class="process-math">\(c\)</span> mapped to 4.<div class="autopermalink" data-description="Paragraph"><a href="#ex_function-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="root-1-2-6-6-1-1">
+<div class="para">If <span class="process-math">\(A=\{a,b,c,d\}\text{,}\)</span> then</div>
+<div class="displaymath process-math" id="root-1-2-6-6-1-1-2">
+\begin{equation*}
+\binom{A}{2}=\{\{a,b\},\{a,c\},\{a,d\},\{b,c\},\{b,d\},\{c,d\}\}\text{,}
+\end{equation*}
 </div>
-<div class="autopermalink" data-description="Example 2.1"><a href="#ex_function" title="Copy heading and permalink for Example 2.1" aria-label="Copy heading and permalink for Example 2.1">🔗</a></div></article><div class="para" id="root-1-2-6-6">\tikzset{every loop/.style={min distance=8mm}} \tikzstyle{vert} = [circle, draw, fill=grey,inner sep=0pt, minimum size=5mm] \tikzstyle{b} = [draw,-stealth]<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">which implies that <span class="process-math">\(\binom{4}{2}=6\text{.}\)</span>
 </div>
-<figure class="figure figure-like" id="fig_function_diagram"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/fig_function_diagram-2.svg" role="img" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Function diagram for a function from <span class="process-math">\(X=\{a,b,c,d,\}\)</span> to <span class="process-math">\(Y=\{1,2,3,4\}\text{.}\)</span><div class="autopermalink" data-description="Figure 2.2"><a href="#fig_function_diagram" title="Copy heading and permalink for Figure 2.2" aria-label="Copy heading and permalink for Figure 2.2">🔗</a></div></figcaption></figure><div class="para" id="root-1-2-6-8">Sometimes we can define a function using a formula. For example, we can write <span class="process-math">\(f(x)=x^2-1\)</span> to mean that each <span class="process-math">\(x\)</span> in the domain of <span class="process-math">\(f\)</span> maps to <span class="process-math">\(x^2-1\)</span> in the codomain. However, notice that providing only a formula is ambiguous! A function is determined by its domain, codomain, and the correspondence between these two sets. If we only provide a description for the correspondence, it is not clear what the domain and codomain are. Two functions that are defined by the same formula, but have different domains or codomains are <em class="emphasis">not</em> equal. It is important to point out that not every function can be described using a formula! Despite your prior experience, functions that can be represented succinctly using a formula are rare.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="example example-like" id="root-1-2-6-9"><h2 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<div class="autopermalink" data-description="Example 3.1"><a href="#root-1-2-6-6" title="Copy heading and permalink for Example 3.1" aria-label="Copy heading and permalink for Example 3.1">🔗</a></div></article><article class="problem example-like" id="root-1-2-6-7"><h2 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h2>
-<div class="para" id="root-1-2-6-9-1-1">The function <span class="process-math">\(f:\mathbb{R}\to \mathbb{R}\)</span> defined via <span class="process-math">\(f(x)=x^{2}-1\)</span> is not equal to the function <span class="process-math">\(g:\mathbb{N}\to\mathbb{R}\)</span> defined by <span class="process-math">\(g(x)=x^{2}-1\)</span> since the two functions do not have the same domain.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="root-1-2-6-7-1-1">For any <span class="process-math">\(A\text{,}\)</span> including the empty set, what is <span class="process-math">\(\binom{A}{0}\text{?}\)</span> For <span class="process-math">\(n\geq 0\text{,}\)</span> what is <span class="process-math">\(\binom{n}{0}\)</span> equal to?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 2.3"><a href="#root-1-2-6-9" title="Copy heading and permalink for Example 2.3" aria-label="Copy heading and permalink for Example 2.3">🔗</a></div></article><article class="problem example-like" id="root-1-2-6-10"><h2 class="heading">
-<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<div class="autopermalink" data-description="Problem 3.2"><a href="#root-1-2-6-7" title="Copy heading and permalink for Problem 3.2" aria-label="Copy heading and permalink for Problem 3.2">🔗</a></div></article><article class="problem example-like" id="root-1-2-6-8"><h2 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h2>
-<div class="para logical" id="root-1-2-6-10-1-1">
-<div class="para">Provide an example of each of the following. You may draw a function diagram, write down a list of ordered pairs that represents the assignment, or write a formula as long as the domain and codomain are clear.</div>
-<ol class="decimal" id="root-1-2-6-10-1-1-1">
-<li id="root-1-2-6-10-1-1-1-1">
-<div class="para" id="root-1-2-6-10-1-1-1-1-1">A function <span class="process-math">\(f\)</span> from a set with 4 elements to a set with 3 elements such that <span class="process-math">\(\range(f)=\codom(f)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-10-1-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="root-1-2-6-8-1-1">For <span class="process-math">\(n\geq 0\text{,}\)</span> what is <span class="process-math">\(\binom{n}{n}\)</span> equal to?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 1"><a href="#root-1-2-6-10-1-1-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+<div class="autopermalink" data-description="Problem 3.3"><a href="#root-1-2-6-8" title="Copy heading and permalink for Problem 3.3" aria-label="Copy heading and permalink for Problem 3.3">🔗</a></div></article><div class="para" id="root-1-2-6-9">If we let <span class="process-math">\(n\)</span> and <span class="process-math">\(k\)</span> vary, we can organize the binomial coefficients in a triangular array, often referred to as <dfn class="terminology">Pascal’s Triangle</dfn>. See <a href="root-1-2-6.html#table_Pascal" class="xref" data-knowl="./knowl/xref/table_Pascal.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 3.4: Pascal’s Triangle of binomial coefficients">Table 3.4</a>.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="table table-like" id="table_Pascal"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Pascal’s Triangle of binomial coefficients<div class="autopermalink" data-description="Table 3.4: Pascal’s Triangle of binomial coefficients"><a href="#table_Pascal" title="Copy heading and permalink for Table 3.4: Pascal’s Triangle of binomial coefficients" aria-label="Copy heading and permalink for Table 3.4: Pascal’s Triangle of binomial coefficients">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(n\setminus k\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(3\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(4\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(5\)</span></td>
+<td class="l m b0 r0 l0 t0 lines">6</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\noalign{\hrule height 2pt} <span class="process-math">\(0\)</span>
+</td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(3\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines">3</td>
+<td class="l m b0 r0 l0 t0 lines">3</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(4\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines">4</td>
+<td class="l m b0 r0 l0 t0 lines">6</td>
+<td class="l m b0 r0 l0 t0 lines">4</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(5\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines">5</td>
+<td class="l m b0 r0 l0 t0 lines">10</td>
+<td class="l m b0 r0 l0 t0 lines">10</td>
+<td class="l m b0 r0 l0 t0 lines">5</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(6\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines">6</td>
+<td class="l m b0 r0 l0 t0 lines">15</td>
+<td class="l m b0 r0 l0 t0 lines">20</td>
+<td class="l m b0 r0 l0 t0 lines">15</td>
+<td class="l m b0 r0 l0 t0 lines">6</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+</tr>
+</table></div></figure><article class="problem example-like" id="root-1-2-6-11"><h2 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
+<div class="para logical" id="root-1-2-6-11-1-1">
+<div class="para">Suppose you have a pool of 6 applicants for a job opening. Let’s assume you believe the values in <a href="root-1-2-6.html#table_Pascal" class="xref" data-knowl="./knowl/xref/table_Pascal.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 3.4: Pascal’s Triangle of binomial coefficients">Table 3.4</a>.</div>
+<ol class="decimal" id="root-1-2-6-11-1-1-2">
+<li id="root-1-2-6-11-1-1-2-1">
+<div class="para" id="root-1-2-6-11-1-1-2-1-1">How many ways can you choose 3 of the 6 applicants to interview?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-11-1-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#root-1-2-6-11-1-1-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
 </li>
-<li id="root-1-2-6-10-1-1-1-2">
-<div class="para" id="root-1-2-6-10-1-1-1-2-1">A function <span class="process-math">\(g\)</span> from a set with 4 elements to a set with 3 elements such that <span class="process-math">\(\range(g)\)</span> is strictly smaller than <span class="process-math">\(\codom(g)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-10-1-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="root-1-2-6-11-1-1-2-2">
+<div class="para" id="root-1-2-6-11-1-1-2-2-1">How many ways can you hire 3 of the 6 applicants for 3 distinct jobs?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-11-1-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 2"><a href="#root-1-2-6-10-1-1-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+<div class="autopermalink" data-description="Item 2"><a href="#root-1-2-6-11-1-1-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-10-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-11-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Problem 2.4"><a href="#root-1-2-6-10" title="Copy heading and permalink for Problem 2.4" aria-label="Copy heading and permalink for Problem 2.4">🔗</a></div></article><article class="problem example-like" id="root-1-2-6-11"><h2 class="heading">
-<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<div class="autopermalink" data-description="Problem 3.5"><a href="#root-1-2-6-11" title="Copy heading and permalink for Problem 3.5" aria-label="Copy heading and permalink for Problem 3.5">🔗</a></div></article><article class="problem example-like" id="prob_sum_of_row_in_Pascal"><h2 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h2>
-<div class="para" id="root-1-2-6-11-1-1">In high school you may have been told that a graph represents a function if it passes the <dfn class="terminology">vertical line test</dfn>. Carefully state what the vertical line test says and then explain why it works.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-11-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="prob_sum_of_row_in_Pascal-1-1">
+<div class="para">What are the row sums in Pascal’s Triangle? That is, what is the following sum equal to for any <span class="process-math">\(n\geq 0\text{?}\)</span>
 </div>
-<div class="autopermalink" data-description="Problem 2.5"><a href="#root-1-2-6-11" title="Copy heading and permalink for Problem 2.5" aria-label="Copy heading and permalink for Problem 2.5">🔗</a></div></article><div class="para" id="root-1-2-6-12">A <dfn class="terminology">piecewise-defined function</dfn> (or <dfn class="terminology">piecewise function</dfn>) is a function defined by specifying its output on a partition (i.e., “disjoint chunks” ) of the domain. Note that “piecewise” is a way of expressing the function, rather than a property of the function itself.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="displaymath process-math" id="prob_sum_of_row_in_Pascal-1-1-2">
+\begin{equation*}
+\sum_{k=0}^n\binom{n}{k}:=\binom{n}{0}+\binom{n}{1}+\cdots +\binom{n}{n}\text{.}
+\end{equation*}
 </div>
-<article class="example example-like" id="root-1-2-6-13"><h2 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<div class="autopermalink" data-description="Paragraph"><a href="#prob_sum_of_row_in_Pascal-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 3.6"><a href="#prob_sum_of_row_in_Pascal" title="Copy heading and permalink for Problem 3.6" aria-label="Copy heading and permalink for Problem 3.6">🔗</a></div></article><article class="problem example-like" id="root-1-2-6-13"><h2 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h2>
 <div class="para logical" id="root-1-2-6-13-1-1">
-<div class="para">The function <span class="process-math">\(f:\mathbb{R}\to \mathbb{R}\)</span> defined via</div>
-<div class="displaymath process-math" id="root-1-2-6-13-1-1-2">
+<div class="para">Using the meanings of <span class="process-math">\(k\)</span>-subset and <span class="process-math">\(k\)</span>-permutation, explain why</div>
+<div class="displaymath process-math" id="root-1-2-6-13-1-1-3">
 \begin{equation*}
-f(x)=\begin{cases}x^2-1, \amp  \mbox{if }  x\geq 0,\\ 17, \amp  \mbox{if }  -2\leq x\lt  0,\\ -x, \amp  \mbox{if }  x\lt -2 \end{cases}
+P(n,k)=\binom{n}{k} \cdot k!\text{.}
 \end{equation*}
 </div>
-<div class="para">is an example of a piecewise-defined function.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-13-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 2.6"><a href="#root-1-2-6-13" title="Copy heading and permalink for Example 2.6" aria-label="Copy heading and permalink for Example 2.6">🔗</a></div></article><article class="problem example-like" id="root-1-2-6-14"><h2 class="heading">
-<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<div class="autopermalink" data-description="Problem 3.7"><a href="#root-1-2-6-13" title="Copy heading and permalink for Problem 3.7" aria-label="Copy heading and permalink for Problem 3.7">🔗</a></div></article><div class="para" id="root-1-2-6-14">Using the previous problem, we immediately get the following handy formula for computing binomial coefficients.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="thm_binomial_formula"><h2 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h2>
-<div class="para" id="root-1-2-6-14-1-1">Define <span class="process-math">\(f:\mathbb{R}\setminus\{0\}\to \mathbb{R}\)</span> via <span class="process-math">\(f(x)=\frac{|x|}{x}\text{.}\)</span> Express <span class="process-math">\(f\)</span> as a piecewise function.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-14-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="thm_binomial_formula-1-1">
+<div class="para">For <span class="process-math">\(0\leq k\leq n\text{,}\)</span> we have</div>
+<div class="displaymath process-math" id="thm_binomial_formula-1-1-2">
+\begin{equation*}
+{\binom{n}{k}=\frac{n!}{k!(n-k)!} =\frac{P(n,k)}{k!}.}
+\end{equation*}
 </div>
-<div class="autopermalink" data-description="Problem 2.7"><a href="#root-1-2-6-14" title="Copy heading and permalink for Problem 2.7" aria-label="Copy heading and permalink for Problem 2.7">🔗</a></div></article><article class="problem example-like" id="prob_binary_output_function"><h2 class="heading">
-<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2>
-<div class="para" id="prob_binary_output_function-1-1">Let <span class="process-math">\(n\in\mathbb{N}\text{.}\)</span> Count all functions <span class="process-math">\(f:\{1,2,\ldots,n\}\to \{0,1\}\text{.}\)</span> How is this problem related to <a href="root-1-2-5.html#prob_bit_strings" class="xref" data-knowl="./knowl/xref/prob_bit_strings.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 1.31">Problem 1.31</a>? How is this problem related to <a href="root-1-2-5.html#prob_number_of_subsets" class="xref" data-knowl="./knowl/xref/prob_number_of_subsets.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 1.32">Problem 1.32</a>?<div class="autopermalink" data-description="Paragraph"><a href="#prob_binary_output_function-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm_binomial_formula-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Problem 2.8"><a href="#prob_binary_output_function" title="Copy heading and permalink for Problem 2.8" aria-label="Copy heading and permalink for Problem 2.8">🔗</a></div></article><div class="para logical" id="root-1-2-6-16">
-<div class="para">Let <span class="process-math">\(f:X\to Y\)</span> be a function. We define the following.</div>
-<ol class="decimal" id="root-1-2-6-16-2">
-<li id="root-1-2-6-16-2-1">
-<div class="para" id="root-1-2-6-16-2-1-1">The function <span class="process-math">\(f\)</span> is said to be <dfn class="terminology">injective</dfn> (or <dfn class="terminology">one-to-one</dfn>) if for all <span class="process-math">\(y\in \range(f)\text{,}\)</span> there is a unique <span class="process-math">\(x\in X\)</span> such that <span class="process-math">\(y=f(x)\text{.}\)</span> Said another way, <span class="process-math">\(f\)</span> is one-to-one provided <span class="process-math">\(f(x) = f(y)\)</span> implies that <span class="process-math">\(x = y\text{,}\)</span> or equivalently <span class="process-math">\(x \ne y\)</span> (in <span class="process-math">\(X\)</span>) implies <span class="process-math">\(f(x) \ne f(y)\text{.}\)</span> That is, different inputs produce different outputs.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-16-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 1"><a href="#root-1-2-6-16-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
-</li>
-<li id="root-1-2-6-16-2-2">
-<div class="para" id="root-1-2-6-16-2-2-1">The function <span class="process-math">\(f\)</span> is said to be <dfn class="terminology">surjective</dfn> (or <dfn class="terminology">onto</dfn>) if for all <span class="process-math">\(y\in Y\text{,}\)</span> there exists <span class="process-math">\(x\in X\)</span> such that <span class="process-math">\(y=f(x)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-16-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 2"><a href="#root-1-2-6-16-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
-</li>
-<li id="root-1-2-6-16-2-3">
-<div class="para" id="root-1-2-6-16-2-3-1">If <span class="process-math">\(f\)</span> is both injective and surjective, we say that <span class="process-math">\(f\)</span> is <dfn class="terminology">bijective</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-16-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 3"><a href="#root-1-2-6-16-2-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
-</li>
-</ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Theorem 3.8"><a href="#thm_binomial_formula" title="Copy heading and permalink for Theorem 3.8" aria-label="Copy heading and permalink for Theorem 3.8">🔗</a></div></article><div class="para" id="root-1-2-6-16">In the last expression above, the numerator of <span class="process-math">\(\frac{P(n,k)}{k!}\)</span> is counting how many distinct arrangements (order matters) there are of <span class="process-math">\(k\)</span> objects taken from <span class="process-math">\(n\)</span> objects and the denominator is essentially unordering arrangements (by Division Principle) that consist of the same objects.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="problem example-like" id="root-1-2-6-17"><h2 class="heading">
-<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h2>
 <div class="para logical" id="root-1-2-6-17-1-1">
-<div class="para">Assume that <span class="process-math">\(X\)</span> and <span class="process-math">\(Y\)</span> are finite sets. Provide an example of each of the following. You may draw a function diagram, write down a list of ordered pairs, or write a formula as long as the domain and codomain are clear.</div>
-<ol class="decimal" id="root-1-2-6-17-1-1-3">
-<li id="root-1-2-6-17-1-1-3-1">
-<div class="para" id="root-1-2-6-17-1-1-3-1-1">A function <span class="process-math">\(f:X\to Y\)</span> that is injective but not surjective.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-17-1-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">A state senate consists of 19 Republicans and 14 Democrats. In how many ways can a committee be chosen if:</div>
+<ol class="decimal" id="root-1-2-6-17-1-1-1">
+<li id="root-1-2-6-17-1-1-1-1">
+<div class="para" id="root-1-2-6-17-1-1-1-1-1">The committee contains 6 senators without regard to party?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-17-1-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 1"><a href="#root-1-2-6-17-1-1-3-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+<div class="autopermalink" data-description="Item 1"><a href="#root-1-2-6-17-1-1-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
 </li>
-<li id="root-1-2-6-17-1-1-3-2">
-<div class="para" id="root-1-2-6-17-1-1-3-2-1">A function <span class="process-math">\(f:X\to Y\)</span> that is surjective but not injective.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-17-1-1-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="root-1-2-6-17-1-1-1-2">
+<div class="para" id="root-1-2-6-17-1-1-1-2-1">The committee contains 3 Republicans and 3 Democrats?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-17-1-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 2"><a href="#root-1-2-6-17-1-1-3-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
-</li>
-<li id="root-1-2-6-17-1-1-3-3">
-<div class="para" id="root-1-2-6-17-1-1-3-3-1">A function <span class="process-math">\(f:X\to Y\)</span> that is a bijection.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-17-1-1-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 3"><a href="#root-1-2-6-17-1-1-3-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
-</li>
-<li id="root-1-2-6-17-1-1-3-4">
-<div class="para" id="root-1-2-6-17-1-1-3-4-1">A function <span class="process-math">\(f:X\to Y\)</span> that is neither injective nor surjective.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-17-1-1-3-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 4"><a href="#root-1-2-6-17-1-1-3-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+<div class="autopermalink" data-description="Item 2"><a href="#root-1-2-6-17-1-1-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
 </li>
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-17-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Problem 2.9"><a href="#root-1-2-6-17" title="Copy heading and permalink for Problem 2.9" aria-label="Copy heading and permalink for Problem 2.9">🔗</a></div></article><article class="problem example-like" id="prob_injective_surjective_functions"><h2 class="heading">
-<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<div class="autopermalink" data-description="Problem 3.9"><a href="#root-1-2-6-17" title="Copy heading and permalink for Problem 3.9" aria-label="Copy heading and permalink for Problem 3.9">🔗</a></div></article><article class="problem example-like" id="root-1-2-6-18"><h2 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h2>
-<div class="para logical" id="prob_injective_surjective_functions-1-1">
-<div class="para">Determine whether each of the following functions is injective, surjective, both, or neither.</div>
-<ol class="decimal" id="prob_injective_surjective_functions-1-1-1">
-<li id="prob_injective_surjective_functions-1-1-1-1">
-<div class="para" id="prob_injective_surjective_functions-1-1-1-1-1">Define <span class="process-math">\(f:\mathbb{R}\to \mathbb{R}\)</span> via <span class="process-math">\(f(x)=x^{2}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#prob_injective_surjective_functions-1-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="root-1-2-6-18-1-1">How many bit strings of length 10 have exactly three 1’s?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-18-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 1"><a href="#prob_injective_surjective_functions-1-1-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
-</li>
-<li id="prob_injective_surjective_functions-1-1-1-2">
-<div class="para" id="prob_injective_surjective_functions-1-1-1-2-1">Define <span class="process-math">\(g:\mathbb{R}\to [0,\infty)\)</span> via <span class="process-math">\(g(x)=x^{2}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#prob_injective_surjective_functions-1-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Problem 3.10"><a href="#root-1-2-6-18" title="Copy heading and permalink for Problem 3.10" aria-label="Copy heading and permalink for Problem 3.10">🔗</a></div></article><article class="problem example-like" id="root-1-2-6-19"><h2 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
+<div class="para" id="root-1-2-6-19-1-1">How many bit strings of length 6 have an odd number of 0’s?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-19-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 2"><a href="#prob_injective_surjective_functions-1-1-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
-</li>
-<li id="prob_injective_surjective_functions-1-1-1-3">
-<div class="para" id="prob_injective_surjective_functions-1-1-1-3-1">Define <span class="process-math">\(h:\mathbb{R}\to \mathbb{R}\)</span> via <span class="process-math">\(h(x)=x^{3}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#prob_injective_surjective_functions-1-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Problem 3.11"><a href="#root-1-2-6-19" title="Copy heading and permalink for Problem 3.11" aria-label="Copy heading and permalink for Problem 3.11">🔗</a></div></article><article class="problem example-like" id="root-1-2-6-20"><h2 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
+<div class="para" id="root-1-2-6-20-1-1">As we noted earlier, we did quite a bit of brute force to determine how many paths I could take to get coffee in <a href="root-1-2-4.html#prob_coffee" class="xref" data-knowl="./knowl/xref/prob_coffee.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 1.16">Problem 1.16</a>. Find a solution that utilizes binomial coefficients.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-20-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 3"><a href="#prob_injective_surjective_functions-1-1-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
-</li>
-<li id="prob_injective_surjective_functions-1-1-1-4">
-<div class="para" id="prob_injective_surjective_functions-1-1-1-4-1">Define <span class="process-math">\(k:\mathbb{R}\to \mathbb{R}\)</span> via <span class="process-math">\(k(x)=x^{3}-x\)</span><div class="autopermalink" data-description="Paragraph"><a href="#prob_injective_surjective_functions-1-1-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Problem 3.12"><a href="#root-1-2-6-20" title="Copy heading and permalink for Problem 3.12" aria-label="Copy heading and permalink for Problem 3.12">🔗</a></div></article><article class="problem example-like" id="root-1-2-6-21"><h2 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
+<div class="para" id="root-1-2-6-21-1-1">How many strings of 10 lower-case English letters have exactly two <span class="process-math">\(g\)</span>’s and exactly three <span class="process-math">\(v\)</span>’s?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-21-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 4"><a href="#prob_injective_surjective_functions-1-1-1-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
-</li>
-<li id="circles">
-<div class="para" id="circles-1">Define <span class="process-math">\(c: \mathbb{R}\times \mathbb{R}\to \mathbb{R}\)</span> via <span class="process-math">\(c(x,y)=x^{2}+y^{2}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#circles-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Problem 3.13"><a href="#root-1-2-6-21" title="Copy heading and permalink for Problem 3.13" aria-label="Copy heading and permalink for Problem 3.13">🔗</a></div></article><article class="problem example-like" id="root-1-2-6-22"><h2 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
+<div class="para logical" id="root-1-2-6-22-1-1">
+<div class="para">Assume <span class="process-math">\(1\leq k\leq n\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Item 5"><a href="#circles" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
-</li>
-<li id="prob_injective_surjective_functions-1-1-1-6">
-<div class="para" id="prob_injective_surjective_functions-1-1-1-6-1">Define <span class="process-math">\(f:\mathbb{N}\to \mathbb{N}\times \mathbb{N}\)</span> via <span class="process-math">\(f(n)=(n,n)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#prob_injective_surjective_functions-1-1-1-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 6"><a href="#prob_injective_surjective_functions-1-1-1-6" title="Copy heading and permalink for Item 6" aria-label="Copy heading and permalink for Item 6">🔗</a></div>
-</li>
-<li id="prob_injective_surjective_functions-1-1-1-7">
-<div class="para logical" id="prob_injective_surjective_functions-1-1-1-7-1">
-<div class="para">Define <span class="process-math">\(g:\mathbb{Z}\to \mathbb{Z}\)</span> via</div>
-<div class="displaymath process-math" id="prob_injective_surjective_functions-1-1-1-7-1-2">
+<ol class="decimal" id="root-1-2-6-22-1-1-2">
+<li id="root-1-2-6-22-1-1-2-1">
+<div class="para logical" id="root-1-2-6-22-1-1-2-1-1">
+<div class="para">Using the definition of <span class="process-math">\(\binom{n}{k}\)</span> in terms of <span class="process-math">\(k\)</span>-subsets (as opposed to the formula in <a href="root-1-2-6.html#thm_binomial_formula" class="xref" data-knowl="./knowl/xref/thm_binomial_formula.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.8">Theorem 3.8</a>), explain why</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm_binomial_formula.html" id="root-1-2-6-22-1-1-2-1-1-4">
 \begin{equation*}
-g(n)=\begin{cases}\frac{n}{2}, \amp  \text{ if } n\text{ is even } \\ \frac{n+1}{2}, \amp  \text{ if } n\text{ is odd } \end{cases}
+{\binom{n}{k}=\binom{n-1}{k}+\binom{n-1}{k-1}.}
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#prob_injective_surjective_functions-1-1-1-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">This identity is often called <dfn class="terminology">Pascal’s Identity</dfn> (or <dfn class="terminology">Pascal’s Recurrence</dfn>).</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-22-1-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 7"><a href="#prob_injective_surjective_functions-1-1-1-7" title="Copy heading and permalink for Item 7" aria-label="Copy heading and permalink for Item 7">🔗</a></div>
+<div class="autopermalink" data-description="Item 1"><a href="#root-1-2-6-22-1-1-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
 </li>
-<li id="prob_injective_surjective_functions-1-1-1-8">
-<div class="para logical" id="prob_injective_surjective_functions-1-1-1-8-1">
-<div class="para">Define <span class="process-math">\(\ell:\mathbb{Z}\to \mathbb{N}\)</span> via</div>
-<div class="displaymath process-math" id="prob_injective_surjective_functions-1-1-1-8-1-2">
+<li id="root-1-2-6-22-1-1-2-2">
+<div class="para" id="root-1-2-6-22-1-1-2-2-1">Connect the formula above with <a href="root-1-2-4.html#prob_coffee" class="xref" data-knowl="./knowl/xref/prob_coffee.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 1.16">Problem 1.16</a> involving my walk to get coffee.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-22-1-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#root-1-2-6-22-1-1-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-22-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 3.14"><a href="#root-1-2-6-22" title="Copy heading and permalink for Problem 3.14" aria-label="Copy heading and permalink for Problem 3.14">🔗</a></div></article><article class="problem example-like" id="root-1-2-6-23"><h2 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
+<div class="para logical" id="root-1-2-6-23-1-1">
+<div class="para">Assume <span class="process-math">\(1\leq k\leq n\text{.}\)</span> It turns out that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm_binomial_formula.html" id="root-1-2-6-23-1-1-2">
 \begin{equation*}
-\ell(n)=\begin{cases}2n+1, \amp  \text{ if } n\geq 0\\ -2n, \amp  \text{ if } n\lt 0 \end{cases}
+{\binom{n}{k}=\binom{n}{n-k}.}
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#prob_injective_surjective_functions-1-1-1-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<ol class="decimal" id="root-1-2-6-23-1-1-3">
+<li id="root-1-2-6-23-1-1-3-1">
+<div class="para" id="root-1-2-6-23-1-1-3-1-1">Prove the identity above using the formula for <span class="process-math">\(\binom{n}{k}\)</span> given in <a href="root-1-2-6.html#thm_binomial_formula" class="xref" data-knowl="./knowl/xref/thm_binomial_formula.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.8">Theorem 3.8</a>.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-23-1-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 8"><a href="#prob_injective_surjective_functions-1-1-1-8" title="Copy heading and permalink for Item 8" aria-label="Copy heading and permalink for Item 8">🔗</a></div>
+<div class="autopermalink" data-description="Item 1"><a href="#root-1-2-6-23-1-1-3-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="root-1-2-6-23-1-1-3-2">
+<div class="para" id="root-1-2-6-23-1-1-3-2-1">Explain why the identity is true by using the definition of <span class="process-math">\(\binom{n}{k}\)</span> in terms of <span class="process-math">\(k\)</span>-subsets.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-23-1-1-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#root-1-2-6-23-1-1-3-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#prob_injective_surjective_functions-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-23-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="root-1-2-6-23-1-2">The upshot is that each row of Pascal’s Triangle is a palindrome.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-23-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Problem 2.10"><a href="#prob_injective_surjective_functions" title="Copy heading and permalink for Problem 2.10" aria-label="Copy heading and permalink for Problem 2.10">🔗</a></div></article><article class="problem example-like" id="root-1-2-6-19"><h2 class="heading">
-<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<div class="autopermalink" data-description="Problem 3.15"><a href="#root-1-2-6-23" title="Copy heading and permalink for Problem 3.15" aria-label="Copy heading and permalink for Problem 3.15">🔗</a></div></article><article class="problem example-like" id="root-1-2-6-24"><h2 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h2>
-<div class="para" id="root-1-2-6-19-1-1">Suppose <span class="process-math">\(X\subseteq \mathbb{R}\)</span> and <span class="process-math">\(f:X\to \mathbb{R}\)</span> is a function. Fill in the blank with the appropriate word.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-19-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <blockquote class="blockquote" id="root-1-2-6-19-1-2">
-<span class="process-math">\(f:X\to \mathbb{R}\)</span><em class="emphasis">                 </em><span class="process-math">\(f\)</span><em class="emphasis">at most once</em><div class="autopermalink" data-description="Quotation"><a href="#root-1-2-6-19-1-2" title="Copy heading and permalink for Quotation" aria-label="Copy heading and permalink for Quotation">🔗</a></div>
-</blockquote> <div class="para" id="root-1-2-6-19-1-3">This statement is often called the <dfn class="terminology">horizontal line test</dfn>. Explain why the horizontal line test is true. What kind of theorems to we get if we replace “at most once” with either “at least once” or “exactly once”?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-19-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Problem 2.11"><a href="#root-1-2-6-19" title="Copy heading and permalink for Problem 2.11" aria-label="Copy heading and permalink for Problem 2.11">🔗</a></div></article><article class="problem example-like" id="prob_injective_surjective_cardinality"><h2 class="heading">
-<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2>
-<div class="para logical" id="prob_injective_surjective_cardinality-1-1">
-<div class="para">Suppose <span class="process-math">\(f:A\to B\)</span> is a function for finite sets <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{.}\)</span> Explain why each of the following statements is true.</div>
-<ol class="decimal" id="prob_injective_surjective_cardinality-1-1-4">
-<li id="prob_injective_surjective_cardinality-1-1-4-1">
-<div class="para" id="prob_injective_surjective_cardinality-1-1-4-1-1">If <span class="process-math">\(f\)</span> is an injection, then <span class="process-math">\(|A|\leq |B|\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#prob_injective_surjective_cardinality-1-1-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 1"><a href="#prob_injective_surjective_cardinality-1-1-4-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
-</li>
-<li id="prob_injective_surjective_cardinality-1-1-4-2">
-<div class="para" id="prob_injective_surjective_cardinality-1-1-4-2-1">If <span class="process-math">\(f\)</span> is a surjection, then <span class="process-math">\(|A|\geq |B|\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#prob_injective_surjective_cardinality-1-1-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 2"><a href="#prob_injective_surjective_cardinality-1-1-4-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
-</li>
-<li id="prob_injective_surjective_cardinality-1-1-4-3">
-<div class="para" id="prob_injective_surjective_cardinality-1-1-4-3-1">If <span class="process-math">\(f\)</span> is a bijection, then <span class="process-math">\(|A|=|B|\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#prob_injective_surjective_cardinality-1-1-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 3"><a href="#prob_injective_surjective_cardinality-1-1-4-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
-</li>
-</ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#prob_injective_surjective_cardinality-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Problem 2.12"><a href="#prob_injective_surjective_cardinality" title="Copy heading and permalink for Problem 2.12" aria-label="Copy heading and permalink for Problem 2.12">🔗</a></div></article><article class="problem example-like" id="root-1-2-6-21"><h2 class="heading">
-<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2>
-<div class="para logical" id="root-1-2-6-21-1-1">
-<div class="para">Let <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> be nonempty finite sets with <span class="process-math">\(|A|=n\)</span> and <span class="process-math">\(|B|=k\text{.}\)</span>
-</div>
-<ol class="decimal" id="root-1-2-6-21-1-1-5">
-<li id="root-1-2-6-21-1-1-5-1">
-<div class="para" id="root-1-2-6-21-1-1-5-1-1">How many different functions are there from <span class="process-math">\(A\)</span> to <span class="process-math">\(B\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-21-1-1-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 1"><a href="#root-1-2-6-21-1-1-5-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
-</li>
-<li id="root-1-2-6-21-1-1-5-2">
-<div class="para" id="root-1-2-6-21-1-1-5-2-1">If <span class="process-math">\(n\leq k\text{,}\)</span> how many injective functions are there from <span class="process-math">\(A\)</span> to <span class="process-math">\(B\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-21-1-1-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 2"><a href="#root-1-2-6-21-1-1-5-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
-</li>
-<li id="root-1-2-6-21-1-1-5-3">
-<div class="para" id="root-1-2-6-21-1-1-5-3-1">If <span class="process-math">\(n=k\text{,}\)</span> how many bijective functions are there from <span class="process-math">\(A\)</span> to <span class="process-math">\(B\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-21-1-1-5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 3"><a href="#root-1-2-6-21-1-1-5-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
-</li>
-<li id="root-1-2-6-21-1-1-5-4">
-<div class="para" id="root-1-2-6-21-1-1-5-4-1">If <span class="process-math">\(n\geq k\text{,}\)</span> do you think it would be challenging to count the number of surjective functions from <span class="process-math">\(A\)</span> to <span class="process-math">\(B\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-21-1-1-5-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 4"><a href="#root-1-2-6-21-1-1-5-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
-</li>
-</ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-21-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Problem 2.13"><a href="#root-1-2-6-21" title="Copy heading and permalink for Problem 2.13" aria-label="Copy heading and permalink for Problem 2.13">🔗</a></div></article><div class="para" id="root-1-2-6-22">The next theorem states an important counting technique, which we refer to as the <dfn class="terminology">Bijection Principle</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-22" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<article class="theorem theorem-like" id="root-1-2-6-23"><h2 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Bijection Principle.</span>
-</h2>
-<div class="para" id="root-1-2-6-23-2-1">If <span class="process-math">\(|B|=k\)</span> and there exists a bijection between <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{,}\)</span> then <span class="process-math">\(|A|=k\text{,}\)</span> as well.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-23-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Theorem 2.14: Bijection Principle"><a href="#root-1-2-6-23" title="Copy heading and permalink for Theorem 2.14: Bijection Principle" aria-label="Copy heading and permalink for Theorem 2.14: Bijection Principle">🔗</a></div></article><article class="problem example-like" id="root-1-2-6-24"><h2 class="heading">
-<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2>
-<div class="para" id="root-1-2-6-24-1-1">Let <span class="process-math">\(A\)</span> denote the set of ways to distribute candy in <a href="root-1-2-5.html#prob_candy" class="xref" data-knowl="./knowl/xref/prob_candy.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 1.42">Problem 1.42</a> (in the situation where the candy is all identical) and let <span class="process-math">\(B\)</span> denote the set of sequence of coin flips in <a href="root-1-2-5.html#prob_coin_flips" class="xref" data-knowl="./knowl/xref/prob_coin_flips.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 1.29">Problem 1.29</a>. Find a bijection <span class="process-math">\(f:A\to B\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-24-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Problem 2.15"><a href="#root-1-2-6-24" title="Copy heading and permalink for Problem 2.15" aria-label="Copy heading and permalink for Problem 2.15">🔗</a></div></article><article class="problem example-like" id="root-1-2-6-25"><h2 class="heading">
-<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2>
-<div class="para" id="root-1-2-6-25-1-1">Utilize a bijection to connect <a href="root-1-2-5.html#prob_bit_strings" class="xref" data-knowl="./knowl/xref/prob_bit_strings.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 1.31">Problems 1.31</a> and <a href="root-1-2-5.html#prob_number_of_subsets" class="xref" data-knowl="./knowl/xref/prob_number_of_subsets.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 1.32">Problem 1.32</a>.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-25-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Problem 2.16"><a href="#root-1-2-6-25" title="Copy heading and permalink for Problem 2.16" aria-label="Copy heading and permalink for Problem 2.16">🔗</a></div></article><div class="para" id="root-1-2-6-26">The next problem illustrates that some care must be taken when attempting to define a function.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-26" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<article class="problem example-like" id="prob_not_well_defined"><h2 class="heading">
-<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.17</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2>
-<div class="para logical" id="prob_not_well_defined-1-1">
-<div class="para">For each of the following, explain why the given description does not define a function.</div>
-<ol class="decimal" id="prob_not_well_defined-1-1-1">
-<li id="prob_not_well_defined-1-1-1-1">
-<div class="para" id="prob_not_well_defined-1-1-1-1-1">Define <span class="process-math">\(f:\{1,2,3\}\to \{1,2,3\}\)</span> via <span class="process-math">\(f(a)=a-1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#prob_not_well_defined-1-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 1"><a href="#prob_not_well_defined-1-1-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
-</li>
-<li id="prob_not_well_defined-1-1-1-2">
-<div class="para" id="prob_not_well_defined-1-1-1-2-1">Define <span class="process-math">\(g:\mathbb{N}\to \mathbb{Q}\)</span> via <span class="process-math">\(g(n)=\frac{n}{n-1}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#prob_not_well_defined-1-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 2"><a href="#prob_not_well_defined-1-1-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
-</li>
-<li id="prob_not_well_defined-1-1-1-3">
-<div class="para logical" id="prob_not_well_defined-1-1-1-3-1">
-<div class="para">Let <span class="process-math">\(A_1=\{1,2,3\}\)</span> and <span class="process-math">\(A_2=\{3,4,5\}\text{.}\)</span> Define <span class="process-math">\(h:A_1\cup A_2\to \{1,2\}\)</span> via</div>
-<div class="displaymath process-math" id="prob_not_well_defined-1-1-1-3-1-4">
+<div class="para logical" id="root-1-2-6-24-1-1">
+<div class="para">Explain why</div>
+<div class="displaymath process-math" id="root-1-2-6-24-1-1-1">
 \begin{equation*}
-h(x)=\begin{cases}1, \amp  \mbox{if } x\in A_1\\ 2, \amp  \mbox{if } x\in A_2. \end{cases}
+{1+2+\cdots +n=\binom{n+1}{2}}
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#prob_not_well_defined-1-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">by counting the number of handshakes that could occur among a group of <span class="process-math">\(n+1\)</span> people in two different ways.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-24-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 3"><a href="#prob_not_well_defined-1-1-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+<div class="autopermalink" data-description="Problem 3.16"><a href="#root-1-2-6-24" title="Copy heading and permalink for Problem 3.16" aria-label="Copy heading and permalink for Problem 3.16">🔗</a></div></article><div class="para" id="root-1-2-6-25">By the way, the number defined by <span class="process-math">\({t_n:=1+2+\cdots +n}\)</span> is called the <span class="process-math">\(n\)</span>th <dfn class="terminology">Triangular number</dfn> (due to the shape we get by representing each number in the sum by a stack of balls).<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-25" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="problem example-like" id="root-1-2-6-26"><h2 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.17</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
+<div class="para logical" id="root-1-2-6-26-1-1">
+<div class="para">Without appealing to the previous problem, find a visual proof of the following:</div>
+<div class="displaymath process-math" id="root-1-2-6-26-1-1-1">
+\begin{equation*}
+{1+2+\cdots +n=\frac{n(n+1)}{2}}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-26-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="root-1-2-6-26-1-2">
+<em class="emphasis">Hint:</em> Consider a rectangular array of balls that has <span class="process-math">\(n\)</span> rows and <span class="process-math">\(n+1\)</span> columns.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-26-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 3.17"><a href="#root-1-2-6-26" title="Copy heading and permalink for Problem 3.17" aria-label="Copy heading and permalink for Problem 3.17">🔗</a></div></article><article class="problem example-like" id="root-1-2-6-27"><h2 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.18</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
+<div class="para logical" id="root-1-2-6-27-1-1">
+<div class="para">Consider the linear equation <span class="process-math">\(x_1+x_2+x_3=11\text{.}\)</span> How many <em class="emphasis">integer</em> solutions are there if:</div>
+<ol class="decimal" id="root-1-2-6-27-1-1-3">
+<li id="root-1-2-6-27-1-1-3-1">
+<div class="para" id="root-1-2-6-27-1-1-3-1-1">
+<span class="process-math">\(x_1,x_2,x_3\geq 0\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-27-1-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#root-1-2-6-27-1-1-3-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
 </li>
-<li id="prob_not_well_defined-1-1-1-4">
-<div class="para" id="prob_not_well_defined-1-1-1-4-1">Define <span class="process-math">\(s:\mathbb{Q}\to \mathbb{Z}\)</span> via <span class="process-math">\(s(a/b)=a+b\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#prob_not_well_defined-1-1-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="root-1-2-6-27-1-1-3-2">
+<div class="para" id="root-1-2-6-27-1-1-3-2-1">
+<span class="process-math">\(x_1,x_2,x_3&gt; 0\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-27-1-1-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 4"><a href="#prob_not_well_defined-1-1-1-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+<div class="autopermalink" data-description="Item 2"><a href="#root-1-2-6-27-1-1-3-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="root-1-2-6-27-1-1-3-3">
+<div class="para" id="root-1-2-6-27-1-1-3-3-1">
+<span class="process-math">\(x_1\geq 1, x_2\geq 0, x_3\geq 2\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-27-1-1-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#root-1-2-6-27-1-1-3-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#prob_not_well_defined-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-27-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Problem 2.17"><a href="#prob_not_well_defined" title="Copy heading and permalink for Problem 2.17" aria-label="Copy heading and permalink for Problem 2.17">🔗</a></div></article><div class="para" id="root-1-2-6-28">In mathematics, we say that an expression is <dfn class="terminology">well defined</dfn> (or <dfn class="terminology">unambiguous</dfn>) if its definition yields a unique interpretation. Otherwise, we say that the expression is not well defined (or is <dfn class="terminology">ambiguous</dfn>). For example, if <span class="process-math">\(a,b,c\in\mathbb{R}\text{,}\)</span> then the expression <span class="process-math">\(abc\)</span> is well defined since it does not matter if we interpret this as <span class="process-math">\((ab)c\)</span> or <span class="process-math">\(a(bc)\)</span> since the real numbers are associative under multiplication.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-28" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Problem 3.18"><a href="#root-1-2-6-27" title="Copy heading and permalink for Problem 3.18" aria-label="Copy heading and permalink for Problem 3.18">🔗</a></div></article><article class="problem example-like" id="root-1-2-6-28"><h2 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.19</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
+<div class="para" id="root-1-2-6-28-1-1">How many ways can you distribute 5 identical lollipops to 6 kids?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-28-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="root-1-2-6-29">When we attempt to define a function, it may not be clear without doing some work that our definition really does yield a function. If there is some potential ambiguity in the definition of a function that ends up not causing any issues, we say that the function is well defined. However, this phrase is a bit of misnomer since all functions are well defined. The issue of whether a description for a proposed function is well defined often arises when defining things in terms of how an element of the domain is written. For example, the descriptions given in Parts (c) and (d) of <a href="root-1-2-6.html#prob_not_well_defined" class="xref" data-knowl="./knowl/xref/prob_not_well_defined.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 2.17">Problem 2.17</a> are not well defined.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-29" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Problem 3.19"><a href="#root-1-2-6-28" title="Copy heading and permalink for Problem 3.19" aria-label="Copy heading and permalink for Problem 3.19">🔗</a></div></article><div class="para" id="root-1-2-6-29">These last two problems illustrate a technique known as <dfn class="terminology">stars and bars</dfn>. In general, <span class="process-math">\(n\)</span> stars tally the number of objects and <span class="process-math">\(k-1\)</span> bars separate them into <span class="process-math">\(k\)</span> distinct categories.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-29" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Chapter 2: Functions"><a href="#root-1-2-6" title="Copy heading and permalink for Chapter 2: Functions" aria-label="Copy heading and permalink for Chapter 2: Functions">🔗</a></div></section></div>
+<article class="theorem theorem-like" id="root-1-2-6-30"><h2 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.20</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
+<div class="para logical" id="root-1-2-6-30-1-1">
+<div class="para">The number of possible collections of <span class="process-math">\(n\)</span> objects of <span class="process-math">\(k\)</span> different types is</div>
+<div class="displaymath process-math" id="root-1-2-6-30-1-1-3">
+\begin{equation*}
+{\binom{n+k-1}{k-1}=\binom{n+k-1}{n}.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-30-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 3.20"><a href="#root-1-2-6-30" title="Copy heading and permalink for Theorem 3.20" aria-label="Copy heading and permalink for Theorem 3.20">🔗</a></div></article><article class="problem example-like" id="root-1-2-6-31"><h2 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.21</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
+<div class="para" id="root-1-2-6-31-1-1">Zittles come in 5 colors: green, yellow, red, orange, and purple. How many different collections of 32 Zittles are possible?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-6-31-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 3.21"><a href="#root-1-2-6-31" title="Copy heading and permalink for Problem 3.21" aria-label="Copy heading and permalink for Problem 3.21">🔗</a></div></article><div class="autopermalink" data-description="Chapter 3: Combinations"><a href="#root-1-2-6" title="Copy heading and permalink for Chapter 3: Combinations" aria-label="Copy heading and permalink for Chapter 3: Combinations">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="root-1-2-5.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
+<a class="previous-button button" href="root-1-2-5.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="root-1-2-7.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
