@@ -212,7 +212,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-4.html#fig_domino",
   "type": "Figure",
-  "number": "1.13",
+  "number": "1.1",
   "title": "",
   "body": " Examples of dominoes. \\domino{2}{4} \\domino{4}{2} \\domino{5}{5} \\domino{3}{0} "
 },
@@ -221,7 +221,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-4.html#root-1-2-4-25",
   "type": "Problem",
-  "number": "1.14",
+  "number": "1.13",
   "title": "",
   "body": "  How many students are enrolled in MAT 136 or MAT 226 (or both) if there are 409 in MAT 136 and 156 in MAT 226? Do you need to know that 40 students are in both courses?   "
 },
@@ -230,7 +230,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-4.html#thm_General_Sum_Principle",
   "type": "Theorem",
-  "number": "1.15",
+  "number": "1.14",
   "title": "General Sum Principle.",
   "body": " General Sum Principle   If and are sets, then or equivalently    "
 },
@@ -239,7 +239,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-4.html#prob_coffee",
   "type": "Problem",
-  "number": "1.16",
+  "number": "1.15",
   "title": "",
   "body": "  I'm in the mood for a cup of coffee! Let's say that the nearest place to get a cup of coffee is four blocks East and three blocks North. Assuming I only walk East or North, how many different routes can I take to get there if:   The last block I walk is heading North?    The last block I walk is heading East?    I don't care whether the last block I walk is North or East?      "
 },
@@ -257,7 +257,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-4.html#ex_counting_two_letter_words",
   "type": "Example",
-  "number": "1.17",
+  "number": "1.16",
   "title": "",
   "body": "  How many two-letter words are there using only the letters , , , ?    We can easily list these, but a different arrangement will illustrate a more powerful technique.                                                                    The rectangular table makes it clear that there are 16 two-letter words using the letters , , , and . Another way to see this is to note that there are 4 choices for the first (left-hand) letter and for each of these there are 4 choices for the right-hand letter, so there are words total.   "
 },
@@ -266,7 +266,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-4.html#root-1-2-4-31",
   "type": "Example",
-  "number": "1.18",
+  "number": "1.17",
   "title": "",
   "body": "  How many numbered words are there consisting of two letters from , , , and , followed by one of the digits 1, 2, 3, 4, and 5?    A geometric display as in Example would seem to require three dimensions, but we can take what we already know and just add a digit to the right:     1  2  3  4  5                                                                    There are 16 rows (each with a word from Example ) and five columns, so there are two-letter words using , , , and , followed by a digit from 1, 2, 3, 4, and 5.   "
 },
@@ -293,7 +293,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-4.html#ex_CartesianProduct",
   "type": "Example",
-  "number": "1.19",
+  "number": "1.18",
   "title": "",
   "body": "  If and , then .   "
 },
@@ -302,7 +302,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-4.html#root-1-2-4-36",
   "type": "Example",
-  "number": "1.20",
+  "number": "1.19",
   "title": "",
   "body": "  The standard two-dimensional plane and standard three space are familiar examples of Cartesian products. In particular, we have and .   "
 },
@@ -311,7 +311,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-4.html#root-1-2-4-37",
   "type": "Problem",
-  "number": "1.21",
+  "number": "1.20",
   "title": "",
   "body": "  Consider the sets and from Example .   Find .    Find .      "
 },
@@ -320,7 +320,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-4.html#root-1-2-4-38",
   "type": "Problem",
-  "number": "1.22",
+  "number": "1.21",
   "title": "",
   "body": "  Let , , and . Find .   "
 },
@@ -329,7 +329,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-4.html#root-1-2-4-39",
   "type": "Problem",
-  "number": "1.23",
+  "number": "1.22",
   "title": "",
   "body": "  If is a set, then what is equal to?   "
 },
@@ -338,7 +338,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-4.html#prob_cardinality_of_product",
   "type": "Problem",
-  "number": "1.24",
+  "number": "1.23",
   "title": "",
   "body": "  If and are both finite sets, find a nice formula for .   "
 },
@@ -347,7 +347,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-4.html#root-1-2-4-41",
   "type": "Problem",
-  "number": "1.25",
+  "number": "1.24",
   "title": "",
   "body": "  Are collections of words or strings that we encountered earlier in the chapter just Cartesian products in disguise? Explain.   "
 },
@@ -356,7 +356,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-4.html#root-1-2-4-42",
   "type": "Problem",
-  "number": "1.26",
+  "number": "1.25",
   "title": "",
   "body": "  Is a set of dominoes a Cartesian product in disguise? Explain.   "
 },
@@ -365,7 +365,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-4.html#root-1-2-4-44",
   "type": "Theorem",
-  "number": "1.27",
+  "number": "1.26",
   "title": "Product Principle.",
   "body": " Product Principle   Each of the following are referred to as the Product Principle .   If and are finite sets, then     If are finite sets, then     If is the set of outcomes for a -step process, where for , there are choices for step , no matter what earlier choices were made, then       "
 },
@@ -374,7 +374,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-4.html#root-1-2-4-46",
   "type": "Problem",
-  "number": "1.28",
+  "number": "1.27",
   "title": "",
   "body": "  A fashion-challenged freshman has three pair of pants, five shirts (all t-shirts, but different patterns) and a pair of sandals. How many different ensembles are available for this freshman?   "
 },
@@ -383,7 +383,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-4.html#prob_coin_flips",
   "type": "Problem",
-  "number": "1.29",
+  "number": "1.28",
   "title": "",
   "body": "  Suppose you flip a coin fives times in a row, recording the sequence of heads and tails that you see. How many different sequences of flips are possible?   "
 },
@@ -392,7 +392,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-4.html#root-1-2-4-48",
   "type": "Problem",
-  "number": "1.30",
+  "number": "1.29",
   "title": "",
   "body": "  Suppose we roll a six-sided die and then flip a coin. How many distinct outcomes are possible?   "
 },
@@ -401,7 +401,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-4.html#prob_bit_strings",
   "type": "Problem",
-  "number": "1.31",
+  "number": "1.30",
   "title": "",
   "body": "  How many bit strings of length are there? How many of these start and end with the bit 1?   "
 },
@@ -410,7 +410,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-4.html#prob_number_of_subsets",
   "type": "Problem",
-  "number": "1.32",
+  "number": "1.31",
   "title": "",
   "body": "  How many subsets does a set with elements have? Make sure you are taking the case into account. You should be able to carefully justify your answer by cleverly utilizing the Product Principle.   "
 },
@@ -419,7 +419,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-4.html#root-1-2-4-51",
   "type": "Problem",
-  "number": "1.33",
+  "number": "1.32",
   "title": "",
   "body": "  How many four-letter words are there using lower-case English letter consonants (including ) that include exactly one occurrence of ?   "
 },
@@ -428,7 +428,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-4.html#root-1-2-4-52",
   "type": "Problem",
-  "number": "1.34",
+  "number": "1.33",
   "title": "",
   "body": "  A pass code consists of a string of two or three case-sensitive English letters followed by three digits (i.e., ). How many different possible pass codes are there?   "
 },
@@ -455,7 +455,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-4.html#root-1-2-4-55",
   "type": "Theorem",
-  "number": "1.35",
+  "number": "1.34",
   "title": "Subtraction Principle.",
   "body": " Subtraction Principle   If is a subset of a universe of discourse , then , or equivalently, .   "
 },
@@ -464,7 +464,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-4.html#root-1-2-4-56",
   "type": "Problem",
-  "number": "1.36",
+  "number": "1.35",
   "title": "",
   "body": "  How many words of length 4 are there consisting of lower-case English letters that utilize at least two x's? Find the answer in two different ways.   "
 },
@@ -473,7 +473,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-4.html#root-1-2-4-57",
   "type": "Problem",
-  "number": "1.37",
+  "number": "1.36",
   "title": "",
   "body": "  How many words of length 6 are there consisting of lower-case English letters subject to the following constraints?   No constraints.    Repetition not allowed.    No instances of letter .    At least one occurrence of letter .      "
 },
@@ -482,7 +482,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-4.html#root-1-2-4-58",
   "type": "Problem",
-  "number": "1.38",
+  "number": "1.37",
   "title": "",
   "body": "  Six friends sit on one side of long rectangular table.   How many seating arrangements are there?    How many seating arrangements are there if Sally and Maria always sit next to each other?      "
 },
@@ -500,7 +500,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-4.html#root-1-2-4-60",
   "type": "Theorem",
-  "number": "1.39",
+  "number": "1.38",
   "title": "Division Principle.",
   "body": " Division Principle   If the finite set is the union of pairwise disjoint subsets each with elements, then . Equivalently, .   "
 },
@@ -509,7 +509,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-4.html#prop_circular_table",
   "type": "Problem",
-  "number": "1.40",
+  "number": "1.39",
   "title": "",
   "body": "  Six friends sit around a circle to play a game. Rotations of the group do not constitute different seating orders.   How many circular seating arrangements are there?    How many circular seating arrangements are there if Sally and Maria always sit next to each other?      "
 },
@@ -518,7 +518,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-4.html#root-1-2-4-62",
   "type": "Problem",
-  "number": "1.41",
+  "number": "1.40",
   "title": "",
   "body": "  How many ways can the letters of the word SLOPPY be arranged?   "
 },
@@ -527,7 +527,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-4.html#prob_candy",
   "type": "Problem",
-  "number": "1.42",
+  "number": "1.41",
   "title": "",
   "body": "  It's Halloween and five students arrive at my office begging for candy. I happen to have five pieces of candy. Depending on my mood, I may give away none of the candy, all of the candy, or any amount in between. Assuming I don't give any student more than one piece of candy, how many different ways can I distribute the candy? Does it matter if the pieces of candy are identical or not? If so, count both situations.   "
 },
@@ -581,7 +581,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-5.html#fig_function_diagram",
   "type": "Figure",
-  "number": "2.2",
+  "number": "2.1",
   "title": "",
   "body": " Function diagram for a function from to .     "
 },
@@ -590,7 +590,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-5.html#root-1-2-5-9",
   "type": "Example",
-  "number": "2.3",
+  "number": "2.2",
   "title": "",
   "body": "  The function defined via is not equal to the function defined by since the two functions do not have the same domain.   "
 },
@@ -599,7 +599,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-5.html#root-1-2-5-10",
   "type": "Problem",
-  "number": "2.4",
+  "number": "2.3",
   "title": "",
   "body": "  Provide an example of each of the following. You may draw a function diagram, write down a list of ordered pairs that represents the assignment, or write a formula as long as the domain and codomain are clear.   A function from a set with 4 elements to a set with 3 elements such that .    A function from a set with 4 elements to a set with 3 elements such that is strictly smaller than .      "
 },
@@ -608,7 +608,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-5.html#root-1-2-5-11",
   "type": "Problem",
-  "number": "2.5",
+  "number": "2.4",
   "title": "",
   "body": "  In high school you may have been told that a graph represents a function if it passes the vertical line test . Carefully state what the vertical line test says and then explain why it works.   "
 },
@@ -626,7 +626,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-5.html#root-1-2-5-13",
   "type": "Example",
-  "number": "2.6",
+  "number": "2.5",
   "title": "",
   "body": "  The function defined via is an example of a piecewise-defined function.   "
 },
@@ -635,7 +635,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-5.html#root-1-2-5-14",
   "type": "Problem",
-  "number": "2.7",
+  "number": "2.6",
   "title": "",
   "body": "  Define via . Express as a piecewise function.   "
 },
@@ -644,7 +644,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-5.html#prob_binary_output_function",
   "type": "Problem",
-  "number": "2.8",
+  "number": "2.7",
   "title": "",
   "body": "  Let . Count all functions . How is this problem related to Problem ? How is this problem related to Problem ?   "
 },
@@ -662,7 +662,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-5.html#root-1-2-5-17",
   "type": "Problem",
-  "number": "2.9",
+  "number": "2.8",
   "title": "",
   "body": "  Assume that and are finite sets. Provide an example of each of the following. You may draw a function diagram, write down a list of ordered pairs, or write a formula as long as the domain and codomain are clear.   A function that is injective but not surjective.    A function that is surjective but not injective.    A function that is a bijection.    A function that is neither injective nor surjective.      "
 },
@@ -671,7 +671,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-5.html#prob_injective_surjective_functions",
   "type": "Problem",
-  "number": "2.10",
+  "number": "2.9",
   "title": "",
   "body": "  Determine whether each of the following functions is injective, surjective, both, or neither.   Define via     Define via     Define via     Define via     Define via     Define via     Define via     Define via       "
 },
@@ -680,7 +680,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-5.html#root-1-2-5-19",
   "type": "Problem",
-  "number": "2.11",
+  "number": "2.10",
   "title": "",
   "body": "  Suppose and is a function. Fill in the blank with the appropriate word.  The function is         if and only if every horizontal line hits the graph of  at most once .  This statement is often called the horizontal line test . Explain why the horizontal line test is true. What kind of theorems to we get if we replace at most once with either at least once or exactly once ?   "
 },
@@ -689,7 +689,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-5.html#prob_injective_surjective_cardinality",
   "type": "Problem",
-  "number": "2.12",
+  "number": "2.11",
   "title": "",
   "body": "  Suppose is a function for finite sets and . Explain why each of the following statements is true.   If is an injection, then .    If is a surjection, then .    If is a bijection, then .      "
 },
@@ -698,7 +698,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-5.html#root-1-2-5-21",
   "type": "Problem",
-  "number": "2.13",
+  "number": "2.12",
   "title": "",
   "body": "  Let and be nonempty finite sets with and .   How many different functions are there from to ?    If , how many injective functions are there from to ?    If , how many bijective functions are there from to ?    If , do you think it would be challenging to count the number of surjective functions from to ?      "
 },
@@ -716,7 +716,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-5.html#root-1-2-5-23",
   "type": "Theorem",
-  "number": "2.14",
+  "number": "2.13",
   "title": "Bijection Principle.",
   "body": " Bijection Principle   If and there exists a bijection between and , then , as well.   "
 },
@@ -725,7 +725,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-5.html#root-1-2-5-24",
   "type": "Problem",
-  "number": "2.15",
+  "number": "2.14",
   "title": "",
   "body": "  Let denote the set of ways to distribute candy in Problem (in the situation where the candy is all identical) and let denote the set of sequence of coin flips in Problem . Find a bijection .   "
 },
@@ -734,7 +734,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-5.html#root-1-2-5-25",
   "type": "Problem",
-  "number": "2.16",
+  "number": "2.15",
   "title": "",
   "body": "  Utilize a bijection to connect Problems and .   "
 },
@@ -743,7 +743,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-5.html#prob_not_well_defined",
   "type": "Problem",
-  "number": "2.17",
+  "number": "2.16",
   "title": "",
   "body": "  For each of the following, explain why the given description does not define a function.   Define via .    Define via .    Let and . Define via     Define via .      "
 },
@@ -797,7 +797,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-6.html#fig_nonattacking",
   "type": "Figure",
-  "number": "3.2",
+  "number": "3.1",
   "title": "",
   "body": " A non-attacking rook arrangement on a chessboard.  TO DO!!!   "
 },
@@ -806,7 +806,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-6.html#root-1-2-6-7",
   "type": "Problem",
-  "number": "3.3",
+  "number": "3.2",
   "title": "",
   "body": "  Consider the collection of -permutations in with . Explain why is equal to the number of non-attacking rook arrangements on an chess board. Hint: Establish a bijection between the collection of non-attacking rook arrangements on an chess board and the collection of -permutations.   "
 },
@@ -824,7 +824,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-6.html#thm_permutations_formula",
   "type": "Theorem",
-  "number": "3.4",
+  "number": "3.3",
   "title": "",
   "body": "  For , we have    "
 },
@@ -833,7 +833,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-6.html#root-1-2-6-14",
   "type": "Problem",
-  "number": "3.5",
+  "number": "3.4",
   "title": "",
   "body": "  How many strings of length three are there using letters from if the letters in the string are not repeated?   "
 },
@@ -842,7 +842,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-6.html#root-1-2-6-15",
   "type": "Problem",
-  "number": "3.6",
+  "number": "3.5",
   "title": "",
   "body": "  There are 8 finalists at the Olympic Games 100 meters sprint. Assume there are no ties.   How many ways are there for the runners to finish?    How many ways are there for the runners to get gold, silver, bronze?    How many ways are there for the runners to get gold, silver, bronze given that Usain Bolt is sure to get the gold medal?      "
 },
@@ -851,7 +851,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-6.html#root-1-2-6-16",
   "type": "Problem",
-  "number": "3.7",
+  "number": "3.6",
   "title": "",
   "body": "  If , prove that , both using the formula in Theorem , and separately using the definition of -permutations together with Product and Sum Principles. The latter approach is an example of a combinatorial proof .   "
 },
@@ -878,7 +878,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-6.html#fig_circular_permutation",
   "type": "Figure",
-  "number": "3.8",
+  "number": "3.2",
   "title": "",
   "body": " Representation of a circular permutation.  TO DO!!!   "
 },
@@ -887,7 +887,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-6.html#root-1-2-6-21",
   "type": "Problem",
-  "number": "3.9",
+  "number": "3.7",
   "title": "",
   "body": "  How many circular permutations are there of length ?   "
 },
@@ -896,7 +896,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-6.html#root-1-2-6-23",
   "type": "Problem",
-  "number": "3.10",
+  "number": "3.8",
   "title": "",
   "body": "  How many ways can the letters of the word PRESCOTT be arranged?   "
 },
@@ -905,7 +905,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-6.html#root-1-2-6-24",
   "type": "Problem",
-  "number": "3.11",
+  "number": "3.9",
   "title": "",
   "body": "  How many ways can the letters of the word POPPY be arranged? Try to solve this problem in two different ways.   "
 },
@@ -923,7 +923,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-6.html#root-1-2-6-26",
   "type": "Theorem",
-  "number": "3.12",
+  "number": "3.10",
   "title": "",
   "body": "  For such that , we have    "
 },
@@ -932,7 +932,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-6.html#root-1-2-6-27",
   "type": "Problem",
-  "number": "3.13",
+  "number": "3.11",
   "title": "",
   "body": "  How many ways can the letters of the word MISSISSIPPI be arranged?   "
 },
@@ -941,7 +941,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-6.html#root-1-2-6-28",
   "type": "Problem",
-  "number": "3.14",
+  "number": "3.12",
   "title": "",
   "body": "  In Professor X's class of 9 graduate students she will give two A's, one B, and six C's. How many possible ways are there to do this?   "
 },
@@ -950,7 +950,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-6.html#root-1-2-6-29",
   "type": "Problem",
-  "number": "3.15",
+  "number": "3.13",
   "title": "",
   "body": "  Let's revisit Problem , which involved my walk to get coffee. When we attacked that problem, we did a lot of brute force. Do we now have an easier method?   "
 },
@@ -959,7 +959,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-6.html#root-1-2-6-30",
   "type": "Problem",
-  "number": "3.16",
+  "number": "3.14",
   "title": "",
   "body": "  In how many ways can a deck of 52 cards be dealt to four players, say , , , and ?   "
 },
@@ -1031,7 +1031,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-7.html#table_Pascal",
   "type": "Table",
-  "number": "4.4",
+  "number": "4.1",
   "title": "Pascal’s Triangle of binomial coefficients",
   "body": " Pascal's Triangle of binomial coefficients           6                               3  3  1      4  6  4  1      5  10  10  5  1      6  15  20  15  6  1    "
 },
@@ -1040,7 +1040,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-7.html#root-1-2-7-11",
   "type": "Problem",
-  "number": "4.5",
+  "number": "4.4",
   "title": "",
   "body": "  Suppose you have a pool of 6 applicants for a job opening. Let's assume you believe the values in Table .   How many ways can you choose 3 of the 6 applicants to interview?    How many ways can you hire 3 of the 6 applicants for 3 distinct jobs?      "
 },
@@ -1049,7 +1049,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-7.html#prob_sum_of_row_in_Pascal",
   "type": "Problem",
-  "number": "4.6",
+  "number": "4.5",
   "title": "",
   "body": "  What are the row sums in Pascal's Triangle? That is, what is the following sum equal to for any ? .   "
 },
@@ -1058,7 +1058,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-7.html#root-1-2-7-13",
   "type": "Problem",
-  "number": "4.7",
+  "number": "4.6",
   "title": "",
   "body": "  Using the meanings of -subset and -permutation, explain why .   "
 },
@@ -1067,7 +1067,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-7.html#thm_binomial_formula",
   "type": "Theorem",
-  "number": "4.8",
+  "number": "4.7",
   "title": "",
   "body": "  For , we have    "
 },
@@ -1076,7 +1076,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-7.html#root-1-2-7-17",
   "type": "Problem",
-  "number": "4.9",
+  "number": "4.8",
   "title": "",
   "body": "  A state senate consists of 19 Republicans and 14 Democrats. In how many ways can a committee be chosen if:   The committee contains 6 senators without regard to party?    The committee contains 3 Republicans and 3 Democrats?      "
 },
@@ -1085,7 +1085,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-7.html#root-1-2-7-18",
   "type": "Problem",
-  "number": "4.10",
+  "number": "4.9",
   "title": "",
   "body": "  How many bit strings of length 10 have exactly three 1's?   "
 },
@@ -1094,7 +1094,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-7.html#root-1-2-7-19",
   "type": "Problem",
-  "number": "4.11",
+  "number": "4.10",
   "title": "",
   "body": "  How many bit strings of length 6 have an odd number of 0's?   "
 },
@@ -1103,7 +1103,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-7.html#root-1-2-7-20",
   "type": "Problem",
-  "number": "4.12",
+  "number": "4.11",
   "title": "",
   "body": "  As we noted earlier, we did quite a bit of brute force to determine how many paths I could take to get coffee in Problem . Find a solution that utilizes binomial coefficients.   "
 },
@@ -1112,7 +1112,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-7.html#root-1-2-7-21",
   "type": "Problem",
-  "number": "4.13",
+  "number": "4.12",
   "title": "",
   "body": "  How many strings of 10 lower-case English letters have exactly two 's and exactly three 's?   "
 },
@@ -1121,7 +1121,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-7.html#root-1-2-7-22",
   "type": "Problem",
-  "number": "4.14",
+  "number": "4.13",
   "title": "",
   "body": "  Assume .   Using the definition of in terms of -subsets (as opposed to the formula in Theorem ), explain why This identity is often called Pascal's Identity (or Pascal's Recurrence ).    Connect the formula above with Problem involving my walk to get coffee.      "
 },
@@ -1130,7 +1130,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-7.html#root-1-2-7-23",
   "type": "Problem",
-  "number": "4.15",
+  "number": "4.14",
   "title": "",
   "body": "  Assume . It turns out that    Prove the identity above using the formula for given in Theorem .    Explain why the identity is true by using the definition of in terms of -subsets.     The upshot is that each row of Pascal's Triangle is a palindrome.   "
 },
@@ -1139,7 +1139,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-7.html#root-1-2-7-24",
   "type": "Problem",
-  "number": "4.16",
+  "number": "4.15",
   "title": "",
   "body": "  Explain why by counting the number of handshakes that could occur among a group of people in two different ways.   "
 },
@@ -1157,7 +1157,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-7.html#root-1-2-7-26",
   "type": "Problem",
-  "number": "4.17",
+  "number": "4.16",
   "title": "",
   "body": "  Without appealing to the previous problem, find a visual proof of the following: .   Hint: Consider a rectangular array of balls that has rows and columns.   "
 },
@@ -1166,7 +1166,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-7.html#root-1-2-7-27",
   "type": "Problem",
-  "number": "4.18",
+  "number": "4.17",
   "title": "",
   "body": "  Consider the linear equation . How many integer solutions are there if:    ?     ?     ?      "
 },
@@ -1175,7 +1175,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-7.html#root-1-2-7-28",
   "type": "Problem",
-  "number": "4.19",
+  "number": "4.18",
   "title": "",
   "body": "  How many ways can you distribute 5 identical lollipops to 6 kids?   "
 },
@@ -1193,7 +1193,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-7.html#root-1-2-7-30",
   "type": "Theorem",
-  "number": "4.20",
+  "number": "4.19",
   "title": "",
   "body": "  The number of possible collections of objects of different types is    "
 },
@@ -1202,7 +1202,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-7.html#root-1-2-7-31",
   "type": "Problem",
-  "number": "4.21",
+  "number": "4.20",
   "title": "",
   "body": "  Zittles come in 5 colors: green, yellow, red, orange, and purple. How many different collections of 32 Zittles are possible?   "
 },
@@ -1519,7 +1519,7 @@ var ptx_lunr_docs = [
   "type": "Chapter",
   "number": "8",
   "title": "Mathematical Induction",
-  "body": " Mathematical Induction  In this chapter, we introduce mathematical induction , which is a proof technique that is useful for proving statements of the form For all natural numbers , , or more generally For all integers , , where is some predicate. Loosely speaking, a predicate is some statement about . For example, is prime is a predicate.  Consider the claims:   For all , .    For all , is prime.     Let's take a look at potential proofs.    Proof of (a). If , then . If , then . If , then , and so on.    Proof of (b). If , then , which is prime. If , then , which is prime. If , then , which is prime, and so on.  Are these actual proofs? No! In fact, the second claim is not even true. If , then , which is not prime since it has 41 as a factor. It turns out that the first claim is true, but what we wrote cannot be a proof since the same type of reasoning when applied to the second claim seems to prove something that is not actually true. We need a rigorous way of capturing and so on and a way to verify whether it really is and so on.   We will not formally prove the following theorem, but instead rely on our intuition.   Principle of Mathematical Induction   Let be a sequence of statements, one for each natural number. Assume    is true, and    for all , if is true, then is true.     Then is true for all .    The Principle of Mathematical Induction (or PMI for short) provides us with a process for proving statements of the form For all natural numbers , , where is some predicate involving . Hypothesis (i) above is called the base step (or base case ) while (ii) is called the inductive step .  Intuitively, here is what the Principle of Mathematical Induction is saying. Think of the statements as being rungs of a ladder. The base step indicates that we can step onto the first rung of the ladder while the inductive step tells us that if we are on a rung of the ladder we can always move up to the next rung. The Principle of Mathematical Induction asserts that if we can achieve these two things, then we can climb the entire infinite ladder. Do you agree that this seems reasonable?  You should not confuse mathematical induction with inductive reasoning associated with the natural sciences. Inductive reasoning is a scientific method whereby one induces general principles from observations. On the other hand, mathematical induction is a deductive form of reasoning used to establish the validity of a proposition.  Here is the general structure for a proof by induction.  \\begin{mdframed}[style=skeleton]   We proceed by induction.   (i)   Base step:  [Verify that is true. This often, but not always, amounts to plugging into two sides of some claimed equation and verifying that both sides are actually equal.]     (ii)   Inductive step:  [Your goal is to prove For all , if is true, then is true. ] Let and assume that is true. [Do something to derive that is true.] Therefore, is true.     Thus, by induction, is true for all .   \\end{mdframed}    Conjecture a nice formula for the following summation and then prove your claim using induction: .  Independent of induction, can you think of a nice visual proof of this result?      Prove the first claim that we introduced at the beginning of the chapter using induction. That is, prove that for all , .      Prove that for all , 3 divides .      Consider a grid of squares that is squares wide by squares long, where . One of the squares has been cut out, but you do not know which one! You have a bunch of L-shapes made up of squares. Prove that you can perfectly cover this chessboard with the L-shapes (with no overlap) for any . Figure depicts one possible covering for the case involving and a fixed cut-out square.     One possible covering for the case involving for Problem .      Mathematical induction can actually be used to prove a broader family of results; namely, those of the form For all integers , , where . Theorem handles the special case when . The ladder analogy from earlier holds for this more general situation, too.   Generalized PMI   Let be a sequence of statements, one for each integer greater than or equal to . Assume that    is true, and    for all , if is true, then is true.     Then is true for all integers .    Here is the general structure for a proof by induction when the base case does not necessarily involve .  \\begin{mdframed}[style=skeleton]   We proceed by induction.   (i)   Base step:  [Verify that is true. This often, but not always, amounts to plugging into two sides of some claimed equation and verifying that both sides are actually equal.]     (ii)   Inductive step:  [Your goal is to prove For all , if is true, then is true. ] Let be an integer and assume that is true. [Do something to derive that is true.] Therefore, is true.     Thus, by induction, is true for all integers .   \\end{mdframed}  We already encountered the next result back Problem , but let's see if we can use induction to prove it.    Use induction to prove that if is a finite set with elements, then has subsets.      Determine when for integer values and prove the claim using mathematical induction.      Determine when for integer values and prove the claim using mathematical induction.    There is another formulation of induction, where the inductive step begins with a set of assumptions rather than one single assumption. This method is sometimes called complete induction or strong induction .   Principle of Complete Mathematical Induction   Let be a sequence of statements, one for each natural number. Assume that    is true for some , and    For all with , if is true for all such that , then is true.     Then is true for all .    Note the difference between ordinary induction ( Theorems and ) and complete induction. For the induction step of complete induction, we are not only assuming that is true, but rather that is true for all from to . Despite the name, complete induction is not any stronger or more powerful than ordinary induction. It is worth pointing out that anytime ordinary induction is an appropriate proof technique, so is complete induction. So, when should we use complete induction?  In the inductive step, you need to reach , and you should ask yourself which of the previous cases you need to get there. If all you need is the statement , then ordinary induction is the way to go. If, for example, two preceding cases, and , are necessary to reach , then complete induction is appropriate. In the extreme, if one needs the full range of preceding cases (i.e., all statements ), then again complete induction should be utilized.  Note that in situations where complete induction is appropriate, it might be the case that you need to verify more than one case in the base step. The number of base cases to be checked depends on how far one needs to look back in the induction step.  Here is the general structure for a proof by complete induction, where the base case includes and possibly more.  \\begin{mdframed}[style=skeleton]   We proceed by strong induction.   (i)  Base step: [Verify that each of the statements are true. The value of depends on the statement.]     (ii)  Inductive step: [Your goal is to prove For all with , if is true for all such that , then is true. ] Let with and suppose is true for all . [Do something to derive that is true.] Therefore, is true.     Thus, by complete induction, is true for all .   \\end{mdframed}  When tackling the remaining problems in this chapter, think carefully about how many base steps you must verify.    The Fibonacci sequence is given by , , and for all natural numbers . Prove that for all .    Recall that Theorem generalized Theorem and allowed us to handle situations where the base case was something other than . We can generalize complete induction in the same way, but we will not write this down as a formal theorem.    Prove that every amount of postage that is at least cents can be made from -cent and -cent stamps.      Consider a grid of squares that is squares wide and squares long. Using dominoes that are square by squares, there are many ways to perfectly cover this grid with no overlap. How many? Prove your answer.    One final thing worth mentioning is that we did not write down a rigorous proof of the Principle of Inclusion and Exclusion, which we encountered in Chapter . However, this omission could be remedied using induction. That is, using induction, we could prove that for all and finite sets , we have .  If , the expression above simply says , which is certainly true. For , we have , which is the General Sum Principle that we encountered in Theorem . The inductive step is a bit messy , so we will omit it, but if you are interested, you can find a complete proof here .  "
+  "body": " Mathematical Induction  In this chapter, we introduce mathematical induction , which is a proof technique that is useful for proving statements of the form For all natural numbers , , or more generally For all integers , , where is some predicate. Loosely speaking, a predicate is some statement about . For example, is prime is a predicate.  Consider the claims:   For all , .    For all , is prime.     Let's take a look at potential proofs.    Proof of (a). If , then . If , then . If , then , and so on.    Proof of (b). If , then , which is prime. If , then , which is prime. If , then , which is prime, and so on.  Are these actual proofs? No! In fact, the second claim is not even true. If , then , which is not prime since it has 41 as a factor. It turns out that the first claim is true, but what we wrote cannot be a proof since the same type of reasoning when applied to the second claim seems to prove something that is not actually true. We need a rigorous way of capturing and so on and a way to verify whether it really is and so on.   We will not formally prove the following theorem, but instead rely on our intuition.   Principle of Mathematical Induction   Let be a sequence of statements, one for each natural number. Assume    is true, and    for all , if is true, then is true.     Then is true for all .    The Principle of Mathematical Induction (or PMI for short) provides us with a process for proving statements of the form For all natural numbers , , where is some predicate involving . Hypothesis (i) above is called the base step (or base case ) while (ii) is called the inductive step .  Intuitively, here is what the Principle of Mathematical Induction is saying. Think of the statements as being rungs of a ladder. The base step indicates that we can step onto the first rung of the ladder while the inductive step tells us that if we are on a rung of the ladder we can always move up to the next rung. The Principle of Mathematical Induction asserts that if we can achieve these two things, then we can climb the entire infinite ladder. Do you agree that this seems reasonable?  You should not confuse mathematical induction with inductive reasoning associated with the natural sciences. Inductive reasoning is a scientific method whereby one induces general principles from observations. On the other hand, mathematical induction is a deductive form of reasoning used to establish the validity of a proposition.  Here is the general structure for a proof by induction.   Proof of For all , by Induction   Here is the general structure for a proof by induction.   We proceed by induction.  Base step: [Verify that is true. This often, but not always, amounts to plugging into two sides of some claimed equation and verifying that both sides are actually equal.]   Inductive step: [Your goal is to prove For all , if is true, then is true. ] Let and assume that is true. [Do something to derive that is true.] Therefore, is true.    Thus, by induction, is true for all .       Conjecture a nice formula for the following summation and then prove your claim using induction: .  Independent of induction, can you think of a nice visual proof of this result?      Prove the first claim that we introduced at the beginning of the chapter using induction. That is, prove that for all , .      Prove that for all , 3 divides .      Consider a grid of squares that is squares wide by squares long, where . One of the squares has been cut out, but you do not know which one! You have a bunch of L-shapes made up of squares. Prove that you can perfectly cover this chessboard with the L-shapes (with no overlap) for any . Figure depicts one possible covering for the case involving and a fixed cut-out square.     One possible covering for the case involving for Problem .      Mathematical induction can actually be used to prove a broader family of results; namely, those of the form For all integers , , where . Theorem handles the special case when . The ladder analogy from earlier holds for this more general situation, too.   Generalized PMI   Let be a sequence of statements, one for each integer greater than or equal to . Assume that    is true, and    for all , if is true, then is true.     Then is true for all integers .     Proof of For all , if , then by Induction   Here is the general structure for a proof by induction when the base case does not necessarily involve .   We proceed by induction.  Base step: [Verify that is true. This often, but not always, amounts to plugging into two sides of some claimed equation and verifying that both sides are actually equal.]  Inductive step: [Your goal is to prove For all , if is true, then is true. ] Let be an integer and assume that is true. [Do something to derive that is true.] Therefore, is true.    Thus, by induction, is true for all integers .     We already encountered the next result back Problem , but let's see if we can use induction to prove it.    Use induction to prove that if is a finite set with elements, then has subsets.      Determine when for integer values and prove the claim using mathematical induction.      Determine when for integer values and prove the claim using mathematical induction.    There is another formulation of induction, where the inductive step begins with a set of assumptions rather than one single assumption. This method is sometimes called complete induction or strong induction .   Principle of Complete Mathematical Induction   Let be a sequence of statements, one for each natural number. Assume that    is true for some , and    For all with , if is true for all such that , then is true.     Then is true for all .    Note the difference between ordinary induction ( Theorems and ) and complete induction. For the induction step of complete induction, we are not only assuming that is true, but rather that is true for all from to . Despite the name, complete induction is not any stronger or more powerful than ordinary induction. It is worth pointing out that anytime ordinary induction is an appropriate proof technique, so is complete induction. So, when should we use complete induction?  In the inductive step, you need to reach , and you should ask yourself which of the previous cases you need to get there. If all you need is the statement , then ordinary induction is the way to go. If, for example, two preceding cases, and , are necessary to reach , then complete induction is appropriate. In the extreme, if one needs the full range of preceding cases (i.e., all statements ), then again complete induction should be utilized.  Note that in situations where complete induction is appropriate, it might be the case that you need to verify more than one case in the base step. The number of base cases to be checked depends on how far one needs to look back in the induction step.  Here is the general structure for a proof by complete induction, where the base case includes and possibly more.   Proof of For all , by Complete Induction   Here is the general structure for a proof by complete induction.   We proceed by complete induction.  Base step: [Verify that each of the statements are true. The value of depends on the statement.]  Inductive step: [Your goal is to prove For all with , if is true for all such that , then is true. ] Let with and suppose is true for all . [Do something to derive that is true.] Therefore, is true.    Thus, by complete induction, is true for all .     When tackling the remaining problems in this chapter, think carefully about how many base steps you must verify.    The Fibonacci sequence is given by , , and for all natural numbers . Prove that for all .    Recall that Theorem generalized Theorem and allowed us to handle situations where the base case was something other than . We can generalize complete induction in the same way, but we will not write this down as a formal theorem.    Prove that every amount of postage that is at least cents can be made from -cent and -cent stamps.      Consider a grid of squares that is squares wide and squares long. Using dominoes that are square by squares, there are many ways to perfectly cover this grid with no overlap. How many? Prove your answer.    One final thing worth mentioning is that we did not write down a rigorous proof of the Principle of Inclusion and Exclusion, which we encountered in Chapter . However, this omission could be remedied using induction. That is, using induction, we could prove that for all and finite sets , we have .  If , the expression above simply says , which is certainly true. For , we have , which is the General Sum Principle that we encountered in Theorem . The inductive step is a bit messy , so we will omit it, but if you are interested, you can find a complete proof here .  "
 },
 {
   "id": "root-1-2-11-2",
@@ -1549,38 +1549,38 @@ var ptx_lunr_docs = [
   "body": "base step base case inductive step "
 },
 {
+  "id": "skeleton_induction",
+  "level": "2",
+  "url": "root-1-2-11.html#skeleton_induction",
+  "type": "Skeleton Proof",
+  "number": "8.2",
+  "title": "Proof of “For all <span class=\"process-math\">\\(n\\in\\mathbb{N}\\text{,}\\)<\/span> <span class=\"process-math\">\\(P(n)\\)<\/span>” by Induction.",
+  "body": " Proof of For all , by Induction   Here is the general structure for a proof by induction.   We proceed by induction.  Base step: [Verify that is true. This often, but not always, amounts to plugging into two sides of some claimed equation and verifying that both sides are actually equal.]   Inductive step: [Your goal is to prove For all , if is true, then is true. ] Let and assume that is true. [Do something to derive that is true.] Therefore, is true.    Thus, by induction, is true for all .    "
+},
+{
   "id": "root-1-2-11-15",
   "level": "2",
   "url": "root-1-2-11.html#root-1-2-11-15",
-  "type": "Proof",
-  "number": "8.1",
+  "type": "Problem",
+  "number": "8.3",
   "title": "",
-  "body": " We proceed by induction.   (i)   Base step:  [Verify that is true. This often, but not always, amounts to plugging into two sides of some claimed equation and verifying that both sides are actually equal.]     (ii)   Inductive step:  [Your goal is to prove For all , if is true, then is true. ] Let and assume that is true. [Do something to derive that is true.] Therefore, is true.     Thus, by induction, is true for all .  "
+  "body": "  Conjecture a nice formula for the following summation and then prove your claim using induction: .  Independent of induction, can you think of a nice visual proof of this result?   "
+},
+{
+  "id": "root-1-2-11-16",
+  "level": "2",
+  "url": "root-1-2-11.html#root-1-2-11-16",
+  "type": "Problem",
+  "number": "8.4",
+  "title": "",
+  "body": "  Prove the first claim that we introduced at the beginning of the chapter using induction. That is, prove that for all , .   "
 },
 {
   "id": "root-1-2-11-17",
   "level": "2",
   "url": "root-1-2-11.html#root-1-2-11-17",
   "type": "Problem",
-  "number": "8.2",
-  "title": "",
-  "body": "  Conjecture a nice formula for the following summation and then prove your claim using induction: .  Independent of induction, can you think of a nice visual proof of this result?   "
-},
-{
-  "id": "root-1-2-11-18",
-  "level": "2",
-  "url": "root-1-2-11.html#root-1-2-11-18",
-  "type": "Problem",
-  "number": "8.3",
-  "title": "",
-  "body": "  Prove the first claim that we introduced at the beginning of the chapter using induction. That is, prove that for all , .   "
-},
-{
-  "id": "root-1-2-11-19",
-  "level": "2",
-  "url": "root-1-2-11.html#root-1-2-11-19",
-  "type": "Problem",
-  "number": "8.4",
+  "number": "8.5",
   "title": "",
   "body": "  Prove that for all , 3 divides .   "
 },
@@ -1589,7 +1589,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-11.html#prob_L-shapes",
   "type": "Problem",
-  "number": "8.5",
+  "number": "8.6",
   "title": "",
   "body": "  Consider a grid of squares that is squares wide by squares long, where . One of the squares has been cut out, but you do not know which one! You have a bunch of L-shapes made up of squares. Prove that you can perfectly cover this chessboard with the L-shapes (with no overlap) for any . Figure depicts one possible covering for the case involving and a fixed cut-out square.   "
 },
@@ -1598,7 +1598,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-11.html#fig_L-shapes",
   "type": "Figure",
-  "number": "8.6",
+  "number": "8.1",
   "title": "",
   "body": " One possible covering for the case involving for Problem .     "
 },
@@ -1612,92 +1612,92 @@ var ptx_lunr_docs = [
   "body": " Generalized PMI   Let be a sequence of statements, one for each integer greater than or equal to . Assume that    is true, and    for all , if is true, then is true.     Then is true for all integers .   "
 },
 {
-  "id": "root-1-2-11-26",
+  "id": "skeleton_induction_greater_than_a",
   "level": "2",
-  "url": "root-1-2-11.html#root-1-2-11-26",
-  "type": "Proof",
-  "number": "8.2",
-  "title": "",
-  "body": " We proceed by induction.   (i)   Base step:  [Verify that is true. This often, but not always, amounts to plugging into two sides of some claimed equation and verifying that both sides are actually equal.]     (ii)   Inductive step:  [Your goal is to prove For all , if is true, then is true. ] Let be an integer and assume that is true. [Do something to derive that is true.] Therefore, is true.     Thus, by induction, is true for all integers .  "
+  "url": "root-1-2-11.html#skeleton_induction_greater_than_a",
+  "type": "Skeleton Proof",
+  "number": "8.8",
+  "title": "Proof of “For all <span class=\"process-math\">\\(n \\in \\mathbb{Z}\\text{,}\\)<\/span> if <span class=\"process-math\">\\(n \\geq a\\text{,}\\)<\/span> then <span class=\"process-math\">\\(P(n)\\)<\/span>” by Induction.",
+  "body": " Proof of For all , if , then by Induction   Here is the general structure for a proof by induction when the base case does not necessarily involve .   We proceed by induction.  Base step: [Verify that is true. This often, but not always, amounts to plugging into two sides of some claimed equation and verifying that both sides are actually equal.]  Inductive step: [Your goal is to prove For all , if is true, then is true. ] Let be an integer and assume that is true. [Do something to derive that is true.] Therefore, is true.    Thus, by induction, is true for all integers .    "
 },
 {
   "id": "prob_number_of_subsets_alt",
   "level": "2",
   "url": "root-1-2-11.html#prob_number_of_subsets_alt",
   "type": "Problem",
-  "number": "8.8",
+  "number": "8.9",
   "title": "",
   "body": "  Use induction to prove that if is a finite set with elements, then has subsets.   "
 },
 {
-  "id": "root-1-2-11-30",
+  "id": "root-1-2-11-25",
   "level": "2",
-  "url": "root-1-2-11.html#root-1-2-11-30",
-  "type": "Problem",
-  "number": "8.9",
-  "title": "",
-  "body": "  Determine when for integer values and prove the claim using mathematical induction.   "
-},
-{
-  "id": "root-1-2-11-31",
-  "level": "2",
-  "url": "root-1-2-11.html#root-1-2-11-31",
+  "url": "root-1-2-11.html#root-1-2-11-25",
   "type": "Problem",
   "number": "8.10",
   "title": "",
   "body": "  Determine when for integer values and prove the claim using mathematical induction.   "
 },
 {
-  "id": "root-1-2-11-32",
+  "id": "root-1-2-11-26",
   "level": "2",
-  "url": "root-1-2-11.html#root-1-2-11-32",
+  "url": "root-1-2-11.html#root-1-2-11-26",
+  "type": "Problem",
+  "number": "8.11",
+  "title": "",
+  "body": "  Determine when for integer values and prove the claim using mathematical induction.   "
+},
+{
+  "id": "root-1-2-11-27",
+  "level": "2",
+  "url": "root-1-2-11.html#root-1-2-11-27",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "complete induction strong induction "
 },
 {
-  "id": "root-1-2-11-33",
+  "id": "root-1-2-11-28",
   "level": "2",
-  "url": "root-1-2-11.html#root-1-2-11-33",
+  "url": "root-1-2-11.html#root-1-2-11-28",
   "type": "Theorem",
-  "number": "8.11",
+  "number": "8.12",
   "title": "Principle of Complete Mathematical Induction.",
   "body": " Principle of Complete Mathematical Induction   Let be a sequence of statements, one for each natural number. Assume that    is true for some , and    For all with , if is true for all such that , then is true.     Then is true for all .   "
 },
 {
-  "id": "root-1-2-11-39",
+  "id": "skeleton_complete_induction",
   "level": "2",
-  "url": "root-1-2-11.html#root-1-2-11-39",
-  "type": "Proof",
-  "number": "8.3",
-  "title": "",
-  "body": " We proceed by strong induction.   (i)  Base step: [Verify that each of the statements are true. The value of depends on the statement.]     (ii)  Inductive step: [Your goal is to prove For all with , if is true for all such that , then is true. ] Let with and suppose is true for all . [Do something to derive that is true.] Therefore, is true.     Thus, by complete induction, is true for all .  "
+  "url": "root-1-2-11.html#skeleton_complete_induction",
+  "type": "Skeleton Proof",
+  "number": "8.13",
+  "title": "Proof of “For all <span class=\"process-math\">\\(n\\in\\mathbb{N}\\text{,}\\)<\/span> <span class=\"process-math\">\\(P(n)\\)<\/span>” by Complete Induction.",
+  "body": " Proof of For all , by Complete Induction   Here is the general structure for a proof by complete induction.   We proceed by complete induction.  Base step: [Verify that each of the statements are true. The value of depends on the statement.]  Inductive step: [Your goal is to prove For all with , if is true for all such that , then is true. ] Let with and suppose is true for all . [Do something to derive that is true.] Therefore, is true.    Thus, by complete induction, is true for all .    "
 },
 {
   "id": "prob_Fibonacci",
   "level": "2",
   "url": "root-1-2-11.html#prob_Fibonacci",
   "type": "Problem",
-  "number": "8.12",
+  "number": "8.14",
   "title": "",
   "body": "  The Fibonacci sequence is given by , , and for all natural numbers . Prove that for all .   "
 },
 {
-  "id": "root-1-2-11-44",
+  "id": "root-1-2-11-37",
   "level": "2",
-  "url": "root-1-2-11.html#root-1-2-11-44",
+  "url": "root-1-2-11.html#root-1-2-11-37",
   "type": "Problem",
-  "number": "8.13",
+  "number": "8.15",
   "title": "",
   "body": "  Prove that every amount of postage that is at least cents can be made from -cent and -cent stamps.   "
 },
 {
-  "id": "root-1-2-11-45",
+  "id": "root-1-2-11-38",
   "level": "2",
-  "url": "root-1-2-11.html#root-1-2-11-45",
+  "url": "root-1-2-11.html#root-1-2-11-38",
   "type": "Problem",
-  "number": "8.14",
+  "number": "8.16",
   "title": "",
   "body": "  Consider a grid of squares that is squares wide and squares long. Using dominoes that are square by squares, there are many ways to perfectly cover this grid with no overlap. How many? Prove your answer.   "
 },
