@@ -113,7 +113,7 @@
         Determine whether each of the following statements is true or false.
         If a statement is true, explain why.
         If a statement is false, provide a specific counterexample.
-        <ol>
+        <ol marker="alpha">
           <li>
             <p>
               <m>A\subseteq A</m>.
@@ -168,7 +168,7 @@
   <p>
     Let <m>A</m> and <m>B</m> be sets in some universe of discourse <m>U</m>.
     We define the following.
-    <ol>
+    <ol marker="alpha">
       <li>
         <p>
           The <term>union</term> of <m>A</m> and <m>B</m> is <m>{A \cup B \:= \{x\in U \mid x\in A \mbox{ or } x\in B \}}</m>.
@@ -208,7 +208,7 @@
         Let <m>A=\{1, 2, 3, 4, 5\}</m>,
         <m>B=\{1, 3, 5\}</m>, and <m>C=\{2, 4, 6, 8\}</m>.
         Find each of the following and then determine the cardinality of the set.
-        <ol>
+        <ol marker="alpha">
           <li>
             <p>
               <m>A \cap C</m>
@@ -274,7 +274,7 @@
     <statement>
       <p>
         If <m>A</m> is a subset of some universe of discourse <m>U</m>, then
-        <ol>
+       <ol marker="alpha">
           <li>
             <p>
               <m>{A\cup A^c=U}</m>;
@@ -325,7 +325,7 @@
         consider handling disjoint cases.
         If you visualize the various cases,
         you may end up with a nice staircase-looking arrangement.
-        <ol>
+        <ol marker="alpha">
           <li>
             <p>
               How many dominoes are there in a set that includes double blank through double nine?
@@ -345,11 +345,78 @@
       </p>
     </statement>
   </problem>
-  <figure xml:id="fig_domino">
-    <caption>Examples of dominoes.</caption>
-    \domino{2}{4} <nbsp/><nbsp/> \domino{4}{2} <nbsp/><nbsp/>\domino{5}{5} <nbsp/><nbsp/> \domino{3}{0}
-  </figure>
-  <problem>
+
+<figure xml:id="fig_domino">
+<caption>Examples of dominoes.</caption>
+<image width="60%">
+<shortdescription>blah</shortdescription>
+<prefigure xmlns="https://prefigure.org"
+             label="prefigure-domino">
+<diagram dimensions="(350,100)" margins="5">
+<coordinates bbox="(0,0,7,2)">
+<!-- Domino 1-->
+<rectangle lower-left="(0,0)" dimensions="(1,2)" stroke="black" thickness="1"/>
+<line endpoints="((0,1), (1,1))" stroke="black" thickness="1"/>
+<!-- top -->
+<circle center="(0.25, 1.75)" radius="0.05" fill="black" />
+<circle center="(0.75, 1.25)" radius="0.05" fill="black" />
+<!-- bottom -->
+<circle center="(0.25, 0.25)" radius="0.05" fill="black" />
+<circle center="(0.25, 0.75)" radius="0.05" fill="black" />
+<circle center="(0.75, 0.25)" radius="0.05" fill="black" />
+<circle center="(0.75, 0.75)" radius="0.05" fill="black" />
+
+<!-- Domino 2-->
+<rectangle lower-left="(2,0)" dimensions="(1,2)" stroke="black" thickness="1"/>
+<line endpoints="((2,1), (3,1))" stroke="black" thickness="1"/>
+<!-- top -->
+<circle center="(2.25, 1.25)" radius="0.05" fill="black" />
+<circle center="(2.25, 1.75)" radius="0.05" fill="black" />
+<circle center="(2.75, 1.25)" radius="0.05" fill="black" />
+<circle center="(2.75, 1.75)" radius="0.05" fill="black" />
+<!-- bottom -->
+<circle center="(2.25, 0.75)" radius="0.05" fill="black" />
+<circle center="(2.75, 0.25)" radius="0.05" fill="black" />
+
+<!-- Domino 3-->
+<rectangle lower-left="(4,0)" dimensions="(1,2)" stroke="black" thickness="1"/>
+<line endpoints="((4,1), (5,1))" stroke="black" thickness="1"/>
+<!-- top -->
+<circle center="(4.25, 1.25)" radius="0.05" fill="black" />
+<circle center="(4.25, 1.75)" radius="0.05" fill="black" />
+<circle center="(4.75, 1.25)" radius="0.05" fill="black" />
+<circle center="(4.75, 1.75)" radius="0.05" fill="black" />
+<circle center="(4.5, 1.5)" radius="0.05" fill="black" />
+<!-- bottom -->
+<circle center="(4.25, 0.25)" radius="0.05" fill="black" />
+<circle center="(4.25, 0.75)" radius="0.05" fill="black" />
+<circle center="(4.75, 0.25)" radius="0.05" fill="black" />
+<circle center="(4.75, 0.75)" radius="0.05" fill="black" />
+<circle center="(4.5, 0.5)" radius="0.05" fill="black" />
+
+<!-- Domino 4-->
+<rectangle lower-left="(6,0)" dimensions="(1,2)" stroke="black" thickness="1"/>
+<line endpoints="((6,1), (7,1))" stroke="black" thickness="1"/>
+<!-- top -->
+<circle center="(6.25, 1.25)" radius="0.05" fill="black" />
+<circle center="(6.5, 1.5)" radius="0.05" fill="black" />
+<circle center="(6.75, 1.75)" radius="0.05" fill="black" />
+<!-- bottom -->
+</coordinates>
+
+<!-- <coordinates bbox="(0,0,1,2)" destination="(2,0,3,2)">
+<rectangle lower-left="(0,0)" dimensions="(1,2)" stroke="black" thickness="1"/>
+<line endpoints="((0,1), (1,1))" stroke="black" thickness="1"/>
+<circle center="(0.25, 1.75)" radius="0.05" fill="black" />
+<circle center="(0.75, 1.25)" radius="0.05" fill="black" />
+<circle center="(0.5, 0.5)" radius="0.05" fill="black" />
+</coordinates> -->
+</diagram>
+</prefigure>
+</image>
+</figure>
+  
+<problem>
     <statement>
       <p>
         How many students are enrolled in MAT 136 or MAT 226
@@ -386,7 +453,7 @@
         Let's say that the nearest place to get a cup of coffee is four blocks East and three blocks North.
         Assuming I only walk East or North,
         how many different routes can I take to get there if:
-        <ol>
+        <ol marker="alpha">
           <li>
             <p>
               The last block I walk is heading North?
@@ -674,7 +741,7 @@
     <statement>
       <p>
         Consider the sets <m>A</m> and <m>B</m> from <xref ref="ex_CartesianProduct">Example</xref>.
-        <ol>
+        <ol marker="alpha">
           <li>
             <p>
               Find <m>B\times A</m>.
@@ -744,7 +811,7 @@
       <p>
         Each of the following are referred to as the
         <term>Product Principle</term>.
-        <ol>
+        <ol marker="alpha">
           <li>
             <p>
               If <m>A</m> and <m>B</m> are finite sets, then
@@ -897,7 +964,7 @@
     <statement>
       <p>
         How many words of length 6 are there consisting of lower-case English letters subject to the following constraints?
-        <ol>
+        <ol marker="alpha">
           <li>
             <p>
               No constraints.
@@ -926,7 +993,7 @@
     <statement>
       <p>
         Six friends sit on one side of long rectangular table.
-        <ol>
+        <ol marker="alpha">
           <li>
             <p>
               How many seating arrangements are there?
@@ -972,7 +1039,7 @@
       <p>
         Six friends sit around a circle to play a game.
         Rotations of the group do not constitute different seating orders.
-        <ol>
+       <ol marker="alpha">
           <li>
             <p>
               How many circular seating arrangements are there?

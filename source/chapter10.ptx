@@ -33,12 +33,11 @@
     where each vertex is a dot and each edge is a connecting segment,
     not necessarily straight.
   </p>
-  <example xml:id="ex_graph">
-    <statement>
-      <p>
-        Here is an example of a graph with vertex set <m>V=\{v_1, v_2, v_3,v_4,v_5\}</m>.
-      </p>
-      <image>
+<example xml:id="ex_graph">
+<statement>
+<p>Here is an example of a graph with vertex set <m>V=\{v_1, v_2, v_3,v_4,v_5\}</m>.</p>
+
+<image width="60%">
 <latex-image>
 <![CDATA[\begin{tikzpicture}\node (1) at (18:2) [vert] {\scriptsize \(v_1\)};
 \node (2) at (90:2) [vert] {\scriptsize \(v_2\)};
@@ -49,11 +48,13 @@
 \path [e] (2) to (4);
 \path [e] (3) to (1);
 \path [e] (3) to (5);
-\path [e,out=0,in=-90,looseness=8] (5) to (5);\end{tikzpicture}]]>
+\path [e,out=0,in=-90,looseness=8] (5) to (5);
+\end{tikzpicture}]]>
 </latex-image>
-      </image>
-    </statement>
-  </example>
+</image>
+</statement>
+</example>
+
   <problem>
     <statement>
       <p>
@@ -173,7 +174,7 @@
     <statement>
       <p>
         How many edges do each of the following have?
-        <ol>
+        <ol marker="alpha">
           <li>
             <p>
               <m>K_n</m>
@@ -347,7 +348,7 @@
     <statement>
       <p>
         Which of the following are graphic sequences?
-        <ol>
+        <ol marker="alpha">
           <li>
             <p>
               3332
@@ -449,7 +450,7 @@
         Consider the graph <m>C_4</m>.
         Label the vertices clockwise as <m>a</m>,
         <m>b</m>, <m>c</m>, and <m>d</m>.
-        <ol>
+        <ol marker="alpha">
           <li>
             <p>
               Find all induced subgraphs of <m>C_4</m>.
@@ -477,7 +478,7 @@
         Determine whether each of the following statements is true or false.
         If a statement is true, prove it.
         Otherwise, provide a counterexample.
-        <ol>
+        <ol marker="alpha">
           <li>
             <p>
               Any subgraph of a complete graph is also complete.
@@ -522,7 +523,7 @@
       <p>
         Consider the graph <m>K_{3,5}</m> with bipartition <m>V_1</m> and <m>V_2</m>,
         where <m>|V_1|=3</m> and <m>|V_2|=5</m>.
-        <ol>
+        <ol marker="alpha">
           <li>
             <p>
               For <m>v\in V_1</m>, what is <m>N(v)</m>?
@@ -574,18 +575,19 @@
   <p>
     Finding a matching in a bipartite graph can be treated as a network flow problem.
   </p>
-  <problem>
-    <statement>
-      <p>
-        Consider the bipartite graph <m>G</m> given below.
-        Is there a total matching from
-        <m>\{a_1,a_2,a_3,a_4\}</m> to <m>\{b_1,b_2,b_3,b_4,b_5\}</m>?
-        If so, find one.
-        If not, explain why.
-      </p>
-      <image>
+
+<problem>
+<statement>
+<p>
+Consider the bipartite graph <m>G</m> given below.
+Is there a total matching from
+<m>\{a_1,a_2,a_3,a_4\}</m> to <m>\{b_1,b_2,b_3,b_4,b_5\}</m>?
+If so, find one. If not, explain why.
+</p>
+<image width="60%">
 <latex-image>
-<![CDATA[\begin{tikzpicture}\node (b1) at (1,0) [vert] {\scriptsize \(b_1\)};
+<![CDATA[\begin{tikzpicture}
+\node (b1) at (1,0) [vert] {\scriptsize \(b_1\)};
 \node (b2) at (2,0) [vert] {\scriptsize \(b_2\)};
 \node (b3) at (3,0) [vert] {\scriptsize \(b_3\)};
 \node (b4) at (4,0) [vert] {\scriptsize \(b_4\)};
@@ -602,23 +604,21 @@
 \path [e] (a3) to (b4);
 \path [e] (a3) to (b5);
 \path [e] (a4) to (b2);
-\path [e] (a4) to (b5);\end{tikzpicture}]]>
+\path [e] (a4) to (b5);
+\end{tikzpicture}]]>
 </latex-image>
-      </image>
-    </statement>
-  </problem>
-  <problem>
-    <statement>
-      <p>
-        Consider the bipartite graph <m>G</m> given below.
-        Is there a total matching from
-        <m>\{a_1,a_2,a_3,a_4\}</m> to <m>\{b_1,b_2,b_3,b_4\}</m>?
-        If so, find one.
-        If not, explain why.
-      </p>
-      <image>
+</image>
+</statement>
+</problem>
+
+<problem>
+<statement>
+<p>
+Consider the bipartite graph <m>G</m> given below. Is there a total matching from <m>\{a_1,a_2,a_3,a_4\}</m> to <m>\{b_1,b_2,b_3,b_4\}</m>? If so, find one. If not, explain why.</p>
+<image width="60%">
 <latex-image>
-<![CDATA[\begin{tikzpicture}\node (b1) at (1,0) [vert] {\scriptsize \(b_1\)};
+<![CDATA[\begin{tikzpicture}
+\node (b1) at (1,0) [vert] {\scriptsize \(b_1\)};
 \node (b2) at (2,0) [vert] {\scriptsize \(b_2\)};
 \node (b3) at (3,0) [vert] {\scriptsize \(b_3\)};
 \node (b4) at (4,0) [vert] {\scriptsize \(b_4\)};
@@ -634,18 +634,20 @@
 \path [e] (a3) to (b3);
 \path [e] (a4) to (b1);
 \path [e] (a4) to (b2);
-\path [e] (a4) to (b4);\end{tikzpicture}]]>
+\path [e] (a4) to (b4);
+\end{tikzpicture}]]>
 </latex-image>
-      </image>
-    </statement>
-  </problem>
+</image>
+</statement>
+</problem>
+
   <problem>
     <statement>
       <p>
         Determine whether each of the following statements is true or false.
         If a statement is true, prove it.
         Otherwise, provide a counterexample.
-        <ol>
+        <ol marker="alpha">
           <li>
             <p>
               If a bipartite graph <m>G=(V,E)</m> has a perfect matching,

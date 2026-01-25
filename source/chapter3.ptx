@@ -22,7 +22,7 @@
     <statement>
       <p>
         Complete the following.
-        <ol>
+        <ol marker="alpha">
           <li>
             <p>
               Write down all of the elements in <m>S_3</m>.
@@ -55,70 +55,23 @@
     shows one possible non-attacking rook arrangement on an <m>6\times 4</m> chessboard.
   </p>
 
-<!-- <figure xml:id="fig_nonattack">
-<caption>A non-attacking rook arrangement on a <m>6\times 4</m> chessboard.</caption>
-<image>
-<description>A 6 by 4 grid with four rooks placed such that no two occupy the same row or column.</description>
-<latex-image>
-<![CDATA[\begin{tikzpicture}\draw[step=1cm,color=gray] (-2,-3) grid (2,3);
-\matrix[matrix of nodes,nodes={inner sep=0pt,text width=1cm,align=center,minimum height=1cm}]{
-&amp; X &amp;   &amp;   \\
-&amp;  &amp;   &amp;   \\
-&amp;   &amp;   &amp; X \\
-X &amp;   &amp;   &amp;   \\
-&amp;   &amp; X &amp;  \\
-&amp;   &amp;  &amp;  \\};
-\end{tikzpicture}]]>
-</latex-image>
-</image>
-</figure> -->
-
 <figure xml:id="fig_nonattack">
 <caption>A non-attacking rook arrangement on a <m>6\times 4</m> chessboard. Four rooks are placed such that no two occupy the same row or column.</caption>
-<!-- <description>A 6 by 4 grid with four rooks placed such that no two occupy the same row or column.</description> -->
-<tabular bottom="minor" top="minor" left="minor" right="minor" halign="center">    
-    <col width="2cm" halign="center" right="minor"/>
-    <col width="2cm" halign="center" right="minor"/>
-    <col width="2cm" halign="center" right="minor"/>
-    <col width="2cm" halign="center" />
-
-    <row bottom="minor" height="1cm">
-      <cell></cell>
-      <cell><m>\bullet</m></cell>
-      <cell></cell>
-      <cell></cell>
-    </row>
-    <row bottom="minor" height="2cm">
-      <cell></cell>
-      <cell><m>\phantom{\bullet}</m></cell>
-      <cell></cell>
-      <cell></cell>
-    </row>
-    <row bottom="minor" height="2cm">
-      <cell></cell>
-      <cell></cell>
-      <cell></cell>
-      <cell><m>\bullet</m></cell>
-    </row>
-    <row bottom="minor" height="2cm">
-      <cell><m>\bullet</m></cell>
-      <cell></cell>
-      <cell></cell>
-      <cell></cell>
-    </row>
-    <row bottom="minor" height="2cm">
-      <cell></cell>
-      <cell></cell>
-      <cell><m>\bullet</m></cell>
-      <cell></cell>
-    </row>
-    <row bottom="minor" height="2cm">
-      <cell></cell>
-      <cell><m>\phantom{\bullet}</m></cell>
-      <cell></cell>
-      <cell></cell>
-    </row>
-  </tabular>
+<image width="40%">
+<shortdescription>A non-attacking rook arrangement on a <m>6\times 4</m> chessboard. Four rooks are placed such that no two occupy the same row or column.</shortdescription>
+  <prefigure xmlns="https://prefigure.org"
+             label="prefigure-rectangle">
+    <diagram dimensions="(400,600)" margins="5">
+       <coordinates bbox="(0,0,4,6)">
+       <definition>centers=((.5,2.5),(1.5,5.5),(2.5,.5),(3.5,4.5))</definition>
+       <grid spacings="((0,1,4),(0,1,6))" stroke="gray" thickness="1"/>
+       <repeat parameter="center in centers">
+       <circle center="center" radius=".25" fill="gray" stroke="black"/>
+       </repeat>
+       </coordinates>
+    </diagram>
+  </prefigure>
+</image>
 </figure>
 
   <problem>
@@ -189,7 +142,7 @@ X &amp;   &amp;   &amp;   \\
       <p>
         There are 8 finalists at the Olympic Games 100 meters sprint.
         Assume there are no ties.
-        <ol>
+        <ol marker="alpha">
           <li>
             <p>
               How many ways are there for the runners to finish?
@@ -227,58 +180,40 @@ X &amp;   &amp;   &amp;   \\
     which will be a topic of focus in a later chapter.
   </p>
   <p>
-    Interpreting a permutation as a linearly ordered arrangement of object (i.e., string),
+    Interpreting a permutation as a linearly ordered arrangement of objects (i.e., string),
     a <term>circular permutation</term>
     is similar to a permutation except the objects are arranged on a circle,
     so that there is no beginning or end.
-    We can present a circular permutation <m>w</m> of length <m>n</m> as in <xref ref="fig_circular_permutation">Figure</xref>.
-    Each <m>w(i)</m> is a distinct value from <m>[n]</m>,
-    and reading clockwise we encounter
-    <m>w(1),
-    w(2),\ldots,w(n)</m>, so that <m>w(n)</m> is placed next to <m>w(1)</m>.
-    Any circular rotation yields the same circular permutation.
+    An example of a circular permutation of length 8 is given in <xref ref="fig_circular_permutation">Figure</xref>.
+    Any circular rotation yields the same circular permutation. However, for <m>n\geq 3</m>, reversing the relative order of the elements (i.e., encountering the same numbers counterclockwise instead of clockwise) yields a different circular permutation. Do you see why we included the restriction on <m>n</m> in the previous sentence?
   </p>
 
 <figure xml:id="fig_circular_permutation">
-<caption>Representation of a circular permutation.</caption>
-<image>
-<latex-image>
-<![CDATA[
-      \begin{tikzpicture}[baseline=(current bounding box.center)]
-        % Define the radius
-        \def\R{2cm}
-        
-        % Place the elements in a circle
-        \node (w1) at (90:\R) {$w(1)$};
-        \node (w2) at (45:\R) {$w(2)$};
-        \node (w3) at (0:\R) {$w(3)$};
-        \node (dots1) at (-45:\R) {\rotatebox{45}{$\cdots$}};
-        \node (wi) at (-90:\R) {$w(i)$};
-        \node (dots2) at (-135:\R) {\rotatebox{-45}{$\cdots$}};
-        \node (wn1) at (180:\R) {$w(n-1)$};
-        \node (wn) at (135:\R) {$w(n)$};
-
-        % Draw the arrows between them
-        \draw[-, bend left=10] (w1) to (w2);
-        \draw[-, bend left=10] (w2) to (w3);
-        \draw[-, bend left=10] (w3) to (dots1);
-        \draw[-, bend left=10] (dots1) to (wi);
-        \draw[-, bend left=10] (wi) to (dots2);
-        \draw[-, bend left=10] (dots2) to (wn1);
-        \draw[-, bend left=10] (wn1) to (wn);
-        \draw[-, bend left=10] (wn) to (w1);
-      \end{tikzpicture}
-      ]]>
-</latex-image>
+<caption>Example of a circular permutation for <m>n=8</m>.</caption>
+<image width="60%">
+<shortdescription>Example of a circular permutation for <m>n=8</m>. Reading the numbers clockwise, we encounter 1, 4, 5, 2, 8, 7, 3, 6.</shortdescription>
+<prefigure xmlns="https://prefigure.org" 
+           label="circular-permutation">
+<diagram width="300" height="300" margins="5">
+  <definition>
+    alignments=['e','ne','n','nw','w','sw','s','se']
+  </definition>
+  <definition substitution="no">
+    labels=['3','6','1','4','5','2','8','7']
+  </definition>
+  <definition>f(t)=(cos(pi*t/4),sin(pi*t/4))</definition>
+  <coordinates bbox="[-1.4,-1.4,1.4,1.4]">
+    <circle at="unit-circle" center="(0,0)" radius="1" stroke="black"/>
+    <repeat parameter="k=0..7">
+      <point at="point" p="f(k)" fill="black" alignment="alignments[k]">
+        <m>${labels[k]}</m>
+      </point>
+    </repeat>
+  </coordinates>
+</diagram>
+</prefigure>
 </image>
 </figure>
-
-<!-- <![CDATA[\begin{tikzpicture}
-\path
-pic[rotate=90,circular diagram/.cd,radius=4,arcs={{[bend]}-}]{
-circular diagram={w(1)/,w(n)/,w(n-1)/,
-\rotatebox{-50}{\(\dots\)}/,w(i)/,\rotatebox{50}{\(\dots\)}/,w(3)/,w(2)/}}
-;\end{tikzpicture}]]> -->
 
   <p>
     We encountered circular permutations back in <xref ref="prop_circular_table">Problem</xref>

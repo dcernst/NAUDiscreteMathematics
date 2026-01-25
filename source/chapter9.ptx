@@ -56,7 +56,7 @@
   <p>
     We have also encountered a few recurrence relations of a different flavor that arise out of two-dimensional arrays of numbers.
     For example:
-    <ol>
+    <ol marker="alpha">
       <li>
         <p>
           Number of <m>k</m>-permutations of <m>[n]</m>: For <m>1\leq k\leq n</m>,
@@ -109,7 +109,7 @@
         of <m>n</m> with <m>k</m> parts is an ordered list of <m>k</m> positive integers whose sum is <m>n</m>,
         denoted <m>\alpha=(\alpha_1,\ldots,\alpha_k)</m>.
         We say that <m>\alpha_i</m> is the <m>i</m>th part.
-        <ol>
+        <ol marker="alpha">
           <li>
             <p>
               How many compositions of <m>n</m> have only odd parts?
@@ -139,7 +139,7 @@
         generate the first few terms.
         If possible,
         find an explicit formula for the terms of the sequence.
-        <ol>
+        <ol marker="alpha">
           <li>
             <p>
               <m>a_1=2</m>, <m>a_n=a_{n-1}+7</m> for <m>n\geq 2</m>.
@@ -232,7 +232,7 @@
     <statement>
       <p>
         Compute the first few terms of each of the following and find the solution.
-        <ol>
+        <ol marker="alpha">
           <li>
             <p>
               Arithmetic progression with <m>a_0=3</m> and <m>d=2</m>.
@@ -269,7 +269,7 @@
         Recall that the <term>triangular numbers</term>
         are defined via <m>t_n:=1+2+\cdots +n</m>.
         The first few terms of this sequence are 1, 3, 6, 10, 15.
-        <ol>
+        <ol marker="alpha">
           <li>
             <p>
               Express the triangular numbers using a recurrence relation and initial condition.
@@ -345,7 +345,7 @@
         Determine which of the following are linear constant-coefficient recurrence relations.
         For those that are,
         which are homogeneous and which are non-homogeneous?
-        <ol>
+        <ol marker="alpha">
           <li>
             <p>
               <m>a_n= na_{n-1}</m>
@@ -511,7 +511,7 @@
         <em>Important:</em> Unfortunately,
         we also used <m>d_n</m> to denote the number of derangements of <m>n</m>.
         This problem is about Dyck path, not derangements.
-        <ol>
+        <ol marker="alpha">
           <li>
             <p>
               Compute <m>d_1</m>, <m>d_2</m>, <m>d_3</m>,
@@ -583,7 +583,7 @@
     <statement>
       <p>
         Tackle each of the following.
-        <ol>
+        <ol marker="alpha">
           <li>
             <p>
               Argue that the number of lattice paths

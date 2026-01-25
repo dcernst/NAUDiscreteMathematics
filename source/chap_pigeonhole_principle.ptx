@@ -13,7 +13,7 @@
         Back in <xref ref="prob_injective_surjective_cardinality">Problem</xref>,
         we implicitly used the Pigeonhole Principle when we argued that if
         <m>f:A\to B</m> is a function for finite sets <m>A</m> and <m>B</m>, then
-        <ol>
+        <ol marker="alpha">
           <li>
             <p>
               If <m>f</m> is an injection, then <m>|A|\leq |B|</m>.

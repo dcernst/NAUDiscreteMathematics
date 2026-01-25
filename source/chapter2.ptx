@@ -66,11 +66,12 @@
   <p>
 
   </p>
-  <figure xml:id="fig_function_diagram">
-    <caption>Function diagram for a function from <m>X=\{a,b,c,d,\}</m> to <m>Y=\{1,2,3,4\}</m>.</caption>
-    <image>
+<figure xml:id="fig_function_diagram">
+<caption>Function diagram for a function from <m>X=\{a,b,c,d,\}</m> to <m>Y=\{1,2,3,4\}</m>.</caption>
+<image width="50%">
 <latex-image>
-<![CDATA[\begin{tikzpicture}\node[vert] (A) at (0,4) {\scriptsize \(a\)};
+<![CDATA[\begin{tikzpicture}[->,>=stealth,shorten >=1pt,auto,node distance=2cm,semithick,scale=1.2]
+\node[vert] (A) at (0,4) {\scriptsize \(a\)};
 \node[vert] (B) at (0,3) {\scriptsize \(b\)};
 \node[vert] (C) at (0,2) {\scriptsize \(c\)};
 \node[vert] (D) at (0,1) {\scriptsize \(d\)};
@@ -78,18 +79,19 @@
 \node[vert] (2) at (2.5,3) {\scriptsize \(2\)};
 \node[vert] (3) at (2.5,2) {\scriptsize \(3\)};
 \node[vert] (4) at (2.5,1) {\scriptsize \(4\)};
+\node[draw,rounded corners,fit=(A) (B) (C) (D),minimum width=1.3cm,gray] {};
+\node[draw,rounded corners,fit=(1) (2) (3) (4),minimum width=1.3cm,gray] {};
 \path (A) edge node {} (2)
 (B) edge node {} (4)
 (C) edge node {} (4)
 (D) edge node {} (1);
-\node[draw,rounded corners,fit=(A) (B) (C) (D),minimum width=1.3cm,gray] {};
-\node[draw,rounded corners,fit=(1) (2) (3) (4),minimum width=1.3cm,gray] {};
 \node (X) at (0,4.6) {\(X\)};
 \node (Y) at (2.5,4.6) {\(Y\)};
 \path (X) edge [bend left] node {\(f\)} (Y);\end{tikzpicture}]]>
 </latex-image>
-    </image>
-  </figure>
+</image>
+</figure>
+
   <p>
     Sometimes we can define a function using a formula.
     For example,
@@ -121,7 +123,7 @@
         You may draw a function diagram,
         write down a list of ordered pairs that represents the assignment,
         or write a formula as long as the domain and codomain are clear.
-        <ol>
+        <ol marker="alpha">
           <li>
             <p>
               A function <m>f</m> from a set with 4 elements to a set with 3 elements such that <m>\range(f)=\codom(f)</m>.
@@ -189,7 +191,7 @@
   <p>
     Let <m>f:X\to Y</m> be a function.
     We define the following.
-    <ol>
+    <ol marker="alpha">
       <li>
         <p>
           The function <m>f</m> is said to be <term>injective</term>
@@ -228,7 +230,7 @@
         You may draw a function diagram,
         write down a list of ordered pairs,
         or write a formula as long as the domain and codomain are clear.
-        <ol>
+        <ol marker="alpha">
           <li>
             <p>
               A function <m>f:X\to Y</m> that is injective but not surjective.
@@ -258,7 +260,7 @@
       <p>
         Determine whether each of the following functions is injective,
         surjective, both, or neither.
-        <ol>
+        <ol marker="alpha">
           <li>
             <p>
               Define <m>f:\mathbb{R}\to \mathbb{R}</m> via <m>f(x)=x^{2}</m>
@@ -336,7 +338,7 @@
       <p>
         Suppose <m>f:A\to B</m> is a function for finite sets <m>A</m> and <m>B</m>.
         Explain why each of the following statements is true.
-        <ol>
+        <ol marker="alpha">
           <li>
             <p>
               If <m>f</m> is an injection, then <m>|A|\leq |B|</m>.
@@ -360,7 +362,7 @@
     <statement>
       <p>
         Let <m>A</m> and <m>B</m> be nonempty finite sets with <m>|A|=n</m> and <m>|B|=k</m>.
-        <ol>
+        <ol marker="alpha">
           <li>
             <p>
               How many different functions are there from <m>A</m> to <m>B</m>?
@@ -427,7 +429,7 @@
       <p>
         For each of the following,
         explain why the given description does not define a function.
-        <ol>
+        <ol marker="alpha">
           <li>
             <p>
               Define <m>f:\{1,2,3\}\to \{1,2,3\}</m> via <m>f(a)=a-1</m>.

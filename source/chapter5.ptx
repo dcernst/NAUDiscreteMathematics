@@ -75,7 +75,7 @@
     <statement>
       <p>
         Expand each of the following.
-        <ol>
+        <ol marker="alpha">
           <li>
             <p>
               <m>(a+b)^6</m>
@@ -129,7 +129,7 @@
     <statement>
       <p>
         Complete each of the following.
-        <ol>
+        <ol marker="alpha">
           <li>
             <p>
               Expand <m>(1+t)^n</m>.
@@ -154,7 +154,7 @@
     <statement>
       <p>
         Suppose we have <m>n\geq 1</m> people.
-        <ol>
+        <ol marker="alpha">
           <li>
             <p>
               Let <m>1\leq k\leq n</m>.

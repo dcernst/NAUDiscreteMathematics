@@ -140,7 +140,7 @@
       <p>
         Suppose you have a pool of 6 applicants for a job opening.
         Let's assume you believe the values in <xref ref="table_Pascal">Table</xref>.
-        <ol>
+        <ol marker="alpha">
           <li>
             <p>
               How many ways can you choose 3 of the 6 applicants to interview?
@@ -204,7 +204,7 @@
       <p>
         A state senate consists of 19 Republicans and 14 Democrats.
         In how many ways can a committee be chosen if:
-        <ol>
+        <ol marker="alpha">
           <li>
             <p>
               The committee contains 6 senators without regard to party?
@@ -253,7 +253,7 @@
     <statement>
       <p>
         Assume <m>1\leq k\leq n</m>.
-        <ol>
+        <ol marker="alpha">
           <li>
             <p>
               Using the definition of <m>\binom{n}{k}</m> in terms of <m>k</m>-subsets
@@ -284,7 +284,7 @@
         <me>
           {\binom{n}{k}=\binom{n}{n-k}.}
         </me>
-        <ol>
+        <ol marker="alpha">
           <li>
             <p>
               Prove the identity above using the formula for
@@ -340,7 +340,7 @@
       <p>
         Consider the linear equation <m>x_1+x_2+x_3=11</m>.
         How many <em>integer</em> solutions are there if:
-        <ol>
+        <ol marker="alpha">
           <li>
             <p>
               <m>x_1,x_2,x_3\geq 0</m>?

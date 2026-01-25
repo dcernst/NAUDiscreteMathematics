@@ -13,7 +13,7 @@
   </p>
   <p>
     Consider the claims:
-    <ol marker="(a)">
+    <ol marker="alpha">
       <li>
         <p>
           For all <m>n\in\mathbb{N}</m>,
@@ -71,7 +71,7 @@
         Let <m>P(1), P(2), P(3), \ldots</m> be a sequence of statements,
         one for each natural number.
         Assume
-        <ol marker="labeltextrmroman">
+        <ol marker="roman">
           <li>
             <p>
               <m>P(1)</m> is true, and
@@ -189,11 +189,12 @@
       </p>
     </statement>
   </problem>
-  <figure xml:id="fig_L-shapes">
-    <caption>One possible covering for the case involving <m>n=2</m> for <xref ref="prob_L-shapes">Problem</xref>.</caption>
-    <image>
+<figure xml:id="fig_L-shapes">
+<caption>One possible covering for the case involving <m>n=2</m> for <xref ref="prob_L-shapes">Problem</xref>.</caption>
+<image width="60%">
 <latex-image>
-<![CDATA[\begin{tikzpicture}\draw [fill=lightorange] (0,0) rectangle (2,1);
+<![CDATA[\begin{tikzpicture}
+\draw [fill=lightorange] (0,0) rectangle (2,1);
 \draw [fill=lightorange] (0,1) rectangle (1,2);
 \draw [fill=lightskyblue] (3,0) rectangle (4,2);
 \draw [fill=lightskyblue] (2,1) rectangle (3,2);
@@ -205,11 +206,13 @@
 \draw [fill=naugreen] (3,2) rectangle (4,3);
 \draw[thick] (0,0) grid (4,4);
 \node (y) at (2.5,.5){};
-\node (x) at (3.8,-.5){cut-out square};
-\draw [->, thick] (x) to [out=180,in=270] (y);\end{tikzpicture}]]>
+\node (x) at (3.8,-.5){cut-out};
+\draw [->, thick] (x) to [out=180,in=270] (y);
+\end{tikzpicture}]]>
 </latex-image>
-    </image>
-  </figure>
+</image>
+</figure>
+
   <p>
     Mathematical induction can actually be used to prove a broader family of results;
     namely, those of the form
@@ -225,7 +228,7 @@
         Let <m>P(a), P(a+1), P(a+2), \ldots</m> be a sequence of statements,
         one for each integer greater than or equal to <m>a</m>.
         Assume that
-        <ol marker="labeltextrmroman">
+        <ol marker="roman">
           <li>
             <p>
               <m>P(a)</m> is true, and
@@ -302,7 +305,7 @@
         Let <m>P(1), P(2), P(3), \ldots</m> be a sequence of statements,
         one for each natural number.
         Assume that
-        <ol marker="labeltextrmroman">
+        <ol marker="roman">
           <li>
             <p>
               <m>P(1),P(2),\ldots, P(m)</m> is true for some <m>m\geq 1</m>, and

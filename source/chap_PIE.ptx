@@ -40,7 +40,7 @@
     <statement>
       <p>
         In the Natteranian township, 750 of the residents have a smart phone, 620 have a laptop computer, 480 have a desktop computer, 420 have both a laptop and a smart phone, 390 have both a smart phone and a desktop, 212 have both a laptop and a desktop computer and 164 have all three items.
-        <ol>
+        <ol marker="alpha">
           <li>
             <p>
               How many residents have at least one of the three items?
@@ -111,7 +111,7 @@
       <p>
         For <m>1\leq i\leq n</m>,
         let <m>F_i</m> be the set of permutations that fix <m>i</m>.
-        <ol>
+        <ol marker="alpha">
           <li>
             <p>
               Explain why

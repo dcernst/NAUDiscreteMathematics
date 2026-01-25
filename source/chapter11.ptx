@@ -24,9 +24,11 @@
       <p>
         Find the indegree and outdegree of each vertex in the following graph.
       </p>
-      <image>
+
+<image width="60%">
 <latex-image>
-<![CDATA[\begin{tikzpicture}\node (1) at (18:2) [ vert] {\scriptsize \(b_1\)};
+<![CDATA[\begin{tikzpicture}
+\node (1) at (18:2) [ vert] {\scriptsize \(b_1\)};
 \node (2) at (90:2) [ vert] {\scriptsize \(b_2\)};
 \node (3) at (162:2) [ vert] {\scriptsize \(b_3\)};
 \node (4) at (234:2) [ vert] {\scriptsize \(b_4\)};
@@ -50,11 +52,13 @@
 \path [d] (2) to (12);
 \path [d] (3) to (13);
 \path [d] (4) to (14);
-\path [d] (5) to (15);\end{tikzpicture}]]>
+\path [d] (5) to (15);
+\end{tikzpicture}]]>
 </latex-image>
-      </image>
-    </statement>
-  </problem>
+</image>
+</statement>
+</problem>
+
   <p>
     As expected,
     we have the following result that is analogous to the Handshake Lemma
@@ -114,12 +118,11 @@
     (respectively,
     the number of edges from <m>v_i</m> to <m>v_j</m>).
   </p>
-  <problem>
-    <statement>
-      <p>
-        Find the adjacency matrix for the following graph.
-      </p>
-      <image>
+  
+<problem>
+<statement>
+<p>Find the adjacency matrix for the following graph.</p>
+<image width="60%">
 <latex-image>
 <![CDATA[\begin{tikzpicture}\node (1) at (18:2) [vert] {\scriptsize \(v_1\)};
 \node (2) at (90:2) [vert] {\scriptsize \(v_2\)};
@@ -129,11 +132,13 @@
 \path [e] (2) to (3) to (4) to (5) to (1);
 \path [e] (2) to (4);
 \path [e] (3) to (1);
-\path [e] (3) to (5);\end{tikzpicture}]]>
+\path [e] (3) to (5);
+\end{tikzpicture}]]>
 </latex-image>
-      </image>
-    </statement>
-  </problem>
+</image>
+</statement>
+</problem>
+
   <problem>
     <statement>
       <p>
@@ -193,7 +198,7 @@
     For <m>G_1=(V_1,E_1)</m> and <m>G_2=(V_2,E_2)</m>,
     to show that <m>G_1\cong G_2</m>:
   </p>
-  <ol>
+  <ol marker="alpha">
     <li>
       <p>
         State a vertex matching explicitly, and
@@ -203,7 +208,7 @@
       <p>
         Either
       </p>
-      <ol>
+      <ol marker="alpha">
         <li>
           <p>
             Check adjacency for each pair of vertices in <m>G_1</m> and the corresponding pair in <m>G_2</m> (a total of <m>\binom{|V_1|}{2}</m> checks).
@@ -228,7 +233,7 @@
     (called an <term>invariant</term>)
     holds for one graph but not the other.
     Here are a few isomorphic invariants:
-    <ol>
+    <ol marker="alpha">
       <li>
         <p>
           Order of the graph
@@ -304,15 +309,15 @@
       </tabular>
     </statement>
   </problem>
-  <problem>
-    <statement>
-      <p>
-        Let <m>G</m> be the graph with vertex set <m>V=\{a,b,c,d,e\}</m> and edge set
-        <m>E=\{\{a,b\},\{a,c\},\{a,e\},\{b,d\},\{b,e\},\{c,d\}\}</m> and let <m>H</m> be the following graph.
-      </p>
-      <image>
+
+<problem>
+<statement>
+<p>Let <m>G</m> be the graph with vertex set <m>V=\{a,b,c,d,e\}</m> and edge set
+<m>E=\{\{a,b\},\{a,c\},\{a,e\},\{b,d\},\{b,e\},\{c,d\}\}</m> and let <m>H</m> be the following graph.</p>
+<image width="60%">
 <latex-image>
-<![CDATA[\begin{tikzpicture}\node (1) at (18:2) [vert] {\scriptsize \(b\)};
+<![CDATA[\begin{tikzpicture}
+\node (1) at (18:2) [vert] {\scriptsize \(b\)};
 \node (2) at (90:2) [vert] {\scriptsize \(a\)};
 \node (3) at (162:2) [vert] {\scriptsize \(e\)};
 \node (4) at (234:2) [vert] {\scriptsize \(d\)};
@@ -320,14 +325,14 @@
 \path [e] (3) to (4) to (5) to (1);
 \path [e] (2) to (4);
 \path [e] (3) to (1);
-\path [e] (2) to (5);\end{tikzpicture}]]>
+\path [e] (2) to (5);
+\end{tikzpicture}]]>
 </latex-image>
-      </image>
-      <p>
-        Determine whether <m>G</m> and <m>H</m> are isomorphic.
-      </p>
-    </statement>
-  </problem>
+</image>
+<p>Determine whether <m>G</m> and <m>H</m> are isomorphic.</p>
+</statement>
+</problem>
+
   <problem>
     <statement>
       <p>
@@ -635,14 +640,13 @@
     of a connected graph is the addition of suitable multiple edges (i.e., duplicate existing edges) to permit an Euler circuit,
     mimicking what must be done to complete a circuit such as a postal route or other delivery/pick-up route.
   </p>
-  <problem>
-    <statement>
-      <p>
-        Eulerize the following graph.
-      </p>
-      <image>
+<problem>
+<statement>
+<p>Eulerize the following graph.</p>
+<image width="60%">
 <latex-image>
-<![CDATA[\begin{tikzpicture}\node (1) at (0,0) [ vert] {\scriptsize \(a_1\)};
+<![CDATA[\begin{tikzpicture}
+\node (1) at (0,0) [ vert] {\scriptsize \(a_1\)};
 \node (2) at (0,1) [ vert] {\scriptsize \(a_2\)};
 \node (3) at (0,2) [ vert] {\scriptsize \(a_3\)};
 \node (4) at (1,0) [ vert] {\scriptsize \(a_4\)};
@@ -658,11 +662,13 @@
 \path [e] (2) to (5);
 \path [e] (6) to (9) to (12) to (11) to (10) to (7) to (4);
 \path [e] (7) to (8) to (9);
-\path [e] (5) to (8) to (11);\end{tikzpicture}]]>
+\path [e] (5) to (8) to (11);
+\end{tikzpicture}]]>
 </latex-image>
-      </image>
-    </statement>
-  </problem>
+</image>
+</statement>
+</problem>
+
   <p>
     A cycle in a graph that passes through every vertex is a
     <term>Hamilton cycle</term>.
@@ -804,7 +810,7 @@
     <statement>
       <p>
         Some properties of trees.
-        <ol>
+        <ol marker="alpha">
           <li>
             <p>
               A tree of order 2 or more has at least two vertices of degree 1.
@@ -1018,7 +1024,7 @@
     <term>Prim's Algorithm</term> (Jarnik 1930, Prim 1957).
     Assume <m>G</m> is a connected,
     undirected, weighted loopless graph of order <m>n</m>.
-    <ol>
+    <ol marker="alpha">
       <li>
         <p>
           Initialize a tree with a single vertex,
