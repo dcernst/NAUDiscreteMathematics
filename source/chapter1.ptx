@@ -349,8 +349,8 @@
 <figure xml:id="fig_domino">
 <caption>Examples of dominoes.</caption>
 <image width="60%">
-<shortdescription>From left to right, first domino has 4 pips and 2 pips, second domino has 2 pips and 4 pips, third domino has 5 pips and 5 pips, fourth domino has 3 pips and 0 pips.</shortdescription>
-<description>From left to right, first domino has 4 pips and 2 pips, second domino has 2 pips and 4 pips, third domino has 5 pips and 5 pips, fourth domino has 3 pips and 0 pips.</description>
+<shortdescription>First domino has 4 pips and 2 pips, second has 2 pips and 4 pips, third has 5 pips and 5 pips, fourth has 3 pips and 0 pips.</shortdescription>
+<description><p>The image contains four examples of dominoes. From left to right, first domino has 4 pips and 2 pips, second domino has 2 pips and 4 pips, third domino has 5 pips and 5 pips, fourth domino has 3 pips and 0 pips.</p></description>
 <prefigure xmlns="https://prefigure.org"
              label="prefigure-domino">
 <diagram dimensions="(350,100)" margins="5">
