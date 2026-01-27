@@ -592,7 +592,13 @@
       <p>
         A geometric display as in <xref ref="table_two_letter_words">Table</xref>
         would seem to require three dimensions,
-        but we can take what we already know and just add a digit to the right. See <xref ref="table_numbered_words">Table</xref>.
+        but we can take what we already know and just add a digit to the right. See <xref ref="table_numbered_words">Table</xref>. There are 16 rows
+        (each with a word from <xref ref="ex_counting_two_letter_words">Example</xref>)
+        and five columns, so there are
+        <m>16\cdot 5 = 80</m> two-letter words using <m>b</m>,
+        <m>c</m>,
+        <m>d</m>,
+        and <m>f</m>, followed by a digit from 1, 2, 3, 4, and 5.
       </p>
 
     <table xml:id="table_numbered_words">
@@ -673,16 +679,6 @@
         </row>
       </tabular>
     </table>
-
-      <p>
-        There are 16 rows
-        (each with a word from <xref ref="ex_counting_two_letter_words">Example</xref>)
-        and five columns, so there are
-        <m>16\cdot 5 = 80</m> two-letter words using <m>b</m>,
-        <m>c</m>,
-        <m>d</m>,
-        and <m>f</m>, followed by a digit from 1, 2, 3, 4, and 5.
-      </p>
     </solution>
   </example>
   <p>
