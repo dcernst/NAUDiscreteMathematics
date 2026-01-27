@@ -501,10 +501,14 @@
     <solution>
       <p>
         We can easily list these,
-        but a different arrangement will illustrate a more powerful technique.
+        but using the arrangement in <xref ref="table_two_letter_words">Table</xref> will illustrate a more powerful technique.
       </p>
-      <tabular>
-        <row>
+    <table xml:id="table_two_letter_words">
+      <title>All possible two-letter words using the letters <m>b</m>,
+        <m>c</m>, <m>d</m>, <m>f</m></title>
+      <tabular halign="center">
+      <col right="medium"/> <col /> <col /> <col /> <col />
+        <row bottom="medium">
           <cell></cell>
           <cell><m>b</m></cell>
           <cell><m>c</m></cell>
@@ -512,14 +516,14 @@
           <cell><m>f</m></cell>
         </row>
         <row>
-          <cell> <!-- \noalign{\hrule height 2pt} -->
+          <cell>
             <m>b</m></cell>
           <cell><m>bb</m></cell>
           <cell><m>bc</m></cell>
           <cell><m>bd</m></cell>
           <cell><m>bf</m></cell>
         </row>
-        <row bottom="minor">
+        <row>
           <cell></cell>
           <cell></cell>
           <cell></cell>
@@ -535,7 +539,7 @@
           <cell><m>cd</m></cell>
           <cell><m>cf</m></cell>
         </row>
-        <row bottom="minor">
+        <row>
           <cell></cell>
           <cell></cell>
           <cell></cell>
@@ -551,7 +555,7 @@
           <cell><m>dd</m></cell>
           <cell><m>df</m></cell>
         </row>
-        <row bottom="minor">
+        <row>
           <cell></cell>
           <cell></cell>
           <cell></cell>
@@ -568,6 +572,7 @@
           <cell><m>f\!f</m></cell>
         </row>
       </tabular>
+    </table>
       <p>
         The rectangular table makes it clear that there are 16 two-letter words using the letters <m>b</m>,
         <m>c</m>, <m>d</m>, and <m>f</m>.
@@ -583,26 +588,31 @@
         <q>numbered words</q>
         are there consisting of two letters from <m>b</m>, <m>c</m>,
         <m>d</m>,
-        and <m>f</m>, followed by one of the digits 1, 2, 3, 4, and 5?
+        and <m>f</m> followed by one of the digits <m>1</m>, <m>2</m>, <m>3</m>, <m>4</m>, and <m>5</m>?
       </p>
     </statement>
     <solution>
       <p>
-        A geometric display as in <xref ref="ex_counting_two_letter_words">Example</xref>
+        A geometric display as in <xref ref="table_two_letter_words">Table</xref>
         would seem to require three dimensions,
-        but we can take what we already know and just add a digit to the right:
+        but we can take what we already know and just add a digit to the right. See <xref ref="table_numbered_words">Table</xref>.
       </p>
-      <tabular>
-        <row>
+
+    <table xml:id="table_numbered_words">
+      <title>All possible <q>numbered words</q> consisting of two letters from <m>b</m>,
+        <m>c</m>, <m>d</m>, <m>f</m> followed by one of the digits <m>1</m>, <m>2</m>, <m>3</m>, <m>4</m>, and <m>5</m>.</title>
+      <tabular halign="center">
+      <col right="medium"/> <col /> <col /> <col /> <col /> <col />
+        <row bottom="medium">
           <cell></cell>
-          <cell>1</cell>
-          <cell>2</cell>
-          <cell>3</cell>
-          <cell>4</cell>
-          <cell>5</cell>
+          <cell><m>1</m></cell>
+          <cell><m>2</m></cell>
+          <cell><m>3</m></cell>
+          <cell><m>4</m></cell>
+          <cell><m>5</m></cell>
         </row>
         <row>
-          <cell> <!-- \noalign{\hrule height 2pt} -->
+          <cell>
             <m>bb</m></cell>
           <cell><m>bb1</m></cell>
           <cell><m>bb2</m></cell>
@@ -610,7 +620,7 @@
           <cell><m>bb4</m></cell>
           <cell><m>bb5</m></cell>
         </row>
-        <row bottom="minor">
+        <row>
           <cell></cell>
           <cell></cell>
           <cell></cell>
@@ -628,7 +638,7 @@
           <cell><m>bc4</m></cell>
           <cell><m>bc5</m></cell>
         </row>
-        <row bottom="minor">
+        <row>
           <cell></cell>
           <cell></cell>
           <cell></cell>
@@ -646,7 +656,7 @@
           <cell><m>\vdots</m></cell>
           <cell><m>\vdots</m></cell>
         </row>
-        <row bottom="minor">
+        <row>
           <cell></cell>
           <cell></cell>
           <cell></cell>
@@ -665,6 +675,8 @@
           <cell><m>f\!f5</m></cell>
         </row>
       </tabular>
+    </table>
+
       <p>
         There are 16 rows
         (each with a word from <xref ref="ex_counting_two_letter_words">Example</xref>)
