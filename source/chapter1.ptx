@@ -501,7 +501,10 @@
     <solution>
       <p>
         We can easily list these,
-        but using the arrangement in <xref ref="table_two_letter_words">Table</xref> will illustrate a more powerful technique.
+        but using the arrangement in <xref ref="table_two_letter_words">Table</xref> illustrates a more powerful technique.  The table makes it clear that there are 16 two-letter words using the letters <m>b</m>,
+        <m>c</m>, <m>d</m>, and <m>f</m>.
+        Another way to see this is to note that there are 4 choices for the first (left-hand) letter and for each of these there are 4 choices for the right-hand letter,
+        so there are <m>4 \cdot 4 = 16</m> words total.
       </p>
     <table xml:id="table_two_letter_words">
       <title>All possible two-letter words using the letters <m>b</m>,
@@ -573,12 +576,6 @@
         </row>
       </tabular>
     </table>
-      <p>
-        The rectangular table makes it clear that there are 16 two-letter words using the letters <m>b</m>,
-        <m>c</m>, <m>d</m>, and <m>f</m>.
-        Another way to see this is to note that there are 4 choices for the first (left-hand) letter and for each of these there are 4 choices for the right-hand letter,
-        so there are <m>4 \cdot 4 = 16</m> words total.
-      </p>
     </solution>
   </example>
   <example>
