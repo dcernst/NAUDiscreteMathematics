@@ -118,13 +118,18 @@
       </p>
     </statement>
   </problem>
-  <problem>
-    <statement>
-      <p>
-        Determine what the sum <m>\displaystyle \sum_{k=0}^n 2^n \binom{n}{k}</m> is equal to.
-      </p>
-    </statement>
-  </problem>
+  
+<problem>
+<statement>
+<p>Determine what each of the following sums is equal to.
+<ol marker="alpha">
+<li><p><m>\sum_{k=0}^n 2^n \binom{n}{k}</m></p></li>
+<li><p><m>\sum_{k=0}^n 2^k \binom{n}{k}</m></p></li>
+</ol>
+</p>
+</statement>
+</problem>
+
   <problem>
     <statement>
       <p>
