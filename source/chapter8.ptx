@@ -121,11 +121,10 @@ mathematical induction is a deductive form of reasoning used to establish the va
 Here is the general structure for a proof by induction.
 </p>
 
-<algorithm xml:id="skeleton_induction">
+<heuristic xml:id="skeleton_induction">
 <title>Proof of <q>For all <m>n\in\mathbb{N}</m>, <m>P(n)</m></q> by Induction</title>
 <statement>
 <p>Here is the general structure for a proof by induction.</p>
-</statement>
 
 <proof>
 <p>We proceed by induction.
@@ -137,7 +136,8 @@ Here is the general structure for a proof by induction.
 </p>
 <p>Thus, by induction, <m>P(n)</m> is true for all <m>n\in\mathbb{N}</m>.</p>
 </proof>
-</algorithm>
+</statement>
+</heuristic>
 
 <problem>
 <statement>
@@ -250,11 +250,10 @@ Then <m>P(n)</m> is true for all integers <m>n \geq a</m>.
 </statement>
 </theorem>
 
-<algorithm xml:id="skeleton_induction_greater_than_a">
+<heuristic xml:id="skeleton_induction_greater_than_a">
 <title>Proof of <q>For all <m>n \in \mathbb{Z}</m>, if <m>n \geq a</m>, then <m>P(n)</m></q> by Induction</title>
 <statement>
 <p>Here is the general structure for a proof by induction when the base case does not necessarily involve <m>a=1</m>.</p>
-</statement>
 
 <proof>
 <p>We proceed by induction.
@@ -265,7 +264,8 @@ Then <m>P(n)</m> is true for all integers <m>n \geq a</m>.
 </p>
 <p>Thus, by induction, <m>P(n)</m> is true for all integers <m>n \ge a</m>.</p>
 </proof>
-</algorithm>
+</statement>
+</heuristic>
 
 <p>
 We already encountered the next result back <xref ref="prob_number_of_subsets">Problem</xref>,
@@ -367,11 +367,10 @@ Here is the general structure for a proof by complete induction,
 where the base case includes <m>n=1</m> and possibly more.
 </p>
 
-<algorithm xml:id="skeleton_complete_induction">
+<heuristic xml:id="skeleton_complete_induction">
 <title>Proof of <q>For all <m>n\in\mathbb{N}</m>, <m>P(n)</m></q> by Complete Induction</title>
 <statement>
 <p>Here is the general structure for a proof by complete induction.</p>
-</statement>
 
 <proof>
 <p>We proceed by complete induction.
@@ -382,7 +381,8 @@ where the base case includes <m>n=1</m> and possibly more.
 </p>
 <p>Thus, by complete induction, <m>P(n)</m> is true for all <m>n \in \mathbb{N}</m>. </p>
 </proof>
-</algorithm>
+</statement>
+</heuristic>
 
 <p>
 When tackling the remaining problems in this chapter,
