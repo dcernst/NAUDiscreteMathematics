@@ -10,15 +10,15 @@ this is the model we should use.
 If <m>A</m> is a set and <m>B\subseteq A</m> with <m>|B|=k</m>,
 we refer to <m>B</m> as a <term><m>k</m>-subset</term> of <m>A</m>.
 The collection of all <m>k</m>-subsets of <m>A</m> is defined via
-<me>
+<md>
 {\binom{A}{k}:=\{B\subseteq A\mid |B|=k\}.}
-</me>
+</md>
 </p>
 <p>
 The <term>binomial coefficient</term> is defined via
-<me>
+<md>
 {\binom{n}{k}:=\text{ number of \(k\)-subsets of an \(n\)-element set } .}
-</me>
+</md>
 </p>
 <p>
 In particular, if <m>|A|=n</m>,
@@ -33,9 +33,9 @@ We will see later why <m>\binom{n}{k}</m> is referred to as a binomial coefficie
 <statement>
 <p>
 If <m>A=\{a,b,c,d\}</m>, then
-<me>
+<md>
 \binom{A}{2}=\{\{a,b\},\{a,c\},\{a,d\},\{b,c\},\{b,d\},\{c,d\}\}
-</me>,
+</md>,
 which implies that <m>\binom{4}{2}=6</m>.
 </p>
 </statement>
@@ -160,9 +160,9 @@ How many ways can you hire 3 of the 6 applicants for 3 distinct jobs?
 <p>
 What are the row sums in Pascal's Triangle?
 That is, what is the following sum equal to for any <m>n\geq 0</m>?
-<me>
+<md>
 \sum_{k=0}^n\binom{n}{k}:=\binom{n}{0}+\binom{n}{1}+\cdots +\binom{n}{n}
-</me>.
+</md>.
 </p>
 </statement>
 </problem>
@@ -171,9 +171,9 @@ That is, what is the following sum equal to for any <m>n\geq 0</m>?
 <p>
 Using the meanings of <m>k</m>-subset and <m>k</m>-permutation,
 explain why
-<me>
+<md>
 P(n,k)=\binom{n}{k} \cdot k!
-</me>.
+</md>.
 </p>
 </statement>
 </problem>
@@ -185,9 +185,9 @@ we immediately get the following handy formula for computing binomial coefficien
 <statement>
 <p>
 For <m>0\leq k\leq n</m>, we have
-<me>
+<md>
 {\binom{n}{k}=\frac{n!}{k!(n-k)!} =\frac{P(n,k)}{k!}.}
-</me>
+</md>
 </p>
 </statement>
 </theorem>
@@ -259,9 +259,9 @@ Assume <m>1\leq k\leq n</m>.
 Using the definition of <m>\binom{n}{k}</m> in terms of <m>k</m>-subsets
 (as opposed to the formula in <xref ref="thm_binomial_formula">Theorem</xref>),
 explain why
-<me>
+<md>
 {\binom{n}{k}=\binom{n-1}{k}+\binom{n-1}{k-1}.}
-</me>
+</md>
 This identity is often called <term>Pascal's Identity</term>
 (or <term>Pascal's Recurrence</term>).
 </p>
@@ -281,9 +281,9 @@ involving my walk to get coffee.
 <p>
 Assume <m>1\leq k\leq n</m>.
 It turns out that
-<me>
+<md>
 {\binom{n}{k}=\binom{n}{n-k}.}
-</me>
+</md>
 <ol marker="alpha">
 <li>
 <p>
@@ -308,9 +308,9 @@ The upshot is that each row of Pascal's Triangle is a palindrome.
 <statement>
 <p>
 Explain why
-<me>
+<md>
 {1+2+\cdots +n=\binom{n+1}{2}}
-</me>
+</md>
 by counting the number of handshakes that could occur among a group of <m>n+1</m> people in two different ways.
 </p>
 </statement>
@@ -326,9 +326,9 @@ By the way, the number defined by
 <p>
 Without appealing to the previous problem,
 find a visual proof of the following:
-<me>
+<md>
 {1+2+\cdots +n=\frac{n(n+1)}{2}}
-</me>.
+</md>.
 </p>
 <p>
 <em>Hint:</em> Consider a rectangular array of balls that has <m>n</m> rows and <m>n+1</m> columns.
@@ -376,9 +376,9 @@ In general, <m>n</m> stars tally the number of objects and <m>k-1</m> bars separ
 <statement>
 <p>
 The number of possible collections of <m>n</m> objects of <m>k</m> different types is
-<me>
+<md>
 {\binom{n+k-1}{k-1}=\binom{n+k-1}{n}.}
-</me>
+</md>
 </p>
 </statement>
 </theorem>

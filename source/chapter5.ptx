@@ -59,9 +59,9 @@ known as the <term>Binomial Theorem</term>.
 <statement>
 <p>
 For <m>n\geq 0</m>, we have
-<me>
+<md>
 {(x+y)^n=\sum_{k=0}^n\binom{n}{k}x^ky^{n-k}.}
-</me>
+</md>
 </p>
 </statement>
 </theorem>
@@ -109,9 +109,9 @@ What is the coefficient of <m>x^6y^6</m> in <m>(x^3+2y^2)^5</m>?
 <p>
 In <xref ref="prob_sum_of_row_in_Pascal">Problem</xref>,
 we discovered the following combinatorial identity:
-<me>
+<md>
 2^n=\sum_{k=0}^n\binom{n}{k}:=\binom{n}{0}+\binom{n}{1}+\cdots +\binom{n}{n}
-</me>.
+</md>.
 </p>
 <p>
 Prove this fact using the Binomial Theorem.

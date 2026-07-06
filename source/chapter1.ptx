@@ -39,9 +39,9 @@ We use <m>\:=</m> to mean that the symbol or expression on the left is defined t
 The language associated to sets is specific.
 We will often define sets using the following notation,
 called <term>set-builder notation</term>:
-<me>
+<md>
 {S=\{x \in A\mid P(x)\}}
-</me>,
+</md>,
 where <m>P(x)</m> is some predicate statement involving <m>x</m>.
 The first part
 <q><m>x \in A</m></q>
@@ -62,9 +62,9 @@ The set <m>\{x\in \mathbb{N}\mid x \mbox{ is even and } x\geq 8\}</m> describes 
 <p>
 We can define the <term>rational numbers</term>
 using set-builder notation via
-<me>
+<md>
 {\mathbb{Q}\:= \{a/b \mid a, b \in \mathbb{Z} \text{ and }  b \neq 0\}}
-</me>.
+</md>.
 </p>
 </statement>
 </example>
@@ -80,9 +80,9 @@ Write the set of perfect squares
 <statement>
 <p>
 Translate the following set defined with set-builder notation in English and list a few of its elements:
-<me>
+<md>
 P=\{x\in\mathbb{N} \mid x=2^n\mbox{ for some } n\in\mathbb{N}\}
-</me>.
+</md>.
 </p>
 </statement>
 </problem>
@@ -297,16 +297,16 @@ The following principle is a natural notion.
 <statement>
 <p>
 If <m>A</m> and <m>B</m> are disjoint sets, then
-<me>
+<md>
 {|A \cup B| = |A| + |B|.}
-</me>
+</md>
 </p>
 <p>
 More generally,
 if <m>A_1,\ldots, A_n</m> are pairwise disjoint sets, then
-<me>
+<md>
 {|A_1\cup \cdots \cup A_n|=|A_1|+\cdots +|A_n|.}
-</me>
+</md>
 </p>
 </statement>
 </theorem>
@@ -437,13 +437,13 @@ to the case when the sets are not disjoint.
 <statement>
 <p>
 If <m>A</m> and <m>B</m> are sets, then
-<me>
+<md>
 {|A \cup B| = |A|+|B|-|A\cap B|,}
-</me>
+</md>
 or equivalently
-<me>
+<md>
 {|A\cup B|+|A\cap B|=|A|+|B|.}
-</me>
+</md>
 </p>
 </statement>
 </theorem>
@@ -692,23 +692,23 @@ or
 is the set of all <term>ordered pairs</term>
 where the first component is from <m>A</m> and the second component is from <m>B</m>.
 In set-builder notation, we have
-<me>
+<md>
 {A\times B\:= \{(a,b)\mid a\in A, b\in B\}}
-</me>.
+</md>.
 </p>
 <p>
 Similarly, the Cartesian product of sets
 <m>A_1, \ldots, A_n</m> sets is the collection of
 <term><m>n</m>-tuples</term> given by
-<me>
+<md>
 {A_1\times \cdots \times A_n\:= \{(a_1,\ldots,a_n)\mid  a_j\in A_j \mbox{ for all } 1\leq j\leq n\}}\
-</me>,
+</md>,
 where <m>A_i</m> is referred to as the <m>i</m>th <term>factor</term>
 of the Cartesian product.
 As a special case, the set
-<me>
+<md>
 \underbrace{A\times \cdots \times A}_{n\text{ factors } }
-</me>
+</md>
 is often abbreviated as <m>{A^n}</m>.
 </p>
 <p>
@@ -720,9 +720,9 @@ Cartesian products are named after French philosopher and mathematician
 <statement>
 <p>
 If <m>A=\{a,b,c\}</m> and <m>B=\{\alpha,\beta\}</m>, then
-<me>
+<md>
 A\times B=\{(a,\alpha), (a,\beta),(b,\alpha),(b,\beta), (c,\alpha),(c,\beta)\}
-</me>.
+</md>.
 </p>
 </statement>
 </example>
@@ -733,13 +733,13 @@ The standard two-dimensional plane
 <m>\mathbb{R}^2</m> and standard three space
 <m>\mathbb{R}^{3}</m> are familiar examples of Cartesian products.
 In particular, we have
-<me>
+<md>
 \mathbb{R}^2=\mathbb{R}\times \mathbb{R}=\{(x,y)\mid x,y\in \mathbb{R}\}
-</me>
+</md>
 and
-<me>
+<md>
 \mathbb{R}^3=\mathbb{R}\times \mathbb{R}\times \mathbb{R}=\{(x,y,z)\mid x,y,z\in \mathbb{R}\}
-</me>.
+</md>.
 </p>
 </statement>
 </example>
@@ -821,17 +821,17 @@ Each of the following are referred to as the
 <li>
 <p>
 If <m>A</m> and <m>B</m> are finite sets, then
-<me>
+<md>
 {|A\times B|=|A|\cdot |B|.}
-</me>
+</md>
 </p>
 </li>
 <li>
 <p>
 If <m>A_1,\ldots,A_k</m> are finite sets, then
-<me>
+<md>
 {|A_1\times\cdots \times A_k|=|A_1|\cdots |A_k|.}
-</me>
+</md>
 </p>
 </li>
 <li>
@@ -840,9 +840,9 @@ If <m>\mathcal{O}</m> is the set of outcomes for a <m>k</m>-step process,
 where for <m>1\leq i\leq k</m>,
 there are <m>n_i</m> choices for step <m>i</m>,
 no matter what earlier choices were made, then
-<me>
+<md>
 {|\mathcal{O}|=n_1n_2\cdots n_k.}
-</me>
+</md>
 </p>
 </li>
 </ol>

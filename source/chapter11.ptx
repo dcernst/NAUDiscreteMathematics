@@ -26,6 +26,8 @@ Find the indegree and outdegree of each vertex in the following graph.
 </p>
 
 <image width="60%">
+<shortdescription>Digraph with ten vertices and fifteen directed edges.</shortdescription>
+<description><p>Digraph with vertices <m>b_1,\ldots,b_{10}</m> and directed edges <m>(b_1,b_2)</m>, <m>(b_3,b_2)</m>, <m>(b_5,b_4)</m>, <m>(b_4,b_3)</m>, <m>(b_5,b_1)</m>, <m>(b_{10},b_1)</m>, <m>(b_{10},b_7)</m>, <m>(b_7,b_9)</m>, <m>(b_9,b_6)</m>, <m>(b_6,b_8)</m>, <m>(b_{10},b_8)</m>, <m>(b_2,b_6)</m>, <m>(b_3,b_7)</m>, <m>(b_4,b_8)</m>, and <m>(b_5,b_9)</m>.</p></description>
 <latex-image>
 <![CDATA[\begin{tikzpicture}
 \node (1) at (18:2) [ vert] {\scriptsize \(b_1\)};
@@ -68,9 +70,9 @@ we have the following result that is analogous to the Handshake Lemma
 <statement>
 <p>
 If <m>D = (V,E)</m> is a digraph, then
-<me>
+<md>
 |E|=\sum_{v \in V} \deg^-(v) = \sum_{v \in V} \deg^+(v)
-</me>.
+</md>.
 </p>
 </statement>
 </theorem>
@@ -100,9 +102,9 @@ The entry in the <m>i</m>th row and <m>j</m>th column is indicated by <m>A_{i,j}
 <statement>
 <p>
 The example below is a <m>2 \times 3</m> matrix:
-<me>
+<md>
 A = \left[\begin{array}{rrr} 2 \amp  3 \amp  5  \\ 10 \amp  6 \amp  7 \end{array} \right]
-</me>
+</md>
 </p>
 <p>
 In this example, <m>A_{1,2} = 3</m>.
@@ -123,6 +125,8 @@ the number of edges from <m>v_i</m> to <m>v_j</m>).
 <statement>
 <p>Find the adjacency matrix for the following graph.</p>
 <image width="60%">
+<shortdescription>Graph with five vertices and seven edges.</shortdescription>
+<description><p>Graph with vertices <m>v_1,v_2,v_3,v_4,v_5</m> and edges <m>\multiset{v_2,v_3}</m>, <m>\multiset{v_3,v_4}</m>, <m>\multiset{v_4,v_5}</m>, <m>\multiset{v_5,v_1}</m>, <m>\multiset{v_2,v_4}</m>, <m>\multiset{v_3,v_1}</m>, and <m>\multiset{v_3,v_5}</m>.</p></description>
 <latex-image>
 <![CDATA[\begin{tikzpicture}\node (1) at (18:2) [vert] {\scriptsize \(v_1\)};
 \node (2) at (90:2) [vert] {\scriptsize \(v_2\)};
@@ -150,9 +154,9 @@ What properties will the adjacency matrix for a simple graph have?
 <statement>
 <p>
 Sketch a graph that has the following adjacency matrix.
-<me>
+<md>
 A = \left[\begin{array}{rrrrr} 1\amp 0\amp 1\amp 0\amp 1  \\ 0\amp 1\amp 1\amp 0\amp 1 \\ 1\amp  1\amp  0 \amp  0\amp  1\\ 0\amp 0\amp 0\amp 0\amp 2 \\ 1\amp  1\amp  1 \amp  2 \amp 0 \end{array}  \right]
-</me>
+</md>
 </p>
 </statement>
 </problem>
@@ -160,9 +164,9 @@ A = \left[\begin{array}{rrrrr} 1\amp 0\amp 1\amp 0\amp 1  \\ 0\amp 1\amp 1\amp 0
 <statement>
 <p>
 Sketch a digraph that has the following adjacency matrix.
-<me>
+<md>
 A = \left[\begin{array}{rrrrr} 0\amp 1\amp 0\amp 1\amp 1  \\ 0\amp 0\amp 1\amp 1\amp 1 \\ 1\amp  0\amp  0 \amp  0\amp  1\\ 0\amp 0\amp 0\amp 0\amp 0 \\ 1\amp  1\amp  1 \amp  2 \amp 0 \end{array}  \right]
-</me>
+</md>
 </p>
 </statement>
 </problem>
@@ -197,7 +201,6 @@ we require that <m>(u,v)</m> is a directed edge in <m>G_1</m> if and only if
 <p>
 For <m>G_1=(V_1,E_1)</m> and <m>G_2=(V_2,E_2)</m>,
 to show that <m>G_1\cong G_2</m>:
-</p>
 <ol marker="alpha">
 <li>
 <p>
@@ -207,7 +210,6 @@ State a vertex matching explicitly, and
 <li>
 <p>
 Either
-</p>
 <ol marker="alpha">
 <li>
 <p>
@@ -221,8 +223,10 @@ Demonstrate that the adjacency matrices of <m>G_1</m> and <m>G_2</m> are the sam
 </p>
 </li>
 </ol>
+</p>
 </li>
 </ol>
+</p>
 <p>
 <em>Warning!</em> The second method above usually involves much less writing,
 but be aware that the adjacency matrices may differ in one ordering but agree with a different ordering.
@@ -271,10 +275,11 @@ Subgraph that is isomorphic to <m>C_n</m> or <m>P_n</m>.
 <p>
 Determine whether the following graphs are isomorphic.
 </p>
-<tabular>
-<row>
-<cell><nbsp/><nbsp/>
+<sidebyside widths="45% 45%">
+<stack>
 <image>
+<shortdescription>Graph G with six vertices and seven edges.</shortdescription>
+<description><p>Graph <m>G</m> with vertices <m>a_1,\ldots,a_6</m> and edges <m>\multiset{a_1,a_2}</m>, <m>\multiset{a_2,a_3}</m>, <m>\multiset{a_3,a_6}</m>, <m>\multiset{a_6,a_5}</m>, <m>\multiset{a_5,a_4}</m>, <m>\multiset{a_4,a_1}</m>, and <m>\multiset{a_2,a_5}</m>.</p></description>
 <latex-image>
 <![CDATA[\begin{tikzpicture}\node (1) at (0,0) [ vert] {\scriptsize \(a_1\)};
 \node (2) at (0,1) [ vert] {\scriptsize \(a_2\)};
@@ -286,9 +291,12 @@ Determine whether the following graphs are isomorphic.
 \path [e] (2) to (5);\end{tikzpicture}]]>
 </latex-image>
 </image>
-<nbsp/><nbsp/></cell>
-<cell><nbsp/><nbsp/>
+<p><m>G</m></p>
+</stack>
+<stack>
 <image>
+<shortdescription>Graph H with six vertices and seven edges.</shortdescription>
+<description><p>Graph <m>H</m> with vertices <m>b_1,\ldots,b_6</m> and edges <m>\multiset{b_1,b_2}</m>, <m>\multiset{b_2,b_3}</m>, <m>\multiset{b_3,b_6}</m>, <m>\multiset{b_6,b_5}</m>, <m>\multiset{b_5,b_4}</m>, <m>\multiset{b_4,b_1}</m>, and <m>\multiset{b_1,b_6}</m>.</p></description>
 <latex-image>
 <![CDATA[\begin{tikzpicture}\node (1) at (0,0) [ vert] {\scriptsize \(b_1\)};
 \node (2) at (0,1) [ vert] {\scriptsize \(b_2\)};
@@ -300,13 +308,9 @@ Determine whether the following graphs are isomorphic.
 \path [e] (1) to (6);\end{tikzpicture}]]>
 </latex-image>
 </image>
-<nbsp/><nbsp/></cell>
-</row>
-<row>
-<cell><nbsp/><nbsp/> <m>G</m> <nbsp/><nbsp/></cell>
-<cell><nbsp/><nbsp/> <m>H</m> <nbsp/><nbsp/></cell>
-</row>
-</tabular>
+<p><m>H</m></p>
+</stack>
+</sidebyside>
 </statement>
 </problem>
 
@@ -315,6 +319,8 @@ Determine whether the following graphs are isomorphic.
 <p>Let <m>G</m> be the graph with vertex set <m>V=\{a,b,c,d,e\}</m> and edge set
 <m>E=\{\{a,b\},\{a,c\},\{a,e\},\{b,d\},\{b,e\},\{c,d\}\}</m> and let <m>H</m> be the following graph.</p>
 <image width="60%">
+<shortdescription>Graph H with five vertices and six edges.</shortdescription>
+<description><p>Graph <m>H</m> with vertices <m>a,b,c,d,e</m> and edges <m>\multiset{e,d}</m>, <m>\multiset{d,c}</m>, <m>\multiset{c,b}</m>, <m>\multiset{a,d}</m>, <m>\multiset{e,b}</m>, and <m>\multiset{a,c}</m>.</p></description>
 <latex-image>
 <![CDATA[\begin{tikzpicture}
 \node (1) at (18:2) [vert] {\scriptsize \(b\)};
@@ -338,10 +344,11 @@ Determine whether the following graphs are isomorphic.
 <p>
 Determine which pairs of the following graphs are isomorphic.
 </p>
-<tabular>
-<row>
-<cell><nbsp/><nbsp/>
+<sidebyside widths="30% 30% 30%">
+<stack>
 <image>
+<shortdescription>Graph G with six vertices and seven edges.</shortdescription>
+<description><p>Graph <m>G</m> with vertices <m>a,b,c,d,e,f</m> and edges <m>\multiset{a,d}</m>, <m>\multiset{d,f}</m>, <m>\multiset{f,c}</m>, <m>\multiset{c,a}</m>, <m>\multiset{a,b}</m>, <m>\multiset{b,e}</m>, and <m>\multiset{c,d}</m>.</p></description>
 <latex-image>
 <![CDATA[\begin{tikzpicture}\node (f) at (0,0) [vert] {\scriptsize \(f\)};
 \node (c) at (-1,1) [vert] {\scriptsize \(c\)};
@@ -353,9 +360,12 @@ Determine which pairs of the following graphs are isomorphic.
 \path [e] (c) to (d);\end{tikzpicture}]]>
 </latex-image>
 </image>
-<nbsp/><nbsp/></cell>
-<cell><nbsp/><nbsp/>
+<p><m>G</m></p>
+</stack>
+<stack>
 <image>
+<shortdescription>Graph H with six vertices and seven edges.</shortdescription>
+<description><p>Graph <m>H</m> with vertices <m>g,h,i,j,k,l</m> and edges <m>\multiset{h,i}</m>, <m>\multiset{i,j}</m>, <m>\multiset{j,k}</m>, <m>\multiset{k,l}</m>, <m>\multiset{g,l}</m>, <m>\multiset{h,l}</m>, and <m>\multiset{i,k}</m>.</p></description>
 <latex-image>
 <![CDATA[\begin{tikzpicture}\node (g) at (0,0) [ vert] {\scriptsize \(g\)};
 \node (h) at (1,0) [ vert] {\scriptsize \(h\)};
@@ -369,9 +379,12 @@ Determine which pairs of the following graphs are isomorphic.
 \path [e,out=-45,in=-135] (i) to (k);\end{tikzpicture}]]>
 </latex-image>
 </image>
-<nbsp/><nbsp/></cell>
-<cell><nbsp/><nbsp/>
+<p><m>H</m></p>
+</stack>
+<stack>
 <image>
+<shortdescription>Graph K with six vertices and seven edges.</shortdescription>
+<description><p>Graph <m>K</m> with vertices <m>p,q,r,s,t,u</m> and edges <m>\multiset{s,r}</m>, <m>\multiset{r,q}</m>, <m>\multiset{q,p}</m>, <m>\multiset{p,t}</m>, <m>\multiset{t,u}</m>, <m>\multiset{u,r}</m>, and <m>\multiset{t,q}</m>.</p></description>
 <latex-image>
 <![CDATA[\begin{tikzpicture}\node (p) at (0,1) [ vert] {\scriptsize \(p\)};
 \node (q) at (1,1) [ vert] {\scriptsize \(q\)};
@@ -383,14 +396,9 @@ Determine which pairs of the following graphs are isomorphic.
 \path [e] (t) to (q);\end{tikzpicture}]]>
 </latex-image>
 </image>
-<nbsp/><nbsp/></cell>
-</row>
-<row>
-<cell><nbsp/><nbsp/> <m>G</m> <nbsp/><nbsp/></cell>
-<cell><nbsp/><nbsp/> <m>H</m> <nbsp/><nbsp/></cell>
-<cell><nbsp/><nbsp/> <m>K</m> <nbsp/><nbsp/></cell>
-</row>
-</tabular>
+<p><m>K</m></p>
+</stack>
+</sidebyside>
 </statement>
 </problem>
 <problem>
@@ -398,10 +406,11 @@ Determine which pairs of the following graphs are isomorphic.
 <p>
 Determine whether the following digraphs are isomorphic.
 </p>
-<tabular>
-<row>
-<cell><nbsp/><nbsp/>
+<sidebyside widths="45% 45%">
+<stack>
 <image>
+<shortdescription>Digraph G with eight vertices and twelve directed edges.</shortdescription>
+<description><p>Digraph <m>G</m> with vertices <m>a_1,\ldots,a_8</m> and directed edges <m>(a_1,a_2)</m>, <m>(a_2,a_3)</m>, <m>(a_3,a_4)</m>, <m>(a_4,a_1)</m>, <m>(a_6,a_5)</m>, <m>(a_5,a_8)</m>, <m>(a_8,a_7)</m>, <m>(a_7,a_6)</m>, <m>(a_2,a_6)</m>, <m>(a_1,a_5)</m>, <m>(a_4,a_8)</m>, and <m>(a_3,a_7)</m>.</p></description>
 <latex-image>
 <![CDATA[\begin{tikzpicture}\node (1) at (0:1) [ vert] {\scriptsize \(a_1\)};
 \node (2) at (90:1) [ vert] {\scriptsize \(a_2\)};
@@ -425,9 +434,12 @@ Determine whether the following digraphs are isomorphic.
 \path [d] (3) to (7);\end{tikzpicture}]]>
 </latex-image>
 </image>
-<nbsp/><nbsp/></cell>
-<cell><nbsp/><nbsp/>
+<p><m>G</m></p>
+</stack>
+<stack>
 <image>
+<shortdescription>Digraph H with eight vertices and twelve directed edges.</shortdescription>
+<description><p>Digraph <m>H</m> with vertices <m>b_1,\ldots,b_8</m> and directed edges <m>(b_2,b_1)</m>, <m>(b_3,b_2)</m>, <m>(b_4,b_3)</m>, <m>(b_1,b_4)</m>, <m>(b_6,b_2)</m>, <m>(b_5,b_1)</m>, <m>(b_8,b_4)</m>, <m>(b_7,b_3)</m>, <m>(b_6,b_5)</m>, <m>(b_5,b_8)</m>, <m>(b_8,b_7)</m>, and <m>(b_7,b_6)</m>.</p></description>
 <latex-image>
 <![CDATA[\begin{tikzpicture}\node (1) at (0:1) [ vert] {\scriptsize \(b_1\)};
 \node (2) at (90:1) [ vert] {\scriptsize \(b_2\)};
@@ -451,13 +463,9 @@ Determine whether the following digraphs are isomorphic.
 \path [d] (7) to (6);\end{tikzpicture}]]>
 </latex-image>
 </image>
-<nbsp/><nbsp/></cell>
-</row>
-<row>
-<cell><nbsp/><nbsp/> <m>G</m> <nbsp/><nbsp/></cell>
-<cell><nbsp/><nbsp/> <m>H</m> <nbsp/><nbsp/></cell>
-</row>
-</tabular>
+<p><m>H</m></p>
+</stack>
+</sidebyside>
 </statement>
 </problem>
 <p>
@@ -558,10 +566,11 @@ Note that an Euler circuit is also an Euler trail as well.
 Determine whether each of the following graphs has an Euler trail.
 How about an Euler circuit?
 </p>
-<tabular>
-<row>
-<cell><nbsp/><nbsp/>
+<sidebyside widths="30% 30% 30%">
+<stack>
 <image>
+<shortdescription>Graph G with four vertices, three simple edges, and two pairs of parallel edges.</shortdescription>
+<description><p>Graph <m>G</m> with vertices <m>a,b,c,d</m> and edges <m>\multiset{b,d}</m>, <m>\multiset{c,d}</m>, <m>\multiset{d,a}</m>, two copies of <m>\multiset{c,b}</m>, and two copies of <m>\multiset{b,a}</m>.</p></description>
 <latex-image>
 <![CDATA[\begin{tikzpicture}\node (a) at (0,0) [vert] {\scriptsize \(a\)};
 \node (b) at (0,1) [vert] {\scriptsize \(b\)};
@@ -575,9 +584,12 @@ How about an Euler circuit?
 \path [e,out=-135,in=135] (b) to (a);\end{tikzpicture}]]>
 </latex-image>
 </image>
-<nbsp/><nbsp/></cell>
-<cell><nbsp/><nbsp/>
+<p><m>G</m></p>
+</stack>
+<stack>
 <image>
+<shortdescription>Graph H with six vertices and seven edges.</shortdescription>
+<description><p>Graph <m>H</m> with vertices <m>b_1,\ldots,b_6</m> and edges <m>\multiset{b_1,b_2}</m>, <m>\multiset{b_2,b_3}</m>, <m>\multiset{b_3,b_6}</m>, <m>\multiset{b_6,b_5}</m>, <m>\multiset{b_5,b_4}</m>, <m>\multiset{b_4,b_1}</m>, and <m>\multiset{b_1,b_6}</m>.</p></description>
 <latex-image>
 <![CDATA[\begin{tikzpicture}\node (1) at (0,0) [ vert] {\scriptsize \(b_1\)};
 \node (2) at (0,1) [ vert] {\scriptsize \(b_2\)};
@@ -589,9 +601,12 @@ How about an Euler circuit?
 \path [e] (1) to (6);\end{tikzpicture}]]>
 </latex-image>
 </image>
-<nbsp/><nbsp/></cell>
-<cell><nbsp/><nbsp/>
+<p><m>H</m></p>
+</stack>
+<stack>
 <image>
+<shortdescription>Graph K with five vertices and ten edges.</shortdescription>
+<description><p>Graph <m>K</m> with vertices <m>v_1,v_2,v_3,v_4,v_5</m> and edges <m>\multiset{v_2,v_3}</m>, <m>\multiset{v_3,v_4}</m>, <m>\multiset{v_4,v_5}</m>, <m>\multiset{v_5,v_1}</m>, <m>\multiset{v_2,v_4}</m>, <m>\multiset{v_3,v_1}</m>, <m>\multiset{v_3,v_5}</m>, <m>\multiset{v_2,v_5}</m>, <m>\multiset{v_1,v_4}</m>, and <m>\multiset{v_1,v_2}</m>.</p></description>
 <latex-image>
 <![CDATA[\begin{tikzpicture}\node (1) at (18:2) [vert] {\scriptsize \(v_1\)};
 \node (2) at (90:2) [vert] {\scriptsize \(v_2\)};
@@ -607,14 +622,9 @@ How about an Euler circuit?
 \path [e] (1) to (2);\end{tikzpicture}]]>
 </latex-image>
 </image>
-<nbsp/><nbsp/></cell>
-</row>
-<row>
-<cell><nbsp/><nbsp/> <m>G</m> <nbsp/><nbsp/></cell>
-<cell><nbsp/><nbsp/> <m>H</m> <nbsp/><nbsp/></cell>
-<cell><nbsp/><nbsp/> <m>K</m> <nbsp/><nbsp/></cell>
-</row>
-</tabular>
+<p><m>K</m></p>
+</stack>
+</sidebyside>
 </statement>
 </problem>
 <theorem>
@@ -644,6 +654,8 @@ mimicking what must be done to complete a circuit such as a postal route or othe
 <statement>
 <p>Eulerize the following graph.</p>
 <image width="60%">
+<shortdescription>A four by three grid graph, with four columns and three rows.</shortdescription>
+<description><p>A <m>4\times 3</m> grid graph, with four columns and three rows.</p></description>
 <latex-image>
 <![CDATA[\begin{tikzpicture}
 \node (1) at (0,0) [ vert] {\scriptsize \(a_1\)};
@@ -680,10 +692,11 @@ A <term>Hamilton path</term> is a path in a graph that includes every vertex.
 <p>
 Determine whether each of the following graphs has a Hamilton circuit or a Hamilton path that is not a circuit.
 </p>
-<tabular>
-<row>
-<cell><nbsp/><nbsp/>
+<sidebyside widths="45% 45%">
+<stack>
 <image>
+<shortdescription>Graph G, a four by three grid graph.</shortdescription>
+<description><p>Graph <m>G</m>, a <m>4\times 3</m> grid graph with four columns and three rows.</p></description>
 <latex-image>
 <![CDATA[\begin{tikzpicture}\node (1) at (0,0) [vert] {\scriptsize \(a_1\)};
 \node (2) at (0,1) [vert] {\scriptsize \(a_2\)};
@@ -704,9 +717,12 @@ Determine whether each of the following graphs has a Hamilton circuit or a Hamil
 \path [e] (5) to (8) to (11);\end{tikzpicture}]]>
 </latex-image>
 </image>
-<nbsp/><nbsp/></cell>
-<cell><nbsp/><nbsp/>
+<p><m>G</m></p>
+</stack>
+<stack>
 <image>
+<shortdescription>Graph H, a five by five grid graph.</shortdescription>
+<description><p>Graph <m>H</m>, a <m>5\times 5</m> grid graph with five columns and five rows.</p></description>
 <latex-image>
 <![CDATA[\begin{tikzpicture}\node (1) at (0,0) [vert] {\scriptsize \(a_1\)};
 \node (2) at (1,0) [vert] {\scriptsize \(a_2\)};
@@ -742,13 +758,9 @@ Determine whether each of the following graphs has a Hamilton circuit or a Hamil
 \path [e] (4) to (9) to (14) to (19) to (24);\end{tikzpicture}]]>
 </latex-image>
 </image>
-<nbsp/><nbsp/></cell>
-</row>
-<row>
-<cell><nbsp/><nbsp/> <m>G</m> <nbsp/><nbsp/></cell>
-<cell><nbsp/><nbsp/> <m>H</m> <nbsp/><nbsp/></cell>
-</row>
-</tabular>
+<p><m>H</m></p>
+</stack>
+</sidebyside>
 </statement>
 </problem>
 <p>
@@ -848,10 +860,11 @@ A <term>spanning tree</term> of a simple graph <m>G</m> is a subgraph <m>T</m> o
 <p>
 Find a spanning tree for each of the following.
 </p>
-<tabular>
-<row>
-<cell><nbsp/><nbsp/>
+<sidebyside widths="45% 45%">
+<stack>
 <image>
+<shortdescription>Graph G, a four by three grid graph.</shortdescription>
+<description><p>Graph <m>G</m>, a <m>4\times 3</m> grid graph with four columns and three rows.</p></description>
 <latex-image>
 <![CDATA[\begin{tikzpicture}\node (1) at (0,0) [vert] {\scriptsize \(a_1\)};
 \node (2) at (0,1) [vert] {\scriptsize \(a_2\)};
@@ -872,9 +885,12 @@ Find a spanning tree for each of the following.
 \path [e] (5) to (8) to (11);\end{tikzpicture}]]>
 </latex-image>
 </image>
-<nbsp/><nbsp/></cell>
-<cell><nbsp/><nbsp/>
+<p><m>G</m></p>
+</stack>
+<stack>
 <image>
+<shortdescription>Graph H, a five by five grid graph.</shortdescription>
+<description><p>Graph <m>H</m>, a <m>5\times 5</m> grid graph with five columns and five rows.</p></description>
 <latex-image>
 <![CDATA[\begin{tikzpicture}\node (1) at (0,0) [vert] {\scriptsize \(a_1\)};
 \node (2) at (1,0) [vert] {\scriptsize \(a_2\)};
@@ -910,13 +926,9 @@ Find a spanning tree for each of the following.
 \path [e] (4) to (9) to (14) to (19) to (24);\end{tikzpicture}]]>
 </latex-image>
 </image>
-<nbsp/><nbsp/></cell>
-</row>
-<row>
-<cell><nbsp/><nbsp/> <m>G</m> <nbsp/><nbsp/></cell>
-<cell><nbsp/><nbsp/> <m>H</m> <nbsp/><nbsp/></cell>
-</row>
-</tabular>
+<p><m>H</m></p>
+</stack>
+</sidebyside>
 </statement>
 </problem>
 <problem>
@@ -972,7 +984,6 @@ as often as needed.
 <term>Breadth-First Search.</term> Initialize:
 <m>T = \{v_1\}</m>, <m>L = v_1</m>.
 As long as <m>T</m> does not contain all vertices, do the following.
-</p>
 <ul>
 <li>
 <p>
@@ -988,7 +999,6 @@ Remove that vertex from <m>L</m>.
 <li>
 <p>
 For all vertices adjacent to <m>v</m> not yet in <m>T</m>,
-</p>
 <ul>
 <li>
 <p>
@@ -1002,8 +1012,10 @@ Repeat until all vertices adjacent to <m>v</m> not yet in <m>T</m> have been exa
 </p>
 </li>
 </ul>
+</p>
 </li>
 </ul>
+</p>
 <p>
 Repeat the above steps as needed.
 </p>

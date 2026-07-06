@@ -38,6 +38,8 @@ not necessarily straight.
 <p>Here is an example of a graph with vertex set <m>V=\{v_1, v_2, v_3,v_4,v_5\}</m>.</p>
 
 <image width="60%">
+<shortdescription>Graph with five vertices, seven regular edges, and one loop.</shortdescription>
+<description><p>Graph with vertices <m>v_1,v_2,v_3,v_4,v_5</m> and edges <m>\multiset{v_2,v_3}</m>, <m>\multiset{v_3,v_4}</m>, <m>\multiset{v_4,v_5}</m>, <m>\multiset{v_5,v_1}</m>, <m>\multiset{v_2,v_4}</m>, <m>\multiset{v_3,v_1}</m>, <m>\multiset{v_3,v_5}</m>, and a loop at <m>v_5</m>.</p></description>
 <latex-image>
 <![CDATA[\begin{tikzpicture}\node (1) at (18:2) [vert] {\scriptsize \(v_1\)};
 \node (2) at (90:2) [vert] {\scriptsize \(v_2\)};
@@ -302,9 +304,9 @@ Do you see why?
 In any graph,
 the sum of the degrees of vertices in the graph is always twice the number of edges.
 In other words, in a graph <m>G = (V,E)</m>,
-<me>
+<md>
 2|E| = \sum_{v \in V} \deg(v)
-</me>.
+</md>.
 </p>
 </statement>
 </theorem>
@@ -585,6 +587,8 @@ Is there a total matching from
 If so, find one. If not, explain why.
 </p>
 <image width="60%">
+<shortdescription>Bipartite graph with four top vertices and five bottom vertices.</shortdescription>
+<description><p>Bipartite graph with top vertices <m>a_1,a_2,a_3,a_4</m>, bottom vertices <m>b_1,b_2,b_3,b_4,b_5</m>, and edges <m>\multiset{a_1,b_1}</m>, <m>\multiset{a_1,b_3}</m>, <m>\multiset{a_2,b_1}</m>, <m>\multiset{a_2,b_2}</m>, <m>\multiset{a_2,b_4}</m>, <m>\multiset{a_3,b_4}</m>, <m>\multiset{a_3,b_5}</m>, <m>\multiset{a_4,b_2}</m>, and <m>\multiset{a_4,b_5}</m>.</p></description>
 <latex-image>
 <![CDATA[\begin{tikzpicture}
 \node (b1) at (1,0) [vert] {\scriptsize \(b_1\)};
@@ -616,6 +620,8 @@ If so, find one. If not, explain why.
 <p>
 Consider the bipartite graph <m>G</m> given below. Is there a total matching from <m>\{a_1,a_2,a_3,a_4\}</m> to <m>\{b_1,b_2,b_3,b_4\}</m>? If so, find one. If not, explain why.</p>
 <image width="60%">
+<shortdescription>Bipartite graph with four top vertices and four bottom vertices.</shortdescription>
+<description><p>Bipartite graph with top vertices <m>a_1,a_2,a_3,a_4</m>, bottom vertices <m>b_1,b_2,b_3,b_4</m>, and edges <m>\multiset{a_1,b_3}</m>, <m>\multiset{a_2,b_1}</m>, <m>\multiset{a_2,b_2}</m>, <m>\multiset{a_2,b_3}</m>, <m>\multiset{a_2,b_4}</m>, <m>\multiset{a_3,b_3}</m>, <m>\multiset{a_4,b_1}</m>, <m>\multiset{a_4,b_2}</m>, and <m>\multiset{a_4,b_4}</m>.</p></description>
 <latex-image>
 <![CDATA[\begin{tikzpicture}
 \node (b1) at (1,0) [vert] {\scriptsize \(b_1\)};

@@ -121,10 +121,11 @@ mathematical induction is a deductive form of reasoning used to establish the va
 Here is the general structure for a proof by induction.
 </p>
 
-<heuristic xml:id="skeleton_induction">
+<algorithm xml:id="skeleton_induction">
 <title>Proof of <q>For all <m>n\in\mathbb{N}</m>, <m>P(n)</m></q> by Induction</title>
 <statement>
 <p>Here is the general structure for a proof by induction.</p>
+</statement>
 
 <proof>
 <p>We proceed by induction.
@@ -136,8 +137,7 @@ Here is the general structure for a proof by induction.
 </p>
 <p>Thus, by induction, <m>P(n)</m> is true for all <m>n\in\mathbb{N}</m>.</p>
 </proof>
-</statement>
-</heuristic>
+</algorithm>
 
 <problem>
 <statement>
@@ -145,9 +145,9 @@ Here is the general structure for a proof by induction.
 Conjecture a
 <q>nice</q>
 formula for the following summation and then prove your claim using induction:
-<me>
+<md>
 \sum_{i=1}^n (2i-1):=1+3+5+\cdots +(2n-1)
-</me>.
+</md>.
 </p>
 <p>
 Independent of induction,
@@ -160,9 +160,9 @@ can you think of a nice visual proof of this result?
 <p>
 Prove the first claim that we introduced at the beginning of the chapter using induction.
 That is, prove that for all <m>n\in\mathbb{N}</m>,
-<me>
+<md>
 \sum_{i=1}^{n}i=\frac{n(n+1)}{2}
-</me>.
+</md>.
 </p>
 </statement>
 </problem>
@@ -192,6 +192,8 @@ depicts one possible covering for the case involving <m>n=2</m> and a fixed cut-
 <figure xml:id="fig_L-shapes">
 <caption>One possible covering for the case involving <m>n=2</m> for <xref ref="prob_L-shapes">Problem</xref>.</caption>
 <image width="60%">
+<shortdescription>A four by four grid with five L-shapes covering all but one square.</shortdescription>
+<description><p>A <m>4\times 4</m> grid with five L-shapes covering all but one square.</p></description>
 <latex-image>
 <![CDATA[\begin{tikzpicture}
 \draw [fill=lightorange] (0,0) rectangle (2,1);
@@ -248,10 +250,11 @@ Then <m>P(n)</m> is true for all integers <m>n \geq a</m>.
 </statement>
 </theorem>
 
-<heuristic xml:id="skeleton_induction_greater_than_a">
+<algorithm xml:id="skeleton_induction_greater_than_a">
 <title>Proof of <q>For all <m>n \in \mathbb{Z}</m>, if <m>n \geq a</m>, then <m>P(n)</m></q> by Induction</title>
 <statement>
 <p>Here is the general structure for a proof by induction when the base case does not necessarily involve <m>a=1</m>.</p>
+</statement>
 
 <proof>
 <p>We proceed by induction.
@@ -262,8 +265,7 @@ Then <m>P(n)</m> is true for all integers <m>n \geq a</m>.
 </p>
 <p>Thus, by induction, <m>P(n)</m> is true for all integers <m>n \ge a</m>.</p>
 </proof>
-</statement>
-</heuristic>
+</algorithm>
 
 <p>
 We already encountered the next result back <xref ref="prob_number_of_subsets">Problem</xref>,
@@ -365,10 +367,11 @@ Here is the general structure for a proof by complete induction,
 where the base case includes <m>n=1</m> and possibly more.
 </p>
 
-<heuristic xml:id="skeleton_complete_induction">
+<algorithm xml:id="skeleton_complete_induction">
 <title>Proof of <q>For all <m>n\in\mathbb{N}</m>, <m>P(n)</m></q> by Complete Induction</title>
 <statement>
 <p>Here is the general structure for a proof by complete induction.</p>
+</statement>
 
 <proof>
 <p>We proceed by complete induction.
@@ -379,8 +382,7 @@ where the base case includes <m>n=1</m> and possibly more.
 </p>
 <p>Thus, by complete induction, <m>P(n)</m> is true for all <m>n \in \mathbb{N}</m>. </p>
 </proof>
-</statement>
-</heuristic>
+</algorithm>
 
 <p>
 When tackling the remaining problems in this chapter,
@@ -428,17 +430,17 @@ However, this omission could be remedied using induction.
 That is, using induction,
 we could prove that for all
 <m>n\in\mathbb{N}</m> and finite sets <m>A_1,\ldots,A_n</m>, we have
-<me>
+<md>
 |A_1\cup\cdots \cup A_n|=\sum_i |A_i| - \sum_{i\lt j} |A_i\cap A_j| + \sum_{i\lt j\lt k}|A_i\cap A_j\cap A_k| -\cdots +(-1)^{n+1}|A_1\cap A_2 \cdots \cap A_n|
-</me>.
+</md>.
 </p>
 <p>
 If <m>n=1</m>, the expression above simply says
 <m>|A_1|=|A_1|</m>, which is certainly true.
 For <m>n=2</m>, we have
-<me>
+<md>
 |A_1\cup A_2|=|A_1|+|A_2|-|A_1\cap A_2|
-</me>,
+</md>,
 which is the General Sum Principle that we encountered in <xref ref="thm_General_Sum_Principle">Theorem</xref>.
 The inductive step is a bit
 <q>messy</q>, so we will omit it, but if you are interested,

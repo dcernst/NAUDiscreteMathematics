@@ -5,9 +5,9 @@ We now introduce a concept known as the
 <term>Principal of Inclusion and Exclusion</term>.
 Recall <xref ref="thm_General_Sum_Principle">Theorem</xref>,
 which states that if <m>A</m> and <m>B</m> are sets, then
-<me>
+<md>
 {|A\cup B| = |A| + |B| - |A\cap B|.}
-</me>
+</md>
 </p>
 <problem>
 <statement>
@@ -73,9 +73,9 @@ We can generalize to any finite number of sets.
 <statement>
 <p>
 The number of elements in the union of finite sets <m>A_1, A_2, \dots, A_n</m> is
-<me>
+<md>
 {{|A_1\cup\cdots \cup A_n|=\sum_i |A_i| - \sum_{i\lt j} |A_i\cap A_j| + \sum_{i\lt j\lt k}|A_i\cap A_j\cap A_k| -\cdots +(-1)^{n+1}|A_1\cap A_2 \cdots \cap A_n|.}}
-</me>
+</md>
 </p>
 </statement>
 </theorem>
@@ -115,25 +115,25 @@ let <m>F_i</m> be the set of permutations that fix <m>i</m>.
 <li>
 <p>
 Explain why
-<me>
+<md>
 d_n=|F^c_1\cap \cdots \cap F^c_n|
-</me>.
+</md>.
 </p>
 </li>
 <li>
 <p>
 Explain why
-<me>
+<md>
 d_n=n!-\sum_i |F_i|+\sum_{i\lt j} |F_i\cap F_j|-\sum_{i\lt j\lt k}|F_i\cap F_j\cap F_k|+\cdots +(-1)^n|F_1\cap\cdots \cap F_n|
-</me>.
+</md>.
 </p>
 </li>
 <li>
 <p>
 Explain why the number of derangements of <m>[n]</m> is
-<me>
+<md>
 {d_n=n!\left(1-\frac{1}{1!}+\frac{1}{2!}-\frac{1}{3!}+\cdots +(-1)^n\frac{1}{n!} \right)=n!\sum_{k=0}^n\frac{(-1)^k}{k!}.}
-</me>
+</md>
 </p>
 </li>
 </ol>
@@ -158,20 +158,20 @@ in how many ways can they be returned so that no one gets the correct hat?
 </problem>
 <p>
 Now, just for funsies<ellipsis/> from second semester calculus, we know
-<me>
+<md>
 e^x=\sum_{k=0}^{\infty}\frac{x^k}{k!}
-</me>,
+</md>,
 which implies that
-<me>
+<md>
 e^{-1}=\sum_{k=0}^{\infty}\frac{(-1)^k}{k!}
-</me>.
+</md>.
 </p>
 <p>
 Using Part<nbsp/>(c) of <xref ref="prob_number_of_derangements">Problem</xref>,
 we see that
-<me>
+<md>
 \lim_{n\to \infty}\frac{d_n}{n!}=\lim_{n\to\infty}\sum_{k=0}^n\frac{(-1)^k}{k!}=\frac{1}{e}\approx 0.367879
-</me>.
+</md>.
 </p>
 <p>
 In other words, when <m>n</m> is large,

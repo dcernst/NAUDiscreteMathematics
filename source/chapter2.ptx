@@ -10,9 +10,9 @@ of <m>f</m> and is denoted by <m>{\dom(f)}</m>.
 The set <m>Y</m> is called the <term>codomain</term>
 of <m>f</m> and is denoted by
 <m>{\codom(f)}</m> while the subset of the codomain defined via
-<me>
+<md>
 {\range(f)\:= \{y\in Y\mid \mbox{there exists } x\mbox{ such that }  (x,y)\in f\}}
-</me>
+</md>
 is called the <term>range</term> of <m>f</m> or the
 <term>image of <m>X</m></term> under <m>f</m>.
 </p>
@@ -69,6 +69,8 @@ Note that it is perfectly okay to have both <m>b</m> and <m>c</m> mapped to 4.
 <figure xml:id="fig_function_diagram">
 <caption>Function diagram for a function from <m>X=\{a,b,c,d,\}</m> to <m>Y=\{1,2,3,4\}</m>.</caption>
 <image width="50%">
+<shortdescription>Function diagram from a four-element set to a four-element set.</shortdescription>
+<description><p>Function diagram for a function from <m>X=\{a,b,c,d,\}</m> to <m>Y=\{1,2,3,4\}</m>, where <m>a</m> maps to <m>2</m>, <m>b</m> and <m>c</m> map to <m>4</m>, and <m>d</m> maps to <m>1</m>.</p></description>
 <latex-image>
 <![CDATA[\begin{tikzpicture}[->,>=stealth,shorten >=1pt,auto,node distance=2cm,semithick,scale=1.2]
 \node[vert] (A) at (0,4) {\scriptsize \(a\)};
@@ -163,9 +165,9 @@ rather than a property of the function itself.
 <statement>
 <p>
 The function <m>f:\mathbb{R}\to \mathbb{R}</m> defined via
-<me>
+<md>
 f(x)=\begin{cases}x^2-1, \amp  \mbox{if }  x\geq 0,\\ 17, \amp  \mbox{if }  -2\leq x\lt  0,\\ -x, \amp  \mbox{if }  x\lt -2 \end{cases}
-</me>
+</md>
 is an example of a piecewise-defined function.
 </p>
 </statement>
@@ -294,17 +296,17 @@ Define <m>f:\mathbb{N}\to \mathbb{N}\times \mathbb{N}</m> via <m>f(n)=(n,n)</m>
 <li>
 <p>
 Define <m>g:\mathbb{Z}\to \mathbb{Z}</m> via
-<me>
+<md>
 g(n)=\begin{cases}\frac{n}{2}, \amp  \text{ if } n\text{ is even } \\ \frac{n+1}{2}, \amp  \text{ if } n\text{ is odd } \end{cases}
-</me>
+</md>
 </p>
 </li>
 <li>
 <p>
 Define <m>\ell:\mathbb{Z}\to \mathbb{N}</m> via
-<me>
+<md>
 \ell(n)=\begin{cases}2n+1, \amp  \text{ if } n\geq 0\\ -2n, \amp  \text{ if } n\lt 0 \end{cases}
-</me>
+</md>
 </p>
 </li>
 </ol>
@@ -318,7 +320,9 @@ Suppose <m>X\subseteq \mathbb{R}</m> and <m>f:X\to \mathbb{R}</m> is a function.
 Fill in the blank with the appropriate word.
 </p>
 <blockquote>
+<p>
 The function <m>f:X\to \mathbb{R}</m> is <em><nbsp/> <nbsp/> <nbsp/> <nbsp/>   <nbsp/> <nbsp/> <nbsp/> <nbsp/> </em> if and only if every horizontal line hits the graph of <m>f</m> <em>at most once</em>.
+</p>
 </blockquote>
 <p>
 This statement is often called the
@@ -444,9 +448,9 @@ Define <m>g:\mathbb{N}\to \mathbb{Q}</m> via <m>g(n)=\frac{n}{n-1}</m>.
 <p>
 Let <m>A_1=\{1,2,3\}</m> and <m>A_2=\{3,4,5\}</m>.
 Define <m>h:A_1\cup A_2\to \{1,2\}</m> via
-<me>
+<md>
 h(x)=\begin{cases}1, \amp  \mbox{if } x\in A_1\\ 2, \amp  \mbox{if } x\in A_2. \end{cases}
-</me>
+</md>
 </p>
 </li>
 <li>

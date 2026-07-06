@@ -10,9 +10,9 @@ If <m>n\in\mathbb{N}</m>, it is common to write <m>a_n:= a(n)</m>.
 We refer to <m>a_n</m> as the <m>n</m>th
 <term>term</term> of the sequence.
 We will abuse notation and associate a sequence with its list of outputs, namely:
-<me>
+<md>
 {(a_n)_{n=1}^{\infty}\:= (a_1,a_2,\ldots)}
-</me>,
+</md>,
 which we may abbreviate as <m>{(a_n)}</m>.
 Sometimes we may start our sequences at <m>n=0</m> as opposed to <m>n=1</m>.
 That is, we may allow the domain of a sequence to be <m>\mathbb{N}\cup \{0\}</m>.
@@ -22,9 +22,9 @@ That is, we may allow the domain of a sequence to be <m>\mathbb{N}\cup \{0\}</m>
 <p>
 Define <m>a:\mathbb{N}\to \mathbb{R}</m> via <m>a_n=\frac{1}{2^n}</m>.
 Then we have
-<me>
+<md>
 a=\left(\frac{1}{2}, \frac{1}{4},\ldots\right)=\left(\frac{1}{2^n}\right)_{n=1}^{\infty}
-</me>.
+</md>.
 </p>
 </statement>
 </example>
@@ -60,25 +60,25 @@ For example:
 <li>
 <p>
 Number of <m>k</m>-permutations of <m>[n]</m>: For <m>1\leq k\leq n</m>,
-<me>
+<md>
 P(n,k)=P(n-1,k)+kP(n-1,k-1)
-</me>.
+</md>.
 </p>
 </li>
 <li>
 <p>
 Number of <m>k</m>-subsets of <m>[n]</m>: For <m>1\leq k\leq n</m>,
-<me>
+<md>
 \binom{n}{k}=\binom{n-1}{k}+\binom{n-1}{k-1}
-</me>.
+</md>.
 </p>
 </li>
 <li>
 <p>
 Number of set partitions of <m>[n]</m> with <m>k</m> blocks: For <m>1\leq k\leq n</m>,
-<me>
+<md>
 \stirling{n}{k}=\stirling{n-1}{k-1}+k\stirling{n-1}{k}
-</me>.
+</md>.
 </p>
 </li>
 </ol>
@@ -215,18 +215,18 @@ is a recurrence relation in which the first term <m>a_0</m>
 (or <m>a_1</m>)
 and a <term>common difference</term>
 <m>d</m> are given and the corresponding recurrence relation is
-<me>
+<md>
 {a_n=a_{n-1}+d.}
-</me>
+</md>
 </p>
 <p>
 A <term>geometric progression</term>
 is a recurrence relation in which the first term <m>a_0</m>
 (or <m>a_1</m>)
 and <term>common ratio</term> <m>r</m> are given and the corresponding recurrence relation is
-<me>
+<md>
 {a_n=r\cdot a_{n-1}.}
-</me>
+</md>
 </p>
 <problem>
 <statement>
@@ -322,16 +322,16 @@ Find a closed form for <m>a_n</m>.
 <p>
 A <term>linear constant-coefficient</term>
 recurrence relation of <term>order</term> <m>r</m> has the form
-<me>
+<md>
 {a_n=c_1a_{n-1}+c_2a_{n-2}+\cdots + c_ra_{n-r}+f(n),}
-</me>
+</md>
 where <m>c_1,c_2,\ldots,c_r</m> are real numbers with <m>c_r\neq 0</m>.
 Such a recurrence relation is said to be
 <term>homogeneous</term> if <m>f(n)=0</m>,
 so that it can be written as
-<me>
+<md>
 {a_n=c_1a_{n-1}+c_2a_{n-2}+\cdots + c_ra_{n-r},}
-</me>
+</md>
 and is <term>non-homogeneous</term> otherwise.
 </p>
 <p>
@@ -406,9 +406,9 @@ This theorem can be proved by direct substitution and some algebraic manipulatio
 <statement>
 <p>
 If <m>s_1(n),\ldots,s_k(n)</m> are solutions to the linear constant-coefficient homogeneous recurrence relation
-<me>
+<md>
 a_n=c_1a_{n-1}+c_2a_{n-2}+\cdots + c_ra_{n-r}
-</me>
+</md>
 and <m>\alpha_1,\ldots,\alpha_k</m> are real numbers,
 then the linear combination <m>\alpha_1s_1(n)+\cdots+\alpha_ks_k(n)</m> is also a solution.
 </p>
@@ -417,13 +417,13 @@ then the linear combination <m>\alpha_1s_1(n)+\cdots+\alpha_ks_k(n)</m> is also 
 <p>
 We now focus on solving second-order linear constant-coefficient homogeneous recurrence relations.
 Given the second-order linear constant-coefficient homogeneous recurrence relation
-<me>
+<md>
 a_n=c_1a_{n-1}+c_2a_{n-2}
-</me>,
+</md>,
 its corresponding <term>characteristic equation</term> is defined via
-<me>
+<md>
 {x^2-c_1x-c_2=0.}
-</me>
+</md>
 </p>
 <p>
 The solutions of the characteristic equation are called
@@ -449,9 +449,9 @@ If <m>r_1</m> and <m>r_2</m> are two <em>distinct</em>
 characteristic roots (i.e.,
 <m>r_1\neq r_2</m>) of the characteristic equation for <m>a_n=c_1a_{n-1}+c_2a_{n-2}</m>,
 then the solution to the recurrence relation is
-<me>
+<md>
 {a_n=ar_1^n+br_2^n,}
-</me>
+</md>
 where <m>a</m> and <m>b</m> are constants determined by the initial conditions.
 </p>
 </statement>
@@ -482,17 +482,17 @@ this characteristic root technique can be applied to much more complicated recur
 We now turn our attention to one of my favorite sequences,
 which is defined by a recurrence relation of a different flavor.
 The <term>Catalan numbers</term> are defined via <m>c_0=1</m> and
-<me>
+<md>
 {c_n=\sum_{i=0}^{n-1}c_ic_{n-1-i}}
-</me>
+</md>
 for <m>n\geq 1</m>.
 The equation above is called the
 <term>Catalan recurrence</term>.
 Using the initial condition and the Catalan recurrence,
 we can generate the first several terms of the Catalan sequence:
-<me>
+<md>
 1, 1, 2, 5, 14, 42, 132, 429, 1430, 4862, 16796, 58786
-</me>
+</md>
 </p>
 <p>
 There are hundreds of interesting combinatorial objects counted by the Catalan numbers!
@@ -521,9 +521,9 @@ and <m>d_4</m> via brute force.
 <li>
 <p>
 Show that <m>d_n</m> satisfies the following recurrence for <m>n\geq 1</m>:
-<me>
+<md>
 d_n=\sum_{i=0}^{n-1}d_id_{n-1-i}
-</me>.
+</md>.
 <em>Hint:</em> Consider the collection of Dyck paths that hit the line <m>y=x</m> at
 <m>(i+1,i+1)</m> for the first time after leaving <m>(0,0)</m>.
 Think about how many ways you can draw the Dyck path to get to
@@ -555,9 +555,9 @@ there should be the same number of left parentheses
 and right parentheses
 <q>)</q>, and when reading from left to right there should never be more right parentheses than left.
 Here are the five balanced parenthesizations containing three pairs:
-<me>
+<md>
 ()()(), ()(()), (()()), (())(), ((()))
-</me>.
+</md>.
 </p>
 <p>
 Prove that the number of balanced sequences of <m>n</m> pairs of parentheses is <m>c_n</m>.
@@ -614,9 +614,9 @@ Prove that <m>\displaystyle d_n=\binom{2n}{n}-\binom{2n}{n-1}</m>.
 <p>
 It is easy to verify that <m>\displaystyle \binom{2n}{n}-\binom{2n}{n-1} = \frac{1}{n+1}\binom{2n}{n}</m>,
 and since <m>d_n=c_n</m>, we obtain
-<me>
+<md>
 c_n=\displaystyle\frac{1}{n+1}\binom{2n}{n}
-</me>.
+</md>.
 </p>
 </statement>
 </problem>
