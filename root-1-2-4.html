@@ -20,67 +20,21 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
-<script>
-var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
-window.MathJax = {
-  "tex": {
-    "inlineMath": [
-      [
-        "\\(",
-        "\\)"
-      ]
-    ],
-    "tags": "none",
-    "tagSide": "right",
-    "tagIndent": ".8em",
-    "packages": {
-      "[+]": [
-        "base",
-        "extpfeil",
-        "ams",
-        "amscd",
-        "color",
-        "newcommand",
-        "knowl"
-      ]
-    }
-  },
-  "options": {
-    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math"
-  },
-  "chtml": {
-    "scale": 0.98,
-    "mtextInheritFont": true
-  },
-  "loader": {
-    "load": [
-      "input/asciimath",
-      "[tex]/extpfeil",
-      "[tex]/amscd",
-      "[tex]/color",
-      "[tex]/newcommand",
-      "[pretext]/mathjaxknowl3.js"
-    ],
-    "paths": {
-      "pretext": "_static/pretext/js/lib"
-    }
-  },
-  "startup": {
-    pageReady() {
-      return MathJax.startup.defaultPageReady().then(function () {
-      console.log("in ready function");
-      rsMathReady();
-      }
-    )}
-  }
-};
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
+<meta name="twitter:title" content="Introduction to Discrete Mathematics">
+<meta property="og:title" content="Introduction to Discrete Mathematics">
 <meta property="book:title" content="Introduction to Discrete Mathematics">
-<meta property="book:author" content="Dana C. Ernst and John W. Hagood">
-<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<meta name="twitter:card" content="summary">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.43"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -102,16 +56,16 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.1.1';
+eBookConfig.runestone_version = '8.1.8';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.dcab57465a404e85.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.79fbb790b185d712.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
+<script src="_static/prefix-runtime.917dfc3cfe0bb764.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.d40a1acc1751a0b6.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.87414d180ebeebd6.css">
-<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+<script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body class="pretext book ignore-math">
@@ -119,18 +73,35 @@ eBookConfig.enable_chatcodes =  false;
 <h1 class="heading"><a href="root-1-2.html"><span class="title">Introduction to Discrete Mathematics</span></a></h1>
 <p class="byline">Dana C. Ernst and John W. Hagood</p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
-<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
-<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
-<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
-<div class="search-results-controls">
-<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+<button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="ptx-search-box">
+<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Search Book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog"><div class="ptx-search-dialog-controls">
+<input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Close" id="ptx-search-close" class="ptx-search-close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
 </div>
-<h2 class="search-results-heading">Search Results: </h2>
-<div id="searchempty" class="searchempty"><span>No results.</span></div>
-<ol id="searchresults" class="searchresults"></ol>
+<div id="ptx-search-status" class="ptx-search-status" aria-live="polite" aria-atomic="true"></div>
+<h2 class="heading ptx-search-results-heading">Search Results: </h2>
+<div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
+<ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
 </div>
+<span class="nav-other-controls"><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Readability settings</h2>
+<button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
 </div>
-<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="chap_acknowledgements.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="root-1-2.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="root-1-2-5.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-line-height"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe240;</span><span>Line height</span><output id="ptx-readability-line-height-value" for="ptx-readability-line-height">1.35</output></label><input type="range" id="ptx-readability-line-height" min="1.10" max="3" step="0.05" value="1.35">
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-font-size"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe245;</span><span>Content font size</span><output id="ptx-readability-font-size-value" for="ptx-readability-font-size">100%</output></label><input type="range" id="ptx-readability-font-size" min="0.8" max="1.5" step="0.05" value="1">
+</div>
+<fieldset class="ptx-readability-options-group ptx-readability-options-group-theme">
+<legend>Theme</legend>
+<label for="ptx-readability-theme-system"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-system" value="system"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe1ab;</span><span>System</span></label><label for="ptx-readability-theme-light"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-light" value="light"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe518;</span><span>Light</span></label><label for="ptx-readability-theme-dark"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-dark" value="dark"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span>Dark</span></label>
+</fieldset>
+<fieldset class="ptx-readability-options-group">
+<legend>Assistive technologies</legend>
+<label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Expose permalinks</span></label>
+</fieldset>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="chap_acknowledgements.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="root-1-2.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="root-1-2-5.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\e}{\varepsilon}
 \renewcommand{\phi}{\varphi}
 \newcommand{\ds}{\displaystyle}
@@ -173,7 +144,7 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<div id="ptx-sidebar" role="complementary" class="ptx-sidebar"><nav id="ptx-toc" tabindex="-1" aria-label="Contents" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="root-1-2-2.html" class="internal"><span class="title">Front Matter</span></a></div></li>
 <li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="chap_acknowledgements.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
 <li class="toc-item toc-chapter active"><div class="toc-title-box"><a href="root-1-2-4.html" class="internal"><span class="codenumber">1</span> <span class="title">Sets and Counting Principles</span></a></div></li>
@@ -188,12 +159,14 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter"><div class="toc-title-box"><a href="root-1-2-13.html" class="internal"><span class="codenumber">10</span> <span class="title">Introduction to Graph Theory</span></a></div></li>
 <li class="toc-item toc-chapter"><div class="toc-title-box"><a href="root-1-2-14.html" class="internal"><span class="codenumber">11</span> <span class="title">Additional Graph Theory</span></a></div></li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="root-1-2-4"><h2 class="heading">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="chapter" id="root-1-2-4">
+<h2 class="heading">
 <span class="type">Chapter</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Sets and Counting Principles</span>
 </h2>
-<div class="para" id="root-1-2-4-2">A <dfn class="terminology">set</dfn> is a collection of objects called <dfn class="terminology">elements</dfn>. Typically, braces are used to denote sets as in <span class="process-math">\(\{b,c,d,f\}\text{,}\)</span> which is the same set as <span class="process-math">\(\{b,d,c,f\}\text{,}\)</span> and the same as <span class="process-math">\(\{c,f,c,f,d,b\}\text{.}\)</span> If <span class="process-math">\(A\)</span> is a set and <span class="process-math">\(x\)</span> is an element of <span class="process-math">\(A\text{,}\)</span> we write <span class="process-math">\({x\in A}\text{.}\)</span> Otherwise, we write <span class="process-math">\({x\notin A}\text{.}\)</span> For example, <span class="process-math">\(b\in \{b,d,c,f\}\)</span> while <span class="process-math">\(e\notin \{b,d,c,f\}\text{.}\)</span> The set containing no elements is called the <dfn class="terminology">empty set</dfn>, and is denoted by the symbol <span class="process-math">\({\emptyset}\text{,}\)</span> but can also be written as <span class="process-math">\({\{\}}\text{.}\)</span> Any set that contains at least one element is referred to as a <dfn class="terminology">nonempty set</dfn>. If we think of a set as a box potentially containing some stuff, then the empty set is a box with nothing in it.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="root-1-2-4-2">A <dfn class="terminology">set</dfn> is a collection of objects called <dfn class="terminology">elements</dfn>. Typically, braces are used to denote sets as in <span class="process-math">\(\{b,c,d,f\}\text{,}\)</span> which is the same set as <span class="process-math">\(\{b,d,c,f\}\text{,}\)</span> and the same as <span class="process-math">\(\{c,f,c,f,d,b\}\text{.}\)</span> If <span class="process-math">\(A\)</span> is a set and <span class="process-math">\(x\)</span> is an element of <span class="process-math">\(A\text{,}\)</span> we write <span class="process-math">\({x\in A}\text{.}\)</span> Otherwise, we write <span class="process-math">\({x\notin A}\text{.}\)</span> For example, <span class="process-math">\(b\in \{b,d,c,f\}\)</span> while <span class="process-math">\(e\notin \{b,d,c,f\}\text{.}\)</span> The set containing no elements is called the <dfn class="terminology">empty set</dfn>, and is denoted by the symbol <span class="process-math">\({\emptyset}\text{,}\)</span> but can also be written as <span class="process-math">\({\{\}}\text{.}\)</span> Any set that contains at least one element is referred to as a <dfn class="terminology">nonempty set</dfn>. If we think of a set as a box potentially containing some stuff, then the empty set is a box with nothing in it.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="root-1-2-4-3">The empty set and the set <span class="process-math">\(\{b,c,d,f\}\)</span> are examples of <dfn class="terminology">finite sets</dfn>. Any set that is not finite is an <dfn class="terminology">infinite set</dfn>. For example, the <dfn class="terminology">natural numbers</dfn> defined by <span class="process-math">\({\mathbb{N}\:= \{1,2,3,\ldots\}}\)</span> and <dfn class="terminology">integers</dfn> defined by <span class="process-math">\({\mathbb{Z}\:= \{0, \pm 1, \pm2, \pm 3, \ldots\}}\)</span> are both examples of infinite sets. Some books will include zero in the set of natural numbers, but we do not. Since the set of natural numbers consists of the positive integers, the natural numbers are sometimes denoted by <span class="process-math">\({\mathbb{Z}^+}\text{.}\)</span> The <dfn class="terminology">real numbers</dfn>, denoted by <span class="process-math">\({\mathbb{R}}\text{,}\)</span> is another example of an infinite set. If you look closely at our definitions for the natural numbers and integers you will notice that we wrote <span class="process-math">\({\:=}\)</span> instead of <span class="process-math">\(=\text{.}\)</span> We use <span class="process-math">\(\:=\)</span> to mean that the symbol or expression on the left is defined to be equal to the expression on the right.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="root-1-2-4-3">The empty set and the set <span class="process-math">\(\{b,c,d,f\}\)</span> are examples of <dfn class="terminology">finite sets</dfn>. Any set that is not finite is an <dfn class="terminology">infinite set</dfn>. For example, the <dfn class="terminology">natural numbers</dfn> defined by <span class="process-math">\({\mathbb{N}\:= \{1,2,3,\ldots\}}\)</span> and <dfn class="terminology">integers</dfn> defined by <span class="process-math">\({\mathbb{Z}\:= \{0, \pm 1, \pm2, \pm 3, \ldots\}}\)</span> are both examples of infinite sets. Some books will include zero in the set of natural numbers, but we do not. Since the set of natural numbers consists of the positive integers, the natural numbers are sometimes denoted by <span class="process-math">\({\mathbb{Z}^+}\text{.}\)</span> The <dfn class="terminology">real numbers</dfn>, denoted by <span class="process-math">\({\mathbb{R}}\text{,}\)</span> is another example of an infinite set. If you look closely at our definitions for the natural numbers and integers you will notice that we wrote <span class="process-math">\({\:=}\)</span> instead of <span class="process-math">\(=\text{.}\)</span> We use <span class="process-math">\(\:=\)</span> to mean that the symbol or expression on the left is defined to be equal to the expression on the right.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="root-1-2-4-4">
 <div class="para">The language associated to sets is specific. We will often define sets using the following notation, called <dfn class="terminology">set-builder notation</dfn>:</div>
@@ -203,16 +176,18 @@ eBookConfig.enable_chatcodes =  false;
 \end{equation*}
 </div>
 <div class="para">where <span class="process-math">\(P(x)\)</span> is some predicate statement involving <span class="process-math">\(x\text{.}\)</span> The first part “<span class="process-math">\(x \in A\)</span>” denotes what type of <span class="process-math">\(x\)</span> is being considered. The predicate to the right of the vertical bar determines the condition(s) that each <span class="process-math">\(x\)</span> must satisfy in order to be a member of the set. This notation is read as “The set of all <span class="process-math">\(x\)</span> in <span class="process-math">\(A\)</span> such that <span class="process-math">\(P(x)\text{.}\)</span>”</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="example example-like" id="root-1-2-4-5"><h2 class="heading">
+<article class="example example-like" id="root-1-2-4-5"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2>
-<div class="para" id="root-1-2-4-5-1-1">The set <span class="process-math">\(\{x\in \mathbb{N}\mid x \mbox{ is even and } x\geq 8\}\)</span> describes the collection of even natural numbers that are greater than or equal to 8.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h3>
+<div class="para" id="root-1-2-4-5-1-1">The set <span class="process-math">\(\{x\in \mathbb{N}\mid x \mbox{ is even and } x\geq 8\}\)</span> describes the collection of even natural numbers that are greater than or equal to 8.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 1.1"><a href="#root-1-2-4-5" title="Copy heading and permalink for Example 1.1" aria-label="Copy heading and permalink for Example 1.1">🔗</a></div></article><article class="example example-like" id="root-1-2-4-6"><h2 class="heading">
+<div class="autopermalink" aria-hidden="true" data-description="Example 1.1"><a tabindex="-1" href="#root-1-2-4-5" title="Copy heading and permalink for Example 1.1" aria-label="Copy heading and permalink for Example 1.1">🔗</a></div>
+</article>
+<article class="example example-like" id="root-1-2-4-6"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2>
+</h3>
 <div class="para logical" id="root-1-2-4-6-1-1">
 <div class="para">We can define the <dfn class="terminology">rational numbers</dfn> using set-builder notation via</div>
 <div class="displaymath process-math" id="root-1-2-4-6-1-1-2">
@@ -220,16 +195,20 @@ eBookConfig.enable_chatcodes =  false;
 {\mathbb{Q}\:= \{a/b \mid a, b \in \mathbb{Z} \text{ and }  b \neq 0\}}\text{.}
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 1.2"><a href="#root-1-2-4-6" title="Copy heading and permalink for Example 1.2" aria-label="Copy heading and permalink for Example 1.2">🔗</a></div></article><article class="problem example-like" id="root-1-2-4-7"><h2 class="heading">
+<div class="autopermalink" aria-hidden="true" data-description="Example 1.2"><a tabindex="-1" href="#root-1-2-4-6" title="Copy heading and permalink for Example 1.2" aria-label="Copy heading and permalink for Example 1.2">🔗</a></div>
+</article>
+<article class="problem example-like" id="root-1-2-4-7"><h3 class="heading">
 <span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2>
-<div class="para" id="root-1-2-4-7-1-1">Write the set of perfect squares <span class="process-math">\(\{1,4,9,16,\ldots\}\)</span> using set-builder notation.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h3>
+<div class="para" id="root-1-2-4-7-1-1">Write the set of perfect squares <span class="process-math">\(\{1,4,9,16,\ldots\}\)</span> using set-builder notation.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Problem 1.3"><a href="#root-1-2-4-7" title="Copy heading and permalink for Problem 1.3" aria-label="Copy heading and permalink for Problem 1.3">🔗</a></div></article><article class="problem example-like" id="root-1-2-4-8"><h2 class="heading">
+<div class="autopermalink" aria-hidden="true" data-description="Problem 1.3"><a tabindex="-1" href="#root-1-2-4-7" title="Copy heading and permalink for Problem 1.3" aria-label="Copy heading and permalink for Problem 1.3">🔗</a></div>
+</article>
+<article class="problem example-like" id="root-1-2-4-8"><h3 class="heading">
 <span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2>
+</h3>
 <div class="para logical" id="root-1-2-4-8-1-1">
 <div class="para">Translate the following set defined with set-builder notation in English and list a few of its elements:</div>
 <div class="displaymath process-math" id="root-1-2-4-8-1-1-1">
@@ -237,181 +216,196 @@ eBookConfig.enable_chatcodes =  false;
 P=\{x\in\mathbb{N} \mid x=2^n\mbox{ for some } n\in\mathbb{N}\}\text{.}
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Problem 1.4"><a href="#root-1-2-4-8" title="Copy heading and permalink for Problem 1.4" aria-label="Copy heading and permalink for Problem 1.4">🔗</a></div></article><div class="para" id="root-1-2-4-9">The <dfn class="terminology">cardinality</dfn> of a set <span class="process-math">\(A\text{,}\)</span> denoted by <span class="process-math">\({|A|}\text{,}\)</span> is the number of elements in <span class="process-math">\(A\text{.}\)</span> For example, if <span class="process-math">\(A = \{b,c,d,f\}\text{,}\)</span> then <span class="process-math">\(|A| = 4\text{.}\)</span> We will mostly concern ourselves with the cardinality of finite sets in this book. Cardinality gets wildly more complicated if we consider infinite sets.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Problem 1.4"><a tabindex="-1" href="#root-1-2-4-8" title="Copy heading and permalink for Problem 1.4" aria-label="Copy heading and permalink for Problem 1.4">🔗</a></div>
+</article>
+<div class="para" id="root-1-2-4-9">The <dfn class="terminology">cardinality</dfn> of a set <span class="process-math">\(A\text{,}\)</span> denoted by <span class="process-math">\({|A|}\text{,}\)</span> is the number of elements in <span class="process-math">\(A\text{.}\)</span> For example, if <span class="process-math">\(A = \{b,c,d,f\}\text{,}\)</span> then <span class="process-math">\(|A| = 4\text{.}\)</span> We will mostly concern ourselves with the cardinality of finite sets in this book. Cardinality gets wildly more complicated if we consider infinite sets.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="root-1-2-4-10">If <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are sets, then we say that <span class="process-math">\(A\)</span> is a <dfn class="terminology">subset</dfn> of <span class="process-math">\(B\text{,}\)</span> written <span class="process-math">\({A\subseteq B}\text{,}\)</span> provided that every element of <span class="process-math">\(A\)</span> is an element of <span class="process-math">\(B\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="root-1-2-4-10">If <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are sets, then we say that <span class="process-math">\(A\)</span> is a <dfn class="terminology">subset</dfn> of <span class="process-math">\(B\text{,}\)</span> written <span class="process-math">\({A\subseteq B}\text{,}\)</span> provided that every element of <span class="process-math">\(A\)</span> is an element of <span class="process-math">\(B\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="example example-like" id="root-1-2-4-11"><h2 class="heading">
+<article class="example example-like" id="root-1-2-4-11"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2>
-<div class="para" id="root-1-2-4-11-1-1">We have <span class="process-math">\(\{c,f,g\} \subseteq \{b,c,d,f,g\}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-11-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h3>
+<div class="para" id="root-1-2-4-11-1-1">We have <span class="process-math">\(\{c,f,g\} \subseteq \{b,c,d,f,g\}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-11-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 1.5"><a href="#root-1-2-4-11" title="Copy heading and permalink for Example 1.5" aria-label="Copy heading and permalink for Example 1.5">🔗</a></div></article><article class="problem example-like" id="root-1-2-4-12"><h2 class="heading">
+<div class="autopermalink" aria-hidden="true" data-description="Example 1.5"><a tabindex="-1" href="#root-1-2-4-11" title="Copy heading and permalink for Example 1.5" aria-label="Copy heading and permalink for Example 1.5">🔗</a></div>
+</article>
+<article class="problem example-like" id="root-1-2-4-12"><h3 class="heading">
 <span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2>
+</h3>
 <div class="para logical" id="root-1-2-4-12-1-1">
 <div class="para">Let <span class="process-math">\(A\)</span> be a set. Determine whether each of the following statements is true or false. If a statement is true, explain why. If a statement is false, provide a specific counterexample.</div>
 <ol class="lower-alpha ol-marker-1" id="root-1-2-4-12-1-1-2">
 <li id="root-1-2-4-12-1-1-2-1">
 <div class="para" id="root-1-2-4-12-1-1-2-1-1">
-<span class="process-math">\(A\subseteq A\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-12-1-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<span class="process-math">\(A\subseteq A\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-12-1-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item a"><a href="#root-1-2-4-12-1-1-2-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item a"><a tabindex="-1" href="#root-1-2-4-12-1-1-2-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
 </li>
 <li id="root-1-2-4-12-1-1-2-2">
 <div class="para" id="root-1-2-4-12-1-1-2-2-1">
-<span class="process-math">\(\emptyset \subseteq A\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-12-1-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<span class="process-math">\(\emptyset \subseteq A\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-12-1-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item b"><a href="#root-1-2-4-12-1-1-2-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item b"><a tabindex="-1" href="#root-1-2-4-12-1-1-2-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-12-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-12-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Problem 1.6"><a href="#root-1-2-4-12" title="Copy heading and permalink for Problem 1.6" aria-label="Copy heading and permalink for Problem 1.6">🔗</a></div></article><article class="problem example-like" id="root-1-2-4-13"><h2 class="heading">
+<div class="autopermalink" aria-hidden="true" data-description="Problem 1.6"><a tabindex="-1" href="#root-1-2-4-12" title="Copy heading and permalink for Problem 1.6" aria-label="Copy heading and permalink for Problem 1.6">🔗</a></div>
+</article>
+<article class="problem example-like" id="root-1-2-4-13"><h3 class="heading">
 <span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2>
-<div class="para" id="root-1-2-4-13-1-1">Consider the set <span class="process-math">\(A=\{a,b,c\}\text{.}\)</span> How many subsets does <span class="process-math">\(A\)</span> have?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-13-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h3>
+<div class="para" id="root-1-2-4-13-1-1">Consider the set <span class="process-math">\(A=\{a,b,c\}\text{.}\)</span> How many subsets does <span class="process-math">\(A\)</span> have?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-13-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Problem 1.7"><a href="#root-1-2-4-13" title="Copy heading and permalink for Problem 1.7" aria-label="Copy heading and permalink for Problem 1.7">🔗</a></div></article><article class="theorem theorem-like" id="root-1-2-4-14"><h2 class="heading">
+<div class="autopermalink" aria-hidden="true" data-description="Problem 1.7"><a tabindex="-1" href="#root-1-2-4-13" title="Copy heading and permalink for Problem 1.7" aria-label="Copy heading and permalink for Problem 1.7">🔗</a></div>
+</article>
+<article class="theorem theorem-like" id="root-1-2-4-14"><h3 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Transitivity of Subsets.</span>
-</h2>
-<div class="para" id="root-1-2-4-14-2-1">Suppose that <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(B\text{,}\)</span> and <span class="process-math">\(C\)</span> are sets. If <span class="process-math">\(A\subseteq B\)</span> and <span class="process-math">\(B\subseteq C\text{,}\)</span> then <span class="process-math">\(A\subseteq C\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-14-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h3>
+<div class="para" id="root-1-2-4-14-2-1">Suppose that <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(B\text{,}\)</span> and <span class="process-math">\(C\)</span> are sets. If <span class="process-math">\(A\subseteq B\)</span> and <span class="process-math">\(B\subseteq C\text{,}\)</span> then <span class="process-math">\(A\subseteq C\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-14-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 1.8: Transitivity of Subsets"><a href="#root-1-2-4-14" title="Copy heading and permalink for Theorem 1.8: Transitivity of Subsets" aria-label="Copy heading and permalink for Theorem 1.8: Transitivity of Subsets">🔗</a></div></article><div class="para" id="root-1-2-4-15">Note that two sets <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are <dfn class="terminology">equal</dfn>, denoted <span class="process-math">\({A=B}\text{,}\)</span> if the sets contain the same elements. It’s clear that <span class="process-math">\(A=B\)</span> if and only if <span class="process-math">\(A \subseteq B\)</span> and <span class="process-math">\(B \subseteq A\text{.}\)</span> If <span class="process-math">\(A\subseteq B\text{,}\)</span> then <span class="process-math">\(A\)</span> is called a <dfn class="terminology">proper subset</dfn> provided that <span class="process-math">\(A\neq B\text{.}\)</span> In this case, we may write <span class="process-math">\({A\subset B}\)</span> or <span class="process-math">\({A\subsetneq B}\text{.}\)</span> Some authors use <span class="process-math">\(\subset\)</span> to mean <span class="process-math">\(\subseteq\text{,}\)</span> so some confusion could arise if you are not reading carefully.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 1.8: Transitivity of Subsets"><a tabindex="-1" href="#root-1-2-4-14" title="Copy heading and permalink for Theorem 1.8: Transitivity of Subsets" aria-label="Copy heading and permalink for Theorem 1.8: Transitivity of Subsets">🔗</a></div>
+</article>
+<div class="para" id="root-1-2-4-15">Note that two sets <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are <dfn class="terminology">equal</dfn>, denoted <span class="process-math">\({A=B}\text{,}\)</span> if the sets contain the same elements. It’s clear that <span class="process-math">\(A=B\)</span> if and only if <span class="process-math">\(A \subseteq B\)</span> and <span class="process-math">\(B \subseteq A\text{.}\)</span> If <span class="process-math">\(A\subseteq B\text{,}\)</span> then <span class="process-math">\(A\)</span> is called a <dfn class="terminology">proper subset</dfn> provided that <span class="process-math">\(A\neq B\text{.}\)</span> In this case, we may write <span class="process-math">\({A\subset B}\)</span> or <span class="process-math">\({A\subsetneq B}\text{.}\)</span> Some authors use <span class="process-math">\(\subset\)</span> to mean <span class="process-math">\(\subseteq\text{,}\)</span> so some confusion could arise if you are not reading carefully.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="root-1-2-4-16">Sometimes it is useful to fix a set to focus our attention on. The term <dfn class="terminology">universe of discourse</dfn> (or <dfn class="terminology">domain of discourse</dfn>) generally refers to the collection of objects being discussed in a specific context.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="root-1-2-4-16">Sometimes it is useful to fix a set to focus our attention on. The term <dfn class="terminology">universe of discourse</dfn> (or <dfn class="terminology">domain of discourse</dfn>) generally refers to the collection of objects being discussed in a specific context.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="root-1-2-4-17">
 <div class="para">Let <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> be sets in some universe of discourse <span class="process-math">\(U\text{.}\)</span> We define the following.</div>
 <ol class="lower-alpha ol-marker-1" id="root-1-2-4-17-4">
 <li id="root-1-2-4-17-4-1">
-<div class="para" id="root-1-2-4-17-4-1-1">The <dfn class="terminology">union</dfn> of <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> is <span class="process-math">\({A \cup B \:= \{x\in U \mid x\in A \mbox{ or } x\in B \}}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-17-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="root-1-2-4-17-4-1-1">The <dfn class="terminology">union</dfn> of <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> is <span class="process-math">\({A \cup B \:= \{x\in U \mid x\in A \mbox{ or } x\in B \}}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-17-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item a"><a href="#root-1-2-4-17-4-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item a"><a tabindex="-1" href="#root-1-2-4-17-4-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
 </li>
 <li id="root-1-2-4-17-4-2">
-<div class="para" id="root-1-2-4-17-4-2-1">The <dfn class="terminology">intersection</dfn> of <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> is <span class="process-math">\({A \cap B \:=\{x\in U \mid x\in A \mbox{ and } x\in B \}}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-17-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="root-1-2-4-17-4-2-1">The <dfn class="terminology">intersection</dfn> of <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> is <span class="process-math">\({A \cap B \:=\{x\in U \mid x\in A \mbox{ and } x\in B \}}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-17-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item b"><a href="#root-1-2-4-17-4-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item b"><a tabindex="-1" href="#root-1-2-4-17-4-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
 </li>
 <li id="root-1-2-4-17-4-3">
-<div class="para" id="root-1-2-4-17-4-3-1">If <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> have the property that <span class="process-math">\(A \cap B = \emptyset\text{,}\)</span> then we say that <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are <dfn class="terminology">disjoint</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-17-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="root-1-2-4-17-4-3-1">If <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> have the property that <span class="process-math">\(A \cap B = \emptyset\text{,}\)</span> then we say that <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are <dfn class="terminology">disjoint</dfn>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-17-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item c"><a href="#root-1-2-4-17-4-3" title="Copy heading and permalink for Item c" aria-label="Copy heading and permalink for Item c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item c"><a tabindex="-1" href="#root-1-2-4-17-4-3" title="Copy heading and permalink for Item c" aria-label="Copy heading and permalink for Item c">🔗</a></div>
 </li>
 <li id="root-1-2-4-17-4-4">
-<div class="para" id="root-1-2-4-17-4-4-1">The <dfn class="terminology">set difference</dfn> (relative to <span class="process-math">\(U\)</span>) of the sets <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> is <span class="process-math">\({A \setminus B \:=\{x\in U \mid x\in A \mbox{ and } x\notin B \}}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-17-4-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="root-1-2-4-17-4-4-1">The <dfn class="terminology">set difference</dfn> (relative to <span class="process-math">\(U\)</span>) of the sets <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> is <span class="process-math">\({A \setminus B \:=\{x\in U \mid x\in A \mbox{ and } x\notin B \}}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-17-4-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item d"><a href="#root-1-2-4-17-4-4" title="Copy heading and permalink for Item d" aria-label="Copy heading and permalink for Item d">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item d"><a tabindex="-1" href="#root-1-2-4-17-4-4" title="Copy heading and permalink for Item d" aria-label="Copy heading and permalink for Item d">🔗</a></div>
 </li>
 <li id="root-1-2-4-17-4-5">
-<div class="para" id="root-1-2-4-17-4-5-1">The <dfn class="terminology">complement</dfn> (relative to <span class="process-math">\(U\)</span>) of <span class="process-math">\(A\)</span> is the set <span class="process-math">\({A^c\:= U \setminus A =\{x \in U \mid x \notin A\}}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-17-4-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="root-1-2-4-17-4-5-1">The <dfn class="terminology">complement</dfn> (relative to <span class="process-math">\(U\)</span>) of <span class="process-math">\(A\)</span> is the set <span class="process-math">\({A^c\:= U \setminus A =\{x \in U \mid x \notin A\}}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-17-4-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item e"><a href="#root-1-2-4-17-4-5" title="Copy heading and permalink for Item e" aria-label="Copy heading and permalink for Item e">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item e"><a tabindex="-1" href="#root-1-2-4-17-4-5" title="Copy heading and permalink for Item e" aria-label="Copy heading and permalink for Item e">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="problem example-like" id="root-1-2-4-18"><h2 class="heading">
+<article class="problem example-like" id="root-1-2-4-18"><h3 class="heading">
 <span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2>
+</h3>
 <div class="para logical" id="root-1-2-4-18-1-1">
 <div class="para">Suppose that the universe of discourse is <span class="process-math">\(U=\{1,2,3,4,5,6,7,8,9,10\}\text{.}\)</span> Let <span class="process-math">\(A=\{1, 2, 3, 4, 5\}\text{,}\)</span> <span class="process-math">\(B=\{1, 3, 5\}\text{,}\)</span> and <span class="process-math">\(C=\{2, 4, 6, 8\}\text{.}\)</span> Find each of the following and then determine the cardinality of the set.</div>
 <ol class="lower-alpha ol-marker-1" id="root-1-2-4-18-1-1-5">
 <li id="root-1-2-4-18-1-1-5-1">
 <div class="para" id="root-1-2-4-18-1-1-5-1-1">
-<span class="process-math">\(\displaystyle A \cap C\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-18-1-1-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<span class="process-math">\(\displaystyle A \cap C\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-18-1-1-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item a"><a href="#root-1-2-4-18-1-1-5-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item a"><a tabindex="-1" href="#root-1-2-4-18-1-1-5-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
 </li>
 <li id="root-1-2-4-18-1-1-5-2">
 <div class="para" id="root-1-2-4-18-1-1-5-2-1">
-<span class="process-math">\(\displaystyle B \cap C\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-18-1-1-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<span class="process-math">\(\displaystyle B \cap C\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-18-1-1-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item b"><a href="#root-1-2-4-18-1-1-5-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item b"><a tabindex="-1" href="#root-1-2-4-18-1-1-5-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
 </li>
 <li id="root-1-2-4-18-1-1-5-3">
 <div class="para" id="root-1-2-4-18-1-1-5-3-1">
-<span class="process-math">\(\displaystyle A \cup B\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-18-1-1-5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<span class="process-math">\(\displaystyle A \cup B\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-18-1-1-5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item c"><a href="#root-1-2-4-18-1-1-5-3" title="Copy heading and permalink for Item c" aria-label="Copy heading and permalink for Item c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item c"><a tabindex="-1" href="#root-1-2-4-18-1-1-5-3" title="Copy heading and permalink for Item c" aria-label="Copy heading and permalink for Item c">🔗</a></div>
 </li>
 <li id="root-1-2-4-18-1-1-5-4">
 <div class="para" id="root-1-2-4-18-1-1-5-4-1">
-<span class="process-math">\(\displaystyle A\setminus B\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-18-1-1-5-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<span class="process-math">\(\displaystyle A\setminus B\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-18-1-1-5-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item d"><a href="#root-1-2-4-18-1-1-5-4" title="Copy heading and permalink for Item d" aria-label="Copy heading and permalink for Item d">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item d"><a tabindex="-1" href="#root-1-2-4-18-1-1-5-4" title="Copy heading and permalink for Item d" aria-label="Copy heading and permalink for Item d">🔗</a></div>
 </li>
 <li id="root-1-2-4-18-1-1-5-5">
 <div class="para" id="root-1-2-4-18-1-1-5-5-1">
-<span class="process-math">\(\displaystyle B \setminus A\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-18-1-1-5-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<span class="process-math">\(\displaystyle B \setminus A\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-18-1-1-5-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item e"><a href="#root-1-2-4-18-1-1-5-5" title="Copy heading and permalink for Item e" aria-label="Copy heading and permalink for Item e">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item e"><a tabindex="-1" href="#root-1-2-4-18-1-1-5-5" title="Copy heading and permalink for Item e" aria-label="Copy heading and permalink for Item e">🔗</a></div>
 </li>
 <li id="root-1-2-4-18-1-1-5-6">
 <div class="para" id="root-1-2-4-18-1-1-5-6-1">
-<span class="process-math">\(\displaystyle C \setminus B\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-18-1-1-5-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<span class="process-math">\(\displaystyle C \setminus B\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-18-1-1-5-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item f"><a href="#root-1-2-4-18-1-1-5-6" title="Copy heading and permalink for Item f" aria-label="Copy heading and permalink for Item f">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item f"><a tabindex="-1" href="#root-1-2-4-18-1-1-5-6" title="Copy heading and permalink for Item f" aria-label="Copy heading and permalink for Item f">🔗</a></div>
 </li>
 <li id="root-1-2-4-18-1-1-5-7">
 <div class="para" id="root-1-2-4-18-1-1-5-7-1">
-<span class="process-math">\(\displaystyle B^c\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-18-1-1-5-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<span class="process-math">\(\displaystyle B^c\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-18-1-1-5-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item g"><a href="#root-1-2-4-18-1-1-5-7" title="Copy heading and permalink for Item g" aria-label="Copy heading and permalink for Item g">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item g"><a tabindex="-1" href="#root-1-2-4-18-1-1-5-7" title="Copy heading and permalink for Item g" aria-label="Copy heading and permalink for Item g">🔗</a></div>
 </li>
 <li id="root-1-2-4-18-1-1-5-8">
 <div class="para" id="root-1-2-4-18-1-1-5-8-1">
-<span class="process-math">\(\displaystyle A^c\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-18-1-1-5-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<span class="process-math">\(\displaystyle A^c\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-18-1-1-5-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item h"><a href="#root-1-2-4-18-1-1-5-8" title="Copy heading and permalink for Item h" aria-label="Copy heading and permalink for Item h">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item h"><a tabindex="-1" href="#root-1-2-4-18-1-1-5-8" title="Copy heading and permalink for Item h" aria-label="Copy heading and permalink for Item h">🔗</a></div>
 </li>
 <li id="root-1-2-4-18-1-1-5-9">
 <div class="para" id="root-1-2-4-18-1-1-5-9-1">
-<span class="process-math">\(\displaystyle (A\cup B)^c\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-18-1-1-5-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<span class="process-math">\(\displaystyle (A\cup B)^c\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-18-1-1-5-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item i"><a href="#root-1-2-4-18-1-1-5-9" title="Copy heading and permalink for Item i" aria-label="Copy heading and permalink for Item i">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item i"><a tabindex="-1" href="#root-1-2-4-18-1-1-5-9" title="Copy heading and permalink for Item i" aria-label="Copy heading and permalink for Item i">🔗</a></div>
 </li>
 <li id="root-1-2-4-18-1-1-5-10">
 <div class="para" id="root-1-2-4-18-1-1-5-10-1">
-<span class="process-math">\(\displaystyle A^c\cap B^c\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-18-1-1-5-10-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<span class="process-math">\(\displaystyle A^c\cap B^c\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-18-1-1-5-10-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item j"><a href="#root-1-2-4-18-1-1-5-10" title="Copy heading and permalink for Item j" aria-label="Copy heading and permalink for Item j">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item j"><a tabindex="-1" href="#root-1-2-4-18-1-1-5-10" title="Copy heading and permalink for Item j" aria-label="Copy heading and permalink for Item j">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-18-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para" id="root-1-2-4-18-1-2">Is any pair of the original sets <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(B\text{,}\)</span> and <span class="process-math">\(C\)</span> disjoint?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-18-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-18-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="root-1-2-4-18-1-2">Is any pair of the original sets <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(B\text{,}\)</span> and <span class="process-math">\(C\)</span> disjoint?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-18-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Problem 1.9"><a href="#root-1-2-4-18" title="Copy heading and permalink for Problem 1.9" aria-label="Copy heading and permalink for Problem 1.9">🔗</a></div></article><div class="para" id="root-1-2-4-19">The next theorem should be clear.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Problem 1.9"><a tabindex="-1" href="#root-1-2-4-18" title="Copy heading and permalink for Problem 1.9" aria-label="Copy heading and permalink for Problem 1.9">🔗</a></div>
+</article>
+<div class="para" id="root-1-2-4-19">The next theorem should be clear.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="theorem theorem-like" id="thm_set_and_its_complement"><h2 class="heading">
+<article class="theorem theorem-like" id="thm_set_and_its_complement"><h3 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2>
+</h3>
 <div class="para logical" id="thm_set_and_its_complement-1-1">
 <div class="para">If <span class="process-math">\(A\)</span> is a subset of some universe of discourse <span class="process-math">\(U\text{,}\)</span> then</div>
 <ol class="lower-alpha ol-marker-1" id="thm_set_and_its_complement-1-1-3">
 <li id="thm_set_and_its_complement-1-1-3-1">
 <div class="para" id="thm_set_and_its_complement-1-1-3-1-1">
-<span class="process-math">\({A\cup A^c=U}\text{;}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm_set_and_its_complement-1-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<span class="process-math">\({A\cup A^c=U}\text{;}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#thm_set_and_its_complement-1-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item a"><a href="#thm_set_and_its_complement-1-1-3-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item a"><a tabindex="-1" href="#thm_set_and_its_complement-1-1-3-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
 </li>
 <li id="thm_set_and_its_complement-1-1-3-2">
 <div class="para" id="thm_set_and_its_complement-1-1-3-2-1">
-<span class="process-math">\({A\cap A^c=\emptyset}\)</span> (i.e., <span class="process-math">\(A\)</span> and <span class="process-math">\(A^c\)</span> are disjoint).<div class="autopermalink" data-description="Paragraph"><a href="#thm_set_and_its_complement-1-1-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<span class="process-math">\({A\cap A^c=\emptyset}\)</span> (i.e., <span class="process-math">\(A\)</span> and <span class="process-math">\(A^c\)</span> are disjoint).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#thm_set_and_its_complement-1-1-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item b"><a href="#thm_set_and_its_complement-1-1-3-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item b"><a tabindex="-1" href="#thm_set_and_its_complement-1-1-3-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#thm_set_and_its_complement-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#thm_set_and_its_complement-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 1.10"><a href="#thm_set_and_its_complement" title="Copy heading and permalink for Theorem 1.10" aria-label="Copy heading and permalink for Theorem 1.10">🔗</a></div></article><div class="para" id="root-1-2-4-21">The following principle is a natural notion.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-21" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 1.10"><a tabindex="-1" href="#thm_set_and_its_complement" title="Copy heading and permalink for Theorem 1.10" aria-label="Copy heading and permalink for Theorem 1.10">🔗</a></div>
+</article>
+<div class="para" id="root-1-2-4-21">The following principle is a natural notion.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-21" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="theorem theorem-like" id="thm_sum_principle"><h2 class="heading">
+<article class="theorem theorem-like" id="thm_sum_principle"><h3 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Sum Principle for Disjoint Sets.</span>
-</h2>
+</h3>
 <div class="para logical" id="thm_sum_principle-2-1">
 <div class="para">If <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are disjoint sets, then</div>
 <div class="displaymath process-math" id="thm_sum_principle-2-1-3">
@@ -419,54 +413,65 @@ P=\{x\in\mathbb{N} \mid x=2^n\mbox{ for some } n\in\mathbb{N}\}\text{.}
 {|A \cup B| = |A| + |B|.}
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#thm_sum_principle-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para logical" id="thm_sum_principle-2-2">
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#thm_sum_principle-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para logical" id="thm_sum_principle-2-2">
 <div class="para">More generally, if <span class="process-math">\(A_1,\ldots, A_n\)</span> are pairwise disjoint sets, then</div>
 <div class="displaymath process-math" id="thm_sum_principle-2-2-2">
 \begin{equation*}
 {|A_1\cup \cdots \cup A_n|=|A_1|+\cdots +|A_n|.}
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#thm_sum_principle-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#thm_sum_principle-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 1.11: Sum Principle for Disjoint Sets"><a href="#thm_sum_principle" title="Copy heading and permalink for Theorem 1.11: Sum Principle for Disjoint Sets" aria-label="Copy heading and permalink for Theorem 1.11: Sum Principle for Disjoint Sets">🔗</a></div></article><article class="problem example-like" id="prob_dominoes"><h2 class="heading">
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 1.11: Sum Principle for Disjoint Sets"><a tabindex="-1" href="#thm_sum_principle" title="Copy heading and permalink for Theorem 1.11: Sum Principle for Disjoint Sets" aria-label="Copy heading and permalink for Theorem 1.11: Sum Principle for Disjoint Sets">🔗</a></div>
+</article>
+<article class="problem example-like" id="prob_dominoes"><h3 class="heading">
 <span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2>
+</h3>
 <div class="para logical" id="prob_dominoes-1-1">
 <div class="para">A <dfn class="terminology">domino</dfn> is a rectangular tile, usually with a line dividing its face into two square ends, and each end is marked with a number of dots (also called pips) or is blank. <a href="root-1-2-4.html#fig_domino" class="xref" data-knowl="./knowl/xref/fig_domino.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.1">Figure 1.1</a> shows a few examples of dominoes. The first and second domino in the figure are actually the same domino since orientation of the domino is irrelevant! When tackling the problems below, consider handling disjoint cases. If you visualize the various cases, you may end up with a nice staircase-looking arrangement.</div>
 <ol class="lower-alpha ol-marker-1" id="prob_dominoes-1-1-3">
 <li id="prob_dominoes-1-1-3-1">
-<div class="para" id="prob_dominoes-1-1-3-1-1">How many dominoes are there in a set that includes double blank through double nine?<div class="autopermalink" data-description="Paragraph"><a href="#prob_dominoes-1-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="prob_dominoes-1-1-3-1-1">How many dominoes are there in a set that includes double blank through double nine?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#prob_dominoes-1-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item a"><a href="#prob_dominoes-1-1-3-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item a"><a tabindex="-1" href="#prob_dominoes-1-1-3-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
 </li>
 <li id="prob_dominoes-1-1-3-2">
-<div class="para" id="prob_dominoes-1-1-3-2-1">How many dominoes are there in a set that includes double blank through double twelve?<div class="autopermalink" data-description="Paragraph"><a href="#prob_dominoes-1-1-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="prob_dominoes-1-1-3-2-1">How many dominoes are there in a set that includes double blank through double twelve?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#prob_dominoes-1-1-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item b"><a href="#prob_dominoes-1-1-3-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item b"><a tabindex="-1" href="#prob_dominoes-1-1-3-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
 </li>
 <li id="prob_dominoes-1-1-3-3">
-<div class="para" id="prob_dominoes-1-1-3-3-1">How many dominoes are there in a set that includes double blank through double <span class="process-math">\(n\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#prob_dominoes-1-1-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="prob_dominoes-1-1-3-3-1">How many dominoes are there in a set that includes double blank through double <span class="process-math">\(n\text{?}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#prob_dominoes-1-1-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item c"><a href="#prob_dominoes-1-1-3-3" title="Copy heading and permalink for Item c" aria-label="Copy heading and permalink for Item c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item c"><a tabindex="-1" href="#prob_dominoes-1-1-3-3" title="Copy heading and permalink for Item c" aria-label="Copy heading and permalink for Item c">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#prob_dominoes-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#prob_dominoes-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Problem 1.12"><a href="#prob_dominoes" title="Copy heading and permalink for Problem 1.12" aria-label="Copy heading and permalink for Problem 1.12">🔗</a></div></article><figure class="figure figure-like" id="fig_domino"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;">
-<img src="generated/prefigure/prefigure-domino.svg" role="img" class="contained" alt="First domino has 4 pips and 2 pips, second has 2 pips and 4 pips, third has 5 pips and 5 pips, fourth has 3 pips and 0 pips."><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="fig_domino-2-description"><div class="para" id="fig_domino-2-2-1">The image contains four examples of dominoes. From left to right, first domino has 4 pips and 2 pips, second domino has 2 pips and 4 pips, third domino has 5 pips and 5 pips, fourth domino has 3 pips and 0 pips.<div class="autopermalink" data-description="Paragraph"><a href="#fig_domino-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div></details>
+<div class="autopermalink" aria-hidden="true" data-description="Problem 1.12"><a tabindex="-1" href="#prob_dominoes" title="Copy heading and permalink for Problem 1.12" aria-label="Copy heading and permalink for Problem 1.12">🔗</a></div>
+</article>
+<figure class="figure figure-like" id="fig_domino"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;">
+<img src="generated/prefigure/prefigure-domino.svg" role="img" class="contained" alt="First domino has 4 pips and 2 pips, second has 2 pips and 4 pips, third has 5 pips and 5 pips, fourth has 3 pips and 0 pips."><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="fig_domino-2-description">
+<div class="para" id="fig_domino-2-2-1">The image contains four examples of dominoes. From left to right, first domino has 4 pips and 2 pips, second domino has 2 pips and 4 pips, third domino has 5 pips and 5 pips, fourth domino has 3 pips and 0 pips.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#fig_domino-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Examples of dominoes.<div class="autopermalink" data-description="Figure 1.1"><a href="#fig_domino" title="Copy heading and permalink for Figure 1.1" aria-label="Copy heading and permalink for Figure 1.1">🔗</a></div></figcaption></figure><article class="problem example-like" id="root-1-2-4-25"><h2 class="heading">
+</div></details>
+</div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Examples of dominoes.<div class="autopermalink" aria-hidden="true" data-description="Figure 1.1"><a tabindex="-1" href="#fig_domino" title="Copy heading and permalink for Figure 1.1" aria-label="Copy heading and permalink for Figure 1.1">🔗</a></div></figcaption>
+</figure>
+<article class="problem example-like" id="root-1-2-4-25"><h3 class="heading">
 <span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2>
-<div class="para" id="root-1-2-4-25-1-1">How many students are enrolled in MAT 136 or MAT 226 (or both) if there are 409 in MAT 136 and 156 in MAT 226? Do you need to know that 40 students are in both courses?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-25-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h3>
+<div class="para" id="root-1-2-4-25-1-1">How many students are enrolled in MAT 136 or MAT 226 (or both) if there are 409 in MAT 136 and 156 in MAT 226? Do you need to know that 40 students are in both courses?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-25-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Problem 1.13"><a href="#root-1-2-4-25" title="Copy heading and permalink for Problem 1.13" aria-label="Copy heading and permalink for Problem 1.13">🔗</a></div></article><div class="para" id="root-1-2-4-26">The previous problems gives us an indication of how to generalize the Sum Principle (<a href="root-1-2-4.html#thm_sum_principle" class="xref" data-knowl="./knowl/xref/thm_sum_principle.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 1.11: Sum Principle for Disjoint Sets">Theorem 1.11</a>) to the case when the sets are not disjoint.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-26" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Problem 1.13"><a tabindex="-1" href="#root-1-2-4-25" title="Copy heading and permalink for Problem 1.13" aria-label="Copy heading and permalink for Problem 1.13">🔗</a></div>
+</article>
+<div class="para" id="root-1-2-4-26">The previous problems gives us an indication of how to generalize the Sum Principle (<a href="root-1-2-4.html#thm_sum_principle" class="xref" data-knowl="./knowl/xref/thm_sum_principle.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 1.11: Sum Principle for Disjoint Sets">Theorem 1.11</a>) to the case when the sets are not disjoint.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-26" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="theorem theorem-like" id="thm_General_Sum_Principle"><h2 class="heading">
+<article class="theorem theorem-like" id="thm_General_Sum_Principle"><h3 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">General Sum Principle.</span>
-</h2>
+</h3>
 <div class="para logical" id="thm_General_Sum_Principle-2-1">
 <div class="para">If <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are sets, then</div>
 <div class="displaymath process-math" id="thm_General_Sum_Principle-2-1-3">
@@ -480,46 +485,50 @@ P=\{x\in\mathbb{N} \mid x=2^n\mbox{ for some } n\in\mathbb{N}\}\text{.}
 {|A\cup B|+|A\cap B|=|A|+|B|.}
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#thm_General_Sum_Principle-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#thm_General_Sum_Principle-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 1.14: General Sum Principle"><a href="#thm_General_Sum_Principle" title="Copy heading and permalink for Theorem 1.14: General Sum Principle" aria-label="Copy heading and permalink for Theorem 1.14: General Sum Principle">🔗</a></div></article><article class="problem example-like" id="prob_coffee"><h2 class="heading">
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 1.14: General Sum Principle"><a tabindex="-1" href="#thm_General_Sum_Principle" title="Copy heading and permalink for Theorem 1.14: General Sum Principle" aria-label="Copy heading and permalink for Theorem 1.14: General Sum Principle">🔗</a></div>
+</article>
+<article class="problem example-like" id="prob_coffee"><h3 class="heading">
 <span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2>
+</h3>
 <div class="para logical" id="prob_coffee-1-1">
 <div class="para">I’m in the mood for a cup of coffee! Let’s say that the nearest place to get a cup of coffee is four blocks East and three blocks North. Assuming I only walk East or North, how many different routes can I take to get there if:</div>
 <ol class="lower-alpha ol-marker-1" id="prob_coffee-1-1-1">
 <li id="prob_coffee-1-1-1-1">
-<div class="para" id="prob_coffee-1-1-1-1-1">The last block I walk is heading North?<div class="autopermalink" data-description="Paragraph"><a href="#prob_coffee-1-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="prob_coffee-1-1-1-1-1">The last block I walk is heading North?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#prob_coffee-1-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item a"><a href="#prob_coffee-1-1-1-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item a"><a tabindex="-1" href="#prob_coffee-1-1-1-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
 </li>
 <li id="prob_coffee-1-1-1-2">
-<div class="para" id="prob_coffee-1-1-1-2-1">The last block I walk is heading East?<div class="autopermalink" data-description="Paragraph"><a href="#prob_coffee-1-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="prob_coffee-1-1-1-2-1">The last block I walk is heading East?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#prob_coffee-1-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item b"><a href="#prob_coffee-1-1-1-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item b"><a tabindex="-1" href="#prob_coffee-1-1-1-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
 </li>
 <li id="prob_coffee-1-1-1-3">
-<div class="para" id="prob_coffee-1-1-1-3-1">I don’t care whether the last block I walk is North or East?<div class="autopermalink" data-description="Paragraph"><a href="#prob_coffee-1-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="prob_coffee-1-1-1-3-1">I don’t care whether the last block I walk is North or East?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#prob_coffee-1-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item c"><a href="#prob_coffee-1-1-1-3" title="Copy heading and permalink for Item c" aria-label="Copy heading and permalink for Item c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item c"><a tabindex="-1" href="#prob_coffee-1-1-1-3" title="Copy heading and permalink for Item c" aria-label="Copy heading and permalink for Item c">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#prob_coffee-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#prob_coffee-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Problem 1.15"><a href="#prob_coffee" title="Copy heading and permalink for Problem 1.15" aria-label="Copy heading and permalink for Problem 1.15">🔗</a></div></article><div class="para" id="root-1-2-4-29">In <a href="root-1-2-4.html#prob_coffee" class="xref" data-knowl="./knowl/xref/prob_coffee.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 1.15">Problem 1.15</a>, we could describe paths to the coffee shop using expressions like <span class="process-math">\(NNENEEE\text{,}\)</span> where we interpret the expression from left to right as instruction for which direction to walk at each step. Such expressions have a name. A <dfn class="terminology">string</dfn> of objects of <dfn class="terminology">length</dfn> <span class="process-math">\(k\)</span> is a linearly ordered arrangements of <span class="process-math">\(k\)</span> objects. The objects in a string may be repeated unless specified otherwise. For example, <span class="process-math">\(NNENEEE\)</span> is a string of length 7 consisting of <span class="process-math">\(N\)</span>’s and <span class="process-math">\(E\)</span>’s. If a string consists of letters, then it may be called a <dfn class="terminology">word</dfn> (we do not require a word to be in the dictionary!). A <dfn class="terminology">bit string</dfn> is a string consisting of 0’s and 1’s. Each occurrence of a 0 or 1 in a bit string is called a <dfn class="terminology">bit</dfn>. The strings <span class="process-math">\(010\)</span> and <span class="process-math">\(100\)</span> are two different bit strings of length 3.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-29" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Problem 1.15"><a tabindex="-1" href="#prob_coffee" title="Copy heading and permalink for Problem 1.15" aria-label="Copy heading and permalink for Problem 1.15">🔗</a></div>
+</article>
+<div class="para" id="root-1-2-4-29">In <a href="root-1-2-4.html#prob_coffee" class="xref" data-knowl="./knowl/xref/prob_coffee.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 1.15">Problem 1.15</a>, we could describe paths to the coffee shop using expressions like <span class="process-math">\(NNENEEE\text{,}\)</span> where we interpret the expression from left to right as instruction for which direction to walk at each step. Such expressions have a name. A <dfn class="terminology">string</dfn> of objects of <dfn class="terminology">length</dfn> <span class="process-math">\(k\)</span> is a linearly ordered arrangements of <span class="process-math">\(k\)</span> objects. The objects in a string may be repeated unless specified otherwise. For example, <span class="process-math">\(NNENEEE\)</span> is a string of length 7 consisting of <span class="process-math">\(N\)</span>’s and <span class="process-math">\(E\)</span>’s. If a string consists of letters, then it may be called a <dfn class="terminology">word</dfn> (we do not require a word to be in the dictionary!). A <dfn class="terminology">bit string</dfn> is a string consisting of 0’s and 1’s. Each occurrence of a 0 or 1 in a bit string is called a <dfn class="terminology">bit</dfn>. The strings <span class="process-math">\(010\)</span> and <span class="process-math">\(100\)</span> are two different bit strings of length 3.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-29" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="example example-like" id="ex_counting_two_letter_words"><h2 class="heading">
+<article class="example example-like" id="ex_counting_two_letter_words"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2>
-<div class="para" id="ex_counting_two_letter_words-1-1">How many two-letter words are there using only the letters <span class="process-math">\(b\text{,}\)</span> <span class="process-math">\(c\text{,}\)</span> <span class="process-math">\(d\text{,}\)</span> <span class="process-math">\(f\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex_counting_two_letter_words-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h3>
+<div class="para" id="ex_counting_two_letter_words-1-1">How many two-letter words are there using only the letters <span class="process-math">\(b\text{,}\)</span> <span class="process-math">\(c\text{,}\)</span> <span class="process-math">\(d\text{,}\)</span> <span class="process-math">\(f\text{?}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex_counting_two_letter_words-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solution solution-like" id="ex_counting_two_letter_words-2">
-<h2 class="heading">
+<h4 class="heading">
 <span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2>
-<div class="para" id="ex_counting_two_letter_words-2-1">We can easily list these, but using the arrangement in <a href="root-1-2-4.html#table_two_letter_words" class="xref" data-knowl="./knowl/xref/table_two_letter_words.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 1.2: All possible two-letter words using the letters b c d f">Table 1.2</a> illustrates a more powerful technique.  The table makes it clear that there are 16 two-letter words using the letters <span class="process-math">\(b\text{,}\)</span> <span class="process-math">\(c\text{,}\)</span> <span class="process-math">\(d\text{,}\)</span> and <span class="process-math">\(f\text{.}\)</span> Another way to see this is to note that there are 4 choices for the first (left-hand) letter and for each of these there are 4 choices for the right-hand letter, so there are <span class="process-math">\(4 \cdot 4 = 16\)</span> words total.<div class="autopermalink" data-description="Paragraph"><a href="#ex_counting_two_letter_words-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h4>
+<div class="para" id="ex_counting_two_letter_words-2-1">We can easily list these, but using the arrangement in <a href="root-1-2-4.html#table_two_letter_words" class="xref" data-knowl="./knowl/xref/table_two_letter_words.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 1.2: All possible two-letter words using the letters b c d f">Table 1.2</a> illustrates a more powerful technique.  The table makes it clear that there are 16 two-letter words using the letters <span class="process-math">\(b\text{,}\)</span> <span class="process-math">\(c\text{,}\)</span> <span class="process-math">\(d\text{,}\)</span> and <span class="process-math">\(f\text{.}\)</span> Another way to see this is to note that there are 4 choices for the first (left-hand) letter and for each of these there are 4 choices for the right-hand letter, so there are <span class="process-math">\(4 \cdot 4 = 16\)</span> words total.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex_counting_two_letter_words-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<figure class="table table-like" id="table_two_letter_words"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>All possible two-letter words using the letters <span class="process-math">\(b\text{,}\)</span> <span class="process-math">\(c\text{,}\)</span> <span class="process-math">\(d\text{,}\)</span> <span class="process-math">\(f\)</span><div class="autopermalink" data-description="Table 1.2: All possible two-letter words using the letters b c d f"><a href="#table_two_letter_words" title="Copy heading and permalink for Table 1.2: All possible two-letter words using the letters b c d f" aria-label="Copy heading and permalink for Table 1.2: All possible two-letter words using the letters b c d f">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<figure class="table table-like" id="table_two_letter_words"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>All possible two-letter words using the letters <span class="process-math">\(b\text{,}\)</span> <span class="process-math">\(c\text{,}\)</span> <span class="process-math">\(d\text{,}\)</span> <span class="process-math">\(f\)</span><div class="autopermalink" aria-hidden="true" data-description="Table 1.2: All possible two-letter words using the letters b c d f"><a tabindex="-1" href="#table_two_letter_words" title="Copy heading and permalink for Table 1.2: All possible two-letter words using the letters b c d f" aria-label="Copy heading and permalink for Table 1.2: All possible two-letter words using the letters b c d f">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="c m b2 r2 l0 t0 lines"></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(b\)</span></td>
@@ -582,20 +591,23 @@ P=\{x\in\mathbb{N} \mid x=2^n\mbox{ for some } n\in\mathbb{N}\}\text{.}
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(fd\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(f\!f\)</span></td>
 </tr>
-</table></div></figure><div class="autopermalink" data-description="Solution 1.16.1"><a href="#ex_counting_two_letter_words-2" title="Copy heading and permalink for Solution 1.16.1" aria-label="Copy heading and permalink for Solution 1.16.1">🔗</a></div>
+</table></div>
+</figure><div class="autopermalink" aria-hidden="true" data-description="Solution 1.16.1"><a tabindex="-1" href="#ex_counting_two_letter_words-2" title="Copy heading and permalink for Solution 1.16.1" aria-label="Copy heading and permalink for Solution 1.16.1">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 1.16"><a href="#ex_counting_two_letter_words" title="Copy heading and permalink for Example 1.16" aria-label="Copy heading and permalink for Example 1.16">🔗</a></div></article><article class="example example-like" id="root-1-2-4-31"><h2 class="heading">
+<div class="autopermalink" aria-hidden="true" data-description="Example 1.16"><a tabindex="-1" href="#ex_counting_two_letter_words" title="Copy heading and permalink for Example 1.16" aria-label="Copy heading and permalink for Example 1.16">🔗</a></div>
+</article>
+<article class="example example-like" id="root-1-2-4-31"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.17</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2>
-<div class="para" id="root-1-2-4-31-1-1">How many “numbered words” are there consisting of two letters from <span class="process-math">\(b\text{,}\)</span> <span class="process-math">\(c\text{,}\)</span> <span class="process-math">\(d\text{,}\)</span> and <span class="process-math">\(f\)</span> followed by one of the digits <span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(2\text{,}\)</span> <span class="process-math">\(3\text{,}\)</span> <span class="process-math">\(4\text{,}\)</span> and <span class="process-math">\(5\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-31-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h3>
+<div class="para" id="root-1-2-4-31-1-1">How many “numbered words” are there consisting of two letters from <span class="process-math">\(b\text{,}\)</span> <span class="process-math">\(c\text{,}\)</span> <span class="process-math">\(d\text{,}\)</span> and <span class="process-math">\(f\)</span> followed by one of the digits <span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(2\text{,}\)</span> <span class="process-math">\(3\text{,}\)</span> <span class="process-math">\(4\text{,}\)</span> and <span class="process-math">\(5\text{?}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-31-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solution solution-like" id="root-1-2-4-31-2">
-<h2 class="heading">
+<h4 class="heading">
 <span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2>
-<div class="para" id="root-1-2-4-31-2-1">A geometric display as in <a href="root-1-2-4.html#table_two_letter_words" class="xref" data-knowl="./knowl/xref/table_two_letter_words.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 1.2: All possible two-letter words using the letters b c d f">Table 1.2</a> would seem to require three dimensions, but we can take what we already know and just add a digit to the right. See <a href="root-1-2-4.html#table_numbered_words" class="xref" data-knowl="./knowl/xref/table_numbered_words.html" data-reveal-label="Reveal" data-close-label="Close" title='Table 1.3: All possible "numbered words" consisting of two letters from b c d f followed by one of the digits 1 2 3 4 and 5'>Table 1.3</a>. There are 16 rows (each with a word from <a href="root-1-2-4.html#ex_counting_two_letter_words" class="xref" data-knowl="./knowl/xref/ex_counting_two_letter_words.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.16">Example 1.16</a>) and five columns, so there are <span class="process-math">\(16\cdot 5 = 80\)</span> two-letter words using <span class="process-math">\(b\text{,}\)</span> <span class="process-math">\(c\text{,}\)</span> <span class="process-math">\(d\text{,}\)</span> and <span class="process-math">\(f\text{,}\)</span> followed by a digit from 1, 2, 3, 4, and 5.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-31-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h4>
+<div class="para" id="root-1-2-4-31-2-1">A geometric display as in <a href="root-1-2-4.html#table_two_letter_words" class="xref" data-knowl="./knowl/xref/table_two_letter_words.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 1.2: All possible two-letter words using the letters b c d f">Table 1.2</a> would seem to require three dimensions, but we can take what we already know and just add a digit to the right. See <a href="root-1-2-4.html#table_numbered_words" class="xref" data-knowl="./knowl/xref/table_numbered_words.html" data-reveal-label="Reveal" data-close-label="Close" title='Table 1.3: All possible "numbered words" consisting of two letters from b c d f followed by one of the digits 1 2 3 4 and 5'>Table 1.3</a>. There are 16 rows (each with a word from <a href="root-1-2-4.html#ex_counting_two_letter_words" class="xref" data-knowl="./knowl/xref/ex_counting_two_letter_words.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.16">Example 1.16</a>) and five columns, so there are <span class="process-math">\(16\cdot 5 = 80\)</span> two-letter words using <span class="process-math">\(b\text{,}\)</span> <span class="process-math">\(c\text{,}\)</span> <span class="process-math">\(d\text{,}\)</span> and <span class="process-math">\(f\text{,}\)</span> followed by a digit from 1, 2, 3, 4, and 5.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-31-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<figure class="table table-like" id="table_numbered_words"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>All possible “numbered words” consisting of two letters from <span class="process-math">\(b\text{,}\)</span> <span class="process-math">\(c\text{,}\)</span> <span class="process-math">\(d\text{,}\)</span> <span class="process-math">\(f\)</span> followed by one of the digits <span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(2\text{,}\)</span> <span class="process-math">\(3\text{,}\)</span> <span class="process-math">\(4\text{,}\)</span> and <span class="process-math">\(5\text{.}\)</span><div class="autopermalink" data-description='Table 1.3: All possible "numbered words" consisting of two letters from b c d f followed by one of the digits 1 2 3 4 and 5'><a href="#table_numbered_words" title='Copy heading and permalink for Table 1.3: All possible "numbered words" consisting of two letters from b c d f followed by one of the digits 1 2 3 4 and 5' aria-label='Copy heading and permalink for Table 1.3: All possible "numbered words" consisting of two letters from b c d f followed by one of the digits 1 2 3 4 and 5'>🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<figure class="table table-like" id="table_numbered_words"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>All possible “numbered words” consisting of two letters from <span class="process-math">\(b\text{,}\)</span> <span class="process-math">\(c\text{,}\)</span> <span class="process-math">\(d\text{,}\)</span> <span class="process-math">\(f\)</span> followed by one of the digits <span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(2\text{,}\)</span> <span class="process-math">\(3\text{,}\)</span> <span class="process-math">\(4\text{,}\)</span> and <span class="process-math">\(5\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description='Table 1.3: All possible "numbered words" consisting of two letters from b c d f followed by one of the digits 1 2 3 4 and 5'><a tabindex="-1" href="#table_numbered_words" title='Copy heading and permalink for Table 1.3: All possible "numbered words" consisting of two letters from b c d f followed by one of the digits 1 2 3 4 and 5' aria-label='Copy heading and permalink for Table 1.3: All possible "numbered words" consisting of two letters from b c d f followed by one of the digits 1 2 3 4 and 5'>🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="c m b2 r2 l0 t0 lines"></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
@@ -666,16 +678,19 @@ P=\{x\in\mathbb{N} \mid x=2^n\mbox{ for some } n\in\mathbb{N}\}\text{.}
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(f\!f4\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(f\!f5\)</span></td>
 </tr>
-</table></div></figure><div class="autopermalink" data-description="Solution 1.17.1"><a href="#root-1-2-4-31-2" title="Copy heading and permalink for Solution 1.17.1" aria-label="Copy heading and permalink for Solution 1.17.1">🔗</a></div>
+</table></div>
+</figure><div class="autopermalink" aria-hidden="true" data-description="Solution 1.17.1"><a tabindex="-1" href="#root-1-2-4-31-2" title="Copy heading and permalink for Solution 1.17.1" aria-label="Copy heading and permalink for Solution 1.17.1">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 1.17"><a href="#root-1-2-4-31" title="Copy heading and permalink for Example 1.17" aria-label="Copy heading and permalink for Example 1.17">🔗</a></div></article><div class="para logical" id="root-1-2-4-32">
+<div class="autopermalink" aria-hidden="true" data-description="Example 1.17"><a tabindex="-1" href="#root-1-2-4-31" title="Copy heading and permalink for Example 1.17" aria-label="Copy heading and permalink for Example 1.17">🔗</a></div>
+</article>
+<div class="para logical" id="root-1-2-4-32">
 <div class="para">If <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are sets, the <dfn class="terminology">Cartesian product</dfn> of <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{,}\)</span> denoted <span class="process-math">\(A\times B\)</span> (read as “<span class="process-math">\(A\)</span> times <span class="process-math">\(B\)</span>” or “<span class="process-math">\(A\)</span> cross <span class="process-math">\(B\)</span>”), is the set of all <dfn class="terminology">ordered pairs</dfn> where the first component is from <span class="process-math">\(A\)</span> and the second component is from <span class="process-math">\(B\text{.}\)</span> In set-builder notation, we have</div>
 <div class="displaymath process-math" id="root-1-2-4-32-12">
 \begin{equation*}
 {A\times B\:= \{(a,b)\mid a\in A, b\in B\}}\text{.}
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-32" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-32" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="root-1-2-4-33">
 <div class="para">Similarly, the Cartesian product of sets <span class="process-math">\(A_1, \ldots, A_n\)</span> sets is the collection of <dfn class="terminology"><span class="process-math">\(n\)</span>-tuples</dfn> given by</div>
@@ -692,13 +707,13 @@ P=\{x\in\mathbb{N} \mid x=2^n\mbox{ for some } n\in\mathbb{N}\}\text{.}
 </div>
 <div class="para">is often abbreviated as <span class="process-math">\({A^n}\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-33" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-33" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="root-1-2-4-34">Cartesian products are named after French philosopher and mathematician <a class="external" href="https://en.wikipedia.org/wiki/Rene_Descartes" target="_blank">René Descartes</a> (1596–1650).<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-34" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="root-1-2-4-34">Cartesian products are named after French philosopher and mathematician <a class="external" href="https://en.wikipedia.org/wiki/Rene_Descartes" target="_blank">René Descartes</a> (1596–1650).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-34" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="example example-like" id="ex_CartesianProduct"><h2 class="heading">
+<article class="example example-like" id="ex_CartesianProduct"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.18</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2>
+</h3>
 <div class="para logical" id="ex_CartesianProduct-1-1">
 <div class="para">If <span class="process-math">\(A=\{a,b,c\}\)</span> and <span class="process-math">\(B=\{\alpha,\beta\}\text{,}\)</span> then</div>
 <div class="displaymath process-math" id="ex_CartesianProduct-1-1-3">
@@ -706,11 +721,13 @@ P=\{x\in\mathbb{N} \mid x=2^n\mbox{ for some } n\in\mathbb{N}\}\text{.}
 A\times B=\{(a,\alpha), (a,\beta),(b,\alpha),(b,\beta), (c,\alpha),(c,\beta)\}\text{.}
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex_CartesianProduct-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex_CartesianProduct-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 1.18"><a href="#ex_CartesianProduct" title="Copy heading and permalink for Example 1.18" aria-label="Copy heading and permalink for Example 1.18">🔗</a></div></article><article class="example example-like" id="root-1-2-4-36"><h2 class="heading">
+<div class="autopermalink" aria-hidden="true" data-description="Example 1.18"><a tabindex="-1" href="#ex_CartesianProduct" title="Copy heading and permalink for Example 1.18" aria-label="Copy heading and permalink for Example 1.18">🔗</a></div>
+</article>
+<article class="example example-like" id="root-1-2-4-36"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.19</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2>
+</h3>
 <div class="para logical" id="root-1-2-4-36-1-1">
 <div class="para">The standard two-dimensional plane <span class="process-math">\(\mathbb{R}^2\)</span> and standard three space <span class="process-math">\(\mathbb{R}^{3}\)</span> are familiar examples of Cartesian products. In particular, we have</div>
 <div class="displaymath process-math" id="root-1-2-4-36-1-1-3">
@@ -724,57 +741,71 @@ A\times B=\{(a,\alpha), (a,\beta),(b,\alpha),(b,\beta), (c,\alpha),(c,\beta)\}\t
 \mathbb{R}^3=\mathbb{R}\times \mathbb{R}\times \mathbb{R}=\{(x,y,z)\mid x,y,z\in \mathbb{R}\}\text{.}
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-36-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-36-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 1.19"><a href="#root-1-2-4-36" title="Copy heading and permalink for Example 1.19" aria-label="Copy heading and permalink for Example 1.19">🔗</a></div></article><article class="problem example-like" id="root-1-2-4-37"><h2 class="heading">
+<div class="autopermalink" aria-hidden="true" data-description="Example 1.19"><a tabindex="-1" href="#root-1-2-4-36" title="Copy heading and permalink for Example 1.19" aria-label="Copy heading and permalink for Example 1.19">🔗</a></div>
+</article>
+<article class="problem example-like" id="root-1-2-4-37"><h3 class="heading">
 <span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.20</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2>
+</h3>
 <div class="para logical" id="root-1-2-4-37-1-1">
 <div class="para">Consider the sets <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> from <a href="root-1-2-4.html#ex_CartesianProduct" class="xref" data-knowl="./knowl/xref/ex_CartesianProduct.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.18">Example 1.18</a>.</div>
 <ol class="lower-alpha ol-marker-1" id="root-1-2-4-37-1-1-4">
 <li id="root-1-2-4-37-1-1-4-1">
-<div class="para" id="root-1-2-4-37-1-1-4-1-1">Find <span class="process-math">\(B\times A\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-37-1-1-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="root-1-2-4-37-1-1-4-1-1">Find <span class="process-math">\(B\times A\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-37-1-1-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item a"><a href="#root-1-2-4-37-1-1-4-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item a"><a tabindex="-1" href="#root-1-2-4-37-1-1-4-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
 </li>
 <li id="root-1-2-4-37-1-1-4-2">
-<div class="para" id="root-1-2-4-37-1-1-4-2-1">Find <span class="process-math">\(B\times B\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-37-1-1-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="root-1-2-4-37-1-1-4-2-1">Find <span class="process-math">\(B\times B\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-37-1-1-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item b"><a href="#root-1-2-4-37-1-1-4-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item b"><a tabindex="-1" href="#root-1-2-4-37-1-1-4-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-37-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-37-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Problem 1.20"><a href="#root-1-2-4-37" title="Copy heading and permalink for Problem 1.20" aria-label="Copy heading and permalink for Problem 1.20">🔗</a></div></article><article class="problem example-like" id="root-1-2-4-38"><h2 class="heading">
+<div class="autopermalink" aria-hidden="true" data-description="Problem 1.20"><a tabindex="-1" href="#root-1-2-4-37" title="Copy heading and permalink for Problem 1.20" aria-label="Copy heading and permalink for Problem 1.20">🔗</a></div>
+</article>
+<article class="problem example-like" id="root-1-2-4-38"><h3 class="heading">
 <span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.21</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2>
-<div class="para" id="root-1-2-4-38-1-1">Let <span class="process-math">\(A=\{1, 2, 3\}\text{,}\)</span> <span class="process-math">\(B=\{1,2\}\text{,}\)</span> and <span class="process-math">\(C=\{1,3\}\text{.}\)</span> Find <span class="process-math">\(A \times B\times C\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-38-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h3>
+<div class="para" id="root-1-2-4-38-1-1">Let <span class="process-math">\(A=\{1, 2, 3\}\text{,}\)</span> <span class="process-math">\(B=\{1,2\}\text{,}\)</span> and <span class="process-math">\(C=\{1,3\}\text{.}\)</span> Find <span class="process-math">\(A \times B\times C\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-38-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Problem 1.21"><a href="#root-1-2-4-38" title="Copy heading and permalink for Problem 1.21" aria-label="Copy heading and permalink for Problem 1.21">🔗</a></div></article><article class="problem example-like" id="root-1-2-4-39"><h2 class="heading">
+<div class="autopermalink" aria-hidden="true" data-description="Problem 1.21"><a tabindex="-1" href="#root-1-2-4-38" title="Copy heading and permalink for Problem 1.21" aria-label="Copy heading and permalink for Problem 1.21">🔗</a></div>
+</article>
+<article class="problem example-like" id="root-1-2-4-39"><h3 class="heading">
 <span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.22</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2>
-<div class="para" id="root-1-2-4-39-1-1">If <span class="process-math">\(A\)</span> is a set, then what is <span class="process-math">\(A\times \emptyset\)</span> equal to?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-39-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h3>
+<div class="para" id="root-1-2-4-39-1-1">If <span class="process-math">\(A\)</span> is a set, then what is <span class="process-math">\(A\times \emptyset\)</span> equal to?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-39-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Problem 1.22"><a href="#root-1-2-4-39" title="Copy heading and permalink for Problem 1.22" aria-label="Copy heading and permalink for Problem 1.22">🔗</a></div></article><article class="problem example-like" id="prob_cardinality_of_product"><h2 class="heading">
+<div class="autopermalink" aria-hidden="true" data-description="Problem 1.22"><a tabindex="-1" href="#root-1-2-4-39" title="Copy heading and permalink for Problem 1.22" aria-label="Copy heading and permalink for Problem 1.22">🔗</a></div>
+</article>
+<article class="problem example-like" id="prob_cardinality_of_product"><h3 class="heading">
 <span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.23</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2>
-<div class="para" id="prob_cardinality_of_product-1-1">If <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are both finite sets, find a nice formula for <span class="process-math">\(|A\times B|\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#prob_cardinality_of_product-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h3>
+<div class="para" id="prob_cardinality_of_product-1-1">If <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are both finite sets, find a nice formula for <span class="process-math">\(|A\times B|\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#prob_cardinality_of_product-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Problem 1.23"><a href="#prob_cardinality_of_product" title="Copy heading and permalink for Problem 1.23" aria-label="Copy heading and permalink for Problem 1.23">🔗</a></div></article><article class="problem example-like" id="root-1-2-4-41"><h2 class="heading">
+<div class="autopermalink" aria-hidden="true" data-description="Problem 1.23"><a tabindex="-1" href="#prob_cardinality_of_product" title="Copy heading and permalink for Problem 1.23" aria-label="Copy heading and permalink for Problem 1.23">🔗</a></div>
+</article>
+<article class="problem example-like" id="root-1-2-4-41"><h3 class="heading">
 <span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.24</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2>
-<div class="para" id="root-1-2-4-41-1-1">Are collections of words or strings that we encountered earlier in the chapter just Cartesian products in disguise? Explain.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-41-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h3>
+<div class="para" id="root-1-2-4-41-1-1">Are collections of words or strings that we encountered earlier in the chapter just Cartesian products in disguise? Explain.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-41-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Problem 1.24"><a href="#root-1-2-4-41" title="Copy heading and permalink for Problem 1.24" aria-label="Copy heading and permalink for Problem 1.24">🔗</a></div></article><article class="problem example-like" id="root-1-2-4-42"><h2 class="heading">
+<div class="autopermalink" aria-hidden="true" data-description="Problem 1.24"><a tabindex="-1" href="#root-1-2-4-41" title="Copy heading and permalink for Problem 1.24" aria-label="Copy heading and permalink for Problem 1.24">🔗</a></div>
+</article>
+<article class="problem example-like" id="root-1-2-4-42"><h3 class="heading">
 <span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.25</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2>
-<div class="para" id="root-1-2-4-42-1-1">Is a set of dominoes a Cartesian product in disguise? Explain.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-42-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h3>
+<div class="para" id="root-1-2-4-42-1-1">Is a set of dominoes a Cartesian product in disguise? Explain.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-42-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Problem 1.25"><a href="#root-1-2-4-42" title="Copy heading and permalink for Problem 1.25" aria-label="Copy heading and permalink for Problem 1.25">🔗</a></div></article><div class="para" id="root-1-2-4-43">We have been dancing around a fundamental counting principle. Let’s state it officially. There are three progressively more general versions, the first of which we already encountered in <a href="root-1-2-4.html#prob_cardinality_of_product" class="xref" data-knowl="./knowl/xref/prob_cardinality_of_product.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 1.23">Problem 1.23</a>. The second version officially follows from the first version by induction, which is a topic we will encounter later. The third version follows from the second by making a careful use of notation to identify the set <span class="process-math">\(\mathcal{O}\)</span> with a Cartesian product.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-43" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Problem 1.25"><a tabindex="-1" href="#root-1-2-4-42" title="Copy heading and permalink for Problem 1.25" aria-label="Copy heading and permalink for Problem 1.25">🔗</a></div>
+</article>
+<div class="para" id="root-1-2-4-43">We have been dancing around a fundamental counting principle. Let’s state it officially. There are three progressively more general versions, the first of which we already encountered in <a href="root-1-2-4.html#prob_cardinality_of_product" class="xref" data-knowl="./knowl/xref/prob_cardinality_of_product.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 1.23">Problem 1.23</a>. The second version officially follows from the first version by induction, which is a topic we will encounter later. The third version follows from the second by making a careful use of notation to identify the set <span class="process-math">\(\mathcal{O}\)</span> with a Cartesian product.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-43" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="theorem theorem-like" id="root-1-2-4-44"><h2 class="heading">
+<article class="theorem theorem-like" id="root-1-2-4-44"><h3 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.26</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Product Principle.</span>
-</h2>
+</h3>
 <div class="para logical" id="root-1-2-4-44-2-1">
 <div class="para">Each of the following are referred to as the <dfn class="terminology">Product Principle</dfn>.</div>
 <ol class="lower-alpha ol-marker-1" id="root-1-2-4-44-2-1-2">
@@ -786,9 +817,9 @@ A\times B=\{(a,\alpha), (a,\beta),(b,\alpha),(b,\beta), (c,\alpha),(c,\beta)\}\t
 {|A\times B|=|A|\cdot |B|.}
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-44-2-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-44-2-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item a"><a href="#root-1-2-4-44-2-1-2-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item a"><a tabindex="-1" href="#root-1-2-4-44-2-1-2-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
 </li>
 <li id="root-1-2-4-44-2-1-2-2">
 <div class="para logical" id="root-1-2-4-44-2-1-2-2-1">
@@ -798,9 +829,9 @@ A\times B=\{(a,\alpha), (a,\beta),(b,\alpha),(b,\beta), (c,\alpha),(c,\beta)\}\t
 {|A_1\times\cdots \times A_k|=|A_1|\cdots |A_k|.}
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-44-2-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-44-2-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item b"><a href="#root-1-2-4-44-2-1-2-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item b"><a tabindex="-1" href="#root-1-2-4-44-2-1-2-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
 </li>
 <li id="root-1-2-4-44-2-1-2-3">
 <div class="para logical" id="root-1-2-4-44-2-1-2-3-1">
@@ -810,170 +841,203 @@ A\times B=\{(a,\alpha), (a,\beta),(b,\alpha),(b,\beta), (c,\alpha),(c,\beta)\}\t
 {|\mathcal{O}|=n_1n_2\cdots n_k.}
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-44-2-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-44-2-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item c"><a href="#root-1-2-4-44-2-1-2-3" title="Copy heading and permalink for Item c" aria-label="Copy heading and permalink for Item c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item c"><a tabindex="-1" href="#root-1-2-4-44-2-1-2-3" title="Copy heading and permalink for Item c" aria-label="Copy heading and permalink for Item c">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-44-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-44-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 1.26: Product Principle"><a href="#root-1-2-4-44" title="Copy heading and permalink for Theorem 1.26: Product Principle" aria-label="Copy heading and permalink for Theorem 1.26: Product Principle">🔗</a></div></article><div class="para" id="root-1-2-4-45">The key difference between versions (b) and (c) of the Product Principle is that version (c) does not assume that the set of choices for step <span class="process-math">\(i\)</span> is independent of the previous choices.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-45" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 1.26: Product Principle"><a tabindex="-1" href="#root-1-2-4-44" title="Copy heading and permalink for Theorem 1.26: Product Principle" aria-label="Copy heading and permalink for Theorem 1.26: Product Principle">🔗</a></div>
+</article>
+<div class="para" id="root-1-2-4-45">The key difference between versions (b) and (c) of the Product Principle is that version (c) does not assume that the set of choices for step <span class="process-math">\(i\)</span> is independent of the previous choices.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-45" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="problem example-like" id="root-1-2-4-46"><h2 class="heading">
+<article class="problem example-like" id="root-1-2-4-46"><h3 class="heading">
 <span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.27</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2>
-<div class="para" id="root-1-2-4-46-1-1">A fashion-challenged freshman has three pair of pants, five shirts (all t-shirts, but different patterns) and a pair of sandals. How many different ensembles are available for this freshman?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-46-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h3>
+<div class="para" id="root-1-2-4-46-1-1">A fashion-challenged freshman has three pair of pants, five shirts (all t-shirts, but different patterns) and a pair of sandals. How many different ensembles are available for this freshman?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-46-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Problem 1.27"><a href="#root-1-2-4-46" title="Copy heading and permalink for Problem 1.27" aria-label="Copy heading and permalink for Problem 1.27">🔗</a></div></article><article class="problem example-like" id="prob_coin_flips"><h2 class="heading">
+<div class="autopermalink" aria-hidden="true" data-description="Problem 1.27"><a tabindex="-1" href="#root-1-2-4-46" title="Copy heading and permalink for Problem 1.27" aria-label="Copy heading and permalink for Problem 1.27">🔗</a></div>
+</article>
+<article class="problem example-like" id="prob_coin_flips"><h3 class="heading">
 <span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.28</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2>
-<div class="para" id="prob_coin_flips-1-1">Suppose you flip a coin fives times in a row, recording the sequence of heads and tails that you see. How many different sequences of flips are possible?<div class="autopermalink" data-description="Paragraph"><a href="#prob_coin_flips-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h3>
+<div class="para" id="prob_coin_flips-1-1">Suppose you flip a coin fives times in a row, recording the sequence of heads and tails that you see. How many different sequences of flips are possible?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#prob_coin_flips-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Problem 1.28"><a href="#prob_coin_flips" title="Copy heading and permalink for Problem 1.28" aria-label="Copy heading and permalink for Problem 1.28">🔗</a></div></article><article class="problem example-like" id="root-1-2-4-48"><h2 class="heading">
+<div class="autopermalink" aria-hidden="true" data-description="Problem 1.28"><a tabindex="-1" href="#prob_coin_flips" title="Copy heading and permalink for Problem 1.28" aria-label="Copy heading and permalink for Problem 1.28">🔗</a></div>
+</article>
+<article class="problem example-like" id="root-1-2-4-48"><h3 class="heading">
 <span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.29</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2>
-<div class="para" id="root-1-2-4-48-1-1">Suppose we roll a six-sided die and then flip a coin. How many distinct outcomes are possible?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-48-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h3>
+<div class="para" id="root-1-2-4-48-1-1">Suppose we roll a six-sided die and then flip a coin. How many distinct outcomes are possible?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-48-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Problem 1.29"><a href="#root-1-2-4-48" title="Copy heading and permalink for Problem 1.29" aria-label="Copy heading and permalink for Problem 1.29">🔗</a></div></article><article class="problem example-like" id="prob_bit_strings"><h2 class="heading">
+<div class="autopermalink" aria-hidden="true" data-description="Problem 1.29"><a tabindex="-1" href="#root-1-2-4-48" title="Copy heading and permalink for Problem 1.29" aria-label="Copy heading and permalink for Problem 1.29">🔗</a></div>
+</article>
+<article class="problem example-like" id="prob_bit_strings"><h3 class="heading">
 <span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.30</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2>
-<div class="para" id="prob_bit_strings-1-1">How many bit strings of length <span class="process-math">\(n\)</span> are there? How many of these start and end with the bit 1?<div class="autopermalink" data-description="Paragraph"><a href="#prob_bit_strings-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h3>
+<div class="para" id="prob_bit_strings-1-1">How many bit strings of length <span class="process-math">\(n\)</span> are there? How many of these start and end with the bit 1?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#prob_bit_strings-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Problem 1.30"><a href="#prob_bit_strings" title="Copy heading and permalink for Problem 1.30" aria-label="Copy heading and permalink for Problem 1.30">🔗</a></div></article><article class="problem example-like" id="prob_number_of_subsets"><h2 class="heading">
+<div class="autopermalink" aria-hidden="true" data-description="Problem 1.30"><a tabindex="-1" href="#prob_bit_strings" title="Copy heading and permalink for Problem 1.30" aria-label="Copy heading and permalink for Problem 1.30">🔗</a></div>
+</article>
+<article class="problem example-like" id="prob_number_of_subsets"><h3 class="heading">
 <span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.31</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2>
-<div class="para" id="prob_number_of_subsets-1-1">How many subsets does a set with <span class="process-math">\(n\)</span> elements have? Make sure you are taking the case <span class="process-math">\(n=0\)</span> into account. You should be able to carefully justify your answer by cleverly utilizing the Product Principle.<div class="autopermalink" data-description="Paragraph"><a href="#prob_number_of_subsets-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h3>
+<div class="para" id="prob_number_of_subsets-1-1">How many subsets does a set with <span class="process-math">\(n\)</span> elements have? Make sure you are taking the case <span class="process-math">\(n=0\)</span> into account. You should be able to carefully justify your answer by cleverly utilizing the Product Principle.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#prob_number_of_subsets-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Problem 1.31"><a href="#prob_number_of_subsets" title="Copy heading and permalink for Problem 1.31" aria-label="Copy heading and permalink for Problem 1.31">🔗</a></div></article><article class="problem example-like" id="root-1-2-4-51"><h2 class="heading">
+<div class="autopermalink" aria-hidden="true" data-description="Problem 1.31"><a tabindex="-1" href="#prob_number_of_subsets" title="Copy heading and permalink for Problem 1.31" aria-label="Copy heading and permalink for Problem 1.31">🔗</a></div>
+</article>
+<article class="problem example-like" id="root-1-2-4-51"><h3 class="heading">
 <span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.32</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2>
-<div class="para" id="root-1-2-4-51-1-1">How many four-letter words are there using lower-case English letter consonants (including <span class="process-math">\(y\)</span>) that include exactly one occurrence of <span class="process-math">\(b\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-51-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h3>
+<div class="para" id="root-1-2-4-51-1-1">How many four-letter words are there using lower-case English letter consonants (including <span class="process-math">\(y\)</span>) that include exactly one occurrence of <span class="process-math">\(b\text{?}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-51-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Problem 1.32"><a href="#root-1-2-4-51" title="Copy heading and permalink for Problem 1.32" aria-label="Copy heading and permalink for Problem 1.32">🔗</a></div></article><article class="problem example-like" id="root-1-2-4-52"><h2 class="heading">
+<div class="autopermalink" aria-hidden="true" data-description="Problem 1.32"><a tabindex="-1" href="#root-1-2-4-51" title="Copy heading and permalink for Problem 1.32" aria-label="Copy heading and permalink for Problem 1.32">🔗</a></div>
+</article>
+<article class="problem example-like" id="root-1-2-4-52"><h3 class="heading">
 <span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.33</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2>
-<div class="para" id="root-1-2-4-52-1-1">A pass code consists of a string of two or three case-sensitive English letters followed by three digits (i.e., <span class="process-math">\(0,1,2,3,4,5,6,7,8,9\)</span>). How many different possible pass codes are there?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-52-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h3>
+<div class="para" id="root-1-2-4-52-1-1">A pass code consists of a string of two or three case-sensitive English letters followed by three digits (i.e., <span class="process-math">\(0,1,2,3,4,5,6,7,8,9\)</span>). How many different possible pass codes are there?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-52-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Problem 1.33"><a href="#root-1-2-4-52" title="Copy heading and permalink for Problem 1.33" aria-label="Copy heading and permalink for Problem 1.33">🔗</a></div></article><div class="para logical" id="root-1-2-4-53">
+<div class="autopermalink" aria-hidden="true" data-description="Problem 1.33"><a tabindex="-1" href="#root-1-2-4-52" title="Copy heading and permalink for Problem 1.33" aria-label="Copy heading and permalink for Problem 1.33">🔗</a></div>
+</article>
+<div class="para logical" id="root-1-2-4-53">
 <div class="para">So far we have encountered the following fundamental methods for determining the cardinality of a set:</div>
 <ul class="disc" id="root-1-2-4-53-1">
 <li id="root-1-2-4-53-1-1">
-<div class="para" id="root-1-2-4-53-1-1-1">Systematic <dfn class="terminology">brute-force</dfn> (with good bookkeeping);<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-53-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="root-1-2-4-53-1-1-1">Systematic <dfn class="terminology">brute-force</dfn> (with good bookkeeping);<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-53-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#root-1-2-4-53-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#root-1-2-4-53-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 <li id="root-1-2-4-53-1-2">
 <div class="para" id="root-1-2-4-53-1-2-1">
-<dfn class="terminology">Sum Principle:</dfn> If there are multiple disjoint cases, we can add up the sizes of the various cases. If you can phrase a problem with “or”, you should consider adding cases.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-53-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<dfn class="terminology">Sum Principle:</dfn> If there are multiple disjoint cases, we can add up the sizes of the various cases. If you can phrase a problem with “or”, you should consider adding cases.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-53-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#root-1-2-4-53-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#root-1-2-4-53-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 <li id="root-1-2-4-53-1-3">
 <div class="para" id="root-1-2-4-53-1-3-1">
-<dfn class="terminology">Product Principle:</dfn> If all the elements/outcomes can be constructed using a step-by-step process, you should multiply the number of ways each step in process can occur. Be on the look out for the keywords “and” or “then”.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-53-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<dfn class="terminology">Product Principle:</dfn> If all the elements/outcomes can be constructed using a step-by-step process, you should multiply the number of ways each step in process can occur. Be on the look out for the keywords “and” or “then”.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-53-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#root-1-2-4-53-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#root-1-2-4-53-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 </ul>
-<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-53" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-53" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="root-1-2-4-54">The next result is simply a special case of <a href="root-1-2-4.html#thm_sum_principle" class="xref" data-knowl="./knowl/xref/thm_sum_principle.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 1.11: Sum Principle for Disjoint Sets">Theorem 1.11</a>. Sometimes it might be easier to count the opposite of what you are looking to count and then to subtract from the size of the universe of discourse. This idea is sometimes referred to as the <dfn class="terminology">Subtraction Principle</dfn>. Keep this in mind as a method of attack for future problems.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-54" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="root-1-2-4-54">The next result is simply a special case of <a href="root-1-2-4.html#thm_sum_principle" class="xref" data-knowl="./knowl/xref/thm_sum_principle.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 1.11: Sum Principle for Disjoint Sets">Theorem 1.11</a>. Sometimes it might be easier to count the opposite of what you are looking to count and then to subtract from the size of the universe of discourse. This idea is sometimes referred to as the <dfn class="terminology">Subtraction Principle</dfn>. Keep this in mind as a method of attack for future problems.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-54" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="theorem theorem-like" id="root-1-2-4-55"><h2 class="heading">
+<article class="theorem theorem-like" id="root-1-2-4-55"><h3 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.34</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Subtraction Principle.</span>
-</h2>
-<div class="para" id="root-1-2-4-55-2-1">If <span class="process-math">\(A\)</span> is a subset of a universe of discourse <span class="process-math">\(U\text{,}\)</span> then <span class="process-math">\({|U|=|A|+|A^c|}\text{,}\)</span> or equivalently, <span class="process-math">\({|A|=|U|-|A^c|}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-55-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h3>
+<div class="para" id="root-1-2-4-55-2-1">If <span class="process-math">\(A\)</span> is a subset of a universe of discourse <span class="process-math">\(U\text{,}\)</span> then <span class="process-math">\({|U|=|A|+|A^c|}\text{,}\)</span> or equivalently, <span class="process-math">\({|A|=|U|-|A^c|}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-55-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 1.34: Subtraction Principle"><a href="#root-1-2-4-55" title="Copy heading and permalink for Theorem 1.34: Subtraction Principle" aria-label="Copy heading and permalink for Theorem 1.34: Subtraction Principle">🔗</a></div></article><article class="problem example-like" id="root-1-2-4-56"><h2 class="heading">
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 1.34: Subtraction Principle"><a tabindex="-1" href="#root-1-2-4-55" title="Copy heading and permalink for Theorem 1.34: Subtraction Principle" aria-label="Copy heading and permalink for Theorem 1.34: Subtraction Principle">🔗</a></div>
+</article>
+<article class="problem example-like" id="root-1-2-4-56"><h3 class="heading">
 <span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.35</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2>
-<div class="para" id="root-1-2-4-56-1-1">How many words of length 4 are there consisting of lower-case English letters that utilize at least two x’s? Find the answer in two different ways.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-56-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h3>
+<div class="para" id="root-1-2-4-56-1-1">How many words of length 4 are there consisting of lower-case English letters that utilize at least two x’s? Find the answer in two different ways.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-56-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Problem 1.35"><a href="#root-1-2-4-56" title="Copy heading and permalink for Problem 1.35" aria-label="Copy heading and permalink for Problem 1.35">🔗</a></div></article><article class="problem example-like" id="root-1-2-4-57"><h2 class="heading">
+<div class="autopermalink" aria-hidden="true" data-description="Problem 1.35"><a tabindex="-1" href="#root-1-2-4-56" title="Copy heading and permalink for Problem 1.35" aria-label="Copy heading and permalink for Problem 1.35">🔗</a></div>
+</article>
+<article class="problem example-like" id="root-1-2-4-57"><h3 class="heading">
 <span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.36</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2>
+</h3>
 <div class="para logical" id="root-1-2-4-57-1-1">
 <div class="para">How many words of length 6 are there consisting of lower-case English letters subject to the following constraints?</div>
 <ol class="lower-alpha ol-marker-1" id="root-1-2-4-57-1-1-1">
 <li id="root-1-2-4-57-1-1-1-1">
-<div class="para" id="root-1-2-4-57-1-1-1-1-1">No constraints.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-57-1-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="root-1-2-4-57-1-1-1-1-1">No constraints.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-57-1-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item a"><a href="#root-1-2-4-57-1-1-1-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item a"><a tabindex="-1" href="#root-1-2-4-57-1-1-1-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
 </li>
 <li id="root-1-2-4-57-1-1-1-2">
-<div class="para" id="root-1-2-4-57-1-1-1-2-1">Repetition not allowed.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-57-1-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="root-1-2-4-57-1-1-1-2-1">Repetition not allowed.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-57-1-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item b"><a href="#root-1-2-4-57-1-1-1-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item b"><a tabindex="-1" href="#root-1-2-4-57-1-1-1-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
 </li>
 <li id="root-1-2-4-57-1-1-1-3">
-<div class="para" id="root-1-2-4-57-1-1-1-3-1">No instances of letter <span class="process-math">\(a\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-57-1-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="root-1-2-4-57-1-1-1-3-1">No instances of letter <span class="process-math">\(a\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-57-1-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item c"><a href="#root-1-2-4-57-1-1-1-3" title="Copy heading and permalink for Item c" aria-label="Copy heading and permalink for Item c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item c"><a tabindex="-1" href="#root-1-2-4-57-1-1-1-3" title="Copy heading and permalink for Item c" aria-label="Copy heading and permalink for Item c">🔗</a></div>
 </li>
 <li id="root-1-2-4-57-1-1-1-4">
-<div class="para" id="root-1-2-4-57-1-1-1-4-1">At least one occurrence of letter <span class="process-math">\(a\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-57-1-1-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="root-1-2-4-57-1-1-1-4-1">At least one occurrence of letter <span class="process-math">\(a\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-57-1-1-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item d"><a href="#root-1-2-4-57-1-1-1-4" title="Copy heading and permalink for Item d" aria-label="Copy heading and permalink for Item d">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item d"><a tabindex="-1" href="#root-1-2-4-57-1-1-1-4" title="Copy heading and permalink for Item d" aria-label="Copy heading and permalink for Item d">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-57-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-57-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Problem 1.36"><a href="#root-1-2-4-57" title="Copy heading and permalink for Problem 1.36" aria-label="Copy heading and permalink for Problem 1.36">🔗</a></div></article><article class="problem example-like" id="root-1-2-4-58"><h2 class="heading">
+<div class="autopermalink" aria-hidden="true" data-description="Problem 1.36"><a tabindex="-1" href="#root-1-2-4-57" title="Copy heading and permalink for Problem 1.36" aria-label="Copy heading and permalink for Problem 1.36">🔗</a></div>
+</article>
+<article class="problem example-like" id="root-1-2-4-58"><h3 class="heading">
 <span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.37</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2>
+</h3>
 <div class="para logical" id="root-1-2-4-58-1-1">
 <div class="para">Six friends sit on one side of long rectangular table.</div>
 <ol class="lower-alpha ol-marker-1" id="root-1-2-4-58-1-1-1">
 <li id="root-1-2-4-58-1-1-1-1">
-<div class="para" id="root-1-2-4-58-1-1-1-1-1">How many seating arrangements are there?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-58-1-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="root-1-2-4-58-1-1-1-1-1">How many seating arrangements are there?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-58-1-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item a"><a href="#root-1-2-4-58-1-1-1-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item a"><a tabindex="-1" href="#root-1-2-4-58-1-1-1-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
 </li>
 <li id="root-1-2-4-58-1-1-1-2">
-<div class="para" id="root-1-2-4-58-1-1-1-2-1">How many seating arrangements are there if Sally and Maria always sit next to each other?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-58-1-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="root-1-2-4-58-1-1-1-2-1">How many seating arrangements are there if Sally and Maria always sit next to each other?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-58-1-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item b"><a href="#root-1-2-4-58-1-1-1-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item b"><a tabindex="-1" href="#root-1-2-4-58-1-1-1-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-58-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-58-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Problem 1.37"><a href="#root-1-2-4-58" title="Copy heading and permalink for Problem 1.37" aria-label="Copy heading and permalink for Problem 1.37">🔗</a></div></article><div class="para" id="root-1-2-4-59">The next principle, called the <dfn class="terminology">Division Principle</dfn>, provides a method for ignoring “unimportant” differences when counting things. Loosely speaking, the general idea is count a larger set of distinct objects and then use the Division Principle to “merge” the ones that are not significantly different from each other. As a motivating example, suppose my kids have 30 toys scattered around the room. After asking my kids to pick up all the toys and put each toy in a bin according to what type of toy it is (e.g., Transformer), there ends up being 6 toys in each bin. In this case, it is easy to see that there must be 5 distinct bins.<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-59" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Problem 1.37"><a tabindex="-1" href="#root-1-2-4-58" title="Copy heading and permalink for Problem 1.37" aria-label="Copy heading and permalink for Problem 1.37">🔗</a></div>
+</article>
+<div class="para" id="root-1-2-4-59">The next principle, called the <dfn class="terminology">Division Principle</dfn>, provides a method for ignoring “unimportant” differences when counting things. Loosely speaking, the general idea is count a larger set of distinct objects and then use the Division Principle to “merge” the ones that are not significantly different from each other. As a motivating example, suppose my kids have 30 toys scattered around the room. After asking my kids to pick up all the toys and put each toy in a bin according to what type of toy it is (e.g., Transformer), there ends up being 6 toys in each bin. In this case, it is easy to see that there must be 5 distinct bins.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-59" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="theorem theorem-like" id="root-1-2-4-60"><h2 class="heading">
+<article class="theorem theorem-like" id="root-1-2-4-60"><h3 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.38</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Division Principle.</span>
-</h2>
-<div class="para" id="root-1-2-4-60-2-1">If the finite set <span class="process-math">\(A\)</span> is the union of <span class="process-math">\(n\)</span> pairwise disjoint subsets each with <span class="process-math">\(d\)</span> elements, then <span class="process-math">\(|A|=n\cdot d\text{.}\)</span> Equivalently, <span class="process-math">\(n=|A|/d\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-60-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h3>
+<div class="para" id="root-1-2-4-60-2-1">If the finite set <span class="process-math">\(A\)</span> is the union of <span class="process-math">\(n\)</span> pairwise disjoint subsets each with <span class="process-math">\(d\)</span> elements, then <span class="process-math">\(|A|=n\cdot d\text{.}\)</span> Equivalently, <span class="process-math">\(n=|A|/d\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-60-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 1.38: Division Principle"><a href="#root-1-2-4-60" title="Copy heading and permalink for Theorem 1.38: Division Principle" aria-label="Copy heading and permalink for Theorem 1.38: Division Principle">🔗</a></div></article><article class="problem example-like" id="prop_circular_table"><h2 class="heading">
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 1.38: Division Principle"><a tabindex="-1" href="#root-1-2-4-60" title="Copy heading and permalink for Theorem 1.38: Division Principle" aria-label="Copy heading and permalink for Theorem 1.38: Division Principle">🔗</a></div>
+</article>
+<article class="problem example-like" id="prop_circular_table"><h3 class="heading">
 <span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.39</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2>
+</h3>
 <div class="para logical" id="prop_circular_table-1-1">
 <div class="para">Six friends sit around a circle to play a game. Rotations of the group do not constitute different seating orders.</div>
 <ol class="lower-alpha ol-marker-1" id="prop_circular_table-1-1-1">
 <li id="prop_circular_table-1-1-1-1">
-<div class="para" id="prop_circular_table-1-1-1-1-1">How many circular seating arrangements are there?<div class="autopermalink" data-description="Paragraph"><a href="#prop_circular_table-1-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="prop_circular_table-1-1-1-1-1">How many circular seating arrangements are there?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#prop_circular_table-1-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item a"><a href="#prop_circular_table-1-1-1-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item a"><a tabindex="-1" href="#prop_circular_table-1-1-1-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
 </li>
 <li id="prop_circular_table-1-1-1-2">
-<div class="para" id="prop_circular_table-1-1-1-2-1">How many circular seating arrangements are there if Sally and Maria always sit next to each other?<div class="autopermalink" data-description="Paragraph"><a href="#prop_circular_table-1-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="prop_circular_table-1-1-1-2-1">How many circular seating arrangements are there if Sally and Maria always sit next to each other?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#prop_circular_table-1-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item b"><a href="#prop_circular_table-1-1-1-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item b"><a tabindex="-1" href="#prop_circular_table-1-1-1-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#prop_circular_table-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#prop_circular_table-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Problem 1.39"><a href="#prop_circular_table" title="Copy heading and permalink for Problem 1.39" aria-label="Copy heading and permalink for Problem 1.39">🔗</a></div></article><article class="problem example-like" id="root-1-2-4-62"><h2 class="heading">
+<div class="autopermalink" aria-hidden="true" data-description="Problem 1.39"><a tabindex="-1" href="#prop_circular_table" title="Copy heading and permalink for Problem 1.39" aria-label="Copy heading and permalink for Problem 1.39">🔗</a></div>
+</article>
+<article class="problem example-like" id="root-1-2-4-62"><h3 class="heading">
 <span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.40</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2>
-<div class="para" id="root-1-2-4-62-1-1">How many ways can the letters of the word SLOPPY be arranged?<div class="autopermalink" data-description="Paragraph"><a href="#root-1-2-4-62-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h3>
+<div class="para" id="root-1-2-4-62-1-1">How many ways can the letters of the word SLOPPY be arranged?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#root-1-2-4-62-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Problem 1.40"><a href="#root-1-2-4-62" title="Copy heading and permalink for Problem 1.40" aria-label="Copy heading and permalink for Problem 1.40">🔗</a></div></article><article class="problem example-like" id="prob_candy"><h2 class="heading">
+<div class="autopermalink" aria-hidden="true" data-description="Problem 1.40"><a tabindex="-1" href="#root-1-2-4-62" title="Copy heading and permalink for Problem 1.40" aria-label="Copy heading and permalink for Problem 1.40">🔗</a></div>
+</article>
+<article class="problem example-like" id="prob_candy"><h3 class="heading">
 <span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.41</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2>
-<div class="para" id="prob_candy-1-1">It’s Halloween and five students arrive at my office begging for candy. I happen to have five pieces of candy. Depending on my mood, I may give away none of the candy, all of the candy, or any amount in between. Assuming I don’t give any student more than one piece of candy, how many different ways can I distribute the candy? Does it matter if the pieces of candy are identical or not? If so, count both situations.<div class="autopermalink" data-description="Paragraph"><a href="#prob_candy-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h3>
+<div class="para" id="prob_candy-1-1">It’s Halloween and five students arrive at my office begging for candy. I happen to have five pieces of candy. Depending on my mood, I may give away none of the candy, all of the candy, or any amount in between. Assuming I don’t give any student more than one piece of candy, how many different ways can I distribute the candy? Does it matter if the pieces of candy are identical or not? If so, count both situations.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#prob_candy-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Problem 1.41"><a href="#prob_candy" title="Copy heading and permalink for Problem 1.41" aria-label="Copy heading and permalink for Problem 1.41">🔗</a></div></article><div class="autopermalink" data-description="Chapter 1: Sets and Counting Principles"><a href="#root-1-2-4" title="Copy heading and permalink for Chapter 1: Sets and Counting Principles" aria-label="Copy heading and permalink for Chapter 1: Sets and Counting Principles">🔗</a></div></section></div>
+<div class="autopermalink" aria-hidden="true" data-description="Problem 1.41"><a tabindex="-1" href="#prob_candy" title="Copy heading and permalink for Problem 1.41" aria-label="Copy heading and permalink for Problem 1.41">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Chapter 1: Sets and Counting Principles"><a tabindex="-1" href="#root-1-2-4" title="Copy heading and permalink for Chapter 1: Sets and Counting Principles" aria-label="Copy heading and permalink for Chapter 1: Sets and Counting Principles">🔗</a></div>
+</section>
+</div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="chap_acknowledgements.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="root-1-2-5.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
