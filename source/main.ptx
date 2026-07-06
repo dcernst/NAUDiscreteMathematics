@@ -95,70 +95,70 @@
 \tikzstyle{e} = [draw, thick, black,-]
 \tikzstyle{d} = [draw, thick,black,-stealth]
 </latex-image-preamble>
-  </docinfo>
-  <book>
-    <title>Introduction to Discrete Mathematics</title>
-    <frontmatter>
-          <bibinfo>
-  
-    <author>
-      <personname>Dana C. Ernst and John W. Hagood</personname>
-      <department>Department of Mathematics and Statistics</department>
-      <institution>
-      <line>Northern Arizona University</line>
-      <line>Flagstaff, AZ, USA</line>
-      </institution>
-      <email>dana.ernst@nau.edu</email>
-    </author>
-    <date>
-      <today />
-    </date>
+</docinfo>
+<book>
+<title>Introduction to Discrete Mathematics</title>
+<frontmatter>
+<bibinfo>
 
-    <!-- <website>
-      <url href="https://danaernst.com"></url>
-    </website> -->
+<author>
+<personname>Dana C. Ernst and John W. Hagood</personname>
+<department>Department of Mathematics and Statistics</department>
+<institution>
+<line>Northern Arizona University</line>
+<line>Flagstaff, AZ, USA</line>
+</institution>
+<email>dana.ernst@nau.edu</email>
+</author>
+<date>
+<today />
+</date>
 
-    <copyright>
-      <year>2026</year>
-      <holder>Dana C. Ernst</holder>
-      <shortlicense> This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit <url href="http://creativecommons.org/licenses/by-sa/4.0/" visual="creativecommons.org/licenses/by-sa/4.0"> CreativeCommons.org</url>
-      </shortlicense>
-    </copyright>
-  
-  </bibinfo>
+<!-- <website>
+<url href="https://danaernst.com"></url>
+</website> -->
 
-  <titlepage>
-    <titlepage-items/>
-  </titlepage>
+<copyright>
+<year>2026</year>
+<holder>Dana C. Ernst</holder>
+<shortlicense> This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit <url href="http://creativecommons.org/licenses/by-sa/4.0/" visual="creativecommons.org/licenses/by-sa/4.0"> CreativeCommons.org</url>
+</shortlicense>
+</copyright>
 
-  <colophon xml:id="front-colophon">
-    <colophon-items/>
-  </colophon>
+</bibinfo>
+
+<titlepage>
+<titlepage-items/>
+</titlepage>
+
+<colophon xml:id="front-colophon">
+<colophon-items/>
+</colophon>
 
 </frontmatter>
 
-    <acknowledgement xml:id="chap_acknowledgements">
-    <title>Acknowledgements</title>
-        <p>
-        This book is intended to be used for a one-semester discrete mathematics course.  There is always a debt to be paid in creating a text, and this one is no different.  The initial source for this book was John W. Hagood's notes by the title <em>MAT 226 Discrete Mathematics</em>. 
-        </p>
+<acknowledgement xml:id="chap_acknowledgements">
+<title>Acknowledgements</title>
+<p>
+This book is intended to be used for a one-semester discrete mathematics course.  There is always a debt to be paid in creating a text, and this one is no different.  The initial source for this book was John W. Hagood's notes by the title <em>MAT 226 Discrete Mathematics</em>.
+</p>
 
-    </acknowledgement>
+</acknowledgement>
 
-    <xi:include href="./chapter1.ptx"/>
-    <xi:include href="./chapter2.ptx"/>
-    <xi:include href="./chapter3.ptx"/>
-    <xi:include href="./chapter4.ptx"/>
-    <xi:include href="./chapter5.ptx"/>
-    <xi:include href="./chap_pigeonhole_principle.ptx"/>
-    <xi:include href="./chap_PIE.ptx"/>
-    <xi:include href="./chapter8.ptx"/>
-    <xi:include href="./chapter9.ptx"/>
-    <xi:include href="./chapter10.ptx"/>
-    <xi:include href="./chapter11.ptx"/>
+<xi:include href="./chapter1.ptx"/>
+<xi:include href="./chapter2.ptx"/>
+<xi:include href="./chapter3.ptx"/>
+<xi:include href="./chapter4.ptx"/>
+<xi:include href="./chapter5.ptx"/>
+<xi:include href="./chap_pigeonhole_principle.ptx"/>
+<xi:include href="./chap_PIE.ptx"/>
+<xi:include href="./chapter8.ptx"/>
+<xi:include href="./chapter9.ptx"/>
+<xi:include href="./chapter10.ptx"/>
+<xi:include href="./chapter11.ptx"/>
 
-    <!-- <backmatter>
-      <xi:include href="./bibliography.ptx"/>
-    </backmatter> -->
-  </book>
+<!-- <backmatter>
+<xi:include href="./bibliography.ptx"/>
+</backmatter> -->
+</book>
 </pretext>
