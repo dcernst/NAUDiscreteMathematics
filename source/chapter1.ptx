@@ -698,7 +698,7 @@ In set-builder notation, we have
 </p>
 <p>
 Similarly, the Cartesian product of sets
-<m>A_1, \ldots, A_n</m> sets is the collection of
+<m>A_1, \ldots, A_n</m> is the collection of
 <term><m>n</m>-tuples</term> given by
 <md>
 {A_1\times \cdots \times A_n\:= \{(a_1,\ldots,a_n)\mid  a_j\in A_j \mbox{ for all } 1\leq j\leq n\}}\
