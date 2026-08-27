@@ -48,7 +48,7 @@ The equation <m>f_n=f_{n-1}+f_{n-2}</m> is the
 <term>recurrence relation</term>
 while <m>f_1=1</m> and <m>f_2=1</m> are the
 <term>initial conditions</term>.
-It is important to emphasize that we cannot define the Fibonacci number using only the recurrence relation since otherwise,
+It is important to emphasize that we cannot define the Fibonacci numbers using only the recurrence relation since otherwise,
 we would not be able to
 <q>get started</q>
 with the recurrence.
